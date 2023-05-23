@@ -42,14 +42,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/appt-org/appt-docusaurus/tree/main/docs/',
+            'https://github.com/appt-org/appt-docusaurus/tree/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'ttps://github.com/appt-org/appt-docusaurus/tree/main/blog/',
+            'https://github.com/appt-org/appt-docusaurus/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
