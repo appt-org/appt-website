@@ -28,11 +28,11 @@ Docusaurus has built-in support for Algolia DocSearch.
 
 With a CMS it's easier to re-use content, e.g. code samples. It is possible to re-use content when using Markdown/Docusaurus. For example, you can use JSON or parse Markdown.
 
-### Code samples 
+### Code samples
 
-For code samples, we could use a folder named `code-samples` and use the file names as index.
+For code samples, we could use a folder named `code-samples` and use file names as indices.
 
-We could then create a `CodeSample` component, that has an `id` parameter. 
+We could then create a `CodeSample` component, that has an `id` parameter.
 
 To insert `accessibility-label` for all platforms:
 
@@ -46,9 +46,27 @@ To insert `accessibility-label` for a single platform:
 <CodeSample id="accessibility-label" platform="android"/>
 ```
 
+Insert for multiple platforms:
+
+```jsx
+<CodeSample id="accessibility-label" platforms="android,ios"/>
+```
+
+Filter by programming languages:
+
+```jsx
+<CodeSample id="accessibility-label" platform="android" language="kotlin"/>
+```
+
+Or multiple languages:
+
+```jsx
+<CodeSample id="accessibility-label" platform="android" languages="kotlin,xml"/>
+```
+
 ### Stats
 
-For stats, I think we could use a `.json` file containing all stats. This `.json` file could be pushed from the Q42 back-end, instead of pushing data into Contentful.
+For stats, I think we could use a `.json` file containing all stats. This `stats.json` file could be pushed from the Q42 back-end, instead of pushing data into Contentful.
 
 Simplified example:
 
@@ -57,11 +75,25 @@ Simplified example:
   "dark-mode": {
     "percentage": 50,
   },
-  "font-size: {
+  "font-size": {
     "percentage": 50,
   }
 }
 ```
+
+Ideally you could insert stats like this:
+
+```jsx
+<Stats id="dark-mode"/>
+```
+
+And to show multiple stats as a chart:
+
+```jsx
+<Stats ids="dark-mode,font-size">
+```
+
+Maybe also specify the appearance, e.g. `type="chart"` or `type="number"`
 
 ## Managing content
 
