@@ -34,8 +34,9 @@ export function CodeSample({ id, platform, locale }: CodeSampleProps) {
     const getBlocks = async () => {
       try {
         const codeBlocks = [...platforms].map(async (platform) => {
+          const currentLocale = locale || 'en'
           const module = await import(
-            `@site/src/data/code-samples/${locale}/${id}/${platform}.md`
+            `@site/src/data/code-samples/${currentLocale}/${id}/${platform}.md`
           );
 
           return {

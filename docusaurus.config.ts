@@ -50,14 +50,25 @@ const config: Config = {
     },
   },
 
-  plugins: [tailwindPlugin],
+  plugins: [
+    tailwindPlugin,
+    [
+      'content-docs',
+      {
+        id: 'guidelines',
+        path: 'guidelines',
+        routeBasePath: 'guidelines',
+        sidebarPath: './sidebarsGuidelines.ts',
+      },
+    ],
+  ],
 
   presets: [
     [
       "classic",
       {
         docs: {
-          sidebarPath: "./sidebars.ts",
+          sidebarPath: "./sidebarsDocs.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -87,7 +98,7 @@ const config: Config = {
         { to: "/", label: "Home", position: "right" },
         { to: "/stats", label: "Stats", position: "right" },
         { to: "/docs", label: "Docs", position: "right" },
-        { to: "/richtlijnen", label: "Richtlijnen", position: "right" },
+        { to: "/guidelines", label: "Guidelines", position: "right" },
         { to: "/artikelen", label: "Artikelen", position: "right" },
         { to: "/partners", label: "Partners", position: "right" },
         {
