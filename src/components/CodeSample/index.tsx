@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import clsx from 'clsx';
+
+import styles from './styles.module.css';
 
 export type CodeSampleProps = {
   id: string;
@@ -56,10 +59,11 @@ export function CodeSample({ id, platformId, locale }: CodeSampleProps) {
     setBlocks();
   }, []);
 
+
   if (codeBlocks) {
     return (
-      <div>
-        <Tabs groupId="platform">
+      <div className={clsx(styles.codeSampleContainer, 'mt-10 mb-12 last:mb-0 md:mb-20')}>
+        <Tabs className={styles.codeSampleTabs} groupId="platform">
           {codeBlocks.map((codeBlock, index) => (
             <TabItem key={index} value={codeBlock.platform} label={codeBlock.platformLabel}>
               <codeBlock.CodeBlock />
