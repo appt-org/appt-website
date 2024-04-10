@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 @import './prism/a11y-light.css';
 @import './prism/a11y-dark.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

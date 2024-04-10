@@ -16,7 +16,6 @@ import type {Props} from '@theme/CodeBlock/Content/String';
 
 import styles from './styles.module.css';
 
-// TODO: add all
 const languageLabels = [
   { id: 'xml', label: 'XML' },
   { id: 'kotlin', label: 'Kotlin' },
@@ -24,6 +23,10 @@ const languageLabels = [
   { id: 'tsx', label: 'TSX' },
   { id: 'xaml', label: 'XAML' },
   { id: 'javascript', label: 'JavaScript' },
+  { id: 'swift', label: 'Swift' },
+  { id: 'dart', label: 'Dart' },
+  { id: 'csharp', label: 'C#' },
+  { id: 'java', label: 'Java' },
 ]
 
 // Prism languages are always lowercase
