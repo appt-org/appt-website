@@ -1,8 +1,8 @@
 import type { Props } from "@theme/MDXComponents/Ul";
-import classNames from "classnames";
+import clsx from "clsx";
 
 function transformUlClassName(className?: string): string | undefined {
-  return classNames(
+  return clsx(
     "mx-auto max-w-md flex flex-col gap-2 markdown-content",
     className,
     // This class is set globally by GitHub/MDX. We keep the global class, and

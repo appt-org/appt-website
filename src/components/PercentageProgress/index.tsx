@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import clsx from "clsx";
 
 export type PercentageProgressProps = {
   percentage: number;
@@ -9,7 +9,7 @@ export function PercentageProgress({
   className,
   percentage,
 }: PercentageProgressProps) {
-  const classes = classNames(
+  const classes = clsx(
     "flex h-[0.25rem] bg-onsurface relative",
     className
   );
