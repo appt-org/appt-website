@@ -1,5 +1,5 @@
 import { Typography, Image } from "@site/src/components";
-import classNames from "classnames";
+import clsx from "clsx";
 
 export type HeroProps = {
   title: string;
@@ -8,7 +8,7 @@ export type HeroProps = {
 };
 
 export function Hero({ title, introText, image }: HeroProps) {
-  const classes = classNames("flex flex-col items-center flex-1 md:flex-row", {
+  const classes = clsx("flex flex-col items-center flex-1 md:flex-row", {
     "justify-center": !!image,
   });
 

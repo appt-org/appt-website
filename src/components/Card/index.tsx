@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 export type CardProps = {
   className?: string;
@@ -8,7 +8,7 @@ export type CardProps = {
 
 export function Card({ tag, className, children }: PropsWithChildren<CardProps>) {
   const CardElement = tag ?? 'div';
-  const classes = classNames('bg-surface p-8 shadow-md', className);
+  const classes = clsx('bg-surface p-8 shadow-md', className);
 
   return <CardElement className={classes}>{children}</CardElement>;
 }

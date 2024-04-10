@@ -1,5 +1,5 @@
 import type { TypographySize, TypographyTag } from "@site/models";
-import classNames from "classnames";
+import clsx from "clsx";
 
 export const getTypographyClassNames = ({
   className,
@@ -83,7 +83,7 @@ export const getTypographyClassNames = ({
     "hyphens-auto": tag === "h1",
   };
 
-  const classes = classNames(
+  const classes = clsx(
     "text-body max-w-[44rem] break-words",
     {
       ...textSizes,
