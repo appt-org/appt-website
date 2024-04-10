@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import './prism/a11y-light.css';
+@import './prism/a11y-dark.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+html {
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+
+/* You can override the default Infima variables here. */
+:root {
+  --color-accent: 204 0 185; /* #CC00B9 */
+  --color-accent-hover: 184 0 166; /* #b800a6 */
+  --color-onaccent: 255 255 255; /* #FFFFFF */
+  --color-surface: 255 255 255; /* #FFFFFF */
+  --color-onsurface: 245 245 245; /* #F5F5F5 */
+  --color-body: 0 0 0; /* #000000 */
+  --color-placeholder: 148 148 148; /* #949494 */
+  --color-background: 245 245 245; /* #F5F5F5 */
+
+  /* Docusaurus theme variables */
+  --ifm-font-family-base: "Rubik", sans-serif;
+  --ifm-color-primary: rgb(var(--color-accent));
+
+  /* TODO */
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --color-accent: 249 103 233; /* #F967E9 */
+  --color-accent-hover: 248 69 228; /* #f845e4 */
+  --color-onaccent: 0 0 0; /* #000000 */
+  --color-surface: 38 38 38; /* #202020 */
+  --color-onsurface: 28 28 28; /* #323232 */
+  --color-body: 255 255 255; /* #FFFFFF */
+  --color-placeholder: 148 148 148; /* #949494 */
+  --color-background: 28 28 28; /* #323232 */
+
+  --ifm-color-primary: rgb(var(--color-accent));
+
+  /* TODO */
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.nav-logo {
+  width: theme(width.24);
+  height: theme(height.12);
+}
+
+.navbar {
+  padding: 0;
+  box-shadow: none;
+  background-color: theme(colors.surface);
+}
+
+.navbar__inner {
+  height: theme(height.16);
+  max-width: theme(maxWidth.xl);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: between;
+  padding-block: theme(spacing.3);
+  padding-inline: theme(spacing.4);
+
+  @media (min-width: theme(screens.lg)) {
+    padding-inline: theme(spacing.8);
+  }
+}
+
+.footer {
+  background-color: theme(colors.surface);
+}
+
+body {
+  background-color: rgb(var(--color-background));
+}
+
+main.container {
+  max-width: max-content;
+  padding: 0;
+  margin-top: 0 !important;
+}
+
+main.container > .row > .col.col--8 {
+  max-width: max-content;
+  padding: 0;
+}
+
+/* Focus outline */
+*:focus {
+  outline: none;
+}
+
+.floating-focus-enabled :focus,
+.floating-focus-enabled .focus {
+  outline: rgb(var(--color-accent)) solid 2px;
+  outline-offset: 8px;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgb(var(--color-accent) / 0.25);
+}
+
+::-moz-selection {
+  background-color: rgb(var(--color-accent) / 0.25);
+}
+
+::-webkit-selection {
+  background-color: rgb(var(--color-accent) / 0.25);
+}
+
+/* Custom class to hyphenate words */
+@media (max-width: 768px) {
+  .hyphens-auto {
+    hyphens: auto;
+  }
+}
+
+/* Fix spacing for markdown items that are not placed within e.g. a two column block  */
+article > .markdown-content,
+article > p {
+  padding-inline: theme(spacing.4);
+
+  @media (min-width: theme(screens.sm)) {
+    padding-inline: theme(spacing.8);
+  }
+}
+
+article > p {
+  max-width: theme(maxWidth.md);
+  margin: auto;
+}
+
+/* Custom class to hide scrollbar (Chrome, Edge, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom class to hide scrollbar (Firefox) */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Better underline styling */
+.underline,
+.hover\:underline {
+  text-underline-offset: 0.15rem;
+  text-decoration-thickness: 0.075rem;
+  text-decoration-skip-ink: all;
+}

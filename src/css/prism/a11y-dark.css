@@ -1,0 +1,194 @@
+/**
+ * a11y-dark theme for JavaScript, CSS, and HTML
+ * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
+ * @author ericwbailey (https: //github.com/ericwbailey/a11y-syntax-highlighting)
+ * 
+ * Slightly edited for Appt
+ * WCAG AAA compliant for color contrast.
+ */
+
+/*
+ Theme
+ */
+[data-theme="dark"] code[class*="language-"],
+[data-theme="dark"] pre[class*="language-"] {
+  color: #ffffff;
+  background: none;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 1rem;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.token.comment {
+  font-size: 0.9rem;
+}
+
+/* Code blocks */
+[data-theme="dark"] pre[class*="language-"] {
+  padding: 1em;
+  margin: 0;
+  overflow: auto;
+}
+
+/* Inline code */
+[data-theme="dark"] :not(pre) > code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+[data-theme="dark"] .token.comment,
+[data-theme="dark"] .token.prolog,
+[data-theme="dark"] .token.doctype,
+[data-theme="dark"] .token.cdata {
+  color: #d4d0ab;
+}
+
+[data-theme="dark"] .token.punctuation {
+  color: #fefefe;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+[data-theme="dark"] .token.property,
+[data-theme="dark"] .token.tag,
+[data-theme="dark"] .token.constant,
+[data-theme="dark"] .token.class-name,
+[data-theme="dark"] .token.symbol,
+[data-theme="dark"] .token.deleted {
+  color: #ffa07a;
+}
+
+[data-theme="dark"] .token.boolean,
+[data-theme="dark"] .token.number {
+  color: #00e0e0;
+}
+
+[data-theme="dark"] .token.selector,
+[data-theme="dark"] .token.attr-name,
+[data-theme="dark"] .token.string,
+[data-theme="dark"] .token.char,
+[data-theme="dark"] .token.builtin,
+[data-theme="dark"] .token.inserted {
+  color: #abe338;
+}
+
+[data-theme="dark"] .token.operator,
+[data-theme="dark"] .token.entity,
+[data-theme="dark"] .token.url,
+[data-theme="dark"] .language-css .token.string,
+[data-theme="dark"] .style .token.string,
+[data-theme="dark"] .token.variable {
+  color: #00e0e0;
+}
+
+[data-theme="dark"] .token.atrule,
+[data-theme="dark"] .token.attr-value,
+[data-theme="dark"] .token.function {
+  color: #ffd700;
+}
+
+[data-theme="dark"] .token.keyword {
+  color: #00e0e0;
+}
+
+[data-theme="dark"] .token.regex,
+[data-theme="dark"] .token.important {
+  color: #ffd700;
+}
+
+[data-theme="dark"] .token.important,
+[data-theme="dark"] .token.bold {
+  font-weight: bold;
+}
+
+[data-theme="dark"] .token.italic {
+  font-style: italic;
+}
+
+[data-theme="dark"] .token.entity {
+  cursor: help;
+}
+
+/*
+ Plugin support
+ */
+
+/* Line highlight */
+[data-theme="dark"] .line-highlight {
+  background: rgba(255, 217, 0, 0.1);
+  border-top: 1px solid rgba(255, 217, 0, 0.55);
+  border-bottom: 1px solid rgba(255, 217, 0, 0.55);
+}
+
+/* Line numbers */
+[data-theme="dark"] .line-numbers .line-numbers-rows {
+  border-right: 1px solid #f8f8f2;
+}
+
+[data-theme="dark"] .line-numbers-rows > span:before {
+  color: #d4d0ab;
+}
+
+/*
+ High contrast mode support
+*/
+@media screen and (-ms-high-contrast: active) {
+  [data-theme="dark"] code[class*="language-"],
+  [data-theme="dark"] pre[class*="language-"] {
+    color: windowText;
+    background: window;
+  }
+
+  [data-theme="dark"] :not(pre) > code[class*="language-"],
+  [data-theme="dark"] pre[class*="language-"] {
+    background: window;
+  }
+
+  [data-theme="dark"] .token.important {
+    background: highlight;
+    color: window;
+    font-weight: normal;
+  }
+
+  [data-theme="dark"] .token.atrule,
+  [data-theme="dark"] .token.attr-value,
+  [data-theme="dark"] .token.function,
+  [data-theme="dark"] .token.keyword,
+  [data-theme="dark"] .token.operator,
+  [data-theme="dark"] .token.selector {
+    font-weight: bold;
+  }
+
+  [data-theme="dark"] .token.attr-value,
+  [data-theme="dark"] .token.comment,
+  [data-theme="dark"] .token.doctype,
+  [data-theme="dark"] .token.function,
+  [data-theme="dark"] .token.keyword,
+  [data-theme="dark"] .token.operator,
+  [data-theme="dark"] .token.property,
+  [data-theme="dark"] .token.string {
+    color: highlight;
+  }
+
+  [data-theme="dark"] .token.attr-value,
+  [data-theme="dark"] .token.url {
+    font-weight: normal;
+  }
+}
