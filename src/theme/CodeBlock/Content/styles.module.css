@@ -1,0 +1,56 @@
+.codeBlockContent {
+  /* rtl:ignore */
+  direction: ltr;
+  border-radius: inherit;
+}
+
+.codeBlockTitle {
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  font-size: var(--ifm-code-font-size);
+  font-weight: 500;
+  padding: 0.75rem var(--ifm-pre-padding);
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.codeBlock {
+  --ifm-pre-background: var(--prism-background-color);
+  margin: 0;
+  padding: 0;
+}
+
+.codeBlockTitle + .codeBlockContent .codeBlock {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.codeBlockStandalone {
+  padding: 0;
+}
+
+.codeBlockLines {
+  font: inherit;
+  /* rtl:ignore */
+  float: left;
+  min-width: 100%;
+}
+
+.codeBlockLinesWithNumbering {
+  display: table;
+  padding: var(--ifm-pre-padding) 0;
+}
+
+@media print {
+  .codeBlockLines {
+    white-space: pre-wrap;
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  column-gap: 0.2rem;
+  position: absolute;
+  /* rtl:ignore */
+  right: 0;
+  top: 0;
+}

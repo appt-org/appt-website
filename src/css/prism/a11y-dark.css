@@ -33,7 +33,11 @@
   hyphens: none!important;
 }
 
-.token.comment {
+[data-theme="dark"] .token.plain {
+  color: #ffffff!important;
+}
+
+[data-theme="dark"] .token.comment {
   font-size: 0.9rem!important;
 }
 
@@ -62,7 +66,7 @@
   color: #fefefe!important;
 }
 
-.token.namespace {
+[data-theme="dark"] .token.namespace {
   opacity: 0.7!important;
 }
 

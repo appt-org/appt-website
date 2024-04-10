@@ -33,6 +33,10 @@ pre[class*="language-"] {
   hyphens: none!important;
 }
 
+.token.plain {
+  color: #202020!important;
+}
+
 .token.comment {
   font-size: 0.9rem!important;
 }
