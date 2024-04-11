@@ -1,0 +1,38 @@
+.codeSampleContainer [role="tabpanel"] h1,
+.codeSampleContainer > h1 {
+  display: none;
+}
+
+.codeSampleContainer [role="tabpanel"] p {
+  margin-block: 1rem;
+}
+
+.codeSampleTabs {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.codeSampleTabs li {
+  text-underline-offset: 0.15rem;
+  text-decoration-thickness: 0.075rem;
+  color: rgb(var(--color-accent));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: unset;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+.codeSampleTabs li:hover {
+  text-decoration-line: underline;
+  background-color: unset;
+}
+
+.codeSampleTabs li[aria-selected="true"] {
+  color: rgb(var(--color-body));
+  background-color: rgb(var(--color-surface));
+  border: none;
+}
