@@ -1,24 +1,57 @@
-import { Typography, Image } from "@site/src/components";
+import { Image, Typography } from "@site/src/components";
 import clsx from "clsx";
 
-export type HeroProps = {
+type HeroWithLightImageProps = {
   title: string;
   introText?: string;
-  image?: string;
+  imageLightSrc: string;
+  imageDarkSrc?: string;
+  alt: string;
 };
 
-export function Hero({ title, introText, image }: HeroProps) {
+type HeroWithDarkImageProps = {
+  title: string;
+  introText?: string;
+  imageLightSrc?: string;
+  imageDarkSrc: string;
+  alt: string;
+};
+
+type HeroWithoutImageProps = {
+  title: string;
+  introText?: string;
+  imageLightSrc: undefined;
+  imageDarkSrc: undefined;
+  alt: undefined;
+};
+
+export type HeroProps =
+  | HeroWithLightImageProps
+  | HeroWithDarkImageProps
+  | HeroWithoutImageProps;
+
+export function Hero({
+  title,
+  introText,
+  imageLightSrc,
+  imageDarkSrc,
+  alt,
+}: HeroProps) {
   const classes = clsx("flex flex-col items-center flex-1 md:flex-row", {
-    "justify-center": !!image,
+    "justify-center": !!imageLightSrc || !!imageDarkSrc,
   });
 
   return (
     <div className="bg-surface w-screen shadow-md">
       <div className="max-w-md w-full mx-auto px-0 py-8 sm:py-16 sm:px-8">
         <div className={classes}>
-          {image && (
+          {(!!imageLightSrc || !!imageDarkSrc) && (
             <div className="relative self-stretch grow-0 mb-8 mt-0 md:my-auto md:mr-8 md:h-auto md:basis-1/3 shrink-0">
-              <Image src={image} sizes="30vw" />
+              <Image
+                lightSrc={imageLightSrc ?? imageDarkSrc}
+                darkSrc={imageDarkSrc}
+                alt={alt}
+              />
             </div>
           )}
           <Typography className="w-full" tag="h1" size="heading-xl">
