@@ -61,6 +61,15 @@ const config: Config = {
         sidebarPath: './sidebarsGuidelines.ts',
       },
     ],
+    [
+      'content-docs',
+      {
+        id: 'articles',
+        path: 'articles',
+        routeBasePath: 'articles',
+        sidebarPath: false,
+      },
+    ],
   ],
 
   presets: [
@@ -106,6 +115,10 @@ const config: Config = {
           position: "right",
         },
       ],
+    },
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 2,
     },
     footer: {
       links: [
