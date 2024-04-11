@@ -22,6 +22,16 @@ const config: Config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap',
+      },
+    },
+  ],
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -40,14 +50,25 @@ const config: Config = {
     },
   },
 
-  plugins: [tailwindPlugin],
+  plugins: [
+    tailwindPlugin,
+    [
+      'content-docs',
+      {
+        id: 'guidelines',
+        path: 'guidelines',
+        routeBasePath: 'guidelines',
+        sidebarPath: './sidebarsGuidelines.ts',
+      },
+    ],
+  ],
 
   presets: [
     [
       "classic",
       {
         docs: {
-          sidebarPath: "./sidebars.ts",
+          sidebarPath: "./sidebarsDocs.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -77,7 +98,7 @@ const config: Config = {
         { to: "/", label: "Home", position: "right" },
         { to: "/stats", label: "Stats", position: "right" },
         { to: "/docs", label: "Docs", position: "right" },
-        { to: "/richtlijnen", label: "Richtlijnen", position: "right" },
+        { to: "/guidelines", label: "Guidelines", position: "right" },
         { to: "/artikelen", label: "Artikelen", position: "right" },
         { to: "/partners", label: "Partners", position: "right" },
         {
@@ -120,6 +141,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.okaidia,
       darkTheme: prismThemes.okaidia,
+      additionalLanguages: ['java', 'kotlin', 'swift', 'objectivec', 'csharp', 'dart'],
     },
   } satisfies Preset.ThemeConfig,
 };
