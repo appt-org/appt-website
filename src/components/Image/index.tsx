@@ -3,17 +3,17 @@ import ThemedImage from "@theme/ThemedImage";
 
 export type ImageProps = {
   alt: string;
-  lightSrc: string;
-  darkSrc?: string;
+  src: string;
+  dark?: string;
 };
 
-export function Image({ alt, lightSrc, darkSrc }: ImageProps) {
+export function Image({ alt, src, dark }: ImageProps) {
   return (
     <ThemedImage
       alt={alt}
       sources={{
-        light: useBaseUrl(lightSrc),
-        dark: useBaseUrl(darkSrc ?? lightSrc),
+        light: useBaseUrl(src),
+        dark: useBaseUrl(dark ?? src),
       }}
     />
   );
