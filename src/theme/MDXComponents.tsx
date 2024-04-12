@@ -5,6 +5,8 @@ import {
   ColumnRow,
   Hero,
   Image,
+  LinkList,
+  LinkListItem,
   PercentageBlock,
   Quote,
   TwoColumnBlock,
@@ -24,4 +26,6 @@ export default {
   PercentageBlock,
   CodeSample,
   Quote,
+  LinkList,
+  LinkListItem,
 };

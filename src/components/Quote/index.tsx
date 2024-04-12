@@ -4,12 +4,12 @@ import clsx from "clsx";
 
 type ImageProps =
   | {
-      imageLightSrc: string;
+      imageSrc: string;
       imageDarkSrc?: string;
       alt: string;
     }
   | {
-      imageLightSrc: undefined;
+      imageSrc: undefined;
       imageDarkSrc: undefined;
       alt: undefined;
     };
@@ -31,7 +31,7 @@ export function Quote({
   name,
   extraInfo,
   isImageLeft = true,
-  imageLightSrc,
+  imageSrc,
   imageDarkSrc,
   alt,
   linkLabel,
@@ -45,12 +45,12 @@ export function Quote({
   );
   return (
     <div className={classes}>
-      {imageLightSrc && alt && (
+      {imageSrc && alt && (
         <div className="overflow-hidden relative block flex-1 grow-0 basis-[12.5rem] h-[12.5rem] w-[12.5rem] rounded-full mb-4 md:first:mr-6 md:mb-0">
           <Image
             className="absolute object-cover w-full h-full"
-            lightSrc={imageLightSrc}
-            darkSrc={imageDarkSrc}
+            src={imageSrc}
+            dark={imageDarkSrc}
             alt={alt}
           />
         </div>

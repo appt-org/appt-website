@@ -4,6 +4,7 @@ import { ExternalIcon } from "@site/src/icons";
 
 import clsx from "clsx";
 export type CustomLinkProps = {
+  className?: string;
   url: string;
   label: string;
   external?: boolean;
@@ -14,6 +15,7 @@ export function CustomLink({
   label,
   url,
   external = false,
+  className,
   active = false,
 }: CustomLinkProps) {
   const { i18n } = useDocusaurusContext();
@@ -22,7 +24,8 @@ export function CustomLink({
     "transition ease-out-quint duration-200 items-center self-end inline text-accent hover:underline",
     {
       "text-body underline": active,
-    }
+    },
+    className
   );
 
   const iconClassNames = clsx("w-8 h-8 inline-block");

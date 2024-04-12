@@ -5,6 +5,8 @@ export * from "./ColumnRow";
 export * from "./CustomLink";
 export * from "./Hero";
 export * from "./Image";
+export * from "./LinkList";
+export * from "./LinkListItem";
 export * from "./PercentageBlock";
 export * from "./PercentageProgress";
 export * from "./Quote";
