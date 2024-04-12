@@ -3,10 +3,11 @@ import {
   CodeSample,
   Column,
   ColumnRow,
+  Hero,
   Image,
   PercentageBlock,
+  Quote,
   TwoColumnBlock,
-  Hero,
 } from "@site/src/components";
 
 import MDXComponents from "@theme-original/MDXComponents";
@@ -22,4 +23,5 @@ export default {
   Image,
   PercentageBlock,
   CodeSample,
+  Quote,
 };
