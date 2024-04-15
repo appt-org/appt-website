@@ -10,6 +10,7 @@ import {
   PercentageBlock,
   Quote,
   TwoColumnBlock,
+  Video,
 } from "@site/src/components";
 
 import MDXComponents from "@theme-original/MDXComponents";
@@ -28,4 +29,5 @@ export default {
   Quote,
   LinkList,
   LinkListItem,
+  Video,
 };

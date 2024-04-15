@@ -61,6 +61,15 @@ const config: Config = {
         sidebarPath: "./sidebarsGuidelines.ts",
       },
     ],
+    [
+      'content-docs',
+      {
+        id: 'articles',
+        path: 'articles',
+        routeBasePath: 'articles',
+        sidebarPath: false,
+      },
+    ],
   ],
 
   presets: [
@@ -97,13 +106,17 @@ const config: Config = {
         { to: "/stats", label: "Stats", position: "right" },
         { to: "/docs", label: "Docs", position: "right" },
         { to: "/guidelines", label: "Guidelines", position: "right" },
-        { to: "/artikelen", label: "Artikelen", position: "right" },
+        { to: "/articles", label: "Articles", position: "right" },
         { to: "/partners", label: "Partners", position: "right" },
         {
           type: "localeDropdown",
           position: "right",
         },
       ],
+    },
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 2,
     },
     footer: {
       links: [

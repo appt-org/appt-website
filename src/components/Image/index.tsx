@@ -1,22 +1,23 @@
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import ThemedImage from "@theme/ThemedImage";
+import { ComponentProps } from "react";
 
-export type ImageProps = {
+export type ImageProps = ComponentProps<"img"> & {
   alt: string;
   src: string;
   dark?: string;
-  className?: string;
 };
 
-export function Image({ alt, src, dark, className = "" }: ImageProps) {
+export function Image({ alt, src, dark, ...props }: ImageProps) {
   return (
     <ThemedImage
       alt={alt}
-      className={className}
+      className={props?.className}
       sources={{
         light: useBaseUrl(src),
         dark: useBaseUrl(dark ?? src),
       }}
+      {...props}
     />
   );
 }

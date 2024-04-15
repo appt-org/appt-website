@@ -10,5 +10,8 @@ export * from "./LinkListItem";
 export * from "./PercentageBlock";
 export * from "./PercentageProgress";
 export * from "./Quote";
+export * from "./Spinner";
 export * from "./TwoColumnBlock";
 export * from "./Typography";
+export * from "./Video";
+export * from "./Video/YoutubeVideo";
