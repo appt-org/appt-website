@@ -86,11 +86,6 @@ const config: Config = {
         theme: {
           customCss: ['./src/css/globals.css'],
         },
-        pages: {
-          path: 'src/pages',
-          routeBasePath: process.env.DOCUSAURUS_CURRENT_LOCALE === 'en' ? 'en' : '',
-          include: ['**/*.{js,jsx,ts,tsx,md,mdx}'],
-        },
       } satisfies Preset.Options,
     ],
   ],
