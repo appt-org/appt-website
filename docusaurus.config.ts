@@ -2,6 +2,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
 import { themes as prismThemes } from 'prism-react-renderer';
 import tailwindPlugin from './plugins/tailwind-config';
+import { getTranslatedPath } from './route-translations';
 
 const config: Config = {
   title: 'Appt',
@@ -53,20 +54,20 @@ const config: Config = {
   plugins: [
     tailwindPlugin,
     [
-      'content-docs',
+      '@docusaurus/plugin-content-docs',
       {
         id: 'guidelines',
         path: 'guidelines',
-        routeBasePath: 'guidelines',
+        routeBasePath: getTranslatedPath('guidelines'),
         sidebarPath: './sidebarsGuidelines.ts',
       },
     ],
     [
-      'content-docs',
+      '@docusaurus/plugin-content-docs',
       {
         id: 'articles',
         path: 'articles',
-        routeBasePath: 'articles',
+        routeBasePath: getTranslatedPath('articles'),
         sidebarPath: false,
       },
     ],
@@ -85,6 +86,11 @@ const config: Config = {
         theme: {
           customCss: ['./src/css/globals.css'],
         },
+        pages: {
+          path: 'src/pages',
+          routeBasePath: process.env.DOCUSAURUS_CURRENT_LOCALE === 'en' ? 'en' : '',
+          include: ['**/*.{js,jsx,ts,tsx,md,mdx}'],
+        },
       } satisfies Preset.Options,
     ],
   ],
@@ -102,11 +108,11 @@ const config: Config = {
       },
       items: [
         { to: '/', label: 'Home', position: 'right' },
-        { to: '/stats', label: 'Stats', position: 'right' },
+        { to: `/${getTranslatedPath('stats')}`, label: 'Stats', position: 'right' },
         { to: '/docs', label: 'Docs', position: 'right' },
-        { to: '/guidelines', label: 'Guidelines', position: 'right' },
-        { to: '/articles', label: 'Articles', position: 'right' },
-        { to: '/partners', label: 'Partners', position: 'right' },
+        { to: `/${getTranslatedPath('guidelines')}`, label: getTranslatedPath('guidelines', true), position: 'right' },
+        { to: `/${getTranslatedPath('articles')}`, label: getTranslatedPath('articles', true), position: 'right' },
+        { to: `/${getTranslatedPath('partners')}`, label: 'Partners', position: 'right' },
         {
           type: 'localeDropdown',
           position: 'right',
@@ -119,15 +125,6 @@ const config: Config = {
     },
     footer: {
       links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
         {
           title: 'Community',
           items: [
