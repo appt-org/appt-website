@@ -1,5 +1,5 @@
-@import './prism/a11y-light.css';
-@import './prism/a11y-dark.css';
+@import "./prism/a11y-light.css";
+@import "./prism/a11y-dark.css";
 
 @tailwind base;
 @tailwind components;
@@ -104,6 +104,17 @@ main.container {
   max-width: max-content;
   padding: 0;
   margin-top: 0 !important;
+}
+
+/* Unordered lists cannot be swizzled */
+.markdown ol {
+  max-width: theme(maxWidth.md);
+  list-style-type: decimal;
+}
+
+.markdown ol li {
+  margin-top: theme(spacing.4);
+  margin-left: theme(spacing.7);
 }
 
 main.container > .row > .col.col--8 {
