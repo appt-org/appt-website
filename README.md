@@ -14,13 +14,12 @@ $ nvm use && npm i
 $ npm run start
 ```
 
-This command starts a local development server using the default locale (English) and opens up a browser window. Most changes are reflected live without having to restart the server. 
+This command starts a local development server using the default locale (English) and opens up a browser window. Most changes are reflected live without having to restart the server.
 For Dutch content, run the following command:
 
 ```
 $ npm run start -- --locale nl
 ```
-
 
 ### Build
 

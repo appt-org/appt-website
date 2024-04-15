@@ -4,26 +4,26 @@ In React Native, you can use [`Alert`](https://reactnative.dev/docs/alert) to sh
 
 ```jsx
 Alert.alert(
-  "Confirm Appt membership?",
-  "Your bank account will be billed.",
+  'Confirm Appt membership?',
+  'Your bank account will be billed.',
   [
     {
-      text: "Cancel",
+      text: 'Cancel',
       onPress: () => {
         // Cancel
       },
-      style: "cancel"
+      style: 'cancel',
     },
     {
-      text: "Proceed",
+      text: 'Proceed',
       onPress: () => {
         // Proceed
       },
     },
   ],
   {
-      cancelable: true,
-      onDismiss: () => console.log("Dismissed alert"),
-  }
+    cancelable: true,
+    onDismiss: () => console.log('Dismissed alert'),
+  },
 );
 ```

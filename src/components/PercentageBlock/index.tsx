@@ -1,9 +1,5 @@
-import {
-  Card,
-  PercentageProgress,
-  Typography,
-} from "@site/src/components";
-import _kebabCase from "lodash/kebabCase";
+import { Card, PercentageProgress, Typography } from '@site/src/components';
+import _kebabCase from 'lodash/kebabCase';
 
 type Metric = {
   title?: string;
@@ -20,16 +16,10 @@ export type PercentageBlockProps = {
 };
 
 function getMetricText(metric: Metric) {
-  return `${metric.number}${metric.isPercentage ? "%" : ""}`;
+  return `${metric.number}${metric.isPercentage ? '%' : ''}`;
 }
 
-export function PercentageBlock({
-  text,
-  id,
-  baseValue,
-  metrics,
-  link,
-}: PercentageBlockProps) {
+export function PercentageBlock({ text, id, baseValue, metrics, link }: PercentageBlockProps) {
   /**
    * Render a single metric as a large percentage/number with text
    */
@@ -37,15 +27,9 @@ export function PercentageBlock({
     const metric = metrics[0];
     return (
       <>
-        {metric.isPercentage && (
-          <PercentageProgress className="mb-4" percentage={metric.number} />
-        )}
+        {metric.isPercentage && <PercentageProgress className="mb-4" percentage={metric.number} />}
         <div className="flex flex-col sm:flex-row">
-          <Typography
-            className="mr-0 break-all sm:mr-8"
-            tag="p"
-            size="heading-xl"
-          >
+          <Typography className="mr-0 break-all sm:mr-8" tag="p" size="heading-xl">
             {getMetricText(metric)}
           </Typography>
           {text && (
@@ -62,8 +46,7 @@ export function PercentageBlock({
    * Render multiple metrics as text and a descending bar chart
    */
   function renderMetrics() {
-    const metricBaseValue =
-      baseValue ?? Math.max(...metrics.map((metric) => metric.number));
+    const metricBaseValue = baseValue ?? Math.max(...metrics.map(metric => metric.number));
 
     return (
       <div className="flex flex-col md:flex-row">
@@ -75,7 +58,7 @@ export function PercentageBlock({
         <ul className="flex-1" aria-labelledby={id}>
           {metrics
             .sort((a, b) => b.number - a.number)
-            .map((metric) => {
+            .map(metric => {
               const id = `${_kebabCase(metric.title)}-${metric.number}`;
               const metricProgressPercentage = metric.isPercentage
                 ? metric.number
@@ -88,15 +71,8 @@ export function PercentageBlock({
                     {metric.title}
                   </Typography>
                   <div className="flex items-center -mt-3">
-                    <PercentageProgress
-                      className="mr-4 flex-1"
-                      percentage={metricProgressPercentage}
-                    />
-                    <Typography
-                      className="flex-grow-0"
-                      tag="p"
-                      size="paragraph"
-                    >
+                    <PercentageProgress className="mr-4 flex-1" percentage={metricProgressPercentage} />
+                    <Typography className="flex-grow-0" tag="p" size="paragraph">
                       {getMetricText(metric)}
                     </Typography>
                   </div>
@@ -111,9 +87,7 @@ export function PercentageBlock({
   return (
     <Card className="flex-1">
       {metrics.length === 1 ? renderMetric() : renderMetrics()}
-      {link && (
-        <div className="flex justify-end mt-4">TODO: Add link component</div>
-      )}
+      {link && <div className="flex justify-end mt-4">TODO: Add link component</div>}
     </Card>
   );
 }

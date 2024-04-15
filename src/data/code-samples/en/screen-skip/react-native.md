@@ -5,6 +5,5 @@ In React Native, skipping content is mostly relevant to [`TalkBack`](https://app
 Provide appropriate accessibility markup to your content by using [`accessibilityRole`](https://reactnative.dev/docs/accessibility#accessibilityrole).
 
 ```jsx
-<Pressable 
-  accessibilityRole="header|link" />
+<Pressable accessibilityRole="header|link" />
 ```

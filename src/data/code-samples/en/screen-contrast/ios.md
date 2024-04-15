@@ -6,6 +6,6 @@ You can also use the property [`accessibilityContrast`](https://developer.apple.
 
 ```swift
 if UITraitCollection.current.accessibilityContrast == .high {
-    // High contrast logic    
+    // High contrast logic
 }
 ```

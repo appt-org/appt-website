@@ -7,9 +7,12 @@ React Native has a couple of attributes to adjust text spacing:
 - [`paddingVertical`](https://reactnative.dev/docs/layout-props#paddingvertical): set spacing between paragraphs
 
 ```jsx
-<Text style={{
-  letterSpacing: 3,
-  lineHeight: 32,
-  paddingVertical: 6
-}}>Appt</Text>
+<Text
+  style={{
+    letterSpacing: 3,
+    lineHeight: 32,
+    paddingVertical: 6,
+  }}>
+  Appt
+</Text>
 ```

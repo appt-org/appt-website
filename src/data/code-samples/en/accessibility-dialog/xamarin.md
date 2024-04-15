@@ -4,7 +4,7 @@ In Xamarin Forms you can use the [`DisplayAlert`](https://learn.microsoft.com/en
 
 ```csharp
 var accept = await App.Current.MainPage.DisplayAlert(
-  "Confirm Appt membership?", 
+  "Confirm Appt membership?",
   "Your bank account will be billed.",
   "Proceed",
   "Cancel"

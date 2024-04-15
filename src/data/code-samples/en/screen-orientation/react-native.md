@@ -9,8 +9,8 @@ You can use the [`Dimensions`](https://reactnative.dev/docs/dimensions) API to l
 
 ```jsx
 Dimensions.addEventListener('change', () => {
-    this.setState({
-        orientation: Platform.isPortrait() ? 'portrait' : 'landscape'
-    });
+  this.setState({
+    orientation: Platform.isPortrait() ? 'portrait' : 'landscape',
+  });
 });
 ```

@@ -6,19 +6,19 @@ In React Native, you can use the [React-Native-Video](https://github.com/react-n
 import { TextTrackType, Video } from 'react-native-video';
 
 <Video
-    textTracks={[
-        {
-            title: "English CC",
-            language: "en",
-            type: TextTrackType.VTT,
-            uri: "https://appt.org/subtitles/en.vtt"
-        },
-        {
-            title: "Spanish Subtitles",
-            language: "es",
-            type: TextTrackType.SRT,
-            uri: require('https://appt.org/subtitles/es.srt')
-        }
-    ]}
-/>
+  textTracks={[
+    {
+      title: 'English CC',
+      language: 'en',
+      type: TextTrackType.VTT,
+      uri: 'https://appt.org/subtitles/en.vtt',
+    },
+    {
+      title: 'Spanish Subtitles',
+      language: 'es',
+      type: TextTrackType.SRT,
+      uri: require('https://appt.org/subtitles/es.srt'),
+    },
+  ]}
+/>;
 ```

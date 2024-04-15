@@ -6,11 +6,7 @@ In React Native, we recommend using [React Navigation](https://reactnative.dev/d
 function StackScreen() {
   return (
     <Stack.Navigator>
-      <Stack.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{ title: 'Appt homescreen' }}
-      />
+      <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Appt homescreen' }} />
     </Stack.Navigator>
   );
 }
