@@ -6,7 +6,7 @@ A gesture should not be the only way to trigger actions. Make sure to provide a 
 
 ```swift
 let gesture = UIPinchGestureRecognizer(
-    target: self, 
+    target: self,
     action: #selector(onPinch(_:))
 )
 addGestureRecognizer(gesture)

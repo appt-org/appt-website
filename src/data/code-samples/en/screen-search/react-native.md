@@ -3,7 +3,5 @@
 In React Native, you could use a [`SearchBar`](https://reactnativeelements.com/docs/components/searchbar) to search for screens.
 
 ```jsx
-<SearchBar
-    onChangeText={search}
-/>
+<SearchBar onChangeText={search} />
 ```

@@ -9,16 +9,16 @@ let videoComposition = AVMutableComposition()
 
 // Add video track
 guard let videoTrack = videoComposition.addMutableTrack(
-    withMediaType: .video, 
+    withMediaType: .video,
     preferredTrackID: kCMPersistentTrackID_Invalid
-) else { 
-    return 
+) else {
+    return
 }
 guard let videoUrl = Bundle.main.url(
-    forResource: "Appt", 
+    forResource: "Appt",
     withExtension: "mp4"
-) else { 
-    return 
+) else {
+    return
 }
 let videoAsset = AVURLAsset.init(url: videoUrl)
 try? videoTrack.insertTimeRange(
@@ -31,14 +31,14 @@ try? videoTrack.insertTimeRange(
 for track in videoAsset.tracks {
     if track.hasMediaCharacteristic(.describesVideoForAccessibility) {
         guard let audioTrack = videoComposition.addMutableTrack(
-            withMediaType: track.mediaType, 
+            withMediaType: track.mediaType,
             preferredTrackID: kCMPersistentTrackID_Invalid
-        ) else { 
-            return 
+        ) else {
+            return
         }
         try? audioTrack.insertTimeRange(
-            CMTimeRange(start: .zero, duration: videoAsset.duration), 
-            of: track, 
+            CMTimeRange(start: .zero, duration: videoAsset.duration),
+            of: track,
             at: .zero
         )
         break

@@ -6,7 +6,7 @@ Open Android Studio and press the Shift key twice to open the search dialog. Sea
 
 You probably need to make additional code adjustments to make sure the all orientations are working as intended.
 
-To listen to orientation changes, add [`android:configChanges="orientation"`](https://developer.android.com/guide/topics/manifest/activity-element#config) to your manifest. Then, override the [`onConfigurationChanged`](https://developer.android.com/reference/android/app/Activity#onConfigurationChanged(android.content.res.Configuration)) to receive configuration notifications. Use the [`orientation`](https://developer.android.com/reference/android/content/res/Configuration#orientation) property of the [`Configuration`](https://developer.android.com/reference/android/content/res/Configuration) object to check the new orientation.
+To listen to orientation changes, add [`android:configChanges="orientation"`](https://developer.android.com/guide/topics/manifest/activity-element#config) to your manifest. Then, override the [`onConfigurationChanged`](<https://developer.android.com/reference/android/app/Activity#onConfigurationChanged(android.content.res.Configuration)>) to receive configuration notifications. Use the [`orientation`](https://developer.android.com/reference/android/content/res/Configuration#orientation) property of the [`Configuration`](https://developer.android.com/reference/android/content/res/Configuration) object to check the new orientation.
 
 ```xml
 <activity

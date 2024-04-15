@@ -24,8 +24,8 @@ namespace KeyCommandsInXamarinForms.iOS
 
             // Create key command for Command + F
             UIKeyCommand command1 = UIKeyCommand.Create(
-                new NSString("F"), 
-                UIKeyModifierFlags.Command, 
+                new NSString("F"),
+                UIKeyModifierFlags.Command,
                 new ObjCRuntime.Selector("OnKeyPressed:")
             );
 
