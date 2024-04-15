@@ -1,42 +1,99 @@
-import { Card, PercentageProgress, Typography } from '@site/src/components';
+import { PropsWithChildren, useEffect, useState } from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { Card, CustomLink, PercentageProgress, Typography } from '@site/src/components';
 import _kebabCase from 'lodash/kebabCase';
+import { v4 as uuidv4 } from 'uuid';
 
-type Metric = {
-  title?: string;
+type ManualAccessibilityMetricApiModel = {
+  title: string;
   number: number;
   isPercentage: boolean;
 };
 
-export type PercentageBlockProps = {
-  text?: string;
-  id: string;
-  baseValue?: number;
-  metrics: Metric[];
-  link?: { label: string; url: string };
+type GeneratedAccessibilityMetricApiModel = {
+  key: string;
+  title: string;
+  isPercentage: boolean;
 };
 
-function getMetricText(metric: Metric) {
-  return `${metric.number}${metric.isPercentage ? '%' : ''}`;
+type GeneratedAccessibilityMetricJsonModel = {
+  name: string;
+  feature_key: string;
+  property_key: string;
+  platform: string;
+  amount: number;
+  percentage: number;
+};
+
+type AccessibilityMetricApiModel = ManualAccessibilityMetricApiModel | GeneratedAccessibilityMetricApiModel;
+
+export type PercentageBlockProps = PropsWithChildren & {
+  metrics?: AccessibilityMetricApiModel[];
+  linkLabel?: string;
+  linkUrl?: string;
+  baseValue?: number;
+};
+
+function getMetricText(metric: ManualAccessibilityMetricApiModel, locale?: string) {
+  const formattedNumber = metric.number.toLocaleString(locale);
+  return `${formattedNumber}${metric.isPercentage ? '%' : ''}`;
 }
 
-export function PercentageBlock({ text, id, baseValue, metrics, link }: PercentageBlockProps) {
+export function PercentageBlock({ metrics, linkLabel, linkUrl, baseValue, children }: PercentageBlockProps) {
+  const { i18n } = useDocusaurusContext();
+  const locale = i18n.currentLocale;
+  const id = uuidv4();
+
+  const [allMetrics, setAllMetrics] = useState<ManualAccessibilityMetricApiModel[]>([]);
+  useEffect(() => {
+    const getMetrics = () => {
+      const newMetrics = metrics.map(async metric => {
+        const isGeneratedMetric = 'key' in metric;
+
+        if (!isGeneratedMetric) {
+          return metric as ManualAccessibilityMetricApiModel;
+        } else {
+          try {
+            const module = await import(`@site/src/data/generated/data-features/${metric.key}.json`);
+            const metricJson: GeneratedAccessibilityMetricJsonModel = module.default;
+
+            return {
+              title: metric.title,
+              number: metric.isPercentage ? metricJson.percentage : metricJson.amount,
+              isPercentage: metric.isPercentage,
+            } as ManualAccessibilityMetricApiModel;
+          } catch (error) {
+            console.error(`Failed to import metric ${metric.key}:`, error);
+          }
+        }
+      });
+
+      return Promise.all(newMetrics);
+    };
+
+    const setMetrics = async () => {
+      const combinedMetrics = (await getMetrics()).filter(metric => metric);
+      setAllMetrics(combinedMetrics);
+    };
+
+    setMetrics();
+  }, []);
+
   /**
    * Render a single metric as a large percentage/number with text
    */
   function renderMetric() {
-    const metric = metrics[0];
+    const metric = allMetrics[0];
     return (
       <>
         {metric.isPercentage && <PercentageProgress className="mb-4" percentage={metric.number} />}
         <div className="flex flex-col sm:flex-row">
           <Typography className="mr-0 break-all sm:mr-8" tag="p" size="heading-xl">
-            {getMetricText(metric)}
+            {getMetricText(metric, locale)}
           </Typography>
-          {text && (
-            <Typography className="flex-1 text-body max-w-[44rem] break-words text-paragraph leading-paragraph font-normal my-4">
-              {text}
-            </Typography>
-          )}
+          <div className="flex-1 first:children:mt-0 first:children:mb-0" id={id}>
+            {children}
+          </div>
         </div>
       </>
     );
@@ -46,34 +103,30 @@ export function PercentageBlock({ text, id, baseValue, metrics, link }: Percenta
    * Render multiple metrics as text and a descending bar chart
    */
   function renderMetrics() {
-    const metricBaseValue = baseValue ?? Math.max(...metrics.map(metric => metric.number));
+    const baseVal = baseValue ?? Math.max(...allMetrics.map(metric => metric.number));
 
     return (
       <div className="flex flex-col md:flex-row">
-        {text && (
-          <div className="flex-1 mb-4 md:mb-0 md:mr-8" id={id}>
-            {text}
-          </div>
-        )}
+        <div className="flex-1 mb-4 md:mb-0 md:mr-8 first:children:mt-0 first:children:mb-0" id={id}>
+          {children}
+        </div>
         <ul className="flex-1" aria-labelledby={id}>
-          {metrics
+          {allMetrics
             .sort((a, b) => b.number - a.number)
-            .map(metric => {
-              const id = `${_kebabCase(metric.title)}-${metric.number}`;
-              const metricProgressPercentage = metric.isPercentage
-                ? metric.number
-                : (metric.number / metricBaseValue) * 100;
-              const metricLabel = `${metric.title} ${getMetricText(metric)}`;
+            .map((metric, i) => {
+              const id = `${_kebabCase(metric.title)}-${metric.number}-${i}`;
+              const metricProgressPercentage = metric.isPercentage ? metric.number : (metric.number / baseVal) * 100;
+              const metricLabel = `${metric.title} ${getMetricText(metric, locale)}`;
 
               return (
                 <li key={id} aria-label={metricLabel}>
-                  <Typography tag="p" size="paragraph">
+                  <Typography tag="p" size="paragraph" className={i === 0 ? '!mt-0' : ''}>
                     {metric.title}
                   </Typography>
                   <div className="flex items-center -mt-3">
                     <PercentageProgress className="mr-4 flex-1" percentage={metricProgressPercentage} />
                     <Typography className="flex-grow-0" tag="p" size="paragraph">
-                      {getMetricText(metric)}
+                      {getMetricText(metric, locale)}
                     </Typography>
                   </div>
                 </li>
@@ -86,8 +139,12 @@ export function PercentageBlock({ text, id, baseValue, metrics, link }: Percenta
 
   return (
     <Card className="flex-1">
-      {metrics.length === 1 ? renderMetric() : renderMetrics()}
-      {link && <div className="flex justify-end mt-4">TODO: Add link component</div>}
+      {allMetrics.length === 1 ? renderMetric() : renderMetrics()}
+      {linkLabel && linkUrl && (
+        <div className="flex justify-end mt-4">
+          <CustomLink className="flex justify-end mt-4" url={linkUrl} label={linkLabel} />
+        </div>
+      )}
     </Card>
   );
 }
