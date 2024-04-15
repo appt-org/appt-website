@@ -24,10 +24,10 @@ const config: Config = {
 
   headTags: [
     {
-      tagName: 'link',
+      tagName: "link",
       attributes: {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap',
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap",
       },
     },
   ],
@@ -53,12 +53,12 @@ const config: Config = {
   plugins: [
     tailwindPlugin,
     [
-      'content-docs',
+      "content-docs",
       {
-        id: 'guidelines',
-        path: 'guidelines',
-        routeBasePath: 'guidelines',
-        sidebarPath: './sidebarsGuidelines.ts',
+        id: "guidelines",
+        path: "guidelines",
+        routeBasePath: "guidelines",
+        sidebarPath: "./sidebarsGuidelines.ts",
       },
     ],
     [
@@ -84,9 +84,7 @@ const config: Config = {
             "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         theme: {
-          customCss: [
-            "./src/css/globals.css",
-          ],
+          customCss: ["./src/css/globals.css"],
         },
       } satisfies Preset.Options,
     ],
@@ -98,8 +96,8 @@ const config: Config = {
     navbar: {
       logo: {
         alt: "Logo Appt",
-        src: "img/appt-logo-light.svg",
-        srcDark: "img/appt-logo-dark.svg",
+        src: "img/light/appt-logo-light.svg",
+        srcDark: "img/dark/appt-logo-dark.svg",
         className: "nav-logo",
         href: "https://appt.org",
       },
@@ -154,7 +152,14 @@ const config: Config = {
     prism: {
       theme: prismThemes.okaidia,
       darkTheme: prismThemes.okaidia,
-      additionalLanguages: ['java', 'kotlin', 'swift', 'objectivec', 'csharp', 'dart'],
+      additionalLanguages: [
+        "java",
+        "kotlin",
+        "swift",
+        "objectivec",
+        "csharp",
+        "dart",
+      ],
     },
   } satisfies Preset.ThemeConfig,
 };
