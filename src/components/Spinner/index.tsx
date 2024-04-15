@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import clsx from 'clsx';
 
 export type SpinnerProps = {
   className?: string;
@@ -6,7 +6,7 @@ export type SpinnerProps = {
 };
 
 export function Spinner({ className, loadingText }: SpinnerProps) {
-  const classes = clsx("my-0 mx-auto w-8 h-8", className);
+  const classes = clsx('my-0 mx-auto w-8 h-8', className);
 
   return (
     <div className={classes} role="status">

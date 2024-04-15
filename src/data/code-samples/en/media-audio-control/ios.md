@@ -16,8 +16,8 @@ The following channels are available:
 ```swift
 // Set audio channel
 try AVAudioSession.sharedInstance().setCategory(
-    .playback, 
-    mode: .default, 
+    .playback,
+    mode: .default,
     options: []
 )
 

@@ -12,7 +12,7 @@ element.accessibilityTraits = .updatesFrequently
 
 // Replicate live region
 let message = NSAttributedString(
-    string: "Appt live region", 
+    string: "Appt live region",
     attributes: [.accessibilitySpeechQueueAnnouncement: true]
 )
 UIAccessibility.post(notification: .announcement, argument: message)

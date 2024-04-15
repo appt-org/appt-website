@@ -5,9 +5,9 @@ On React Native, the [`isBoldTextEnabled()`](https://reactnative.dev/docs/next/a
 Note: it only checks the preference on iOS. Android is not yet supported.
 
 ```jsx
-import { AccessibilityInfo } from "react-native";
+import { AccessibilityInfo } from 'react-native';
 
 if (AccessibilityInfo.isBoldTextEnabled()) {
-    // Use bold text
+  // Use bold text
 }
 ```

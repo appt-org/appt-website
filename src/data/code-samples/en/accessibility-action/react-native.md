@@ -6,7 +6,7 @@ In React Native, you can add [`accessibility actions`](https://reactnative.dev/d
 <View
   accessible
   accessibilityRole="adjustable"
-  accessibilityActions={[{name: 'increment', label: 'Increment'}]}
+  accessibilityActions={[{ name: 'increment', label: 'Increment' }]}
   onAccessibilityAction={event => {
     if (event.nativeEvent.actionName === 'increment') {
       handleIncrement();
