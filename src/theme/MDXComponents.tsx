@@ -7,6 +7,7 @@ import {
   PercentageBlock,
   TwoColumnBlock,
   Hero,
+  Video,
 } from "@site/src/components";
 
 import MDXComponents from "@theme-original/MDXComponents";
@@ -22,4 +23,5 @@ export default {
   Image,
   PercentageBlock,
   CodeSample,
+  Video,
 };
