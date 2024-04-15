@@ -2,23 +2,27 @@ import { useState } from "react";
 import clsx from "clsx";
 import { PlayIcon } from "@site/src/icons";
 import { Spinner, YoutubeVideo } from "@site/src/components";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import { Image } from "@site/src/components";
 
 export type VideoProps = {
   title: string;
-  videoId: string;
-//   thumbnail?: ImageApiModel;
-  locale?: string;
+  youTubeId: string;
+  thumbnailSrc?: string;
+  thumbnailDarkSrc?: string;
+  thumbnailAlt?: string;
 };
 
 export function Video({
-  videoId,
+  youTubeId,
   title,
-//   thumbnail,
-  locale,
+  thumbnailSrc,
+  thumbnailDarkSrc,
+  thumbnailAlt,
 }: VideoProps) {
-  const currentLocale = locale || "en";
-  const youtubeThumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
-  const fallbackYoutubeThumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+  const { i18n } = useDocusaurusContext();
+  const youtubeThumbnailUrl = `https://img.youtube.com/vi/${youTubeId}/maxresdefault.jpg`;
+  const fallbackYoutubeThumbnailUrl = `https://img.youtube.com/vi/${youTubeId}/hqdefault.jpg`;
 
   const [playing, setPlaying] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -28,16 +32,17 @@ export function Video({
   const videoClasses = clsx("absolute left-0 top-0 w-full h-full");
   const videoLoaderClasses = clsx("bg-surface", videoClasses);
 
-	const videoLoadingText = locale === "en" ? "Loading video" : "Video wordt geladen";
-//   const playWithThumbnailText =
-//     currentLocale === "en"
-//       ? `Play video: ${title}. Contains image: ${thumbnail.alt}`
-//       : `Video afspelen: ${title}. Bevat afbeelding: ${thumbnail.alt}`;
+  const videoLoadingText =
+    i18n.currentLocale === "en" ? "Loading video" : "Video wordt geladen";
+  const playWithThumbnailText =
+    i18n.currentLocale === "en"
+      ? `Play video: ${title}. Contains image: ${thumbnailAlt}`
+      : `Video afspelen: ${title}. Bevat afbeelding: ${thumbnailAlt}`;
   const playText =
-    currentLocale === "en"
+    i18n.currentLocale === "en"
       ? `Play video: ${title}`
       : `Video afspelen: ${title}`;
-  const playButtonAriaLabel = playText //thumbnail?.alt ? playWithThumbnailText : playText;
+  const playButtonAriaLabel = thumbnailAlt ? playWithThumbnailText : playText;
 
   async function onReady() {
     setLoading(false);
@@ -48,34 +53,36 @@ export function Video({
       {playing && (
         <YoutubeVideo
           className={videoClasses}
-          videoId={videoId}
+          youTubeId={youTubeId}
           title={title}
           onReady={onReady}
-          locale={currentLocale}
         />
       )}
       {loading && (
         <div className={videoLoaderClasses}>
           <div className="relative w-full h-full">
-            <img src={thumbnailUrl} />
-            {/* {video.thumbnail ? (
-              <Image image={video.thumbnail} className="object-cover w-full" />
+            {thumbnailSrc ? (
+              <Image
+                src={thumbnailSrc}
+                dark={thumbnailDarkSrc}
+                alt={thumbnailAlt ?? title}
+                className="object-cover w-full h-full"
+              />
             ) : (
               <Image
                 src={thumbnailUrl}
-                alt={video.title}
-                layout="fill"
-                objectFit="cover"
-                unoptimized
-                onLoadingComplete={result => {
+                alt={title}
+                onLoad={(result) => {
+                  const target = result.target as HTMLImageElement;
                   // Youtube's maxresdefault.jpg thumbnails might not exist because it depends on the upload source of the video itself.
                   // It does return a 404, but also a small fallback thumbnail 120x90, which kind of ruins our way to easily catch the error
                   // to show a fallback thumbnail of hqdefault.jpg (which should always exist). We can however check the natural width and use that
                   // to determine if a fallback must be showed
-                  result.naturalWidth <= 120 && setThumbnailUrl(fallbackYoutubeThumbnailUrl);
+                  target.naturalWidth <= 120 && setThumbnailUrl(fallbackYoutubeThumbnailUrl);
                 }}
+                className="object-cover w-full h-full"
               />
-            )} */}
+            )}
           </div>
           <button
             className="flex items-center justify-center absolute top-0 left-0 w-full h-full group"
@@ -86,7 +93,10 @@ export function Video({
               {!playing ? (
                 <PlayIcon className="w-10 h-10 md:w-16 md:h-16" />
               ) : (
-                <Spinner className="md:w-10 md:h-10" loadingText={videoLoadingText} />
+                <Spinner
+                  className="md:w-10 md:h-10"
+                  loadingText={videoLoadingText}
+                />
               )}
             </span>
           </button>
