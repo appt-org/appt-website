@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "appt-org",
+    "acceptance": "appt-org"
+  },
+  "targets": {},
+  "etags": {}
+}
