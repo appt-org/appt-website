@@ -1,11 +1,7 @@
-import { PropsWithChildren, useEffect, useState } from "react";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import {
-  Card,
-  PercentageProgress,
-  Typography,
-} from "@site/src/components";
-import _kebabCase from "lodash/kebabCase";
+import { PropsWithChildren, useEffect, useState } from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { Card, CustomLink, PercentageProgress, Typography } from '@site/src/components';
+import _kebabCase from 'lodash/kebabCase';
 import { v4 as uuidv4 } from 'uuid';
 
 type ManualAccessibilityMetricApiModel = {
@@ -27,13 +23,14 @@ type GeneratedAccessibilityMetricJsonModel = {
   platform: string;
   amount: number;
   percentage: number;
-}
+};
 
 type AccessibilityMetricApiModel = ManualAccessibilityMetricApiModel | GeneratedAccessibilityMetricApiModel;
 
 export type PercentageBlockProps = PropsWithChildren & {
   metrics?: AccessibilityMetricApiModel[];
-  // link?: LinkApiModel;
+  linkLabel?: string;
+  linkUrl?: string;
   baseValue?: number;
 };
 
@@ -42,7 +39,7 @@ function getMetricText(metric: ManualAccessibilityMetricApiModel, locale?: strin
   return `${formattedNumber}${metric.isPercentage ? '%' : ''}`;
 }
 
-export function PercentageBlock({ metrics, baseValue, children }: PercentageBlockProps) {
+export function PercentageBlock({ metrics, linkLabel, linkUrl, baseValue, children }: PercentageBlockProps) {
   const { i18n } = useDocusaurusContext();
   const locale = i18n.currentLocale;
   const id = uuidv4();
@@ -50,21 +47,19 @@ export function PercentageBlock({ metrics, baseValue, children }: PercentageBloc
   const [allMetrics, setAllMetrics] = useState<ManualAccessibilityMetricApiModel[]>([]);
   useEffect(() => {
     const getMetrics = () => {
-      const newMetrics = metrics.map(async (metric) => {
-        const isGeneratedMetric = 'key' in metric
+      const newMetrics = metrics.map(async metric => {
+        const isGeneratedMetric = 'key' in metric;
 
-        if (!isGeneratedMetric) { 
+        if (!isGeneratedMetric) {
           return metric as ManualAccessibilityMetricApiModel;
         } else {
           try {
-            const module = await import(
-              `@site/src/data/generated/data-features/${metric.key}.json`
-            );
+            const module = await import(`@site/src/data/generated/data-features/${metric.key}.json`);
             const metricJson: GeneratedAccessibilityMetricJsonModel = module.default;
-  
+
             return {
               title: metric.title,
-              number: metric.isPercentage? metricJson.percentage : metricJson.amount,
+              number: metric.isPercentage ? metricJson.percentage : metricJson.amount,
               isPercentage: metric.isPercentage,
             } as ManualAccessibilityMetricApiModel;
           } catch (error) {
@@ -79,7 +74,7 @@ export function PercentageBlock({ metrics, baseValue, children }: PercentageBloc
     const setMetrics = async () => {
       const combinedMetrics = (await getMetrics()).filter(metric => metric);
       setAllMetrics(combinedMetrics);
-    }
+    };
 
     setMetrics();
   }, []);
@@ -96,7 +91,9 @@ export function PercentageBlock({ metrics, baseValue, children }: PercentageBloc
           <Typography className="mr-0 break-all sm:mr-8" tag="p" size="heading-xl">
             {getMetricText(metric, locale)}
           </Typography>
-          <div className="flex-1" id={id}>{children}</div>
+          <div className="flex-1 first:children:mt-0 first:children:mb-0" id={id}>
+            {children}
+          </div>
         </div>
       </>
     );
@@ -110,18 +107,20 @@ export function PercentageBlock({ metrics, baseValue, children }: PercentageBloc
 
     return (
       <div className="flex flex-col md:flex-row">
-        <div className="flex-1" id={id}>{children}</div>
+        <div className="flex-1 mb-4 md:mb-0 md:mr-8 first:children:mt-0 first:children:mb-0" id={id}>
+          {children}
+        </div>
         <ul className="flex-1" aria-labelledby={id}>
           {allMetrics
             .sort((a, b) => b.number - a.number)
-            .map(metric => {
-              const id = `${_kebabCase(metric.title)}-${metric.number}`;
+            .map((metric, i) => {
+              const id = `${_kebabCase(metric.title)}-${metric.number}-${i}`;
               const metricProgressPercentage = metric.isPercentage ? metric.number : (metric.number / baseVal) * 100;
               const metricLabel = `${metric.title} ${getMetricText(metric, locale)}`;
 
               return (
                 <li key={id} aria-label={metricLabel}>
-                  <Typography tag="p" size="paragraph">
+                  <Typography tag="p" size="paragraph" className={i === 0 ? '!mt-0' : ''}>
                     {metric.title}
                   </Typography>
                   <div className="flex items-center -mt-3">
@@ -141,11 +140,11 @@ export function PercentageBlock({ metrics, baseValue, children }: PercentageBloc
   return (
     <Card className="flex-1">
       {allMetrics.length === 1 ? renderMetric() : renderMetrics()}
-      {/* {block.link && path !== block.link.page?.url && (
+      {linkLabel && linkUrl && (
         <div className="flex justify-end mt-4">
-          <CFLink link={block.link} />
+          <CustomLink className="flex justify-end mt-4" url={linkUrl} label={linkLabel} />
         </div>
-      )} */}
+      )}
     </Card>
   );
 }
