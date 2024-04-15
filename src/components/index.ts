@@ -8,3 +8,6 @@ export * from './TwoColumnBlock';
 export * from './Image';
 export * from './PercentageBlock';
 export * from './Hero';
+export * from './Video';
+export * from './Video/YoutubeVideo';
+export * from './Spinner';
