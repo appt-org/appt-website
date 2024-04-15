@@ -1,13 +1,17 @@
-import { Card, CustomLink, Image, Typography } from "@site/src/components";
-import { PropsWithChildren } from "react";
+import { Card, CustomLink, Image, Typography } from '@site/src/components';
+import { PropsWithChildren } from 'react';
+
+// Alt is only required if icon is provided
+export type LinkListImage =
+  | { icon: string; darkIcon?: string; iconAlt: string }
+  | { icon: undefined; darkIcon: undefined; iconAlt: undefined };
 
 export type LinkListItemProps = {
   title: string;
   url: string;
   pageTitle?: string;
   shortDescription?: string;
-  icon?: string;
-};
+} & LinkListImage;
 
 export function LinkListItem({
   url,
@@ -15,9 +19,12 @@ export function LinkListItem({
   pageTitle,
   shortDescription,
   icon,
+  darkIcon,
+  iconAlt,
 }: PropsWithChildren<LinkListItemProps>) {
   const isHighlighted = !!shortDescription && !!pageTitle;
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   function onLinkClick({ title, url }: { title: string; url: string }) {
     // TODO: Analytics
     // logEvent({
@@ -38,7 +45,8 @@ export function LinkListItem({
                 <Image
                   className="object-cover h-full w-full max-w-12 max-h-12"
                   src={icon}
-                  alt={pageTitle}
+                  dark={darkIcon}
+                  alt={iconAlt}
                 />
               </div>
             )}
@@ -51,12 +59,7 @@ export function LinkListItem({
             {shortDescription}
           </Typography>
         </div>
-        <CustomLink
-          className="self-end"
-          label={title}
-          url={url}
-          onClick={() => onLinkClick({ title, url })}
-        />
+        <CustomLink className="self-end" label={title} url={url} onClick={() => onLinkClick({ title, url })} />
       </Card>
     );
   }
