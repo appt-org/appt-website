@@ -74,8 +74,5 @@ Available values for `textContentType` on iOS:
 - `oneTimeCode`
 
 ```jsx
-<TextInput
-    autoComplete='email'
-    textContentType='emailAdress'
-/>
+<TextInput autoComplete="email" textContentType="emailAdress" />
 ```

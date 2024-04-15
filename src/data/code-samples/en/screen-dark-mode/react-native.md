@@ -11,7 +11,7 @@ import { ThemeProvider } from 'styled-components';
 const darkTheme = {
     primary: "#f967e9",
 };
-    
+
 const lighTheme = {
     primary: "#cc00b9"
 };

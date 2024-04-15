@@ -12,7 +12,7 @@ public override bool OnTouchEvent(MotionEvent event)
     }
     return base.OnTouchEvent(event);
 }
-    
+
 // iOS CustomRenderer
 public override void TouchesBegan(NSSet touches, UIEvent event)
 {

@@ -8,11 +8,6 @@ You can also use a package for displaying instructions, such as [React Native Pa
 import { TextInput } from 'react-native-paper';
 
 const InputWithLabelComponent = () => {
-  return (
-    <TextInput
-      label="Name"
-      value={name}
-    />
-  );
+  return <TextInput label="Name" value={name} />;
 };
 ```

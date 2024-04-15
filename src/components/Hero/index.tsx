@@ -1,5 +1,5 @@
-import { Image, Typography } from "@site/src/components";
-import clsx from "clsx";
+import { Image, Typography } from '@site/src/components';
+import clsx from 'clsx';
 
 type WithImageProps = {
   imageSrc: string;
@@ -18,15 +18,9 @@ export type HeroProps = {
   introText?: string;
 } & (WithImageProps | WithoutImageProps);
 
-export function Hero({
-  title,
-  introText,
-  imageSrc,
-  imageDarkSrc,
-  alt,
-}: HeroProps) {
-  const classes = clsx("flex flex-col items-center flex-1 md:flex-row", {
-    "justify-center": !!imageSrc || !!imageDarkSrc,
+export function Hero({ title, introText, imageSrc, imageDarkSrc, alt }: HeroProps) {
+  const classes = clsx('flex flex-col items-center flex-1 md:flex-row', {
+    'justify-center': !!imageSrc || !!imageDarkSrc,
   });
 
   return (

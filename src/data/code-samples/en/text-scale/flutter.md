@@ -15,7 +15,7 @@ MediaQuery(
 );
 
 Text(
-  'Appt', 
+  'Appt',
   textScaleFactor: 1.0, // Override scale for a single widget
 );
 ```

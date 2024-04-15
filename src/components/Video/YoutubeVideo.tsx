@@ -1,5 +1,5 @@
-import YouTube, { YouTubeEvent } from "react-youtube";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import YouTube, { YouTubeEvent } from 'react-youtube';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 export type YoutubeVideoProps = {
   className?: string;
@@ -8,12 +8,7 @@ export type YoutubeVideoProps = {
   onReady?: () => void;
 };
 
-export function YoutubeVideo({
-  className,
-  youTubeId,
-  title,
-  onReady,
-}: YoutubeVideoProps) {
+export function YoutubeVideo({ className, youTubeId, title, onReady }: YoutubeVideoProps) {
   const { i18n } = useDocusaurusContext();
 
   async function handleReady(e: YouTubeEvent) {
@@ -30,7 +25,7 @@ export function YoutubeVideo({
       title={title}
       onReady={handleReady}
       opts={{
-        host: "https://www.youtube-nocookie.com",
+        host: 'https://www.youtube-nocookie.com',
         playerVars: {
           autoplay: 1,
           disablekb: 1,

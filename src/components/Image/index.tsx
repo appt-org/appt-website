@@ -1,6 +1,6 @@
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import ThemedImage from "@theme/ThemedImage";
-import { ComponentProps } from "react";
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import ThemedImage from '@theme/ThemedImage';
+import { ComponentProps } from 'react';
 
 export type ImageProps = ComponentProps<'img'> & {
   alt: string;

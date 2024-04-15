@@ -8,9 +8,9 @@ import {
   TwoColumnBlock,
   Hero,
   Video,
-} from "@site/src/components";
+} from '@site/src/components';
 
-import MDXComponents from "@theme-original/MDXComponents";
+import MDXComponents from '@theme-original/MDXComponents';
 
 export default {
   // Re-use the default mapping
