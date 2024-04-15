@@ -3,10 +3,13 @@ import {
   CodeSample,
   Column,
   ColumnRow,
-  Image,
-  PercentageBlock,
-  TwoColumnBlock,
   Hero,
+  Image,
+  LinkList,
+  LinkListItem,
+  PercentageBlock,
+  Quote,
+  TwoColumnBlock,
   Video,
 } from '@site/src/components';
 
@@ -23,5 +26,8 @@ export default {
   Image,
   PercentageBlock,
   CodeSample,
+  Quote,
+  LinkList,
+  LinkListItem,
   Video,
 };

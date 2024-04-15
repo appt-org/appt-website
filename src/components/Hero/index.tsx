@@ -20,7 +20,7 @@ export type HeroProps = {
 
 export function Hero({ title, introText, imageSrc, imageDarkSrc, alt }: HeroProps) {
   const classes = clsx('flex flex-col items-center flex-1 md:flex-row', {
-    'justify-center': !!imageSrc || !!imageDarkSrc,
+    'justify-center': !!imageSrc,
   });
 
   return (
