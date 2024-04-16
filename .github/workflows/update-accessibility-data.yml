@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-       - name: Create env file
+      - name: Create env file
         run: |
           touch .env.secrets
           echo DATA_SA_KEY=${{ secrets.DATA_SA_KEY }} >> .env.secrets
