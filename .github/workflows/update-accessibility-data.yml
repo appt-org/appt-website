@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: 'npm run update-accessibility-data'
+      - run: 'npm ci && npm run update-accessibility-data'
       - name: Commit data
         run: |
           git config --global user.name 'Lisa Klein'
