@@ -1,5 +1,6 @@
 import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
+import 'dotenv/config';
 import { themes as prismThemes } from 'prism-react-renderer';
 import tailwindPlugin from './plugins/tailwind-config';
 import { getTranslatedPath } from './route-translations';
@@ -8,6 +9,7 @@ const config: Config = {
   title: 'Appt',
   tagline: 'Gids voor het maken van toegankelijke apps',
   favicon: 'favicon.ico',
+  noIndex: process.env.ENVIRONMENT !== 'production',
 
   // Set the production url of your site here
   url: 'https://appt.org',
@@ -103,11 +105,11 @@ const config: Config = {
       },
       items: [
         { to: '/', label: 'Home', position: 'right' },
-        { to: `/${getTranslatedPath('stats')}`, label: 'Stats', position: 'right' },
+        // { to: `/${getTranslatedPath('stats')}`, label: 'Stats', position: 'right' },
         { to: '/docs', label: 'Docs', position: 'right' },
         { to: `/${getTranslatedPath('guidelines')}`, label: getTranslatedPath('guidelines', true), position: 'right' },
         { to: `/${getTranslatedPath('articles')}`, label: getTranslatedPath('articles', true), position: 'right' },
-        { to: `/${getTranslatedPath('partners')}`, label: 'Partners', position: 'right' },
+        // { to: `/${getTranslatedPath('partners')}`, label: 'Partners', position: 'right' },
         {
           type: 'localeDropdown',
           position: 'right',
