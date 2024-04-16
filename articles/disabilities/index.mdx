@@ -37,12 +37,14 @@ We focus on disabilities that make it more difficult to use apps. We have divide
 
 There is no combined data about how many Dutch people have a disability. In the table below, we have combined data from multiple sources. We have calculated averages for the percentages and amount on the basis of the available data. Percentages are rounded to two significant figures, numbers are rounded to thousands. We have assumed there are 17.4 million Dutch citizens.
 
-Amount of Dutch people with an impairment which effect the usage of apps.
-
-{/* prettier-ignore */}
- {/* TODO
-
-<PercentageBlock name="Disabilities - Metrics"></PercentageBlock> */}
+<PercentageBlock
+  metrics={[
+    { title: 'Impairments due to aging', number: 3400000, isPercentage: false },
+    { title: 'Low literate', number: 2500000, isPercentage: false },
+    { title: 'Hearing impairment', number: 767000, isPercentage: false },
+  ]}>
+  Amount of Dutch people with an impairment which effect the usage of apps.
+</PercentageBlock>
 
 ### **Percentages and sources**
 
