@@ -19,7 +19,25 @@ article > p {
   }
 }
 
-article > p {
+article > p,
+.theme-doc-markdown > p {
+  max-width: theme(maxWidth.md);
+  margin: theme(spacing.4) auto;
+  font-size: theme(fontSize.paragraph);
+  line-height: theme(lineHeight.paragraph);
+}
+
+.theme-doc-markdown {
   max-width: theme(maxWidth.md);
   margin: auto;
+}
+
+h1 {
+  line-height: theme(lineHeight.heading-xl);
+  font-size: theme(fontSize.mobile-heading-xl);
+  font-weight: theme(fontWeight.light);
+
+  @media (min-width: theme(screens.sm)) {
+    font-size: theme(fontSize.heading-xl);
+  }
 }
