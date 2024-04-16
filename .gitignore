@@ -21,3 +21,6 @@ yarn-error.log*
 
 firebase-debug.log
 .firebase
+
+data_sa_key.json
+.env.secrets
