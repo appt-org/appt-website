@@ -24,8 +24,8 @@ export function Hero({ title, introText, imageSrc, imageDarkSrc, alt }: HeroProp
   });
 
   return (
-    <div className="bg-surface w-screen shadow-md">
-      <div className="max-w-md w-full mx-auto px-0 py-8 sm:py-16 sm:px-8">
+    <div className="bg-surface shadow-md px-4 lg:px-16">
+      <div className="max-w-md mx-auto px-0 py-8 sm:py-16 sm:px-8">
         <div className={classes}>
           {!!imageSrc && (
             <div className="relative self-stretch grow-0 mb-8 mt-0 md:my-auto md:mr-8 md:h-auto md:basis-1/3 shrink-0">

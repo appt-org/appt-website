@@ -1,0 +1,41 @@
+.nav-logo {
+  width: theme(width.24);
+  height: theme(height.12);
+}
+
+.navbar {
+  padding: 0;
+  box-shadow: none;
+  background-color: theme(colors.surface);
+}
+
+.navbar__inner {
+  height: theme(height.16);
+  max-width: theme(maxWidth.xl);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: between;
+  padding-block: theme(spacing.3);
+  padding-inline: theme(spacing.4);
+
+  @media (min-width: theme(screens.lg)) {
+    padding-inline: theme(spacing.8);
+  }
+}
+
+main.container {
+  padding: 0;
+  margin-top: 0 !important;
+  max-width: initial;
+  overflow-x: hidden;
+}
+
+main.container > .row > .col.col--8 {
+  max-width: max-content;
+  padding: 0;
+}
+
+.footer {
+  background-color: theme(colors.surface);
+}

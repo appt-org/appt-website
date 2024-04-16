@@ -1,8 +1,8 @@
 import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
+import 'dotenv/config';
 import { themes as prismThemes } from 'prism-react-renderer';
 import tailwindPlugin from './plugins/tailwind-config';
-import 'dotenv/config';
 
 const config: Config = {
   title: 'Appt',
@@ -85,7 +85,7 @@ const config: Config = {
           editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
-          customCss: ['./src/css/globals.css'],
+          customCss: ['./src/css/globals.css', './src/css/markdown.css', './src/css/layout.css'],
         },
       } satisfies Preset.Options,
     ],
