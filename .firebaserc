@@ -1,7 +1,7 @@
 {
   "projects": {
     "default": "appt-org",
-    "acceptance": "appt-org"
+    "acceptance": "appt-org-acc"
   },
   "targets": {},
   "etags": {}
