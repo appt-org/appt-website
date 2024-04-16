@@ -1,0 +1,17 @@
+name: Update accessibility data
+'on':
+  push:
+    branches:
+      - feature/stats-api
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: 'npm run update-accessibility-data'
+      - name: Commit data
+        run: |
+          git config --global user.name 'Lisa Klein'
+          git config --global user.email 'lisaklein@users.noreply.github.com'
+          git commit -am "Automated data update"
+          git push
