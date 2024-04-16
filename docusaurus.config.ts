@@ -2,11 +2,13 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
 import { themes as prismThemes } from 'prism-react-renderer';
 import tailwindPlugin from './plugins/tailwind-config';
+import 'dotenv/config';
 
 const config: Config = {
   title: 'Appt',
   tagline: 'Gids voor het maken van toegankelijke apps',
   favicon: 'favicon.ico',
+  noIndex: process.env.ENVIRONMENT !== 'production',
 
   // Set the production url of your site here
   url: 'https://appt.org',
