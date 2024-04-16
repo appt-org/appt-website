@@ -104,11 +104,11 @@ const config: Config = {
       },
       items: [
         { to: '/', label: 'Home', position: 'right' },
-        { to: '/stats', label: 'Stats', position: 'right' },
+        // { to: '/stats', label: 'Stats', position: 'right' },
         { to: '/docs', label: 'Docs', position: 'right' },
         { to: '/guidelines', label: 'Guidelines', position: 'right' },
         { to: '/articles', label: 'Articles', position: 'right' },
-        { to: '/partners', label: 'Partners', position: 'right' },
+        // { to: '/partners', label: 'Partners', position: 'right' },
         {
           type: 'localeDropdown',
           position: 'right',
@@ -121,15 +121,6 @@ const config: Config = {
     },
     footer: {
       links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
         {
           title: 'Community',
           items: [
