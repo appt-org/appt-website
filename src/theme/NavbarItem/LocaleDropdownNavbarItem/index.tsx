@@ -1,4 +1,4 @@
-import React, { MouseEventHandler } from 'react';
+import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { translate } from '@docusaurus/Translate';
 import { useLocation } from '@docusaurus/router';
@@ -6,6 +6,9 @@ import DropdownNavbarItem from '@theme/NavbarItem/DropdownNavbarItem';
 import type { LinkLikeNavbarItemProps } from '@theme/NavbarItem';
 import type { Props } from '@theme/NavbarItem/LocaleDropdownNavbarItem';
 import BrowserOnly from '@docusaurus/BrowserOnly';
+
+import { ChevronIcon } from '@site/src/icons';
+import clsx from 'clsx';
 
 export default function LocaleDropdownNavbarItem({
   mobile,
@@ -27,6 +30,9 @@ export default function LocaleDropdownNavbarItem({
         description: 'The label for the mobile language switcher dropdown',
       })
     : localeConfigs[currentLocale]!.label;
+
+  const navbarLabelClass = clsx({ 'flex items-center font-normal': !mobile });
+  const chevronClass = clsx({ 'w-8 h-8 ml-8': !mobile, hidden: mobile });
 
   return (
     <BrowserOnly>
@@ -55,7 +61,19 @@ export default function LocaleDropdownNavbarItem({
 
         const items = [...dropdownItemsBefore, ...localeItems, ...dropdownItemsAfter];
 
-        return <DropdownNavbarItem {...props} mobile={mobile} label={dropdownLabel} items={items} />;
+        return (
+          <DropdownNavbarItem
+            {...props}
+            mobile={mobile}
+            label={
+              <span className={navbarLabelClass}>
+                <span>{dropdownLabel}</span>
+                <ChevronIcon className={chevronClass} />
+              </span>
+            }
+            items={items}
+          />
+        );
       }}
     </BrowserOnly>
   );

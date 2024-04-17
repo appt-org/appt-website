@@ -1,5 +1,5 @@
-@import "./prism/a11y-light.css";
-@import "./prism/a11y-dark.css";
+@import './prism/a11y-light.css';
+@import './prism/a11y-dark.css';
 
 @tailwind base;
 @tailwind components;
@@ -29,7 +29,7 @@ html {
   --color-background: 245 245 245; /* #F5F5F5 */
 
   /* Docusaurus theme variables */
-  --ifm-font-family-base: "Rubik", sans-serif;
+  --ifm-font-family-base: 'Rubik', sans-serif;
   --ifm-color-primary: rgb(var(--color-accent));
 
   /* TODO */
@@ -44,7 +44,7 @@ html {
 }
 
 /* Dark theme */
-[data-theme="dark"] {
+[data-theme='dark'] {
   --color-accent: 249 103 233; /* #F967E9 */
   --color-accent-hover: 248 69 228; /* #f845e4 */
   --color-onaccent: 0 0 0; /* #000000 */
@@ -66,60 +66,8 @@ html {
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-.nav-logo {
-  width: theme(width.24);
-  height: theme(height.12);
-}
-
-.navbar {
-  padding: 0;
-  box-shadow: none;
-  background-color: theme(colors.surface);
-}
-
-.navbar__inner {
-  height: theme(height.16);
-  max-width: theme(maxWidth.xl);
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: between;
-  padding-block: theme(spacing.3);
-  padding-inline: theme(spacing.4);
-
-  @media (min-width: theme(screens.lg)) {
-    padding-inline: theme(spacing.8);
-  }
-}
-
-.footer {
-  background-color: theme(colors.surface);
-}
-
 body {
   background-color: rgb(var(--color-background));
-}
-
-main.container {
-  max-width: max-content;
-  padding: 0;
-  margin-top: 0 !important;
-}
-
-/* Unordered lists cannot be swizzled */
-.markdown ol {
-  max-width: theme(maxWidth.md);
-  list-style-type: decimal;
-}
-
-.markdown ol li {
-  margin-top: theme(spacing.4);
-  margin-left: theme(spacing.7);
-}
-
-main.container > .row > .col.col--8 {
-  max-width: max-content;
-  padding: 0;
 }
 
 /* Focus outline */
@@ -151,21 +99,6 @@ main.container > .row > .col.col--8 {
   .hyphens-auto {
     hyphens: auto;
   }
-}
-
-/* Fix spacing for markdown items that are not placed within e.g. a two column block  */
-article > .markdown-content,
-article > p {
-  padding-inline: theme(spacing.4);
-
-  @media (min-width: theme(screens.sm)) {
-    padding-inline: theme(spacing.8);
-  }
-}
-
-article > p {
-  max-width: theme(maxWidth.md);
-  margin: auto;
 }
 
 /* Custom class to hide scrollbar (Chrome, Edge, Safari and Opera) */

@@ -35,7 +35,7 @@ export function Quote({
   linkLabel,
   url,
 }: QuoteProps) {
-  const classes = clsx('flex flex-col items-center justify-center md:flex-row', {
+  const classes = clsx('flex flex-col items-center justify-center md:flex-row mb-12 md:mb-20', {
     'md:flex-row-reverse': !isImageLeft,
   });
   return (
