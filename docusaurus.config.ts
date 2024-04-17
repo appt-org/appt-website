@@ -1,9 +1,9 @@
 import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
-import 'dotenv/config';
 import { themes as prismThemes } from 'prism-react-renderer';
 import tailwindPlugin from './plugins/tailwind-config';
-import { getTranslatedPath } from './route-translations';
+import 'dotenv/config';
+import { getTranslatedPath } from './src/utils/route-translations';
 
 const config: Config = {
   title: 'Appt',
@@ -15,7 +15,7 @@ const config: Config = {
   url: 'https://appt.org',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: process.env.BASE_URL,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -52,7 +52,20 @@ const config: Config = {
       },
     },
   },
-
+  presets: [
+    [
+      'classic',
+      {
+        docs: {
+          sidebarPath: './sidebarsDocs.ts',
+          editUrl: 'https://github.com/appt-org/appt-docusaurus/',
+        },
+        theme: {
+          customCss: ['./src/css/globals.css', './src/css/markdown.css', './src/css/layout.css'],
+        },
+      } satisfies Preset.Options,
+    ],
+  ],
   plugins: [
     tailwindPlugin,
     [
@@ -74,22 +87,6 @@ const config: Config = {
       },
     ],
   ],
-
-  presets: [
-    [
-      'classic',
-      {
-        docs: {
-          sidebarPath: './sidebarsDocs.ts',
-          editUrl: 'https://github.com/appt-org/appt-docusaurus/',
-        },
-        theme: {
-          customCss: ['./src/css/globals.css', './src/css/markdown.css', './src/css/layout.css'],
-        },
-      } satisfies Preset.Options,
-    ],
-  ],
-
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',

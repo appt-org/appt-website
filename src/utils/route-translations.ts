@@ -5,8 +5,8 @@ export const getTranslatedPath = (path: string, capitalized?: true) => {
     partners: 'partners',
     stats: 'stats',
   };
-  const isEn = process.env.DOCUSAURUS_CURRENT_LOCALE === 'en';
 
-  const translatedPath = isEn ? path : dutchTranslations[path];
+  const isNl = process.env.DOCUSAURUS_CURRENT_LOCALE === 'nl';
+  const translatedPath = isNl ? dutchTranslations[path] : path;
   return `${capitalized ? translatedPath.charAt(0).toUpperCase() + translatedPath.slice(1) : translatedPath}`;
 };

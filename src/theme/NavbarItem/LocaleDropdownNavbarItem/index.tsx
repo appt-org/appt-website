@@ -1,11 +1,12 @@
+import React from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { translate } from '@docusaurus/Translate';
 import { useLocation } from '@docusaurus/router';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import type { LinkLikeNavbarItemProps } from '@theme/NavbarItem';
 import DropdownNavbarItem from '@theme/NavbarItem/DropdownNavbarItem';
+import type { LinkLikeNavbarItemProps } from '@theme/NavbarItem';
 import type { Props } from '@theme/NavbarItem/LocaleDropdownNavbarItem';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import { ChevronIcon } from '@site/src/icons';
 import clsx from 'clsx';
 
@@ -21,29 +22,6 @@ export default function LocaleDropdownNavbarItem({
   } = useDocusaurusContext();
   const { search, hash } = useLocation();
 
-  const baseUrl = useBaseUrl('/', { absolute: true });
-  const localeItems = locales.map((locale): LinkLikeNavbarItemProps => {
-    // Leave 'en' out of the URL since it's the default
-    const localePrefix = locale === 'en' ? '' : 'nl';
-
-    // preserve ?search#hash suffix on locale switches
-    const to = `${baseUrl}${localePrefix}${search}${hash}${queryString}`;
-    return {
-      label: localeConfigs[locale]!.label,
-      lang: localeConfigs[locale]!.htmlLang,
-      href: to,
-      target: '_self',
-      autoAddBaseUrl: false,
-      // Hide 'external link' icon
-      className: clsx('[&>svg]:hidden', {
-        'menu__link--active': locale !== currentLocale && mobile,
-        'dropdown__link--active': locale !== currentLocale && !mobile,
-      }),
-    };
-  });
-
-  const items = [...dropdownItemsBefore, ...localeItems, ...dropdownItemsAfter];
-
   // Mobile is handled a bit differently
   const dropdownLabel = mobile
     ? translate({
@@ -57,16 +35,46 @@ export default function LocaleDropdownNavbarItem({
   const chevronClass = clsx({ 'w-8 h-8 ml-8': !mobile, hidden: mobile });
 
   return (
-    <DropdownNavbarItem
-      {...props}
-      mobile={mobile}
-      label={
-        <span className={navbarLabelClass}>
-          <span>{dropdownLabel}</span>
-          <ChevronIcon className={chevronClass} />
-        </span>
-      }
-      items={items}
-    />
+    <BrowserOnly>
+      {() => {
+        const localeItems = locales.map((locale): LinkLikeNavbarItemProps => {
+          // preserve ?search#hash suffix on locale switches
+          const to = `${window.location.origin}/${locale}${search}${hash}${queryString}`;
+          return {
+            label: localeConfigs[locale]!.label,
+            lang: localeConfigs[locale]!.htmlLang,
+            to,
+            target: '_self',
+            autoAddBaseUrl: false,
+            className:
+              // eslint-disable-next-line no-nested-ternary
+              locale === currentLocale
+                ? // Similar idea as DefaultNavbarItem: select the right Infima active
+                  // class name. This cannot be substituted with isActive, because the
+                  // target URLs contain `pathname://` and therefore are not NavLinks!
+                  mobile
+                  ? 'menu__link--active'
+                  : 'dropdown__link--active'
+                : '',
+          };
+        });
+
+        const items = [...dropdownItemsBefore, ...localeItems, ...dropdownItemsAfter];
+
+        return (
+          <DropdownNavbarItem
+            {...props}
+            mobile={mobile}
+            label={
+              <span className={navbarLabelClass}>
+                <span>{dropdownLabel}</span>
+                <ChevronIcon className={chevronClass} />
+              </span>
+            }
+            items={items}
+          />
+        );
+      }}
+    </BrowserOnly>
   );
 }
