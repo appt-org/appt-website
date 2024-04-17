@@ -6,6 +6,7 @@ import DropdownNavbarItem from '@theme/NavbarItem/DropdownNavbarItem';
 import type { Props } from '@theme/NavbarItem/LocaleDropdownNavbarItem';
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import { ChevronIcon } from '@site/src/icons';
 import clsx from 'clsx';
 
 export default function LocaleDropdownNavbarItem({
@@ -52,5 +53,20 @@ export default function LocaleDropdownNavbarItem({
       })
     : localeConfigs[currentLocale]!.label;
 
-  return <DropdownNavbarItem {...props} mobile={mobile} label={dropdownLabel} items={items} />;
+  const navbarLabelClass = clsx({ 'flex items-center font-normal': !mobile });
+  const chevronClass = clsx({ 'w-8 h-8 ml-8': !mobile, hidden: mobile });
+
+  return (
+    <DropdownNavbarItem
+      {...props}
+      mobile={mobile}
+      label={
+        <span className={navbarLabelClass}>
+          <span>{dropdownLabel}</span>
+          <ChevronIcon className={chevronClass} />
+        </span>
+      }
+      items={items}
+    />
+  );
 }

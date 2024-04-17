@@ -36,6 +36,17 @@
   padding-inline: theme(spacing.4);
 }
 
+.navbar__items > .dropdown {
+  background-color: theme(colors.onsurface);
+  border-radius: theme(borderRadius.md);
+  padding-inline-start: theme(spacing.4);
+  margin-inline: theme(spacing.4);
+}
+
+.navbar__items > .dropdown > .navbar__link::after {
+  display: none;
+}
+
 .navbar__items > .navbar__link:hover {
   text-decoration: underline;
 }
