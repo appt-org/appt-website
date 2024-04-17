@@ -1,0 +1,43 @@
+/* Unordered lists cannot be swizzled */
+.markdown ol {
+  max-width: theme(maxWidth.md);
+  list-style-type: decimal;
+}
+
+.markdown ol li {
+  margin-top: theme(spacing.4);
+  margin-left: theme(spacing.7);
+}
+
+/* Fix spacing for markdown items that are not placed within e.g. a two column block  */
+article > .markdown-content,
+article > p {
+  padding-inline: theme(spacing.4);
+
+  @media (min-width: theme(screens.sm)) {
+    padding-inline: theme(spacing.8);
+  }
+}
+
+article > p,
+.theme-doc-markdown > p {
+  max-width: theme(maxWidth.md);
+  margin: theme(spacing.4) auto;
+  font-size: theme(fontSize.paragraph);
+  line-height: theme(lineHeight.paragraph);
+}
+
+.theme-doc-markdown {
+  max-width: theme(maxWidth.md);
+  margin: auto;
+}
+
+h1 {
+  line-height: theme(lineHeight.heading-xl);
+  font-size: theme(fontSize.mobile-heading-xl);
+  font-weight: theme(fontWeight.light);
+
+  @media (min-width: theme(screens.sm)) {
+    font-size: theme(fontSize.heading-xl);
+  }
+}

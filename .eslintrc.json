@@ -1,0 +1,32 @@
+{
+  "extends": ["plugin:prettier/recommended", "plugin:@typescript-eslint/recommended"],
+  "overrides": [
+    { "files": ["*.jsx", "*.tsx", "*.ts"] },
+    {
+      "files": ["*.md", "*.mdx"],
+      "extends": ["plugin:mdx/recommended"]
+    }
+  ],
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaFeatures": {
+      "jsx": true,
+      "tsx": true
+    },
+    "sourceType": "module",
+    "ecmaVersion": 2020
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "argsIgnorePattern": "^_"
+      }
+    ]
+  },
+  "settings": {
+    "mdx/code-blocks": false
+  }
+}

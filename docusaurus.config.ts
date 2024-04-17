@@ -1,33 +1,36 @@
-import type * as Preset from "@docusaurus/preset-classic";
-import type { Config } from "@docusaurus/types";
-import { themes as prismThemes } from "prism-react-renderer";
-import tailwindPlugin from "./plugins/tailwind-config";
+import type * as Preset from '@docusaurus/preset-classic';
+import type { Config } from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import tailwindPlugin from './plugins/tailwind-config';
+import 'dotenv/config';
+import { getTranslatedPath } from './src/utils/route-translations';
 
 const config: Config = {
-  title: "Appt",
-  tagline: "Gids voor het maken van toegankelijke apps",
-  favicon: "favicon.ico",
+  title: 'Appt',
+  tagline: 'Gids voor het maken van toegankelijke apps',
+  favicon: 'favicon.ico',
+  noIndex: true, //process.env.ENVIRONMENT !== 'production',
 
   // Set the production url of your site here
-  url: "https://appt.org",
+  url: 'https://appt.org',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  baseUrl: process.env.BASE_URL,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: 'appt-org', // Usually your GitHub org/user name.
+  projectName: 'appt-docusaurus', // Usually your repo name.
 
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
 
   headTags: [
     {
-      tagName: "link",
+      tagName: 'link',
       attributes: {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap",
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap',
       },
     },
   ],
@@ -36,100 +39,98 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en", "nl"],
+    defaultLocale: 'en',
+    locales: ['en', 'nl'],
     localeConfigs: {
       en: {
-        htmlLang: "en",
-        path: "en",
+        htmlLang: 'en',
+        path: 'en',
       },
       nl: {
-        htmlLang: "nl",
-        path: "nl",
+        htmlLang: 'nl',
+        path: 'nl',
       },
     },
   },
-
-  plugins: [
-    tailwindPlugin,
-    [
-      "content-docs",
-      {
-        id: "guidelines",
-        path: "guidelines",
-        routeBasePath: "guidelines",
-        sidebarPath: "./sidebarsGuidelines.ts",
-      },
-    ],
-  ],
-
   presets: [
     [
-      "classic",
+      'classic',
       {
         docs: {
-          sidebarPath: "./sidebarsDocs.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          sidebarPath: './sidebarsDocs.ts',
+          editUrl: 'https://github.com/appt-org/appt-docusaurus/',
         },
         theme: {
-          customCss: ["./src/css/globals.css"],
+          customCss: ['./src/css/globals.css', './src/css/markdown.css', './src/css/layout.css'],
         },
       } satisfies Preset.Options,
     ],
   ],
-
+  plugins: [
+    tailwindPlugin,
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'guidelines',
+        path: 'guidelines',
+        routeBasePath: getTranslatedPath('guidelines'),
+        sidebarPath: './sidebarsGuidelines.ts',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'articles',
+        path: 'articles',
+        routeBasePath: getTranslatedPath('articles'),
+        sidebarPath: false,
+      },
+    ],
+  ],
   themeConfig: {
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: 'img/docusaurus-social-card.jpg',
     navbar: {
       logo: {
-        alt: "Logo Appt",
-        src: "img/light/appt-logo-light.svg",
-        srcDark: "img/dark/appt-logo-dark.svg",
-        className: "nav-logo",
-        href: "https://appt.org",
+        alt: 'Logo Appt',
+        src: 'img/light/appt-logo-light.svg',
+        srcDark: 'img/dark/appt-logo-dark.svg',
+        className: 'nav-logo',
+        href: 'https://appt.org',
       },
       items: [
-        { to: "/", label: "Home", position: "right" },
-        { to: "/stats", label: "Stats", position: "right" },
-        { to: "/docs", label: "Docs", position: "right" },
-        { to: "/guidelines", label: "Guidelines", position: "right" },
-        { to: "/artikelen", label: "Artikelen", position: "right" },
-        { to: "/partners", label: "Partners", position: "right" },
+        { to: '/', label: 'Home', position: 'right' },
+        { to: `/${getTranslatedPath('stats')}`, label: 'Stats', position: 'right' },
+        { to: '/docs', label: 'Docs', position: 'right' },
+        { to: `/${getTranslatedPath('guidelines')}`, label: getTranslatedPath('guidelines', true), position: 'right' },
+        { to: `/${getTranslatedPath('articles')}`, label: getTranslatedPath('articles', true), position: 'right' },
+        // { to: `/${getTranslatedPath('partners')}`, label: 'Partners', position: 'right' },
         {
-          type: "localeDropdown",
-          position: "right",
+          type: 'localeDropdown',
+          position: 'right',
         },
       ],
+    },
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 2,
     },
     footer: {
       links: [
         {
-          title: "Docs",
+          title: 'Community',
           items: [
             {
-              label: "Tutorial",
-              to: "/docs/intro",
-            },
-          ],
-        },
-        {
-          title: "Community",
-          items: [
-            {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              label: 'Stack Overflow',
+              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
             },
             {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              label: 'Discord',
+              href: 'https://discordapp.com/invite/docusaurus',
             },
             {
-              label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              label: 'Twitter',
+              href: 'https://twitter.com/docusaurus',
             },
           ],
         },
@@ -139,14 +140,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.okaidia,
       darkTheme: prismThemes.okaidia,
-      additionalLanguages: [
-        "java",
-        "kotlin",
-        "swift",
-        "objectivec",
-        "csharp",
-        "dart",
-      ],
+      additionalLanguages: ['java', 'kotlin', 'swift', 'objectivec', 'csharp', 'dart'],
     },
   } satisfies Preset.ThemeConfig,
 };

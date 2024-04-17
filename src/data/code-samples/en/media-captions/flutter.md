@@ -18,7 +18,7 @@ Future<ClosedCaptionFile> _loadCaptions() async {
 void initState() {
   super.initState();
   _controller = VideoPlayerController.asset(
-    '/assets/appt.mp4',     
+    '/assets/appt.mp4',
     closedCaptionFile: _loadCaptions(),
   );
 

@@ -7,7 +7,7 @@ In React Native you can use the [`accessibilityValue`](https://reactnative.dev/d
   accessibilityValue={{min: 0, max: 100, now: 50}}
   accessibilityState="busy" />
 
-<View 
+<View
   accessibilityValue={{text: "Custom"}}
   accessibilityState="disabled" />
 ```

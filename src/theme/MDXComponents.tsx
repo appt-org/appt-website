@@ -3,13 +3,18 @@ import {
   CodeSample,
   Column,
   ColumnRow,
-  Image,
-  PercentageBlock,
-  TwoColumnBlock,
   Hero,
-} from "@site/src/components";
+  Image,
+  LinkList,
+  LinkListItem,
+  PercentageBlock,
+  Quote,
+  TwoColumnBlock,
+  Video,
+  TextBlock,
+} from '@site/src/components';
 
-import MDXComponents from "@theme-original/MDXComponents";
+import MDXComponents from '@theme-original/MDXComponents';
 
 export default {
   // Re-use the default mapping
@@ -22,4 +27,9 @@ export default {
   Image,
   PercentageBlock,
   CodeSample,
+  Quote,
+  LinkList,
+  LinkListItem,
+  Video,
+  TextBlock,
 };

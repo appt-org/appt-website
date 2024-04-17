@@ -1,8 +1,8 @@
 # Scale text - Xamarin
 
-In Xamarin Forms you make styles for the scalable fonts that you use in your app. 
+In Xamarin Forms you make styles for the scalable fonts that you use in your app.
 
-First, accessibility scaling should be enabled for named font sizes. This can be done by pass `True` to the the [`SetEnableAccessibilityScalingForNamedFontSizes`](https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.platformconfiguration.iosspecific.application.setenableaccessibilityscalingfornamedfontsizes?view=xamarin-forms#xamarin-forms-platformconfiguration-iosspecific-application-setenableaccessibilityscalingfornamedfontsizes(xamarin-forms-bindableobject-system-boolean)) method of the [`Application`](https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.platformconfiguration.iosspecific.application?view=xamarin-forms). This can also be done in XAML by using `ios:Application.EnableAccessibilityScalingForNamedFontSizes="true"`.
+First, accessibility scaling should be enabled for named font sizes. This can be done by pass `True` to the the [`SetEnableAccessibilityScalingForNamedFontSizes`](<https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.platformconfiguration.iosspecific.application.setenableaccessibilityscalingfornamedfontsizes?view=xamarin-forms#xamarin-forms-platformconfiguration-iosspecific-application-setenableaccessibilityscalingfornamedfontsizes(xamarin-forms-bindableobject-system-boolean)>) method of the [`Application`](https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.platformconfiguration.iosspecific.application?view=xamarin-forms). This can also be done in XAML by using `ios:Application.EnableAccessibilityScalingForNamedFontSizes="true"`.
 
 Secondly, you have to register the font and it's properties with the assembly. Afterwards, the fonts can be used in your app and they will automatically scale depending on the users' font size preference.
 
