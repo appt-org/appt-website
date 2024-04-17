@@ -15,3 +15,4 @@ export * from './TwoColumnBlock';
 export * from './Typography';
 export * from './Video';
 export * from './Video/YoutubeVideo';
+export * from './TextBlock';

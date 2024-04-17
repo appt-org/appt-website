@@ -8,7 +8,7 @@ const config: Config = {
   title: 'Appt',
   tagline: 'Gids voor het maken van toegankelijke apps',
   favicon: 'favicon.ico',
-  noIndex: process.env.ENVIRONMENT !== 'production',
+  noIndex: true, //process.env.ENVIRONMENT !== 'production',
 
   // Set the production url of your site here
   url: 'https://appt.org',
@@ -18,8 +18,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'appt-org', // Usually your GitHub org/user name.
+  projectName: 'appt-docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -57,9 +57,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebarsDocs.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/appt-org/appt-docusaurus/',
         },
         theme: {
           customCss: ['./src/css/globals.css'],
@@ -101,7 +99,7 @@ const config: Config = {
       },
       items: [
         { to: '/', label: 'Home', position: 'right' },
-        // { to: '/stats', label: 'Stats', position: 'right' },
+        { to: '/stats', label: 'Stats', position: 'right' },
         { to: '/docs', label: 'Docs', position: 'right' },
         { to: '/guidelines', label: 'Guidelines', position: 'right' },
         { to: '/articles', label: 'Articles', position: 'right' },
