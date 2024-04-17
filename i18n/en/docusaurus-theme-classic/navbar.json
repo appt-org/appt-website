@@ -1,0 +1,22 @@
+{
+  "logo.alt": {
+    "message": "Logo Appt",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Home": {
+    "message": "Home",
+    "description": "Navbar item with label Home"
+  },
+  "item.label.Docs": {
+    "message": "Docs",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.Richtlijnen": {
+    "message": "Richtlijnen",
+    "description": "Navbar item with label Richtlijnen"
+  },
+  "item.label.Artikelen": {
+    "message": "Artikelen",
+    "description": "Navbar item with label Artikelen"
+  }
+}

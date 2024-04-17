@@ -51,29 +51,6 @@ const config: Config = {
       },
     },
   },
-
-  plugins: [
-    tailwindPlugin,
-    [
-      'content-docs',
-      {
-        id: 'guidelines',
-        path: 'guidelines',
-        routeBasePath: 'guidelines',
-        sidebarPath: './sidebarsGuidelines.ts',
-      },
-    ],
-    [
-      'content-docs',
-      {
-        id: 'articles',
-        path: 'articles',
-        routeBasePath: 'articles',
-        sidebarPath: false,
-      },
-    ],
-  ],
-
   presets: [
     [
       'classic',
@@ -90,7 +67,27 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
+  plugins: [
+    tailwindPlugin,
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'guidelines',
+        path: 'guidelines',
+        routeBasePath: 'guidelines',
+        sidebarPath: './sidebarsGuidelines.ts',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'articles',
+        path: 'articles',
+        routeBasePath: 'articles',
+        sidebarPath: false,
+      },
+    ],
+  ],
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
