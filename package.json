@@ -15,7 +15,7 @@
     "build:dev": "rm -rf build && npm run build:dev:en && npm run build:dev:nl",
     "build:acc": "rm -rf build && npm run build:acc:en && npm run build:acc:nl",
     "build:prod": "rm -rf build && npm run build:prod:en && npm run build:prod:nl",
-    "swizzle": "docusaurus swizzle",
+    "swizzle": "cross-env BASE_URL='/' docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "lint": "eslint --ext  \".js,.ts,.tsx,.md,.mdx\" --ignore-path .eslintignore .",
