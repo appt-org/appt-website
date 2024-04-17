@@ -102,7 +102,7 @@ const config: Config = {
       },
       items: [
         { to: '/', label: 'Home', position: 'right' },
-        // { to: '/stats', label: 'Stats', position: 'right' },
+        { to: '/stats', label: 'Stats', position: 'right' },
         { to: '/docs', label: 'Docs', position: 'right' },
         { to: '/guidelines', label: 'Guidelines', position: 'right' },
         { to: '/articles', label: 'Articles', position: 'right' },
