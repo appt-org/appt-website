@@ -24,6 +24,41 @@
   }
 }
 
+.navbar__items {
+  position: relative;
+}
+
+.navbar__items > .navbar__link {
+  color: theme(colors.accent);
+  font-weight: theme(fontWeight.normal);
+  text-underline-offset: 0.15rem;
+  text-decoration-thickness: 0.075rem;
+  padding-inline: theme(spacing.4);
+}
+
+.navbar__items > .navbar__link:hover {
+  text-decoration: underline;
+}
+
+.navbar__items > .navbar__link--active {
+  color: theme(colors.body);
+  text-decoration: underline;
+}
+
+.navbar__items > .navbar__link--active:hover {
+  color: theme(colors.body);
+  text-decoration: underline;
+}
+
+.navbar__inner > .navbar__items > .navbar__toggle.clean-btn {
+  position: absolute;
+  right: 0;
+  margin: 0;
+  padding: theme(spacing.2);
+  border-radius: theme(borderRadius.lg);
+  background: theme(colors.onsurface);
+}
+
 main.container {
   padding: 0;
   margin-top: 0 !important;

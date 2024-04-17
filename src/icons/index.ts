@@ -1,2 +1,3 @@
 export { default as ExternalIcon } from './icon-external.svg';
+export { default as MenuIcon } from './icon-menu.svg';
 export { default as PlayIcon } from './icon-play.svg';
