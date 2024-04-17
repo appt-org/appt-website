@@ -5,6 +5,9 @@
     "checkMdx": true
   },
   "compilerOptions": {
-    "baseUrl": "."
+    "baseUrl": ".",
+    "lib": [
+      "ES2021.String"
+    ]
   }
 }
