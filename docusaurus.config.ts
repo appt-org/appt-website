@@ -3,6 +3,7 @@ import type { Config } from '@docusaurus/types';
 import { themes as prismThemes } from 'prism-react-renderer';
 import tailwindPlugin from './plugins/tailwind-config';
 import 'dotenv/config';
+import { getTranslatedPath } from './src/utils/route-translations';
 
 const config: Config = {
   title: 'Appt',
@@ -72,7 +73,7 @@ const config: Config = {
       {
         id: 'guidelines',
         path: 'guidelines',
-        routeBasePath: 'guidelines',
+        routeBasePath: getTranslatedPath('guidelines'),
         sidebarPath: './sidebarsGuidelines.ts',
       },
     ],
@@ -81,7 +82,7 @@ const config: Config = {
       {
         id: 'articles',
         path: 'articles',
-        routeBasePath: 'articles',
+        routeBasePath: getTranslatedPath('articles'),
         sidebarPath: false,
       },
     ],
@@ -99,11 +100,11 @@ const config: Config = {
       },
       items: [
         { to: '/', label: 'Home', position: 'right' },
-        { to: '/stats', label: 'Stats', position: 'right' },
+        { to: `/${getTranslatedPath('stats')}`, label: 'Stats', position: 'right' },
         { to: '/docs', label: 'Docs', position: 'right' },
-        { to: '/guidelines', label: 'Guidelines', position: 'right' },
-        { to: '/articles', label: 'Articles', position: 'right' },
-        // { to: '/partners', label: 'Partners', position: 'right' },
+        { to: `/${getTranslatedPath('guidelines')}`, label: getTranslatedPath('guidelines', true), position: 'right' },
+        { to: `/${getTranslatedPath('articles')}`, label: getTranslatedPath('articles', true), position: 'right' },
+        // { to: `/${getTranslatedPath('partners')}`, label: 'Partners', position: 'right' },
         {
           type: 'localeDropdown',
           position: 'right',

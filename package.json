@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "cross-env BASE_URL='/' docusaurus start",
+    "start:nl": "cross-env BASE_URL='/' docusaurus start --locale nl --port 3001",
+    "start": "cross-env BASE_URL='/' docusaurus start --locale en --port 3000",
     "build:dev:nl": "cross-env BASE_URL='/nl/' env-cmd -f .env docusaurus build --locale nl --out-dir build/nl",
     "build:dev:en": "cross-env BASE_URL='/en/' env-cmd -f .env docusaurus build --locale en --out-dir build/en",
     "build:acc:nl": "cross-env BASE_URL='/nl/' env-cmd -f .env.acc docusaurus build --locale nl --out-dir build/nl",
