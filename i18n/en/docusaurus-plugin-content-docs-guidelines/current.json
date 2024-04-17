@@ -1,0 +1,10 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.wcag": {
+    "message": "wcag",
+    "description": "The label for category wcag in sidebar tutorialSidebar"
+  }
+}
