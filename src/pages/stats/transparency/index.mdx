@@ -1,0 +1,37 @@
+---
+locale: en
+contentfulID: OVlIkBEGu53t9gzdhN5AR
+type: pageContentPage
+title: Transparency
+shortDescription: More about the transparency setting
+---
+
+Turning off the transparency feature makes system windows, overlays and other transparent elements opaque or less transparent. This setting produces a calmer image with more contrast.
+
+This feature is specific to iOS: the interface uses transparent layers. Material design, the design system that Android uses, has no transparency. That is why this setting is not an option on Android.
+
+More than 200,000 Dutch people have been shown to have switched off the transparency feature on their iPhone. This deactivation of the transparency feature often goes hand in hand with switching on bold text.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'iOS - transparency metric', key: 'ios-accessibility_is_reduce_transparency_enabled-true', isPercentage: true }
+        ]}
+        linkLabel="More about transparency"
+        linkUrl="/en/stats/transparency">
+        have turned off the transparency setting on iOS.
+      </PercentageBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        The setting to turn off transparency is not available on Android. 
+        <CustomLink url="/en/stats/transparency" label="More about transparency" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>

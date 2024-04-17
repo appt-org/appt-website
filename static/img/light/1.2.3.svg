@@ -1,0 +1,13 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.5 16.5H4.8C3.7 16.5 2.8 17.4 2.8 18.5V40.3C2.8 41.4 3.7 42.3 4.8 42.3H38C39.1 42.3 40 41.4 40 40.3V26.6" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.6 34.1H31.2" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26.6 38.2H31.2" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.1 34.1H16.9" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.1 38.2H22.7" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M30.2 20.7V12.3C30.2 12.3 36.3 11.5 36.2 16.5C36.3 16.5 36.5 21.3 30.2 20.7Z" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.5 20.8L21.2 18.8L23.6 12.3L26.8 20.8" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M25.7 18.8H21.2" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M38.5 11.6C38.4 11.5 38.2 11.4 38.1 11.4C38 11.4 37.8 11.5 37.7 11.6C37.5 11.8 37.5 12.2 37.7 12.4C38.9 13.5 39.5 15 39.5 16.6C39.5 18.2 38.9 19.6 37.8 20.7C37.6 20.9 37.6 21.3 37.8 21.5C38 21.7 38.4 21.7 38.6 21.5C39.9 20.2 40.6 18.4 40.6 16.6C40.7 14.7 39.9 12.9 38.5 11.6Z" fill="#D023BE" stroke="#D023BE"/>
+<path d="M41.5 9.60001C41.4 9.50001 41.2 9.40001 41.1 9.40001C41 9.40001 40.8 9.50001 40.7 9.60001C40.5 9.80001 40.5 10.2 40.7 10.4C42.3 12.1 43.2 14.2 43.2 16.5C43.2 18.8 42.3 21 40.7 22.6C40.5 22.8 40.5 23.2 40.7 23.4C40.9 23.6 41.3 23.6 41.5 23.4C43.3 21.5 44.3 19.1 44.3 16.5C44.3 14 43.3 11.5 41.5 9.60001Z" fill="#D023BE" stroke="#D023BE"/>
+<path d="M44.5 7.80001C44.4 7.70001 44.2 7.60001 44.1 7.60001C44 7.60001 43.8 7.60001 43.7 7.80001C43.5 8.00001 43.5 8.40001 43.7 8.60001C45.7 10.8 46.8 13.6 46.8 16.6C46.8 19.6 45.7 22.4 43.7 24.6C43.5 24.8 43.5 25.2 43.7 25.4C43.9 25.6 44.3 25.6 44.5 25.4C46.7 23 47.9 19.9 47.9 16.6C47.9 13.3 46.7 10.2 44.5 7.80001Z" fill="#D023BE" stroke="#D023BE"/>
+</svg>

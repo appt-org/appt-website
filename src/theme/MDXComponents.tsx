@@ -12,6 +12,7 @@ import {
   TwoColumnBlock,
   Video,
   TextBlock,
+  CustomLink,
 } from '@site/src/components';
 
 import MDXComponents from '@theme-original/MDXComponents';
@@ -32,4 +33,5 @@ export default {
   LinkListItem,
   Video,
   TextBlock,
+  CustomLink,
 };

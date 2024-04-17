@@ -1,0 +1,59 @@
+---
+locale: en
+contentfulID: bbgq2UPrhfpiBVszpTnUU
+type: pageContentPage
+title: Dark mode
+shortDescription: More about dark mode
+---
+
+This setting, which darkens background colours, provides a more comfortable viewing experience in low light. This is essential for many visually impaired people since a light background colour can be painful or even impossible to look at for an extended period of time.
+
+More than 4 million users in the Netherlands prefer the dark mode over the standard light mode, according to our research.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'Dark mode', key: 'ios-preference_ui_style-dark', isPercentage: true }
+        ]}
+        linkLabel="More about dark mode"
+        linkUrl="/en/stats/dark-mode">
+        have turned on dark mode on iOS.
+      </PercentageBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'Dark mode', key: 'android-preference_is_nightmode_enabled-true', isPercentage: true }
+        ]}
+        linkLabel="More about dark mode"
+        linkUrl="/en/stats/dark-mode">
+        have turned on dark mode on Android.
+      </PercentageBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+## Why is this an accessibility feature?
+
+On Android, this feature is explicitly listed under accessibility in the menu. So the system determines whether the dark theme is on or off.
+
+Apple does not classify dark mode as an accessibility feature. But for many people with disabilities it is necessary. Some people who are blind or visually impaired are also hypersensitive to light. Looking at a bright white screen can be very painful for them. But also people who have problems with their concentration, for example due to a brain disorder, benefit greatly from dark mode. Incidentally, both iOS and Android also offer the option to [reverse colours](/en/stats/invert-colours) altogether.
+
+<Quote>
+  quote="I try to reduce overstimulation on my mobile phone."
+  name="Colinda"
+  imageSrc="/img/light/colinda.jpg"
+  alt="Colinda"
+  linkLabel="Read the interview with Colinda"
+  url="/en/articles/colinda"
+</Quote>
+
+## Support in apps
+
+Below are some code samples for the most commonly used platforms and frameworks.
+
+<CodeSample id="screen-dark-mode" locale="en"/>

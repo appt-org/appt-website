@@ -8,21 +8,27 @@ thumbnail: Thumbnail overzichtspagina onderzoekstatistieken
 seo.title: Accessibility Stats
 seo.name: Accessibility stats - SEO
 seo.description: Results from research amongst millions of iOS and Android users that looked at which accessibility features are actually turned on.
+hide_table_of_contents: true
 ---
+
+<Hero
+    title="Accessibility stats"
+/>
 
 Almost half of all people with a mobile phone use accessibility features. Much more than you would expect, right? In our survey of millions of iOS and Android users in the Netherlands, we looked at which accessibility features are enabled.
 
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
+      <TextBlock
+        showBackgroundColor={false}>
         ## **iOS** 
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'At least one feature on iOS', number: 45, isPercentage: true },
+          { title: 'At least one feature on iOS', number: 45, isPercentage: true }
         ]}>
         Almost half of the Dutch iOS users surveyed have one or more accessibility settings activated on their phone.
       </PercentageBlock>
@@ -38,7 +44,8 @@ Almost half of all people with a mobile phone use accessibility features. Much m
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
+      <TextBlock
+        showBackgroundColor={false}>
         ## **Android** 
       </TextBlock>
     </ColumnRow>
@@ -70,7 +77,8 @@ The study shows that visual settings are changed most frequently in mobile appli
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
+      <TextBlock
+        showBackgroundColor={false}>
         ### **Visual features on iOS** 
       </TextBlock>
     </ColumnRow>
@@ -80,7 +88,7 @@ The study shows that visual settings are changed most frequently in mobile appli
           { title: 'Dark mode', key: 'ios-preference_ui_style-dark', isPercentage: true }
         ]}
         linkLabel="More about dark mode"
-        linkUrl="https://appt.org/en/stats/dark-mode">
+        linkUrl="/en/stats/dark-mode">
         have turned on dark mode on iOS.
       </PercentageBlock>
     </ColumnRow>
@@ -89,10 +97,10 @@ The study shows that visual settings are changed most frequently in mobile appli
         metrics={[
           { title: 'Font-size smaller', key: 'ios-custom_content_size-smaller', isPercentage: true },
           { title: 'Font-size normal', key: 'ios-custom_content_size-default', isPercentage: true },
-          { title: 'Font-size larger', key: 'ios-custom_content_size-larger', isPercentage: true },
+          { title: 'Font-size larger', key: 'ios-custom_content_size-larger', isPercentage: true }
         ]}
         linkLabel="More about font size"
-        linkUrl="https://appt.org/en/stats/font-size">
+        linkUrl="/en/stats/font-size">
         Many people make their fonts larger on iOS.
       </PercentageBlock>
     </ColumnRow>
@@ -102,14 +110,15 @@ The study shows that visual settings are changed most frequently in mobile appli
           { title: 'Zoom', key: 'ios-screen_zoomed-true', isPercentage: true }
         ]}
         linkLabel="More about zoom"
-        linkUrl="https://appt.org/en/stats/zoom">
+        linkUrl="/en/stats/zoom">
         use zoom on iOS.
       </PercentageBlock>
     </ColumnRow>
     <ColumnRow>
-      <TextBlock showBackgroundColor={true}>
+      <TextBlock
+        showBackgroundColor={true}>
         The metric for display size on iOS is not available at the moment. 
-        {/* <Link url="/en/stats/display-size" title="More about display size" pageTitle="Display size" shortDescription="More about display size"/> */}
+        <CustomLink url="/en/stats/display-size" label="More about display size" external={false}/>
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
@@ -118,7 +127,7 @@ The study shows that visual settings are changed most frequently in mobile appli
           { title: 'Bold text', key: 'ios-accessibility_is_bold_text_enabled-true', isPercentage: true }
         ]}
         linkLabel="More about bold text"
-        linkUrl="https://appt.org/en/stats/bold-text">
+        linkUrl="/en/stats/bold-text">
         turn on bold text on iOS.
       </PercentageBlock>
     </ColumnRow>
@@ -128,7 +137,7 @@ The study shows that visual settings are changed most frequently in mobile appli
           { title: 'Colour contrast', key: 'ios-accessibility_is_darker_system_colors_enabled-true', isPercentage: true }
         ]}
         linkLabel="More about colour contrast"
-        linkUrl="https://appt.org/en/stats/colour-contrast">
+        linkUrl="/en/stats/colour-contrast">
         select an increased colour contrast on iOS.
       </PercentageBlock>
     </ColumnRow>
@@ -138,14 +147,15 @@ The study shows that visual settings are changed most frequently in mobile appli
           { title: 'iOS - transparency metric', key: 'ios-accessibility_is_reduce_transparency_enabled-true', isPercentage: true }
         ]}
         linkLabel="More about transparency"
-        linkUrl="https://appt.org/en/stats/transparency">
+        linkUrl="/en/stats/transparency">
         have turned off the transparency setting on iOS.
       </PercentageBlock>
     </ColumnRow>
     <ColumnRow>
-      <TextBlock showBackgroundColor={true}>
+      <TextBlock
+        showBackgroundColor={true}>
         The metric for colour blind mode is not available on iOS at the moment. 
-        {/* <Link url="/en/stats/colour-blind-mode" title="More about colour blind mode" pageTitle="Colour blind mode" shortDescription="More about colour blind mode"/> */}
+        <CustomLink url="/en/stats/colour-blind-mode" label="More about colour blind mode" external={false}/>
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
@@ -154,14 +164,15 @@ The study shows that visual settings are changed most frequently in mobile appli
           { title: 'iOS - invert colours metric', key: 'ios-accessibility_is_invert_colors_enabled-true', isPercentage: true }
         ]}
         linkLabel="More about invert colours"
-        linkUrl="https://appt.org/en/stats/invert-colours">
+        linkUrl="/en/stats/invert-colours">
         invert colours on iOS.
       </PercentageBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
+      <TextBlock
+        showBackgroundColor={false}>
         ### **Visual features on Android** 
       </TextBlock>
     </ColumnRow>
@@ -171,7 +182,7 @@ The study shows that visual settings are changed most frequently in mobile appli
           { title: 'Dark mode', key: 'android-preference_is_nightmode_enabled-true', isPercentage: true }
         ]}
         linkLabel="More about dark mode"
-        linkUrl="https://appt.org/en/stats/dark-mode">
+        linkUrl="/en/stats/dark-mode">
         have turned on dark mode on Android.
       </PercentageBlock>
     </ColumnRow>
@@ -180,10 +191,10 @@ The study shows that visual settings are changed most frequently in mobile appli
         metrics={[
           { title: 'Font-size normal', key: 'android-default_screen_font_scale-true', isPercentage: true },
           { title: 'Font-size larger', key: 'android-screen_font_scale_default_comparison-bigger', isPercentage: true },
-          { title: 'Font-size smaller', key: 'android-screen_font_scale_default_comparison-smaller', isPercentage: true },
+          { title: 'Font-size smaller', key: 'android-screen_font_scale_default_comparison-smaller', isPercentage: true }
         ]}
         linkLabel="More about font size"
-        linkUrl="https://appt.org/en/stats/font-size">
+        linkUrl="/en/stats/font-size">
         Many people make their font-size larger on Android.
       </PercentageBlock>
     </ColumnRow>
@@ -193,7 +204,7 @@ The study shows that visual settings are changed most frequently in mobile appli
           { title: 'Magnification', key: 'android-accessibility_is_magnification_enabled-true', isPercentage: true }
         ]}
         linkLabel="More about zoom"
-        linkUrl="https://appt.org/en/stats/zoom">
+        linkUrl="/en/stats/zoom">
         use magnification on Android.
       </PercentageBlock>
     </ColumnRow>
@@ -203,7 +214,7 @@ The study shows that visual settings are changed most frequently in mobile appli
           { title: 'Bigger display size', key: 'android-screen_display_scale_default_comparison-bigger', isPercentage: true }
         ]}
         linkLabel="More about display size"
-        linkUrl="https://appt.org/en/stats/display-size">
+        linkUrl="/en/stats/display-size">
         increase display size on Android.
       </PercentageBlock>
     </ColumnRow>
@@ -213,20 +224,22 @@ The study shows that visual settings are changed most frequently in mobile appli
           { title: 'Bold text', key: 'android-preference_font_weight_adjustment-300', isPercentage: true }
         ]}
         linkLabel="More about bold text"
-        linkUrl="https://appt.org/en/stats/bold-text">
+        linkUrl="/en/stats/bold-text">
         turn on bold text on Android.
       </PercentageBlock>
     </ColumnRow>
     <ColumnRow>
-      <TextBlock showBackgroundColor={true}>
+      <TextBlock
+        showBackgroundColor={true}>
         The metric for high contrast text on Android will soon become available. 
-        {/* <Link url="/en/stats/colour-contrast" title="More about colour contrast" pageTitle="Colour contrast" shortDescription="More about colour contrast"/> */}
+        <CustomLink url="/en/stats/colour-contrast" label="More about colour contrast" external={false}/>
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
-      <TextBlock showBackgroundColor={true}>
+      <TextBlock
+        showBackgroundColor={true}>
         The setting to turn off transparency is not available on Android. 
-        {/* <Link url="/en/stats/transparency" title="More about transparency" pageTitle="Transparency" shortDescription="More about the transparency setting"/> */}
+        <CustomLink url="/en/stats/transparency" label="More about transparency" external={false}/>
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
@@ -235,7 +248,7 @@ The study shows that visual settings are changed most frequently in mobile appli
           { title: 'Colour blind mode', key: 'android-accessibility_is_color_blind_mode_enabled-true', isPercentage: true }
         ]}
         linkLabel="More about colour blind mode"
-        linkUrl="https://appt.org/en/stats/colour-blind-mode">
+        linkUrl="/en/stats/colour-blind-mode">
         use colour blind mode on Android.
       </PercentageBlock>
     </ColumnRow>
@@ -245,7 +258,7 @@ The study shows that visual settings are changed most frequently in mobile appli
           { title: 'Android - invert colours metric', key: 'android-accessibility_is_color_inversion_enabled-true', isPercentage: true }
         ]}
         linkLabel="More about invert colours"
-        linkUrl="https://appt.org/en/stats/invert-colours">
+        linkUrl="/en/stats/invert-colours">
         invert colours on Android.
       </PercentageBlock>
     </ColumnRow>
@@ -261,7 +274,8 @@ Closed captions and other audio settings are indispensable for people who are de
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
+      <TextBlock
+        showBackgroundColor={false}>
         ### **Audio features on iOS** 
       </TextBlock>
     </ColumnRow>
@@ -271,7 +285,7 @@ Closed captions and other audio settings are indispensable for people who are de
           { title: 'iOS - mono audio metric', key: 'ios-accessibility_is_mono_audio_enabled-true', isPercentage: true }
         ]}
         linkLabel="More about mono audio"
-        linkUrl="https://appt.org/en/stats/mono-audio">
+        linkUrl="/en/stats/mono-audio">
         turn on mono audio on iOS.
       </PercentageBlock>
     </ColumnRow>
@@ -281,21 +295,23 @@ Closed captions and other audio settings are indispensable for people who are de
           { title: 'iOS - closed captions metric', key: 'ios-accessibility_is_closed_captioning_enabled-true', isPercentage: true }
         ]}
         linkLabel="More about closed captions"
-        linkUrl="https://appt.org/en/stats/closed-captions">
+        linkUrl="/en/stats/closed-captions">
         have closed captions on by default on iOS.
       </PercentageBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
+      <TextBlock
+        showBackgroundColor={false}>
         ### **Audio features on Android** 
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
-      <TextBlock showBackgroundColor={true}>
+      <TextBlock
+        showBackgroundColor={true}>
         The metric for mono audio on Android will soon become available. 
-        {/* <Link url="/en/stats/mono-audio" title="More about mono audio" pageTitle="Mono audio" shortDescription="More about mono audio"/> */}
+        <CustomLink url="/en/stats/mono-audio" label="More about mono audio" external={false}/>
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
@@ -304,7 +320,7 @@ Closed captions and other audio settings are indispensable for people who are de
           { title: 'Live captions', key: 'android-accessibility_is_closed_captioning_enabled-true', isPercentage: true }
         ]}
         linkLabel="More about closed captions"
-        linkUrl="https://appt.org/en/stats/closed-captions">
+        linkUrl="/en/stats/closed-captions">
         have closed captions on by default on Android.
       </PercentageBlock>
     </ColumnRow>
@@ -320,7 +336,8 @@ If you are unable to look at your screen for whatever reason, speech settings he
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
+      <TextBlock
+        showBackgroundColor={false}>
         ### **Speech features on iOS** 
       </TextBlock>
     </ColumnRow>
@@ -330,7 +347,7 @@ If you are unable to look at your screen for whatever reason, speech settings he
           { title: 'iOS - speak selection metric', key: 'ios-accessibility_is_speak_selection_enabled-true', isPercentage: true }
         ]}
         linkLabel="More about speak selection"
-        linkUrl="https://appt.org/en/stats/speak-selection">
+        linkUrl="/en/stats/speak-selection">
         use speak selection on iOS.
       </PercentageBlock>
     </ColumnRow>
@@ -340,7 +357,7 @@ If you are unable to look at your screen for whatever reason, speech settings he
           { title: 'iOS - speak screen metric', key: 'ios-accessibility_is_speak_screen_enabled-true', isPercentage: true }
         ]}
         linkLabel="More about speak screen"
-        linkUrl="https://appt.org/en/stats/speak-screen">
+        linkUrl="/en/stats/speak-screen">
         use the speak screen feature on iOS.
       </PercentageBlock>
     </ColumnRow>
@@ -350,20 +367,22 @@ If you are unable to look at your screen for whatever reason, speech settings he
           { title: 'iOS - voiceover metric', key: 'ios-accessibility_is_voice_over_running-true', isPercentage: true }
         ]}
         linkLabel="More about the screen reader"
-        linkUrl="https://appt.org/en/stats/screen-reader">
+        linkUrl="/en/stats/screen-reader">
         use voiceover on iOS.
       </PercentageBlock>
     </ColumnRow>
     <ColumnRow>
-      <TextBlock showBackgroundColor={true}>
+      <TextBlock
+        showBackgroundColor={true}>
         The metric for Voice Control on iOS will soon become available. 
-        {/* <Link url="/en/stats/voice-control" title="More about voice control" pageTitle="Voice control" shortDescription="This article provides in-depth information about voice control on Android and iOS."/> */}
+        <CustomLink url="/en/stats/voice-control" label="More about voice control" external={false}/>
       </TextBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
+      <TextBlock
+        showBackgroundColor={false}>
         ### **Speech features on Android** 
       </TextBlock>
     </ColumnRow>
@@ -373,14 +392,15 @@ If you are unable to look at your screen for whatever reason, speech settings he
           { title: 'Android - select to speak', key: 'android-accessibility_is_select_to_speak_enabled-true', isPercentage: true }
         ]}
         linkLabel="More about speak selection"
-        linkUrl="https://appt.org/en/stats/speak-selection">
+        linkUrl="/en/stats/speak-selection">
         use select to speak on Android.
       </PercentageBlock>
     </ColumnRow>
     <ColumnRow>
-      <TextBlock showBackgroundColor={true}>
+      <TextBlock
+        showBackgroundColor={true}>
         The speak screen feature is not available on Android. 
-        {/* <Link url="/en/stats/speak-screen" title="More about speak screen" pageTitle="Speak screen" shortDescription="More about speak screen"/> */}
+        <CustomLink url="/en/stats/speak-screen" label="More about speak screen" external={false}/>
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
@@ -389,7 +409,7 @@ If you are unable to look at your screen for whatever reason, speech settings he
           { title: 'Android - talkback metric', key: 'android-accessibility_is_talk_back_enabled-true', isPercentage: true }
         ]}
         linkLabel="More about the screen reader"
-        linkUrl="https://appt.org/en/stats/screen-reader">
+        linkUrl="/en/stats/screen-reader">
         use Talkback on Android.
       </PercentageBlock>
     </ColumnRow>
@@ -399,7 +419,7 @@ If you are unable to look at your screen for whatever reason, speech settings he
           { title: 'Android - voice access metric', key: 'android-accessibility_is_voice_access_enabled-true', isPercentage: true }
         ]}
         linkLabel="More about voice control"
-        linkUrl="https://appt.org/en/stats/voice-control">
+        linkUrl="/en/stats/voice-control">
         use Voice Access on Android.
       </PercentageBlock>
     </ColumnRow>
@@ -415,7 +435,8 @@ In addition to the findings set out above, we also discovered some that are not 
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
+      <TextBlock
+        showBackgroundColor={false}>
         ### **Striking results on iOS** 
       </TextBlock>
     </ColumnRow>
@@ -425,14 +446,15 @@ In addition to the findings set out above, we also discovered some that are not 
           { title: 'Shake to undo off', key: 'ios-accessibility_is_shake_to_undo_enabled-false', isPercentage: true }
         ]}
         linkLabel="More about shake to undo"
-        linkUrl="https://appt.org/en/stats/shake-to-undo">
+        linkUrl="/en/stats/shake-to-undo">
         have turned off shake to undo on iOS. 
       </PercentageBlock>
     </ColumnRow>
     <ColumnRow>
-      <TextBlock showBackgroundColor={true}>
+      <TextBlock
+        showBackgroundColor={true}>
         The metric for disabling the automatic screen rotation is not available on iOS. 
-        {/* <Link url="/en/stats/screen-orientation-landscape" title="More about screen orientation landscape" pageTitle="Screen orientation landscape" shortDescription="Screen orientation landscape"/> */}
+        <CustomLink url="/en/stats/screen-orientation-landscape" label="More about screen orientation landscape" external={false}/>
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
@@ -441,21 +463,23 @@ In addition to the findings set out above, we also discovered some that are not 
           { title: 'Switch Control', key: 'ios-accessibility_is_switch_control_running-true', isPercentage: true }
         ]}
         linkLabel="More about switch control"
-        linkUrl="https://appt.org/en/stats/switch-control">
+        linkUrl="/en/stats/switch-control">
         use Switch Control on iOS.
       </PercentageBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
+      <TextBlock
+        showBackgroundColor={false}>
         ### **Striking results on Android** 
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
-      <TextBlock showBackgroundColor={true}>
+      <TextBlock
+        showBackgroundColor={true}>
         The setting to turn off shake to undo is not available on Android. 
-        {/* <Link url="/en/stats/shake-to-undo" title="More about shake to undo" pageTitle="Shake to undo" shortDescription="More about shake to undo "/> */}
+        <CustomLink url="/en/stats/shake-to-undo" label="More about shake to undo" external={false}/>
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
@@ -464,7 +488,7 @@ In addition to the findings set out above, we also discovered some that are not 
           { title: 'Screen orientation landscape', key: 'android-screen_orientation-landscape', isPercentage: true }
         ]}
         linkLabel="More about screen orientation landscape"
-        linkUrl="https://appt.org/en/stats/screen-orientation-landscape">
+        linkUrl="/en/stats/screen-orientation-landscape">
         have their screen in landscape mode per default on Android.
       </PercentageBlock>
     </ColumnRow>
@@ -474,7 +498,7 @@ In addition to the findings set out above, we also discovered some that are not 
           { title: 'Switch Access', key: 'android-accessibility_is_switch_access_enabled-true', isPercentage: true }
         ]}
         linkLabel="More about switch control"
-        linkUrl="https://appt.org/en/stats/switch-control">
+        linkUrl="/en/stats/switch-control">
         use Switch Access on Android.
       </PercentageBlock>
     </ColumnRow>

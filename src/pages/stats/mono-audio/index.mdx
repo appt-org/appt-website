@@ -1,0 +1,37 @@
+---
+locale: en
+contentfulID: 3jmYe3LALs8Mj2K41AW1gS
+type: pageContentPage
+title: Mono audio
+shortDescription: More about mono audio
+---
+
+Turning on mono audio sends the left and right channels of stereo sound through both channels. This is useful if you are deaf or hard of hearing in one ear. But please note: it is also used by people wearing just a single earphone.
+
+This feature is available on both iOS and Android. Unlike iOS, on Android it is both a power button and a slider from left to right. This last feature cannot be programmatically explored on Android. Data will become available about the use of the on/off button on Android.
+
+Based on our accessibility research, we estimate that approximately 250,000 Dutch people have activated this accessibility setting on iOS.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'iOS - mono audio metric', key: 'ios-accessibility_is_mono_audio_enabled-true', isPercentage: true }
+        ]}
+        linkLabel="More about mono audio"
+        linkUrl="/en/stats/mono-audio">
+        turn on mono audio on iOS.
+      </PercentageBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        The metric for mono audio on Android will soon become available. 
+        <CustomLink url="/en/stats/mono-audio" label="More about mono audio" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>

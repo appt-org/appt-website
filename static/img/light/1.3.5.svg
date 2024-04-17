@@ -1,0 +1,16 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M34.3 29.1H4.2C3.1 29.1 2.2 28.2 2.2 27.1V17.2C2.2 16.1 3.1 15.2 4.2 15.2H40.5C41.6 15.2 42.5 16.1 42.5 17.2V21.3" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 19.1V25.2" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.6 20.6L6.4 23.7" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.6 23.7L6.4 20.5" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.1 19.1V25.2" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.7 20.6L16.4 23.7" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.6 23.7L16.5 20.5" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M29.1 19.1V25.2" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M31.7 20.6L26.4 23.7" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M31.6 23.7L26.5 20.5" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M41.1 34.9C44.8555 34.9 47.9 31.8555 47.9 28.1C47.9 24.3445 44.8555 21.3 41.1 21.3C37.3445 21.3 34.3 24.3445 34.3 28.1C34.3 31.8555 37.3445 34.9 41.1 34.9Z" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M39 26.7C39.5523 26.7 40 26.2523 40 25.7C40 25.1477 39.5523 24.7 39 24.7C38.4477 24.7 38 25.1477 38 25.7C38 26.2523 38.4477 26.7 39 26.7Z" fill="#D023BE"/>
+<path d="M43.2 26.7C43.7523 26.7 44.2 26.2523 44.2 25.7C44.2 25.1477 43.7523 24.7 43.2 24.7C42.6477 24.7 42.2 25.1477 42.2 25.7C42.2 26.2523 42.6477 26.7 43.2 26.7Z" fill="#D023BE"/>
+<path d="M37.9 29.1C37.9 29.1 41 33 44.2 29.1" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M41.29 12H8C6.89543 12 6 12.8954 6 14V35.88C6 36.9846 6.89543 37.88 8 37.88H41.29C42.3946 37.88 43.29 36.9846 43.29 35.88V14C43.29 12.8954 42.3946 12 41.29 12Z" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M23.82 29.62H34.35" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M29.82 33.68H34.35" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.32 29.62H20.1" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.32 33.68H25.85" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22.89 15.71C22.76 15.66 22.61 15.69 22.51 15.79L19.78 18.52H18.38C18.19 18.52 18.03 18.68 18.03 18.87V21.96C18.03 22.15 18.19 22.31 18.38 22.31H19.78L22.51 25.04C22.58 25.11 22.67 25.14 22.76 25.14C22.81 25.14 22.85 25.14 22.89 25.11C23.02 25.06 23.11 24.93 23.11 24.79V16.03C23.11 15.89 23.02 15.76 22.89 15.71Z" stroke="#D023BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26.47 17.15C26.4 17.08 26.31 17.05 26.21 17.05C26.11 17.05 26.02 17.09 25.94 17.16C25.8 17.31 25.8 17.54 25.94 17.68C26.7 18.41 27.11 19.39 27.11 20.43C27.11 21.47 26.71 22.41 25.99 23.13C25.85 23.27 25.85 23.51 25.99 23.65C26.13 23.79 26.37 23.79 26.51 23.65C27.37 22.79 27.85 21.64 27.85 20.42C27.85 19.2 27.35 18 26.45 17.13L26.47 17.15Z" fill="#D023BE" stroke="#D023BE" stroke-width="1.2" stroke-miterlimit="10"/>
+<path d="M29.44 15.88C29.37 15.8 29.27 15.77 29.17 15.77C29.07 15.77 28.98 15.8 28.91 15.87C28.76 16.01 28.76 16.25 28.91 16.39C29.95 17.47 30.53 18.9 30.53 20.4C30.53 21.9 29.96 23.33 28.91 24.41C28.77 24.56 28.77 24.79 28.91 24.93C29.06 25.07 29.29 25.07 29.43 24.93C30.61 23.71 31.26 22.1 31.26 20.4C31.26 18.7 30.61 17.11 29.44 15.88Z" fill="#D023BE" stroke="#D023BE" stroke-width="1.2" stroke-miterlimit="10"/>
+</svg>

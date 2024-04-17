@@ -13,8 +13,11 @@
 article > .markdown-content,
 article > p {
   padding-inline: theme(spacing.4);
+}
 
-  @media (min-width: theme(screens.sm)) {
+@media (min-width: theme(screens.sm)) {
+  article > .markdown-content,
+  article > p {
     padding-inline: theme(spacing.8);
   }
 }
