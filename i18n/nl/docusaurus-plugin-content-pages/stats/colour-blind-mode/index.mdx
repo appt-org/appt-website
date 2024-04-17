@@ -1,0 +1,39 @@
+---
+locale: nl
+contentfulID: 1clC4nMXh2m7Lex1ciGcZw
+type: pageContentPage
+title: Kleurblind modus
+shortDescription: Meer over kleurenblind modus
+---
+
+Voor mensen met kleurenblindheid bieden iOS en Android een optie om beter het verschil tussen kleuren te zien. Deze instelling kan ook gebruikt worden door mensen die bijvoorbeeld een geler schermlicht prettiger vinden lezen op hun tablet of telefoon.
+
+Op iOS heet deze toegankelijkheidsfunctie Kleurfilters. Het is daarbij mogelijk om grijstinten of andere filters te kiezen die bovendien in intensiteit zijn in te stellen.
+
+Het aanpassen van de kleuren op het scherm heet op Android Kleurcorrectie. Android biedt minder kleurfilters aan dan iOS. Wel is het mogelijk om een snelkoppeling voor kleurcorrectie vast op het scherm te zetten.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        The metric for colour blind mode is not available on iOS at the moment. 
+        <CustomLink url="/nl/stats/colour-blind-mode" label="More about colour blind mode" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'Colour blind mode', key: 'android-accessibility_is_color_blind_mode_enabled-true', isPercentage: true }
+        ]}
+        linkLabel="More about colour blind mode"
+        linkUrl="/nl/stats/colour-blind-mode">
+        use colour blind mode on Android.
+      </PercentageBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+Overigens bieden zowel iOS als Android ook nog de optie om kleuren helemaal [om te keren](/nl/stats/invert-colours).

@@ -1,0 +1,33 @@
+---
+locale: nl
+contentfulID: 27vqrZ5O1Ewec2L8N0ZIKX
+type: pageContentPage
+title: Animaties verwijderen
+shortDescription: Meer over animaties verwijderen
+---
+
+Informatie over animaties verwijderen op Android en beweging verminderen op iOS.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        The metric for reduce motion on iOS will soon become available. 
+        <CustomLink url="/nl/stats/remove-animations" label="More about remove animations" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'Remove animations', key: 'android-accessibility_is_animation_disabled-true', isPercentage: true }
+        ]}
+        linkLabel="More about remove animations"
+        linkUrl="/nl/stats/remove-animations">
+        use remove animations on Android.
+      </PercentageBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>

@@ -1,0 +1,37 @@
+---
+locale: nl
+contentfulID: OVlIkBEGu53t9gzdhN5AR
+type: pageContentPage
+title: Verminderde transparantie
+shortDescription: Meer over verminderde transparantie
+---
+
+De transparantie uitzetten zorgt ervoor dat systeemvensters, overlays en andere transparante elementen niet of minder doorzichtig zijn. Deze functie geeft een rustiger beeld met meer contrast.
+
+Deze setting is specifiek voor iOS: er wordt in de interface gebruikgemaakt van doorzichtige lagen. Material design, het designsysteem dat Android gebruikt, kent geen transparantie. Daarom is deze instelling ook geen optie.
+
+Ruim 200.000 Nederlanders blijken de transparantie gedeactiveerd te hebben op hun mobiele telefoon. Dit gaat vaak gepaard met het inschakelen van de functie voor vette tekst.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'iOS - transparency metric', key: 'ios-accessibility_is_reduce_transparency_enabled-true', isPercentage: true }
+        ]}
+        linkLabel="More about transparency"
+        linkUrl="/nl/stats/transparency">
+        have turned off the transparency setting on iOS.
+      </PercentageBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        The setting to turn off transparency is not available on Android. 
+        <CustomLink url="/nl/stats/transparency" label="More about transparency" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
