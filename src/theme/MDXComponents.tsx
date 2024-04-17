@@ -1,7 +1,8 @@
 // Import the original mapper
 import {
   CodeSample,
-  Column,
+  LeftColumn,
+  RightColumn,
   ColumnRow,
   Hero,
   Image,
@@ -23,8 +24,8 @@ export default {
   Hero,
   TwoColumnBlock,
   ColumnRow,
-  LeftColumn: Column,
-  RightColumn: Column,
+  LeftColumn,
+  RightColumn,
   Image,
   PercentageBlock,
   CodeSample,
