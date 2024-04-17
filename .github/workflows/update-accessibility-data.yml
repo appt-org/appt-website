@@ -2,7 +2,9 @@ name: Automated - Update accessibility data
 'on':
   push:
     branches:
-      - feature/stats-api
+      - main
+  schedule:
+    - cron: '0 2 * * *'
 jobs:
   get_data_and_commit:
     runs-on: ubuntu-latest
