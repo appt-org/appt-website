@@ -4,6 +4,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import tailwindPlugin from './plugins/tailwind-config';
 import 'dotenv/config';
 import { getTranslatedPath } from './src/utils/route-translations';
+import { docusaurusContentDocsConfig } from './docusaurus-content-docs-config';
 
 const config: Config = {
   title: 'Appt',
@@ -66,36 +67,7 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-  plugins: [
-    tailwindPlugin,
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'guidelines',
-        path: 'guidelines',
-        routeBasePath: getTranslatedPath('guidelines'),
-        sidebarPath: './sidebarsGuidelines.ts',
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'articles',
-        path: 'articles',
-        routeBasePath: getTranslatedPath('articles'),
-        sidebarPath: false,
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'stats',
-        path: 'stats',
-        routeBasePath: getTranslatedPath('stats'),
-        sidebarPath: false,
-      },
-    ],
-  ],
+  plugins: [tailwindPlugin, ...docusaurusContentDocsConfig],
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',

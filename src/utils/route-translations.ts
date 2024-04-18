@@ -4,6 +4,12 @@ export const getTranslatedPath = (path: string, capitalized?: true) => {
     guidelines: 'richtlijnen',
     partners: 'partners',
     stats: 'stats',
+    about: 'over',
+    'appt-api': 'appt-api',
+    'appt-app': 'appt-app',
+    community: 'community',
+    handbook: 'handboek',
+    licenses: 'licenties',
   };
 
   const isNl = process.env.DOCUSAURUS_CURRENT_LOCALE === 'nl';
