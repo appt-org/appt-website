@@ -1,0 +1,136 @@
+---
+locale: nl
+contentfulID: kJbwL6RlKsF3PhsfDw51I
+type: pageContentPage
+title: Verzamel jouw eigen toegankelijkheidsdata
+shortDescription: Alle ingrediënten om inzicht te krijgen in het gebruik van toegankelijkheidsfeatures in jouw eigen app.
+thumbnail: Services - icon
+slug: /verzamel-jouw-eigen-toegankelijkheidsdata
+seo.title: Verzamel jouw eigen toegankelijkheidsdata
+seo.name: Gather your own accessibility data - SEO
+seo.description: Alle ingrediënten om inzicht te krijgen in het gebruik van toegankelijkheidsfeatures in jouw eigen app.
+hero.title: Verzamel jouw eigen toegankelijkheidsdata
+hero.introText: Alle ingrediënten om inzicht te krijgen in het gebruik van toegankelijkheidsfeatures in jouw eigen app.
+hero.useThumbnail: false
+---
+
+<Hero
+  title="Verzamel jouw eigen toegankelijkheidsdata"
+  introText="Alle ingrediënten om inzicht te krijgen in het gebruik van toegankelijkheidsfeatures in jouw eigen app."
+/>
+
+<Image src="/img/light/arend-2.463821b.jpg" alt="Een blinde jongeman die zijn telefoon bedient"/>
+
+Data over het gebruik van toegankelijkheidsfuncties in jouw eigen app zorgt voor meer focus op toegankelijkheid. Het geeft inzicht in de behoeften van jouw gebruikers en helpt bij het maken van gerichte keuzes. Jouw eigen dataset kan je op de volgende manieren helpen.
+
+- Overtuigen en aanbrengen van focus  op toegankelijkheid. 
+Data maakt inzichtelijk dat er behoefte is en het benadrukt de noodzaak voor ondersteuning van digitale toegankelijkheid. Het helpt bij het maken van een businesscase en het overtuigen van beslissingnemers.
+- Inzicht in de behoeften van jouw gebruikers. 
+De data toont jou precies welke functies gebruikt worden en hoeveel. Dit geeft jou de kans om te bepalen welke stappen je moet zetten om een zo groot mogelijk deel van jouw gebruikers optimaal te bedienen.
+- Hulp bij het prioriteren.
+De dat geeft Inzicht in welk aanpassing de meeste impact gaat hebben. Daarmee kun jij bepalen wat je als eerste wilt oppakken en wat daarna.
+- Meer gedetailleerde inzichten. 
+Door de data over langere periode te verzamelen krijg je steeds meer gedetailleerde inzichten in het gebruik van functies ten behoeve van toegankelijkheid op de telefoons van jouw gebruikers. Zo zagen we bij een klant initieel geen gebruik van een schermlezer. Maar na een paar maanden was dit aantal opgelopen tot een paar honderd.
+
+## Zelf doen? Hier zijn de ingrediënten.
+
+Voor het verzamelen van je eigen data heb je het volgende nodig:
+
+1. Een stukje code in de app om de gegevens op te halen. 
+2. Een plek waar je de data kunt opslaan.
+3. Een manier om de verzamelde data inzichtelijk te maken.
+
+Om het voor jou makkelijk te maken om dit ook te doen delen we hier de manier waarop we de data hebben verzameld voor deze website. 
+
+N.B. Alle code is open source en vrij voor jou om te gebruiken. Het enige dat we vragen is dat je refereert naar de originele maker ervan, namelijk [Q42](https://q42.nl).
+
+### Stap 1. Gegevens verzamelen
+Hiervoor hebben we een library (een klein stukje programmatuur) ontwikkeld dat in overleg met onze klanten is toegevoegd aan hun apps. Deze library controleert bij het opstarten van de app welke toegankelijkheidsopties gebruikers hebben geactiveerd op hun telefoon. Het uitvragen van deze gegevens is iets wat iedere app doet. Het is namelijk noodzakelijk om te weten welke instellingen van de telefoon de app moet ondersteunen. Denk bijvoorbeeld aan dark mode. Ons stukje code vraagt deze data eveneens uit. 
+We hebben een tweetal libraries ontwikkeld. Één voor iOS en één voor Android. Deze zijn open source en vrij om te gebruiken voor iedereen.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Q42Stats library for iOS
+        
+        Collect stats for Q42 internal usage, shared accross multiple iOS projects. 
+        <CustomLink url="https://github.com/Q42/Q42Stats" label="Q42Stats library for iOS on Github" external={true}/>
+      </TextBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Q42Stats library for Android
+        
+        Collect stats for Q42 internal usage, shared accross multiple Android projects. 
+        <CustomLink url="https://github.com/Q42/Q42Stats.Android" label="Q42Stats library for Android on Github" external={true}/>
+      </TextBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+### Stap 2. Pijplijn bouwen
+
+Om de data te verwerken hebben we een zogenaamde data pijplijn opgezet. Deze bestaat uit verschillende onderdelen, namelijk: voor elke app gebruiken we een instantie van Firestore. Hierin wordt de data uit de apps voor 24 uur verzameld. Iedere 24 uur wordt deze data verwerkt naar BigQuery. Vervolgens wordt de data in Firestore verwijderd. Dit is om de kosten zo laag mogelijk te houden. In BigQuery wordt de data samengevoegd met alle historische data. De data wordt ontdaan van eventuele dubbelingen en toegevoegd aan de reeds opgeslagen set.
+Dat is de eenvoudige uitleg. Onze pijplijn is open source en uitgebreider gedocumenteerd op github.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Accessibility pipeline
+        
+        This project facilitates the greater part of an initiative to gather information about usage of accessibility settings on mobile phones. 
+        <CustomLink url="https://github.com/Q42/accessibility-data-pipeline" label="Accessibility data pipeline on Github" external={true}/>
+      </TextBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={false}>
+         
+      </TextBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+### Stap 3. Inzicht geven
+
+Hoe je de data vervolgens wilt delen is natuurlijk helemaal aan jou. Soms is een simpele tabel met alle verzamelde gegevens al voldoende. Wij hebben ervoor gekozen om de data voor onze klanten te ontsluiten via datastudio van Google. Die gegevens kunnen we niet delen maar we kunnen wel een voorbeeld geven hoe dat eruit ziet.
+
+<Image src="/img/light/data-dashboard.png" alt="Voorbeeld van een toegankelijkheidsdata dashboard"/>
+
+Wat we wel kunnen delen zijn de geaggregeerde data van al deze klanten samen. Dat zijn de data die je op deze site ziet.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Accessibility statistics
+        
+        Almost half of all people with a mobile phone use accessibility features. Much more than you would expect. We researched the real use of all these features. 
+        <CustomLink url="/nl/stats" label="All accessibility stats" icon="/img/light/Research statistics accessibility use mobiel phones.jpg" darkIcon="/img/dark/Research statistics accessibility use mobiel phones.jpg" iconAlt="Research statistics accessibility use mobile phones (screen shot)" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={false}>
+         
+      </TextBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+## 
+Vragen?
+
+Met deze documentatie en code zou je zelf in staat moeten zijn  om je eigen verzameling van toegankelijkheidsdata te beginnen. Mis je iets? Is er iets niet helemaal duidelijk? Neem dan contact op met [johan@q42.nl](mailto:johan@q42.nl) of laat het weten in [het slack kanaal van Appt](https://appt.li/slack).
