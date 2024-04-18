@@ -25,6 +25,7 @@ export function CustomLink({ label, url, className, external, appearance, active
       'transition ease-out-quint duration-200 items-center self-end inline text-accent hover:underline': !isButton,
       'text-body underline': active,
       'inline-flex': isExternal && !isButton,
+      'flex-row-reverse pl-4 gap-2': isExternal && isButton, // Show icon on the left if the link is styled as a button
       'leading-paragraph text-paragraph hover:no-underline flex max-w-max py-1.5 px-6 rounded-lg border-2 border-accent transition-all hover:border-accent-hover duration-200 out-quint max-w-full break-words':
         isButton,
       'bg-accent text-onaccent hover:bg-accent-hover hover:shadow-elevate hover:text-onaccent':
@@ -39,7 +40,7 @@ export function CustomLink({ label, url, className, external, appearance, active
 
   return (
     <Link to={url} className={classNames}>
-      {label}
+      <span>{label}</span>
       {isExternal && (
         <ExternalIcon aria-label={i18n.currentLocale === 'en' ? 'External' : 'Extern'} className={iconClassNames} />
       )}
