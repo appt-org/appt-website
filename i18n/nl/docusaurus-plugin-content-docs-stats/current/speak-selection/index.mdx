@@ -1,0 +1,59 @@
+---
+locale: nl
+contentfulID: 1yzicK0VdLvQpUT3ztDXdc
+type: pageContentPage
+title: Spreek selectie uit
+shortDescription: Meer over selectie uitspreken
+---
+
+Deze functie zorgt ervoor, dat een tekst kan worden voorgelezen. Wanneer een stuk tekst wordt geselecteerd, verschijnt de optie om deze te laten uitspreken. 
+
+Teksten laten voorlezen is noodzakelijk voor blinden en slechtzienden. Maar ook mensen met autisme of focus- en concentratieproblemen gebruiken deze instelling. En het wordt niet alleen gebruikt door mensen met een beperking, maar ook in situaties waarin gebruikers niet naar het scherm kunnen kijken, zoals in de auto. 
+
+Deze setting is beschikbaar op zowel iOS als Android. Als we onze meting doortrekken naar alle Nederlanders met een iPhone, gaat het om een groep van ruim 250.000 mensen.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'iOS - speak selection metric', key: 'ios-accessibility_is_speak_selection_enabled-true', isPercentage: true }
+        ]}
+        linkLabel="More about speak selection"
+        linkUrl="/nl/stats/speak-selection">
+        use speak selection on iOS.
+      </PercentageBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'Android - select to speak', key: 'android-accessibility_is_select_to_speak_enabled-true', isPercentage: true }
+        ]}
+        linkLabel="More about speak selection"
+        linkUrl="/nl/stats/speak-selection">
+        use select to speak on Android.
+      </PercentageBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+## VoiceOver
+
+Een geselecteerde tekst laten voorlezen is overigens niet hetzelfde als [VoiceOver](/nl/stats/screen-reader). Uit onze resultaten komt geen significant gebruik van voice-over naar voren. Maar speak screen en speak selection hebben net als VoiceOver goede labelling nodig.
+
+<Quote>
+  quote="Mijn iPhone is mijn derde oog."
+  name="Jeroen"
+  imageSrc="/img/light/Blinde app gebruiker Jeroen.jpg"
+  alt="Jeroen - Asset"
+  linkLabel="Read the interview with Jeroen"
+  url="/nl/articles/jeroen"
+</Quote>
+
+## Ondersteuning in apps
+
+Niet-tekstuele inhoud zoals knoppen en afbeeldingen dienen te zijn voorzien van een label. Hieronder vind je een aantal codevoorbeelden voor de meest gebruikte platformen en frameworks.
+
+<CodeSample id="accessibility-label" locale="nl"/>

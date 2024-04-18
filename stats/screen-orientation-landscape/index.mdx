@@ -1,0 +1,49 @@
+---
+locale: en
+contentfulID: 2YiQawCXikWy8LZScRSy3X
+type: pageContentPage
+title: Screen orientation landscape
+shortDescription: Screen orientation landscape
+---
+
+On Android it is possible to disable the automatic screen rotation when the phone is rotated. In that case, the screen will retain its last orientation. This feature is important for people who have their screen mounted on something, such as a wheelchair. Or cyclists who attach their device to the handlebars. 
+
+Most apps have been developed purely for vertical portrait orientation. When the screen is fixed in the horizontal position, those apps will be less useful.
+
+- On iOS you can lock your screen to portrait orientation, make sure screen lock is disabled when testing.
+- On Android you can lock your screen to the most recent orientation, make sure this lock is disabled when testing.
+
+At the moment we are not measuring screen orientation on iOS yet.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        The metric for disabling the automatic screen rotation is not available on iOS. 
+        <CustomLink url="/en/stats/screen-orientation-landscape" label="More about screen orientation landscape" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'Screen orientation landscape', key: 'android-screen_orientation-landscape', isPercentage: true }
+        ]}
+        linkLabel="More about screen orientation landscape"
+        linkUrl="/en/stats/screen-orientation-landscape">
+        have their screen in landscape mode per default on Android.
+      </PercentageBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+<Quote>
+  quote="How many hours a day I use my phone? How many hours do you use your eyes?"
+  name="Jesse"
+  imageSrc="/img/light/Jesse.png"
+  alt="Photo Jesse"
+  linkLabel="Read the interview with Jesse"
+  url="/en/articles/jesse"
+</Quote>

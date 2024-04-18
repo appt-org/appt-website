@@ -1,0 +1,53 @@
+---
+locale: nl
+contentfulID: 2bsnyQeRa8fYpoQxM5WA4Z
+type: pageContentPage
+title: Ondertiteling
+shortDescription: Meer over audio descripties
+---
+
+Het automatisch ondertitelen van bijvoorbeeld video's wordt zowel op iOS als Android ondersteund. Maar de werking verschilt wel. Op iOS worden de captions in de ingestelde voorkeurstaal bij video’s automatisch geactiveerd, wanneer de maker van het filmpje hierin heeft voorzien. Op Android wordt de ondertiteling automatisch gegenereerd als deze instelling is geselecteerd. (NB. iOS 16 heeft inmiddels ook de functie voor live ondertiteling. Dit is nog in bèta. Wanneer dit voor iedereen beschikbaar komt, zullen we hier het gebruik daarvan delen.)
+
+Mensen gebruiken deze functie als ze doof of slechthorend zijn. Maar ook voor mensen die bijvoorbeeld Netflix willen kijken in de sportschool, is dit handig. Doorberekend hebben ongeveer 600.000 Nederlanders dit standaard aan staan. 
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'iOS - closed captions metric', key: 'ios-accessibility_is_closed_captioning_enabled-true', isPercentage: true }
+        ]}
+        linkLabel="More about closed captions"
+        linkUrl="/nl/stats/closed-captions">
+        have closed captions on by default on iOS.
+      </PercentageBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'Live captions', key: 'android-accessibility_is_closed_captioning_enabled-true', isPercentage: true }
+        ]}
+        linkLabel="More about closed captions"
+        linkUrl="/nl/stats/closed-captions">
+        have closed captions on by default on Android.
+      </PercentageBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+<Quote>
+  quote="Ik heb geen beperking, de wereld maakt mij beperkt."
+  name="Darice"
+  imageSrc="/img/light/Interview met dove eindgebruiken over inzetten van toegankelijkheid in mobiele apps.jpg"
+  alt="Foto Darice"
+  linkLabel="Read the interview with Darice"
+  url="/nl/articles/darice"
+</Quote>
+
+## Ondersteuning in apps
+
+Om iedereen media te laten begrijpen en ervaren dient deze voorzien te zijn van captions of ondertiteling. Hieronder vind je een aantal codevoorbeelden voor de meest gebruikte platformen en frameworks.
+
+<CodeSample id="media-captions" locale="nl"/>

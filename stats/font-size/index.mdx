@@ -1,0 +1,50 @@
+---
+locale: en
+contentfulID: 6U9RJU80319u4uGXZ2JJoe
+type: pageContentPage
+title: Font size
+shortDescription: More about font sizes
+---
+
+People with a visual impairment often use the accessibility feature to increase the text size. This means that less information than usual is displayed on the screen, so users see less content at once and need to scroll down to read the entire text.
+
+Our accessibility research in the Netherlands shows that more than a fifth of users normally increase the text size on iOS and on Android. When extrapolated to all Dutch people with a mobile phone, we get a figure of more than 3 million people.
+
+<PercentageBlock
+  metrics={[
+    { title: 'Font-size smaller', key: 'ios-custom_content_size-smaller', isPercentage: true },
+    { title: 'Font-size normal', key: 'ios-custom_content_size-default', isPercentage: true },
+    { title: 'Font-size larger', key: 'ios-custom_content_size-larger', isPercentage: true }
+  ]}
+  linkLabel="More about font size"
+  linkUrl="/en/stats/font-size">
+  Many people make their fonts larger on iOS.
+</PercentageBlock>
+
+Our research found that there is a huge diversity of font sizes on Android. The most commonly used setting differs per device type. The default font size therefore seems to differ between the various implementations of the OS. In order to be able to make a statement about the adjustments compared to the standard, we determined per device what the most used setting was and what percentage the font size has changed in relation to this.
+
+<PercentageBlock
+  metrics={[
+    { title: 'Font-size normal', key: 'android-default_screen_font_scale-true', isPercentage: true },
+    { title: 'Font-size larger', key: 'android-screen_font_scale_default_comparison-bigger', isPercentage: true },
+    { title: 'Font-size smaller', key: 'android-screen_font_scale_default_comparison-smaller', isPercentage: true }
+  ]}
+  linkLabel="More about font size"
+  linkUrl="/en/stats/font-size">
+  Many people make their font-size larger on Android.
+</PercentageBlock>
+
+<Quote>
+  quote="Resizing texts is a necessity for me. "
+  name="Edith"
+  imageSrc="/img/light/Edith-s.jpg"
+  alt="Picture of Edith"
+  linkLabel="Read the interview with Edith"
+  url="/en/articles/edith"
+</Quote>
+
+## Support in apps
+
+Below are some code samples for the most commonly used platforms and frameworks.
+
+<CodeSample id="text-scale" locale="en"/>

@@ -1,7 +1,8 @@
 // Import the original mapper
 import {
   CodeSample,
-  Column,
+  LeftColumn,
+  RightColumn,
   ColumnRow,
   Hero,
   Image,
@@ -12,6 +13,7 @@ import {
   TwoColumnBlock,
   Video,
   TextBlock,
+  CustomLink,
 } from '@site/src/components';
 
 import MDXComponents from '@theme-original/MDXComponents';
@@ -22,8 +24,8 @@ export default {
   Hero,
   TwoColumnBlock,
   ColumnRow,
-  LeftColumn: Column,
-  RightColumn: Column,
+  LeftColumn,
+  RightColumn,
   Image,
   PercentageBlock,
   CodeSample,
@@ -32,4 +34,5 @@ export default {
   LinkListItem,
   Video,
   TextBlock,
+  CustomLink,
 };
