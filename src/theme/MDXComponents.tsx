@@ -3,15 +3,16 @@ import {
   CodeSample,
   Column,
   ColumnRow,
+  CustomLink,
   Hero,
   Image,
   LinkList,
   LinkListItem,
   PercentageBlock,
   Quote,
+  TextBlock,
   TwoColumnBlock,
   Video,
-  TextBlock,
 } from '@site/src/components';
 
 import MDXComponents from '@theme-original/MDXComponents';
@@ -32,4 +33,5 @@ export default {
   LinkListItem,
   Video,
   TextBlock,
+  CustomLink,
 };
