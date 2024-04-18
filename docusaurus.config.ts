@@ -115,6 +115,34 @@ const config: Config = {
             },
           ],
         },
+        {
+          items: [
+            {
+              label: getTranslatedPath('about', true),
+              to: getTranslatedPath('about'),
+            },
+            {
+              label: getTranslatedPath('community', true),
+              to: getTranslatedPath('community'),
+            },
+            {
+              label: getTranslatedPath('newsletter', true),
+              to: getTranslatedPath('newsletter'),
+            },
+            {
+              label: 'Appt App',
+              to: getTranslatedPath('appt-app'),
+            },
+            {
+              label: getTranslatedPath('licenses', true),
+              to: getTranslatedPath('licenses'),
+            },
+            {
+              label: getTranslatedPath('privacy', true),
+              to: getTranslatedPath('privacy'),
+            },
+          ],
+        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
