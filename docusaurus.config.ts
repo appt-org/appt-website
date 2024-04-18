@@ -85,7 +85,7 @@ const config: Config = {
         { to: '/docs', label: 'Docs', position: 'right' },
         { to: `/${getTranslatedPath('guidelines')}`, label: getTranslatedPath('guidelines', true), position: 'right' },
         { to: `/${getTranslatedPath('articles')}`, label: getTranslatedPath('articles', true), position: 'right' },
-        // { to: `/${getTranslatedPath('partners')}`, label: 'Partners', position: 'right' },
+        { to: `/${getTranslatedPath('partners')}`, label: 'Partners', position: 'right' },
         {
           type: 'localeDropdown',
           position: 'right',

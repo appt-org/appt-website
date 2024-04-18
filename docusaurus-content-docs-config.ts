@@ -82,4 +82,31 @@ export const docusaurusContentDocsConfig = [
       sidebarPath: false,
     },
   ],
+  [
+    '@docusaurus/plugin-content-docs',
+    {
+      id: 'newsletter',
+      path: 'newsletter',
+      routeBasePath: getTranslatedPath('newsletter'),
+      sidebarPath: false,
+    },
+  ],
+  [
+    '@docusaurus/plugin-content-docs',
+    {
+      id: 'partners',
+      path: 'partners',
+      routeBasePath: getTranslatedPath('partners'),
+      sidebarPath: false,
+    },
+  ],
+  [
+    '@docusaurus/plugin-content-docs',
+    {
+      id: 'privacy',
+      path: 'privacy',
+      routeBasePath: getTranslatedPath('privacy'),
+      sidebarPath: false,
+    },
+  ],
 ];

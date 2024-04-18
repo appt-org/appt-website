@@ -10,6 +10,8 @@ export const getTranslatedPath = (path: string, capitalized?: true) => {
     community: 'community',
     handbook: 'handboek',
     licenses: 'licenties',
+    newsletter: 'nieuwsbrief',
+    privacy: 'privacy',
   };
 
   const isNl = process.env.DOCUSAURUS_CURRENT_LOCALE === 'nl';
