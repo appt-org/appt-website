@@ -25,7 +25,7 @@ export function CustomLink({ label, url, className, external, appearance, active
       'transition ease-out-quint duration-200 items-center self-end inline text-accent hover:underline': !isButton,
       'text-body underline': active,
       'inline-flex': isExternal && !isButton,
-      'leading-paragraph text-paragraph hover:no-underline flex max-w-fit py-1.5 px-6 rounded-lg border-2 border-accent transition-all hover:border-accent-hover duration-200 out-quint max-w-full break-words':
+      'leading-paragraph text-paragraph hover:no-underline flex max-w-max py-1.5 px-6 rounded-lg border-2 border-accent transition-all hover:border-accent-hover duration-200 out-quint max-w-full break-words':
         isButton,
       'bg-accent text-onaccent hover:bg-accent-hover hover:shadow-elevate hover:text-onaccent':
         linkAppearance === LinkAppearance.PrimaryButton,
