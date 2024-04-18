@@ -7,19 +7,20 @@ export type CustomLinkProps = {
   className?: string;
   url: string;
   label: string;
+  external?: boolean;
   active?: boolean;
 } & NavLinkProps;
 
-export function CustomLink({ label, url, className, active = false }: CustomLinkProps) {
+export function CustomLink({ label, url, className, external, active = false }: CustomLinkProps) {
   const { i18n } = useDocusaurusContext();
 
-  const external = url.startsWith('https');
+  const isExternal = external || url.startsWith('https');
 
   const classNames = clsx(
-    'transition ease-out-quint duration-200 items-center self-end text-accent hover:underline',
+    'transition ease-out-quint duration-200 items-center self-end inline text-accent hover:underline',
     {
       'text-body underline': active,
-      'inline-flex': external,
+      'inline-flex': isExternal,
     },
     className,
   );
@@ -29,7 +30,7 @@ export function CustomLink({ label, url, className, active = false }: CustomLink
   return (
     <Link to={url} className={classNames}>
       {label}
-      {external && (
+      {isExternal && (
         <ExternalIcon aria-label={i18n.currentLocale === 'en' ? 'External' : 'Extern'} className={iconClassNames} />
       )}
     </Link>
