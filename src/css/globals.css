@@ -19,6 +19,7 @@ html {
 
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-menu-link-sublist-icon: url('data:image/svg+xml,<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(-90deg);"><path d="M16 20a.996.996 0 0 1-.707-.293l-5-5a1 1 0 1 1 1.414-1.414l4.292 4.294 4.294-4.293a1 1 0 1 1 1.414 1.414l-5 5A.997.997 0 0 1 16 20Z" fill="currentColor"></path></svg>');
   --color-accent: 204 0 185; /* #CC00B9 */
   --color-accent-hover: 184 0 166; /* #b800a6 */
   --color-onaccent: 255 255 255; /* #FFFFFF */

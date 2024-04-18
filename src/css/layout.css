@@ -20,6 +20,35 @@
   padding-inline: theme(spacing.4);
 }
 
+.navbar-sidebar__items .menu__list-item {
+  margin: 0;
+}
+
+.navbar-sidebar__item .menu__list-item > .menu__link:not(.menu__link--sublist) {
+  padding-block: theme(spacing.4);
+  border-top: theme(borderWidth.DEFAULT) solid theme(colors.onsurface);
+}
+
+.navbar-sidebar__items .menu__list-item:first-child > .menu__link {
+  border-top: none;
+}
+
+@media (min-width: theme(screens.lg)) {
+  .navbar-sidebar__items .menu__list-item {
+    align-self: center;
+    margin-right: theme(spacing.8);
+    border-top: none;
+  }
+}
+
+.menu__list-item:not(.menu__list-item--collapsed) .chevron {
+  transform: rotate(180deg);
+}
+
+.navbar .menu__list-item .menu__link--sublist-caret::after {
+  display: none;
+}
+
 @media (min-width: theme(screens.lg)) {
   .navbar__inner {
     padding-inline: theme(spacing.8);
@@ -45,15 +74,75 @@
   margin-inline: theme(spacing.4);
 }
 
+.dropdown__link:not(.dropdown__link--active) {
+  color: theme(colors.accent);
+}
+
 .navbar__items > .dropdown > .navbar__link::after {
   display: none;
 }
 
 .navbar__items > .navbar__link:hover {
   text-decoration: underline;
+  text-underline-offset: 0.15rem;
+  text-decoration-thickness: 0.075rem;
+  text-decoration-skip-ink: all;
 }
 
 .navbar__items > .navbar__link--active {
+  color: theme(colors.body);
+  text-decoration: underline;
+  text-underline-offset: 0.15rem;
+  text-decoration-thickness: 0.075rem;
+  text-decoration-skip-ink: all;
+}
+
+.dropdown .navbar__link,
+.dropdown__menu,
+.menu__list-item {
+  font-weight: theme(fontWeight.normal);
+}
+
+.navbar .menu__list-item .menu__link--sublist + ul.menu__list .menu__link {
+  padding-block: theme(spacing.3);
+}
+
+.navbar .dropdown__link.dropdown__link--active,
+.menu__link.menu__link--active {
+  text-decoration: underline;
+  text-underline-offset: 0.15rem;
+  text-decoration-thickness: 0.075rem;
+  text-decoration-skip-ink: all;
+  color: theme(colors.body);
+}
+
+.menu__caret::before {
+  transform: rotate(-90deg);
+}
+
+.menu__caret::after,
+.menu__link--sublist-caret::after {
+  transform: rotate(270deg);
+}
+
+.navbar .dropdown__link--active:hover {
+  text-decoration: none;
+}
+
+.navbar .dropdown__link--active:hover {
+  text-decoration: none;
+}
+
+.navbar .menu__link.menu__link--active {
+  background: none;
+}
+
+.menu__list-item .menu__link {
+  color: theme(colors.accent);
+}
+
+.menu__link.menu__link--active,
+.menu__link.dropdown__link--active {
   color: theme(colors.body);
   text-decoration: underline;
 }
