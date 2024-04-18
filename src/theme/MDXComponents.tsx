@@ -1,19 +1,19 @@
 // Import the original mapper
 import {
   CodeSample,
-  LeftColumn,
-  RightColumn,
   ColumnRow,
+  CustomLink,
   Hero,
   Image,
+  LeftColumn,
   LinkList,
   LinkListItem,
   PercentageBlock,
   Quote,
+  RightColumn,
+  TextBlock,
   TwoColumnBlock,
   Video,
-  TextBlock,
-  CustomLink,
 } from '@site/src/components';
 
 import MDXComponents from '@theme-original/MDXComponents';
