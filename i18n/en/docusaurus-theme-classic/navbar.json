@@ -18,5 +18,17 @@
   "item.label.Artikelen": {
     "message": "Artikelen",
     "description": "Navbar item with label Artikelen"
+  },
+  "item.label.Stats": {
+    "message": "Stats",
+    "description": "Navbar item with label Stats"
+  },
+  "item.label.Guidelines": {
+    "message": "Guidelines",
+    "description": "Navbar item with label Guidelines"
+  },
+  "item.label.Articles": {
+    "message": "Articles",
+    "description": "Navbar item with label Articles"
   }
 }
