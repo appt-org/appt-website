@@ -1,0 +1,78 @@
+---
+locale: nl
+contentfulID: 4j28k0q5myb1Cc4j3uWJq8
+type: pageContentPage
+title: Data over toegankelijkheid
+shortDescription: Hoe data jou kan helpen om meer inzicht te krijgen in toegankelijkheid.
+thumbnail: Q42 logo (black / white)
+hide_table_of_contents: true
+---
+
+Welke functies ten behoeve van toegankelijkheid gebruiken Nederlanders nu echt op hun mobiel telefoon?
+
+Om die vraag te beantwoorden zijn we bij Q42 in 2020 een kwantitatief onderzoek gestart naar ingeschakelde accessibility-­functies in door ons gebouwde iOS-apps van bekende Nederlandse merken
+
+De motivatie voor dit onderzoek was: bewijzen dat toegankelijkheid van digitale producten veel belangrijker is dan veel mensen veronderstellen. 
+
+Hiervoor hebben we een library (een klein stukje programmatuur) ontwikkeld dat in overleg met onze klanten is toegevoegd aan hun apps. Deze library controleert bij het opstarten van de app welke toegankelijkheidsopties gebruikers hebben geactiveerd op hun iPhone. Het uitvragen van deze gegevens is iets wat iedere app doet. Het is namelijk noodzakelijk om te weten welke instellingen van de telefoon de app moet ondersteunen. Denk bijvoorbeeld aan dark mode. Ons stukje code vraagt deze data eveneens uit. 
+
+Samen met een advocaat privacyrecht hebben we ons systeem zo ingericht, dat er geen persoonsgegevens worden verzameld of verwerkt. De gegevens die worden verzameld zijn generieke eigenschappen en instellingen van mobiele apparaten, ook in de verwerking worden verder geen gegevens verzameld of gegenereerd die herleidbaar zijn naar een persoon. 
+
+Uit ons onderzoek blijkt, dat accessibility-instellingen veel breder worden gebruikt dan je zou verwachten. En vooral: om welke settings het dan precies gaat. De resultaten helpen om meer focus te geven op dit gebied. 
+
+Aan dit onderzoek doen enkele bekende Nederlandse apps mee, waarmee een aanzienlijk deel van de Nederlandse bevolking vertegenwoordigd is in de data. Het onderzoek is inmiddels gebaseerd op meer dan 2 miljoen iPhone-gebruikers. Met het toevoegen van steeds meer apps, waarbij we nu ook de Android-apps meenemen, wordt het onderzoek nóg nauwkeuriger. 
+
+## **Hoe werkt het?**
+
+Bij het opstarten van een app wordt door de library informatie opgehaald over de functies ten behoeve van toegankelijkheid op de mobiele telefoon: Per functie wordt bekeken of deze is geactiveerd en in een aantal gevallen welke waarden zijn ingesteld. Bijvoorbeeld bij de fontgrootte wordt de waarde van het ingestelde formaat, small/medium/large/extra large/…,  gedeeld. Dit wordt niet iedere keer gedeeld maar volgens een ingestelde interval. Bijvoorbeeld elke week. Dit wordt naar een instantie van Firestore gestuurd. Hierin wordt de data uit de apps voor 24 uur verzameld. Iedere 24 uur wordt deze data verwerkt naar BigQuery. Vervolgens wordt de data in Firestore verwijderd. Dit is om de kosten zo laag mogelijk te houden. Als je ervoor kiest om de Firestore, dataverwerking en BigQuery in eigen beheer te houden, houd dan rekening met 40-60 euro per maand. Uiteraard is dit ook afhankelijk van het aantal app-gebruikers. 
+
+In BigQuery wordt de data samengevoegd met alle historische data. De data wordt ontdaan van eventuele dubbelingen en toegevoegd aan de reeds opgeslagen set.
+
+Wat wij nodig hebben, zijn schrijfrechten om vanuit onze API de data uit de app te kunnen wegschrijven naar Firestore. Daarnaast hebben we leesrechten nodig om de data op te kunnen halen die we toevoegen in BigQuery. 
+
+[ Link naar documentatie/technische toelichting ]
+
+
+### De libraries
+
+[https://github.com/Q42/Q42Stats](https://github.com/Q42/Q42Stats)
+
+[https://github.com/Q42/Q42Stats.Android](https://github.com/Q42/Q42Stats.Android)
+
+### Interval
+
+De library draait op de achtergrond. Er is dus geen impact op de performance van de app. Om de data-footprint van de app te beperken worden de verzamelde gegevens niet bij iedere app start-up verstuurd. Het versturen gebeurt in ieder geval de allereerste keer dat de app opstart na implementatie van de library. Daarna op een moment dat zelf is in te stellen middels een configureerbare interval. 
+
+### Belasting
+
+De library is klein, ongeveer 50 kB voor Android en 72 kB voor iOS. Het dataverbruik is zeer bescheiden. Er wordt ongeveer 5 kB aan gegevens verstuurd. De impact die de gegevensverzameling heeft op de performance van een app is verwaarloosbaar.
+
+### Privacy
+
+De data die uit de app wordt gehaald, bevat geen persoonsgegevens en is op geen enkele manier herleidbaar naar een specifiek persoon. We hebben hierover advies ingewonnen bij een jurist op het gebied van privacy en technologie. Op basis van zijn aanwijzingen hebben we de gegevensverzameling zo opgezet dat de AVG hierop niet van toepassing is.
+
+Iedere nacht wordt de nieuwe data opgehaald uit de Firestore. Deze data wordt verwerkt en toegevoegd aan de grote algemene set met data volgens een vooropgestelde formule. De resulterende set geeft een algemeen beeld van het gebruik van functies ten behoeve van toegankelijkheid. 
+
+[Link naar juridische bijsluiter toevoegen ]
+
+## **Hoe gaat dit jou helpen?**
+
+We hopen dat dit onderzoek ook jou en je team gaat helpen om digitale producten te maken die bruikbaar zijn door iedereen.
+
+- Inzicht in de wensen van jouw gebruikers. 
+Persoonlijk dashboard toont jou precies welke functies door klanten gebruikt worden en hoeveel. Dit geeft jou de kans om te bepalen welke stappen je moet zetten om een zo groot mogelijk deel van jouw gebruikers optimaal te bedienen.
+- Focus op toegankelijkheid.  
+Data maakt inzichtelijk dat er behoefte is aan toegankelijkheid en helpt daarbij bij het maken van een businesscase voor toegankelijkheid.
+- Prioritering in toegankelijkheid. 
+Inzicht middels persoonlijk dashboard. Welk onderdeel heeft de meeste impact?
+- Meer gedetailleerde inzichten. 
+Hoe langer je dit laat lopen hoe meer detaillering. Zo zagen we bij een klant initieel geen gebruik van een schermlezer. Maar na een paar maanden was dit aantal opgelopen tot een paar honderd.
+
+## **Gepersonaliseerde uitbreiding**
+
+Het is doorgaans heel lastig kwantificeerbaar, hoe ver je bent met het toegankelijk maken van jouw product of producten. Met een persoonlijk dashboard wordt het effect van de inspanningen ten behoeve van toegankelijkheid inzichtelijk gemaakt. Het toont hoeveel mensen een bepaalde feature gebruiken. Als de ondersteuning van deze feature is gerealiseerd, zie je direct wat het effect is op jouw doelgroep. Door ook de uitkomsten van audits en gebruiksonderzoeken hierin een plek te geven ontstaat een meetinstrument dat jouw voortgang nog beter inzichtelijk maakt. 
+
+## 
+**Contact**
+
+Heb je vragen of wil je meer weten? Mail naar [johan@q42.nl](mailto:johan@q42.nl) of bel 070 445 2342.
