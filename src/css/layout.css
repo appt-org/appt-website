@@ -18,8 +18,10 @@
   justify-content: between;
   padding-block: theme(spacing.3);
   padding-inline: theme(spacing.4);
+}
 
-  @media (min-width: theme(screens.lg)) {
+@media (min-width: theme(screens.lg)) {
+  .navbar__inner {
     padding-inline: theme(spacing.8);
   }
 }

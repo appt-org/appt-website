@@ -1,0 +1,66 @@
+---
+locale: nl
+contentfulID: 5yiFgQhsCfsAsbOT4p7NtR
+type: pageContentPage
+title: Spreek scherm uit
+shortDescription: Meer over spreek scherm uit
+---
+
+Spraakinstellingen helpen als de gebruiker niet in staat is om naar het scherm te kijken. Ze zijn noodzakelijk voor blinden en slechtzienden. Maar ook mensen met autisme of focus- en concentratieproblemen gebruiken deze functie: deze gebruikers hebben vaak moeite met het lezen van geschreven tekst. De functie om de hele inhoud van het scherm te laten uitspreken zorgt ervoor dat alle content op het scherm kan worden voorgelezen. 
+
+De toegankelijkheidssetting om de inhoud van het hele scherm te laten voorlezen, is alleen aanwezig op iPhones. Deze instelling werkt door met twee vingers naar beneden te vegen. Android kent geen vergelijkbare feature.
+
+Op basis van ons onderzoek is de schatting dat ongeveer 200.000 Nederlanders deze functie hebben ingeschakeld op hun iOS-telefoon. NB. Nog meer mensen laten [geselecteerde tekst voorlezen](/nl/stats/speak-selection) op hun iPhone.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'iOS - speak screen metric', key: 'ios-accessibility_is_speak_screen_enabled-true', isPercentage: true }
+        ]}
+        linkLabel="More about speak screen"
+        linkUrl="/nl/stats/speak-screen">
+        use the speak screen feature on iOS.
+      </PercentageBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        The speak screen feature is not available on Android. 
+        <CustomLink url="/nl/stats/speak-screen" label="More about speak screen" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+
+
+<Quote>
+  quote="Mijn iPhone is mijn derde oog."
+  name="Jeroen"
+  imageSrc="/img/light/Blinde app gebruiker Jeroen.jpg"
+  alt="Jeroen - Asset"
+  linkLabel="Read the interview with Jeroen"
+  url="/nl/articles/jeroen"
+</Quote>
+
+## VoiceOver
+
+De inhoud van het scherm laten uitspreken is overigens niet hetzelfde als [VoiceOver](/nl/stats/screen-reader). Uit onze resultaten komt geen significant gebruik van voice-over naar voren. Maar om VoiceOver, speak screen en speak selection goed te laten werken voor een gebruiker moet alle niet-tekstuele inhoud een tekstalternatief hebben dat hetzelfde doel dient. 
+
+## Ondersteuning in apps
+
+Niet-tekstuele inhoud zoals knoppen en afbeeldingen dienen te zijn voorzien van een label. Hieronder vind je een aantal codevoorbeelden voor de meest gebruikte platformen en frameworks.
+
+<CodeSample id="accessibility-label" locale="nl"/>
+
+### WCAG-richtlijn
+
+Dit hoort bij het volgende succescriterium van de WCAG:
+
+<LinkList title="Text alternatives - link list" isHighlighted={false}>
+  <LinkListItem url="https://appt.org/nl/guidelines/wcag/success-criterion-1-1-1" title="Success Criterion 1.1.1 - Non-text Content - Level A"/>
+</LinkList>

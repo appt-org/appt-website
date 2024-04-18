@@ -11,7 +11,7 @@ export type CodeSampleProps = {
   locale: string;
 };
 
-export function CodeSample({ id, platform, locale }: CodeSampleProps) {
+export function CodeSample({ id, platform }: CodeSampleProps) {
   const defaultPlatforms = ['android', 'ios', 'flutter', 'react-native', 'xamarin'];
   const platformLabels = [
     { id: 'android', label: 'Android' },
@@ -26,26 +26,25 @@ export function CodeSample({ id, platform, locale }: CodeSampleProps) {
 
   useEffect(() => {
     const getBlocks = async () => {
-      try {
-        const codeBlocks = [...platforms].map(async platform => {
-          const currentLocale = locale || 'en';
-          const module = await import(`@site/src/data/code-samples/${currentLocale}/${id}/${platform}.md`);
+      const codeBlocks = [...platforms].map(async platform => {
+        try {
+          const module = await import(`@site/src/data/code-samples/en/${id}/${platform}.md`);
 
           return {
             platform,
             platformLabel: platformLabels.find(label => label.id === platform).label,
             CodeBlock: module.default,
           };
-        });
+        } catch (error) {
+          console.error('Failed to import MDX content:', error);
+        }
+      });
 
-        return Promise.all(codeBlocks);
-      } catch (error) {
-        console.error('Failed to import MDX content:', error);
-      }
+      return Promise.all(codeBlocks);
     };
 
     const setBlocks = async () => {
-      const codeBlocks = await getBlocks();
+      const codeBlocks = (await getBlocks()).filter(block => block);
       setCodeBlocks(codeBlocks);
     };
 

@@ -86,6 +86,15 @@ const config: Config = {
         sidebarPath: false,
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'stats',
+        path: 'stats',
+        routeBasePath: getTranslatedPath('stats'),
+        sidebarPath: false,
+      },
+    ],
   ],
   themeConfig: {
     // Replace with your project's social card

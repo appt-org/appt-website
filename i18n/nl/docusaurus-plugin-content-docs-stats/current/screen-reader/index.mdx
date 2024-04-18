@@ -1,0 +1,69 @@
+---
+locale: nl
+contentfulID: 4kqCV7Lhdw9aSaW0kxuIjO
+type: pageContentPage
+title: Schermlezer
+shortDescription: Wat is een schermlezer? Hoe kun je die gebruiken en ondersteunen in een app.
+thumbnail: Screen Reader icon
+---
+
+Een schermlezer leest voor wat er op het scherm staat in een app. Met gebaren kun je door apps navigeren en acties uitvoeren. Op deze manier is het mogelijk om apps zonder zicht te gebruiken.
+
+De ingebouwde schermlezer op Android-apparaten heet TalkBack. iOS-apparaten hebben ook een ingebouwde schermlezer: VoiceOver.
+
+De schermlezer is een van de belangrijkste hulpmiddelen voor mensen met een beperking. Laat je niet misleiden door de lage gebruikspercentages. Deze functie is voor sommige mensen een noodzakelijkheid. Zo kunnen blinden en slechtzienden over het algemeen niet zonder. 
+
+Maar ook voor developers is het een ontzettend krachtig middel om een app te toetsen op toegankelijkheid. Een app die goed bruikbaar is met een schermlezer moet onder andere voorzien van tekstuele alternatieven en alle essentiële elementen moeten goed te bereiken en focusbaar zijn. Een veel grotere groep dan alleen gebruikers van een schermlezer heeft hier profijt van. Ook mensen die gebruikmaken van de functie om een scherm of selectie uit te spreken en mensen die gebruikmaken van externe apparatuur, zoals een toetsenbord of een switch, hebben baat bij een app die goed werkt met een schermlezer.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'iOS - voiceover metric', key: 'ios-accessibility_is_voice_over_running-true', isPercentage: true }
+        ]}
+        linkLabel="More about the screen reader"
+        linkUrl="/nl/stats/screen-reader">
+        use voiceover on iOS.
+      </PercentageBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'Android - talkback metric', key: 'android-accessibility_is_talk_back_enabled-true', isPercentage: true }
+        ]}
+        linkLabel="More about the screen reader"
+        linkUrl="/nl/stats/screen-reader">
+        use Talkback on Android.
+      </PercentageBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+## Ondersteuning in apps
+
+Hieronder vind je een aantal codevoorbeelden voor de meest gebruikte platformen en frameworks.
+
+<CodeSample id="accessibility-label" locale="nl"/>
+
+## Een schermlezer gebruiken
+
+Dankzij een schermlezer is het mogelijk om zonder zicht gebruik te maken van apps. Door middel van gebaren kun je door apps heen navigeren en handelingen uitvoeren.
+
+<LinkList title="List of screen reader features" isHighlighted={true}>
+  <LinkListItem url="https://appt.org/nl/docs/android/features/talkback" title="TalkBack for Android" pageTitle="TalkBack: screen reader for Android" shortDescription="This article provides in-depth information about the TalkBack screen reader for Android." icon="/img/light/screenreader.svg" iconAlt="Screen Reader icon"/>
+  <LinkListItem url="https://appt.org/nl/docs/ios/features/voiceover" title="VoiceOver for iOS" pageTitle="VoiceOver: screen reader for iOS" shortDescription="This article provides in-depth information about the VoiceOver screen reader on iOS." icon="/img/light/screenreader.svg" iconAlt="Screen Reader icon"/>
+</LinkList>
+
+## Interview met een gebruiker van een schermlezer
+
+<Quote>
+  quote="Hoeveel uur ik per dag mijn telefoon gebruik? Hoeveel uur gebruik jij je ogen?"
+  name="Jesse"
+  imageSrc="/img/light/Jesse.png"
+  alt="Foto Jesse"
+  linkLabel="Read the interview with Jesse"
+  url="/nl/articles/jesse"
+</Quote>

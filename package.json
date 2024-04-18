@@ -23,7 +23,7 @@
     "serve:nl": "cross-env BASE_URL='/nl/' docusaurus serve --dir build/nl --port 3001",
     "serve:en": "cross-env BASE_URL='/en/' docusaurus serve --dir build/en --port 3000",
     "serve": "concurrently --kill-others \"npm run serve:en\" \"npm run serve:nl\"",
-    "write-translations": "docusaurus write-translations",
+    "write-translations": "cross-env BASE_URL='/' docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
     "update-accessibility-data": "env-cmd -f .env.secrets tsx scripts/accessibility-data-update.ts"

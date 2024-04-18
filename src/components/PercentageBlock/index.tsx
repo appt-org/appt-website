@@ -35,8 +35,20 @@ export type PercentageBlockProps = PropsWithChildren & {
 };
 
 function getMetricText(metric: ManualAccessibilityMetricApiModel, locale?: string) {
-  const formattedNumber = metric.number.toLocaleString(locale);
+  const roundedNumber = metric.isPercentage ? roundPercentage(metric.number) : metric.number;
+  const formattedNumber = roundedNumber.toLocaleString(locale);
+
   return `${formattedNumber}${metric.isPercentage ? '%' : ''}`;
+}
+
+function roundPercentage(percentage: number) {
+  if (percentage < 1) {
+    return percentage;
+  }
+  if (percentage < 10) {
+    return Math.round(percentage * 10) / 10;
+  }
+  return Math.round(percentage);
 }
 
 export function PercentageBlock({ metrics, linkLabel, linkUrl, baseValue, children }: PercentageBlockProps) {

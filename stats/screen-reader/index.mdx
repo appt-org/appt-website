@@ -1,0 +1,69 @@
+---
+locale: en
+contentfulID: 4kqCV7Lhdw9aSaW0kxuIjO
+type: pageContentPage
+title: Screen reader
+shortDescription: What is a screen reader? How to use it and support it in een app.
+thumbnail: Screen Reader icon
+---
+
+A screen reader reads out what is on the screen in an app. Gestures allow you to navigate through apps and perform actions. In this way it is possible to use apps without sight. 
+
+The screen reader on Android devices is called TalkBack. iOS devices also have a built-in screen reader: VoiceOver.
+
+The screen reader is a useful tool for people with disabilities. Don't be fooled by the low usage rates. This setting is a necessity for some people. For example, blind and partially sighted people generally cannot live without it. 
+
+But it is also a powerful tool for developers to test an app for accessibility. An app that is useful with a screen reader must include textual alternatives and all essential elements must be easily accessible and focusable. This benefits a much larger group than screen reader users. People who use external devices, such as a keyboard or a switch, also benefit from an app that works well with a screen reader.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'iOS - voiceover metric', key: 'ios-accessibility_is_voice_over_running-true', isPercentage: true }
+        ]}
+        linkLabel="More about the screen reader"
+        linkUrl="/en/stats/screen-reader">
+        use voiceover on iOS.
+      </PercentageBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'Android - talkback metric', key: 'android-accessibility_is_talk_back_enabled-true', isPercentage: true }
+        ]}
+        linkLabel="More about the screen reader"
+        linkUrl="/en/stats/screen-reader">
+        use Talkback on Android.
+      </PercentageBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+## Support in apps
+
+Below are some code samples for the most commonly used platforms and frameworks.
+
+<CodeSample id="accessibility-label" locale="en"/>
+
+## Using a screen reader
+
+A screen reader makes it possible to use apps without sight. Gestures allow you to navigate through apps and perform actions.
+
+<LinkList title="List of screen reader features" isHighlighted={true}>
+  <LinkListItem url="https://appt.org/en/docs/android/features/talkback" title="TalkBack for Android" pageTitle="TalkBack: screen reader for Android" shortDescription="This article provides in-depth information about the TalkBack screen reader for Android." icon="/img/light/screenreader.svg" iconAlt="Screen Reader icon"/>
+  <LinkListItem url="https://appt.org/en/docs/ios/features/voiceover" title="VoiceOver for iOS" pageTitle="VoiceOver: screen reader for iOS" shortDescription="This article provides in-depth information about the VoiceOver screen reader on iOS." icon="/img/light/screenreader.svg" iconAlt="Screen Reader icon"/>
+</LinkList>
+
+## Interview with a screen reader user
+
+<Quote>
+  quote="How many hours a day I use my phone? How many hours do you use your eyes?"
+  name="Jesse"
+  imageSrc="/img/light/Jesse.png"
+  alt="Photo Jesse"
+  linkLabel="Read the interview with Jesse"
+  url="/en/articles/jesse"
+</Quote>

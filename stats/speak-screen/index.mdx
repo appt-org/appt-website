@@ -1,0 +1,64 @@
+---
+locale: en
+contentfulID: 5yiFgQhsCfsAsbOT4p7NtR
+type: pageContentPage
+title: Speak screen
+shortDescription: More about speak screen
+---
+
+Speech settings help if the user is unable to look at the screen. They are necessary for the blind and visually impaired. But people with autism or focus and concentration problems also use this function: these users often have difficulty reading written text. The feature to speak the entire content of the screen ensures that all content on the screen can be read aloud.
+
+The accessibility feature to have the contents of the entire screen read aloud is only present on iPhones. It works by swiping down with two fingers. Android has no comparable feature.
+
+Based on our accessibility research, we estimate that about 200,000 Dutch people have switched on this accessibility feature on their iOS phone. Note: even more people are having [selected text read aloud](/en/stats/speak-selection) on their iPhone.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'iOS - speak screen metric', key: 'ios-accessibility_is_speak_screen_enabled-true', isPercentage: true }
+        ]}
+        linkLabel="More about speak screen"
+        linkUrl="/en/stats/speak-screen">
+        use the speak screen feature on iOS.
+      </PercentageBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        The speak screen feature is not available on Android. 
+        <CustomLink url="/en/stats/speak-screen" label="More about speak screen" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+<Quote>
+  quote="My iPhone is my third eye."
+  name="Jeroen"
+  imageSrc="/img/light/Blinde app gebruiker Jeroen.jpg"
+  alt="Jeroen - Asset"
+  linkLabel="Read the interview with Jeroen"
+  url="/en/articles/jeroen"
+</Quote>
+
+## VoiceOver
+
+By the way, having the contents of the screen speak is not the same as [VoiceOver](/en/stats/screen-reader). Our results do not show any significant use of voice-over. But for VoiceOver, speak screen, and speak selection to work properly for a user, all non-text content must have a text alternative that serves the same purpose.
+
+## Support in apps
+
+Non-text content such as buttons and images must be labeled. Below is explained how it can be added to an element in native and cross-platform apps.
+
+<CodeSample id="accessibility-label" locale="en"/>
+
+### WCAG-guideline
+
+This is part of the WCAG's following success criterion:
+
+<LinkList title="Text alternatives - link list" isHighlighted={false}>
+  <LinkListItem url="/en/guidelines/wcag/success-criterion-1-1-1" title="Success Criterion 1.1.1 - Non-text Content - Level A"/>
+</LinkList>
