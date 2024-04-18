@@ -1,0 +1,23 @@
+name: Build site
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build_site:
+    runs-on: ubuntu-latest
+    name: Build site
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Run build
+        run: |
+          npm install
+          npm run build:prod
