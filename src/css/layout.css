@@ -59,7 +59,8 @@
   position: relative;
 }
 
-.navbar__items > .navbar__link {
+.navbar__items > .navbar__link,
+.footer__link-item {
   color: theme(colors.accent);
   font-weight: theme(fontWeight.normal);
   text-underline-offset: 0.15rem;
