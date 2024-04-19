@@ -38,11 +38,11 @@
 }
 
 .theme-doc-sidebar-menu .menu__caret:before {
-  transform: rotate(0deg);
+  transform: rotate(180deg);
 }
 
 .theme-doc-sidebar-menu .menu__list-item--collapsed .menu__caret:before {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
 }
 
 .theme-doc-sidebar-menu .menu__link--active:not(.menu__link--sublist),
