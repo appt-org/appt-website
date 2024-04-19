@@ -1,0 +1,50 @@
+---
+locale: en
+slug: /wcag/success-criterion-2-1-1
+contentfulID: 5bi4SN3rbpPPhqbcGxAW0b
+type: pageGuidelinePage
+title: Keyboard
+prefix: Success Criterion
+chapter: 2.1.1
+suffix: Level A
+shortDescription: Ensure that all functionality in the app can be used with assistive technologies.
+thumbnail: WCAG 2.1.1 - Image
+source: "https://www.w3.org/TR/WCAG22/#keyboard"
+layout: Layout - WCAG
+---
+
+# Keyboard
+
+Ensure that all functionality in an app can be used via the keyboard interface. This includes external keyboard, screen reader, switch control and voice control. Visually impaired people use a screen reader. People with a motor disability use switch control and voice control.
+
+## Impact
+
+- People who are blind often use a screen reader to operate apps.
+- People with limited hand function often have difficulty using the touchscreen. Using a keyboard is a solution for them.
+- People with motor disabilities often use switch control or voice control to operate an app.
+
+## Check
+
+“*Can you fully operate the app when using assistive technologies?*“
+
+We recommend to test with at least the [screen reader](/en/stats/screen-reader), [voice control](/en/stats/voice-control), [keyboard access](/en/stats/keyboard-access) or [switch access](/en/stats/switch-control).
+
+## Solution
+
+All interactive elements must be operable with assistive technologies. It can be needed to move the focus of assistive technologies.
+
+### Adjust order for keyboard
+
+<CodeSample id="keyboard-order" locale="en"/>
+
+### Adjust order for assistive technologies
+
+<CodeSample id="accessibility-order" locale="en"/>
+
+### Move accessibility focus
+
+<CodeSample id="accessibility-focus" locale="en"/>
+
+## Resources
+
+- [WCAG 2.2 - Success Criterion 2.1.1 - Keyboard](https://www.w3.org/TR/WCAG22/#keyboard)

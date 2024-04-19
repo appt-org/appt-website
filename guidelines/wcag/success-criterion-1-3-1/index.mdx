@@ -1,0 +1,54 @@
+---
+locale: en
+slug: /wcag/success-criterion-1-3-1
+contentfulID: 1NDO6Gke4dEvdf2vET8E6n
+type: pageGuidelinePage
+title: Info and Relationships
+prefix: Success Criterion
+chapter: 1.3.1
+suffix: Level A
+shortDescription: Ensure that the information and relationships on the screen are not only conveyed visually.
+thumbnail: WCAG 1.3.1 - Image
+source: "https://www.w3.org/TR/WCAG22/#info-and-relationships"
+layout: Layout - WCAG
+---
+
+# Info and Relationships
+
+Ensure that the information and relationships on the screen are not just conveyed visually.
+
+Information on the screen must be conveyed to assistive technologies. For example, make sure that headings are not only bold, but also marked as headings in the code.
+
+Relationships on the screen must be indicated to assistive technologies. Elements in a list must be navigable one by one. Elements in a table must be navigable by rows and columns.
+
+## Impact
+
+- It is important for users of assistive technology that titles of rows and columns are conveyed in tables.
+- Make sure paragraphs can be navigated separately by screen reader users.
+- Convey visual indications, such as bullet points in a list, to assistive technologies to let users know they are in a list.
+
+## Check
+
+“*Is the structure of the screen clear when using assistive technologies?”*
+
+You can use a [screen reader](/en/stats/screen-reader) to check the structure of the screen.
+
+## Solution
+
+Websites often use [WAI-ARIA](https://www.w3.org/WAI/standards-guidelines/aria/) attributes to convey information and relationships. You cannot use these attributes in apps, because apps are not written in HTML. Alternatives are available for some of these attributes, but not for all.
+
+### Set accessibility role
+
+<CodeSample id="accessibility-role" locale="en"/>
+
+### Indicate accessibility modal
+
+<CodeSample id="accessibility-modal" locale="en"/>
+
+### Group elements
+
+<CodeSample id="accessibility-group" locale="en"/>
+
+## Resources
+
+- [WCAG 2.2 - Success Criterion 1.3.1 - Info and Relationships](https://www.w3.org/TR/WCAG22/#info-and-relationships)

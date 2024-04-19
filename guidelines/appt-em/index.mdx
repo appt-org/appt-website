@@ -1,0 +1,301 @@
+---
+locale: en
+slug: /appt-em
+contentfulID: 1ppnG6wr4v6T6i7ZHVcVMh
+type: pageContentPage
+title: Appt Evaluation Methodology (Appt-EM)
+shortDescription: The Appt Evaluation Methodology (Appt-EM) can be used to determine the accessibility of apps in a uniform and reproducible manner.
+thumbnail: Services - icon
+layout: Layout - In page navigation
+pagination_next: null
+pagination_prev: null
+---
+
+*Current version: 1.1.0, last updated on 4 July 2023.*
+
+The Appt Foundation has created the Appt Evaluation Methodology (Appt-EM) to determine the accessibility of apps in a uniform and reproducible manner.
+
+Worldwide legislation for digital accessibility sets requirements for apps. Most legislation refers to the[ Web Content Accessibility Guidelines 2.1 (WCAG 2.1)](https://www.w3.org/TR/WCAG21/). The recommended evaluation method is the[ Website Accessibility Conformance Evaluation Methodology (WCAG-EM)](https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/).
+
+However, both the WCAG and WCAG-EM are written for websites and therefore not easily applicable to apps. Appt-EM is written specifically for apps and is based on WCAG-EM.
+
+## Basic conditions
+
+To successfully use Appt-EM it is assumed that there is a good understanding of WCAG and accessibility features of Android and iOS.
+
+## Evaluation procedure
+
+This chapter describes the steps and activities of the evaluation procedure. At each step you perform several activities. You may have to take one or more steps back when you have gained new insights.
+
+The steps of Appt-EM are similar to those of WCAG-EM:
+
+- Step 1 – Define the evaluation scope
+- Step 2 – Explore the app
+- Step 3 – Select a representative sample
+- Step 4 – Audit the selected sample
+- Step 5 – Report the evaluation findings
+
+### Step 1 - Define the evaluation scope
+
+In this step, the scope of the evaluation is determined. To determine the scope, it must be clear what is within and outside the scope of the research.
+
+#### Step 1a - Define the scope of the app
+
+Determining the scope starts by determining the URL where the app can be downloaded. Then, an overview of which screens are available must be gained.
+
+##### Determine operating system
+
+Apps are often available for Android and iOS. Determine on which operating system you are conducting the research. A separate audit must be done for each operating system. We recommend providing a separate report for each operating system.
+
+##### Determine installation method
+
+An app can often be downloaded from an app store and then has a unique download link. It is important to copy the full download link, including all URL parameters. There may be different versions of an app available per country. In addition, there may also be different variants available, such as a 'lite' version.
+
+If an app has not (yet) been published, it can also be made available via an installation file. The installation file is called an Android Application Package (.apk) on Android and an iOS App Store Package (.ipa) on iOS. In this case, include the download link and/or the full name of the installation file.
+
+##### Determine version number
+
+You can find the version number in the app store. After installation, you can also find the version number in the settings of your device. The version number is often also stated somewhere in the app.
+
+##### Determine screens
+
+Apps usually do not have a sitemap with an overview of all screens. In addition, screens usually do not have a unique URL. Therefore, record the path you took to get to the screen. Use the names of the screens for this, for example: Home → Profile → Edit. If a screen does not have a name, you will have to come up with a descriptive name yourself.
+
+You can determine the available screens within an app in various ways. Usually, it comes down to navigating through all the screens of the app.
+
+#### Step 1.b – Define the conformance target
+
+Determine the conformance level being tested: level A, AA or AAA. The AA conformance level is widely used. European legislation also refers to this level for government organizations.
+
+- **Note 1:** [EN 301 549](/en/guidelines/en-301-549) excludes 6 success criteria for apps, see [Appendix I](https://appt.org/en/guidelines/appt-em#appendix-i-accessibility-requirements-from-the-en-301-549-v321).
+- **Note 2:** [Section 508](/en/guidelines/section-508) excludes 4 success criteria for apps.
+
+#### Step 1.c – Define the scope of the hardware/software
+
+##### Determine hardware scope
+
+Depending on the hardware, an app may respond differently.
+
+- Determine the devices
+- Determine the screen dimensions*.*
+
+##### Determine software scope
+
+Depending on the software, an app may respond differently. It is important to note the version number of the operating system.
+
+Apps have accessibility features built into the operating system. Accessibility features vary by manufacturer. Assistive technologies such as the screen reader, voice control, switch control, and keyboard control often have their own version number, make a note of this.
+
+Finally, note relevant system settings that affect the behavior of the app, such as language and location.
+
+We recommend at least testing with larger text and the screen reader. Additionally, you can test with keyboard, voice control, switch control, and other available accessibility features.
+
+- *Determine operating system version number*
+- *Determine accessibility features and their version numbers*
+- *Determine relevant system settings*
+- *Determine which tools and accessibility features to test with.*
+
+### Step 2 – Explore the app
+
+This step determines the use, purpose and functionality of the app. For this, the screens need to be examined in more detail.
+
+#### Step 2.a – Identify frequently used screens
+
+Determine if there are screens that users encounter multiple times when using the app. And determine which screens users spend the most time on.
+
+In any case, choose screens that contain functionality that is essential to use the app, such as registering, logging in, resetting password, etc. Screens that are directly accessible from the main screen of the app are often also important to investigate.
+
+#### Step 2.b – Identify essential functionality
+
+Determine which flows are essential in the app. A flow consists of several steps or screens that you have to go through to perform a task. By describing the important flows of the app, you can then test all screens of these flows.
+
+#### Step 2.c – Identify frequently used elements
+
+Determine what kind of elements are used in the app. The table below lists common Android, iOS, Flutter, and React Native elements.
+
+| **Element** | **Android** | **iOS** | **Flutter** | **React Native** |
+| Image | [ImageView](https://developer.android.com/reference/android/widget/ImageView) | [UIImageView](https://developer.apple.com/documentation/uikit/uiimageview) | [Image](https://api.flutter.dev/flutter/widgets/Image-class.html) | [Image](https://reactnative.dev/docs/image) |
+| Video | [MediaPlayer](https://developer.android.com/reference/androidx/media2/player/MediaPlayer) | [AVPlayer](https://developer.apple.com/documentation/avfoundation/avplayer/) | [VideoPlayer](https://pub.dev/packages/video_player) | [Video](https://docs.expo.dev/versions/latest/sdk/video/) |
+| Audio | [MediaPlayer](https://developer.android.com/reference/androidx/media2/player/MediaPlayer) | [AVPlayer](https://developer.apple.com/documentation/avfoundation/avplayer/) | [AudioPlayer](https://pub.dev/packages/just_audio) | [Audio](https://docs.expo.dev/versions/latest/sdk/audio/) |
+| Text | [TextView](https://developer.android.com/reference/android/widget/TextView) | [UILabel](https://developer.apple.com/documentation/uikit/uilabel/) | [Text](https://api.flutter.dev/flutter/widgets/Text-class.html) | [Text](https://reactnative.dev/docs/text) |
+| Button | [Button](https://developer.android.com/reference/android/widget/Button) | [UIButton](https://developer.apple.com/documentation/uikit/uibutton/) | [TextButton](https://api.flutter.dev/flutter/material/TextButton-class.html) | [Button](https://reactnative.dev/docs/button) |
+| Link | [URLSpan](https://developer.android.com/reference/android/text/style/URLSpan) | [NSAttributedString](https://developer.apple.com/documentation/foundation/nsattributedstring/) | [TextSpan](https://api.flutter.dev/flutter/painting/TextSpan-class.html) | [Text](https://reactnative.dev/docs/text) |
+| Input field | [EditText](https://developer.android.com/reference/android/widget/EditText) | [UITextField](https://developer.apple.com/documentation/uikit/uitextfield/) | [TextField](https://api.flutter.dev/flutter/material/TextField-class.html) | [TextInput](https://reactnative.dev/docs/textinput) |
+| Checkbox | [CheckBox](https://developer.android.com/reference/android/widget/CheckBox.html) | [UISwitch](https://developer.apple.com/documentation/uikit/uiswitch/) | [Checkbox](https://api.flutter.dev/flutter/material/Checkbox-class.html) | [Switch](https://reactnative.dev/docs/switch) |
+| Navigation | [Toolbar](https://developer.android.com/reference/androidx/appcompat/widget/Toolbar) | [UINavigationBar](https://developer.apple.com/documentation/uikit/uinavigationbar/) | [AppBar](https://api.flutter.dev/flutter/material/AppBar-class.html) | [NavigationBar](https://docs.expo.dev/versions/latest/sdk/navigation-bar/) |
+| Tabs | [TabLayout](https://developer.android.com/reference/com/google/android/material/tabs/TabLayout) | [UITabBar](https://developer.apple.com/documentation/uikit/uitabbar/) | [AppBar](https://api.flutter.dev/flutter/material/AppBar-class.html) | [BottomTabs](https://reactnavigation.org/docs/bottom-tab-navigator/) |
+
+#### Step 2.d – Identify technologies relied upon
+
+Determine which techniques were used to develop the app.
+
+- Programming languages, for example Swift or Kotlin
+- Frameworks, for example SwiftUI or React Native
+- Libraries, for example Alamofire or Expo
+
+#### Step 2.e – Identify other relevant screens
+
+Determine whether there are specific functionalities or screens for users with disabilities. Also add screens explaining the app or contact information to the sample.
+
+### Step 3 – Select a representative sample
+
+Select the screens that are part of the research. You can choose to examine all screens of the app. Or you can take a representative sample consisting of a structured sample and randomly selected screens.
+
+#### Step 3.a – Include a structured sample
+
+With a structured sample you select screens that are a good reflection of all screens of the app.
+
+Select the screens as follows:
+
+1. The main screens as determined in step 2.a
+2. The other relevant screens as determined in step 2.e
+3. If the screens from steps 2.a and 2.e are not sufficient for a representative structured sample, add these screens:
+   - Screens with essential functionality from step 2.b
+   - Screens with common elements from step 2.c
+   - Screens using the techniques from step 2.d
+
+#### Step 3.b – Include a randomly selected sample
+
+Randomly choose one or more screens to check whether the structured sample accurately reflects the app. The number of random screens must be at least 10% of the number of screens in the sample.
+
+For example: with 20 screens in the sample, you must add at least 2 randomly selected screens for checking.
+
+#### Step 3.c – Include flows
+
+See if any screens from steps 3.a and 3.b are part of a flow. Add the screens of the detected flows to the selection.
+
+Apps mainly consist of multi-screen flows. So, you may eventually have to test (almost) all screens.
+
+### Step 4 – Audit the selected sample
+
+Audit the screens according to the chosen conformance level from step 1.b.
+
+Perform the following steps:
+
+- Step 4.a Evaluate all screens
+- Step 4.b Assess all flows
+- Step 4.c Compare structured and random samples
+
+**Note**: Unlike websites, it is important to include screenshots when dealing with apps. If you reload the screen, the content may be different the next time, making it irreproducible without a screenshot.
+
+### Step 5 – Report the evaluation findings
+
+An audit report must meet certain formal requirements. See[ Chapter 5 of WCAG-EM](https://www.w3.org/TR/WCAG-EM/#step5) for further explanation.
+
+For apps there are deviations and recommendations which are explained below. As a result, the reports meet the minimum requirements necessary to reproduce the findings.
+
+#### Deviations
+
+##### Names and Definitions
+
+An app has specific names and definitions. For example, there is no web page, but a screen. Use the correct names and definitions for apps.
+
+##### Report path
+
+Apps usually don't use URLs to identify screens. Instead of the URL, report the path you took to get to the screen.
+
+#### Recommendations
+
+##### Provide solutions and code samples
+
+The WCAG Success Criteria definitions only include solutions and code samples for websites. Provide solutions and code samples for apps, for example by referencing relevant pages from the[ Appt knowledge base](https://appt.org/en). You can use our WCAG shortlinks, e.g.[ appt.li/1.1.1](https://appt.li/1.1.1) refers to our explanations for success criterion 1.1.1.
+
+##### Provide screenshots
+
+With apps, it's important to add screenshots to the report. Apps are much more dynamic than websites making it difficult to reproduce the error. A screenshot shows exactly what the app looked like at the time of reporting.
+
+
+## Appendix I: Accessibility requirements from the EN 301 549 v3.2.1
+
+The[ European Directive EN 301 549 V3.2.1 (2021-03)](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf) contains accessibility requirements for software, including mobile applications (apps). Apps are listed in the category 'Open functionality'. Chapter 11 includes 44 success criteria from the[ Web Content Accessibility Guidelines 2.1 (WCAG 2.1)](https://www.w3.org/TR/WCAG21/). This is 6 less compared to websites.
+
+### Closed and Open Functionality
+
+The European Directive refers to "Open functionality" and "Closed functionality". The given definition for "Closed functionality" is: "Computers that do not allow end-users to adjust settings or install software are functionally closed." Since many accessibility tools can be used in the settings of the mobile phone, we see mobile phones with the corresponding apps as "Open functionality".
+
+### Success criteria with deviation
+
+Chapter 11 includes all Level A and AA success criteria from WCAG 2.1. In total, 6 success criteria are not applicable. With 13 success criteria there are small adjustments in the notes or definitions. The thinking and purpose behind these success criteria is the same, only the term “webpage” has been replaced by “software”.
+
+**Note**: Apps only have to meet 44 success criteria instead of 50.
+
+An overview of the deviations:
+
+- 6 success criteria are not applicable at all.
+   - [2.4.1 Bypass Blocks](http://appt.li/2.4.1)
+   - [2.4.2 Page Titled](http://appt.li/2.4.2)
+   - [2.4.5 Multiple Ways](http://appt.li/2.4.5)
+   - [3.1.2 Language of Parts](http://appt.li/3.1.2)
+   - [3.2.3 Consistent Navigation](http://appt.li/3.2.3)
+   - [3.2.4 Consistent Identification](http://appt.li/3.2.4).
+- 13 success criteria have small adjustments in the notes or definitions. The context is mostly the same.
+   - [1.4.2 Audio Control](http://appt.li/1.4.2)
+   - [1.4.10 Reflow](http://appt.li/1.4.10)
+   - [2.1.2 No Keyboard Trap](http://appt.li/2.1.2)
+   - [2.2.1 Timing Adjustable](http://appt.li/2.2.1)
+   - [2.2.2 Pause, Stop, Hide](http://appt.li/2.2.2)
+   - [2.3.1 Three Flashes or Below Threshold](http://appt.li/2.3.1)
+   - [2.4.3 Focus Order](http://appt.li/2.4.3)
+   - [2.5.1 Pointer Gestures](http://appt.li/2.5.1)
+   - [2.5.2 Pointer Cancellation](http://appt.li/2.5.2)
+   - [3.1.1 Language of Page](http://appt.li/3.1.1)
+   - [3.3.4 Error Prevention (Legal, Financial, Data)](http://appt.li/3.3.4)
+   - [4.1.1 Parsing](http://appt.li/4.1.1)
+   - [4.1.2 Name, Role, Value](http://appt.li/4.1.2).
+- 31 success criteria are directly applicable without adjustments.
+
+The table below contains a complete overview of the comments per success criterion.
+
+| Success criterion | Level | Comment from EN 301 549 |
+| --- | --- | --- |
+| [1.1.1 Non-text Content](http://appt.li/1.1.1) | A | No deviations |
+| [1.2.1 Audio-only and Video-only (Prerecorded)](http://appt.li/1.2.1) | A | No deviations |
+| [1.2.2 Captions (Prerecorded)](http://appt.li/1.2.2) | A | No deviations |
+| [1.2.3 Audio Description or Media Alternative (Prerecorded)](http://appt.li/1.2.3) | A | No deviations |
+| [1.2.4 Captions (Live)](http://appt.li/1.2.4) | AA | No deviations |
+| [1.2.5 Audio Description (Prerecorded)](http://appt.li/1.2.5) | AA | No deviations |
+| [1.3.1 Info and Relationships](http://appt.li/1.3.1) | A | No deviations |
+| [1.3.2 Meaningful Sequence](http://appt.li/1.3.2) | A | No deviations |
+| [1.3.3 Sensory Characteristics](http://appt.li/1.3.3) | A | No deviations |
+| [1.3.4 Orientation](http://appt.li/1.3.4) | AA | No deviations |
+| [1.3.5 Identify Input Purpose](http://appt.li/1.3.5) | AA | No deviations |
+| [1.4.1 Use of Color](http://appt.li/1.4.1) | A | No deviations |
+| [1.4.2 Audio Control](http://appt.li/1.4.2) | A | Small adjustments in the notes or definitions |
+| [1.4.3 Contrast (Minimum)](http://appt.li/1.4.3) | AA | No deviations |
+| [1.4.4 Resize text](http://appt.li/1.4.4) | AA | No deviations |
+| [1.4.5 Images of Text](http://appt.li/1.4.5) | AA | No deviations |
+| [1.4.10 Reflow](http://appt.li/1.4.10) | AA | Small adjustments in the notes or definitions |
+| [1.4.11 Non-text Contrast](http://appt.li/1.4.11) | AA | No deviations |
+| [1.4.12 Text Spacing](http://appt.li/1.4.12) | AA | No deviations |
+| [1.4.13 Content on Hover or Focus](http://appt.li/1.4.13) | AA | No deviations |
+| [2.1.1 Keyboard](http://appt.li/2.1.1) | A | No deviations |
+| [2.1.2 No Keyboard Trap](http://appt.li/2.1.2) | A | Small adjustments in the notes or definitions |
+| [2.1.4 Character Key Shortcuts](http://appt.li/2.1.4) | A | No deviations |
+| [2.2.1 Timing Adjustable](http://appt.li/2.2.1) | A | Small adjustments in the notes or definitions |
+| [2.2.2 Pause, Stop, Hide](http://appt.li/2.2.2) | A | Small adjustments in the notes or definitions |
+| [2.3.1 Three Flashes or Below Threshold](http://appt.li/2.3.1) | A | Small adjustments in the notes or definitions |
+| [2.4.1 Bypass Blocks](http://appt.li/2.4.1) | A | **Not applicable to apps** |
+| [2.4.2 Page Titled](http://appt.li/2.4.2) | A | **Not applicable to apps** |
+| [2.4.3 Focus Order](http://appt.li/2.4.3) | A | Small adjustments in the notes or definitions |
+| [2.4.4 Link Purpose (In Context)](http://appt.li/2.4.4) | A | No deviations |
+| [2.4.5 Multiple Ways](http://appt.li/2.4.5) | AA | **Not applicable to apps** |
+| [2.4.6 Headings and Labels](http://appt.li/2.4.6) | AA | No deviations |
+| [2.4.7 Focus Visible](http://appt.li/2.4.7) | AA | No deviations |
+| [2.5.1 Pointer Gestures](http://appt.li/2.5.1) | A | Small adjustments in the notes or definitions |
+| [2.5.2 Pointer Cancellation](http://appt.li/2.5.2) | A | Small adjustments in the notes or definitions |
+| [2.5.3 Label in Name](http://appt.li/2.5.3) | A | No deviations |
+| [2.5.4 Motion Actuation](http://appt.li/2.5.4) | A | No deviations |
+| [3.1.1 Language of Page](http://appt.li/3.1.1) | AA | Small adjustments in the notes or definitions |
+| [3.1.2 Language of Parts](http://appt.li/3.1.2) | AA | **Not applicable to apps** |
+| [3.2.1 On Focus](http://appt.li/3.2.1) | A | No deviations |
+| [3.2.2 On Input](http://appt.li/3.2.2) | A | No deviations |
+| [3.2.3 Consistent Navigation](http://appt.li/3.2.3) | AA | **Not applicable to apps** |
+| [3.2.4 Consistent Identification](http://appt.li/3.2.4) | AA | **Not applicable to apps** |
+| [3.3.1 Error Identification](http://appt.li/3.3.1) | A | No deviations |
+| [3.3.2 Labels or Instructions](http://appt.li/3.3.2) | A | No deviations |
+| [3.3.3 Error Suggestion](http://appt.li/3.3.3) | AA | No deviations |
+| [3.3.4 Error Prevention (Legal, Financial, Data)](http://appt.li/3.3.4) | AA | Small adjustments in the notes or definitions |
+| [4.1.1 Parsing](http://appt.li/4.1.1) | A | Small adjustments in the notes or definitions |
+| [4.1.2 Name, Role, Value](http://appt.li/4.1.2) | A | Small adjustments in the notes or definitions |
+| [4.1.3 Status Messages](http://appt.li/4.1.3) | AA | No deviations |
+
+For the full explanation, see Chapter 11 of the[ European Directive EN 301 549 V3.2.1 (2021-03)](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf).
