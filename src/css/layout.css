@@ -87,3 +87,19 @@ main.container > .row > .col.col--8 {
 .footer {
   background-color: theme(colors.surface);
 }
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs__item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs__link svg {
+  display: inline;
+}
