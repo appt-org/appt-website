@@ -1,0 +1,47 @@
+---
+locale: en
+slug: /wcag/success-criterion-1-3-3
+contentfulID: 593faSoaB0eLe5Zi2ldJ0t
+type: pageGuidelinePage
+title: Sensory Characteristics
+prefix: Success Criterion
+chapter: 1.3.3
+suffix: Level A
+shortDescription: Ensure instructions can be understood by everyone. Instructions that only use shape, size, location, orientation or sound are not understandable for everyone.
+thumbnail: WCAG 1.3.3 - Image
+source: "https://www.w3.org/TR/WCAG22/#sensory-characteristics"
+layout: Layout - WCAG
+---
+
+# Sensory Characteristics
+
+Ensure instructions can be understood by everyone. Instructions that use only shape, size, location, orientation or audio are not understandable for everyone. For example, people who are blind cannot see shapes. Combine multiple properties to allow everyone to understand instructions.
+
+## Impact
+
+- When referring to the 'green button', someone who is color blind or visually impaired might not know which button is meant. By adding a secondary characteristic, such as the location, the instruction becomes more clear.
+- Do not refer to only shape, size, location or orientation of an element, as not everyone can perceive these properties.
+
+## Check
+
+“*Are multiple properties of elements used in instructions?”*
+
+This can be tested visually, no assistive technologies are needed.
+
+## Solution
+
+When designing an app it is important not to convey instructions through sensory characteristics. For example do not tell the user to click a button "to the right" or "the green link below". For screen reader users this will not convey any useful information.
+
+Meeting this criterion will allow your app to be localized for languages where layouts do flow left to right (i.e. Chinese, Arabic).
+
+### Add accessibility hint
+
+<CodeSample id="accessibility-hint" locale="en"/>
+
+### Add accessibility action
+
+<CodeSample id="accessibility-action" locale="en"/>
+
+## Resources
+
+- [WCAG 2.2 - Success Criterion 1.3.3 - Sensory Characteristics](https://www.w3.org/TR/WCAG22/#sensory-characteristics)

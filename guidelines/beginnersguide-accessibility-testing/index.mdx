@@ -1,0 +1,211 @@
+---
+locale: en
+slug: /beginnersguide-accessibility-testing
+contentfulID: 1iiAX3DG3134KC5pQOJgzz
+type: pageContentPage
+title: Beginners' Guide to Accessibility Testing
+shortDescription: Test whether your app is accessible yourself.
+thumbnail: Features icon
+seo.title: Beginners' Guide to Accessibility Testing
+seo.name: Beginners' Guide to Accessibility Testing - SEO
+seo.description: With the test on this page you'll get a good first impression of the accessibility of your app. This enables you to find up to 80% of the errors with 20% of the effort.
+pagination_next: null
+pagination_prev: null
+hide_table_of_contents: true
+---
+
+With the test on this page you'll get a good first impression of the accessibility of your app. This enables you to find up to 80% of the errors with 20% of the effort.
+
+## Approach
+
+Testing an app against the full WCAG success criteria can be extensive and complex. In addition to knowledge about the guidelines, you also need knowledge about [assistive technologies](/en/articles/assistive-technologies). If the goal is to form an idea about the status of your app's accessibility, you do not need to know all WCAG guidelines. We have simplified some of the guidelines into a short explanation and a question.
+
+For this we use the text magnification tools, the screen reader, a contrast measurement and ask the following 15 questions. 
+
+## Testing without tools
+
+You can test the points below without any tools or use of assistive technology.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Are subtitles available with video?
+        
+        Captions must be available for all videos with sound, even for live video. So people who depend on captions can understand what is being said. 
+        <CustomLink url="/en/guidelines/wcag/success-criterion-1-2-2" label="Success Criterion 1.2.2 - Captions (Prerecorded) - Level A" icon="/img/light/1.2.2.svg" iconAlt="WCAG 1.2.2 - Logo" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Are visible details described in videos?
+        
+        If there is important information that you cannot hear, you must describe the information. You do this by offering a sound track in which the visual information is described. In this way, people who are blind can hear all the information. 
+        <CustomLink url="/en/guidelines/wcag/success-criterion-1-2-3" label="Success Criterion 1.2.3 - Audio Description or Media Alternative (Prerecorded) - Level A" icon="/img/light/1.2.3.svg" iconAlt="WCAG 1.2.3 - Logo" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Does the content of the screen rotate when you rotate your device?
+        
+        Wheelchair users sometimes have their device mounted horizontally. The content of the screen must rotate with the display of the device. Support vertical and horizontal display. 
+        <CustomLink url="/en/guidelines/wcag/success-criterion-1-3-4" label="Success Criterion 1.3.4 - Orientation - Level AA" icon="/img/light/1.3.4.svg" iconAlt="WCAG 1.3.4 - Logo" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### In a form, is it clear which data is expected and which fields are required?
+        
+        Ensure clear instructions are provided in places users have to input data. Add a label to the input fields, for example 'First name'. Mark whether fields are required or optional. Indicate if data must be entered in a specified order. 
+        <CustomLink url="/en/guidelines/wcag/success-criterion-3-3-2" label="Success Criterion 3.3.2 - Labels or Instructions - Level A" icon="/img/light/3.3.2.svg" iconAlt="WCAG 3.3.2 - Logo" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+## Text resizing
+
+On a mobile phone you can turn on text resizing in the system settings. This works differently on different devices, but if you search for "text" in the system settings, you will see the text size option. If you set this to maximum, you can then see whether your app uses large fonts and whether this does not lead to errors.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Does text appear larger when you have set a larger font?
+        
+        It is important for visually impaired users that text can be enlarged. Users specify their preferred font size in the system settings. Text in your app should resize according to this preferred font size. Ensure that the text in your app supports resizing. 
+        <CustomLink url="/en/guidelines/wcag/success-criterion-1-4-4" label="Success Criterion - 1.4.4 Resize text - Level AA" icon="/img/light/1.4.4.svg" iconAlt="WCAG 1.4.4 - Logo" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Can all text be read with the largest font?
+        
+        Ensure that all content on the screen remains readable even with the largest font. Content should be readable without having to scroll in two directions. Because the text is displayed larger, it can push other elements off the screen. Ensure content can still be reached, for example, by scrolling vertically. 
+        <CustomLink url="/en/guidelines/wcag/success-criterion-1-4-10" label="Success Criterion 1.4.10 - Reflow - Level AA" icon="/img/light/1.4.10.svg" iconAlt="WCAG 1.4.10 - Logo" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+## Contrast
+
+You can easily test your app's contrast. Answer these questions to form an idea whether your app has sufficient contrast. We use this [contrast checker](https://webaim.org/resources/contrastchecker/) ourselves. But there are various tools available that can do this for you.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Is the contrast of normal text at least 4.5:1?
+        
+        It is important for visually impaired and color blind users that text is legible. The contrast ratio between the text color and background color must be at least 4.5:1. For bold text and larger text, a ratio of 3:1 is sufficient. 
+        <CustomLink url="/en/guidelines/wcag/success-criterion-1-4-3" label="Success Criterion 1.4.3 - Contrast (Minimum) - Level AA" icon="/img/light/1.4.3.svg" iconAlt="WCAG 1.4.3 - Logo" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Is the contrast of the content at least 3:1?
+        
+        The content of a screen must be legible for everyone. You achieve this by using enough color difference in graphical elements such as icons, buttons and input fields. The contrast must be at least 3:1. 
+        <CustomLink url="/en/guidelines/wcag/success-criterion-1-4-11" label="Success Criterion 1.4.11 - Non-text Contrast - Level AA" icon="/img/light/1.4.11.svg" iconAlt="WCAG 1.4.11 - Logo" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+## Screen reader
+
+A screen reader reads what is on the screen. You can navigate through apps and perform actions using gestures. In this way it is possible to use apps without sight. More information about the screen reader can be found on the page about [assistive technologies](/en/articles/assistive-technologies) page. If the screen reader works properly, keyboard controls, voice controls, and toggles will usually work as well. You can practice the screen reader gestures in the [screenreader.app](https://screenreader.app/).
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Are textual alternatives available for all non-text content?
+        
+        People who are blind use a screen reader to read the information on the screen. Make sure that a description is available for all non-text content. Images, for example. By describing them the screen reader can read what you see. 
+        <CustomLink url="/en/guidelines/wcag/success-criterion-1-1-1" label="Success Criterion 1.1.1 - Non-text Content - Level A" icon="/img/light/1.1.1.svg" iconAlt="WCAG 1.1.1 - Logo" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Is the order of elements clear to assistive technologies?
+        
+        Make sure that the order which assistive technologies follow reflect the meaning of the content. Otherwise, users of assistive technology may misunderstand the content. Most content is presented from left to right, from top to bottom. The information should also be presented to users of assistive technologies in this way. 
+        <CustomLink url="/en/guidelines/wcag/success-criterion-1-3-2" label="Success Criterion 1.3.2 - Meaningful Sequence - Level A" icon="/img/light/1.3.2.svg" iconAlt="WCAG 1.3.2 - Logo" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Are there places in the app where you get stuck using the keyboard?
+        
+        Prevent people using an external keyboard from getting stuck in your app. For example, it often happens that pop-ups cannot be closed with a keyboard. You can test this to a large extent with a screen reader. 
+        <CustomLink url="/en/guidelines/wcag/success-criterion-2-1-2" label="Success Criterion 2.1.2 - No Keyboard Trap - Level A" icon="/img/light/2.1.2.svg" iconAlt="WCAG 2.1.2 - Logo" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Is the correct name, role and value given?
+        
+        It should be clear to users of assistive technologies what actions they can take. Make sure that the name, role and value can be determined for all elements. For example, when you use an image as a button, you must set the role as a button. 
+        <CustomLink url="/en/guidelines/wcag/success-criterion-4-1-2" label="Success Criterion 4.1.2 - Name, Role, Value - Level A" icon="/img/light/4.1.2.svg" iconAlt="WCAG 4.1.2 - Logo" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Is the structure of a page clear to users of assistive technologies?
+        
+        Information on the screen must be conveyed to assistive technologies. For example, make sure that headings are not only bold, but also marked as headings in the code. Relationships on the screen must be usable with assistive technologies. Elements in a list must be navigable one by one. Elements in a table must be navigable by rows and columns. 
+        <CustomLink url="/en/guidelines/wcag/success-criterion-1-3-1" label="Success Criterion 1.3.1 - Info and Relationships - Level A" icon="/img/light/1.3.1.svg" iconAlt="WCAG 1.3.1 - Logo" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Can you operate the app with assistive technologies?
+        
+        Make sure that all functionality in the app can be used with assistive technologies. People who are blind use the screen reader. People with a motor disability use switch control, voice control and/or the keyboard. These assistive technologies are built into the operating system. 
+        <CustomLink url="/en/guidelines/wcag/success-criterion-2-1-1" label="Success Criterion 2.1.1 - Keyboard - Level A" icon="/img/light/2.1.1.svg" iconAlt="WCAG 2.1.1 - Logo" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Do the headings and labels describe the content clear enough?
+        
+        The use of headings is important to understand how the content is structured. Blind users can use a screen reader to request an overview of all headings on the screen. The use of labels is important with forms to understand what input is requested. Make sure the labels are linked to the input fields. 
+        <CustomLink url="/en/guidelines/wcag/success-criterion-2-4-6" label="Success Criterion 2.4.6 - Headings and Labels - Level AA" icon="/img/light/2.4.6.svg" iconAlt="WCAG 2.4.6 - Logo" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+## Overview of all the guidelines
+
+The simplicity and the number of questions will give you a general idea. You will be able to find up to 80% of the errors with 20% of the effort. However, it will not give a complete picture but only a first impression. For a complete picture, visit the overview of all WCAG guidelines.
+
+<LinkList title="List of guidelines" isHighlighted={true}>
+  <LinkListItem url="/en/guidelines/wcag" title="WCAG overview" pageTitle="Web Content Accessibility Guidelines (WCAG)" shortDescription="The Web Content Accessibility Guidelines (WCAG) defines how to make content more accessible to people with disabilities." icon="/img/light/w3c.svg" iconAlt="W3C logo (light)"/>
+  <LinkListItem url="/en/guidelines/appt-em" title="Appt Evaluation Methodology (Appt-EM)" pageTitle="Appt Evaluation Methodology (Appt-EM)" shortDescription="The Appt Evaluation Methodology (Appt-EM) can be used to determine the accessibility of apps in a uniform and reproducible manner." icon="/img/light/Diensten.svg" iconAlt="Services"/>
+</LinkList>

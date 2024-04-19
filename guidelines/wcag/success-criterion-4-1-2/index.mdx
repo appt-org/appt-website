@@ -1,0 +1,61 @@
+---
+locale: en
+slug: /wcag/success-criterion-4-1-2
+contentfulID: 2PUK2fkMYehjG3Hkz80MH
+type: pageGuidelinePage
+title: Name, Role, Value
+prefix: Success Criterion
+chapter: 4.1.2
+suffix: Level A
+shortDescription: Ensure it is clear for users of assistive technologies what actions can be performed.
+thumbnail: WCAG 4.1.2 - Image
+source: "https://www.w3.org/TR/WCAG22/#name-role-value"
+layout: Layout - WCAG
+---
+
+# Name, Role, Value
+
+Ensure a correct name, role and value is set for all interactive elements.
+
+The name helps users to identify elements. The screen reader speaks the name and voice control uses the name for actions.
+
+The role lets users know what to expect. The role "button" indicates which action takes place upon activation.
+
+The value informs the user. This includes the state (disabled), properties (selected) and values (50%).
+
+For example, give a tab the name "Home", the role "tab", the property "selected" and the value "1 of 4".
+
+## Impact
+
+- People who use assistive technologies depend on a correct name, role and value.
+- If a button has no name then it is not clear what action will take place.
+- If a button does not have the role button, then a user will not know that it can be clicked.
+- If the value of a switch is not indicated to assistive technologies, a user will not know whether it is on or off.
+
+## Check
+
+“*Are the name, role and value set correctly?*“
+
+This can be tested with the [screen reader](/en/stats/screen-reader).
+
+## Solution
+
+### Set accessibility name
+
+<CodeSample id="accessibility-name" locale="en"/>
+
+### Set accessibility role
+
+<CodeSample id="accessibility-role" locale="en"/>
+
+### Set accessibility value
+
+<CodeSample id="accessibility-value" locale="en"/>
+
+### Set accessibility state
+
+<CodeSample id="accessibility-state" locale="en"/>
+
+## Resources
+
+- [WCAG 2.2 - Success Criterion 4.1.2 - Name, Role, Value](https://www.w3.org/TR/WCAG22/#name-role-value)
