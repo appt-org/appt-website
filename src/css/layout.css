@@ -186,3 +186,19 @@ main.container > .row > .col.col--8 {
 .footer__link-item {
   line-height: theme(lineHeight.normal);
 }
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs__item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs__link svg {
+  display: inline;
+}
