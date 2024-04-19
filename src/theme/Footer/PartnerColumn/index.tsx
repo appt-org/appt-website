@@ -25,7 +25,7 @@ export default function PartnerColumn() {
   const createdByPartners = [
     {
       src: 'img/light/logos/q42.svg',
-      darkSrc: 'img/dark/q42.svg',
+      darkSrc: 'img/dark/logos/q42.svg',
       alt: 'Q42 logo',
       url: '/partners/q42',
     },
@@ -40,15 +40,15 @@ export default function PartnerColumn() {
   const supportedByPartners = [
     {
       src: 'img/light/logos/sidn-fonds.svg',
-      darkSrc: 'img/dark/sidn-fonds.svg',
+      darkSrc: 'img/dark/logos/sidn-fonds.svg',
       alt: 'SIDN fonds logo',
       url: 'https://www.sidnfonds.nl/excerpt',
     },
     {
-      src: 'img/light/logos/contentful.webp',
-      darkSrc: 'img/dark/logos/contentful.webp',
-      alt: 'Contentful logo',
-      url: 'https://www.contentful.com/',
+      src: 'img/light/logos/go-fonds.png',
+      alt: 'Stichting GO Fonds logo',
+      url: 'https://www.gofonds.nl/',
+      className: 'dark:bg-body dark:rounded dark:rounded dark:rounded-tr-none h-5 max-w-[6rem] object-contain',
     },
   ];
   return (
@@ -70,7 +70,7 @@ export default function PartnerColumn() {
         </Typography>
         <ul className="flex gap-4" role="list">
           {supportedByPartners.map((partner, i) => (
-            <PartnerItem key={i} {...partner} className="w-auto h-4 max-w-[4.5rem]" />
+            <PartnerItem key={i} {...partner} className={`w-auto h-4 max-w-[4.5rem] ${partner.className}`} />
           ))}
         </ul>
       </div>
