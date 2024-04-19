@@ -1,0 +1,54 @@
+---
+locale: nl
+slug: /wcag/succescriterium-1-3-1
+contentfulID: 1NDO6Gke4dEvdf2vET8E6n
+type: pageGuidelinePage
+title: Info en relaties
+prefix: Succescriterium
+chapter: 1.3.1
+suffix: Niveau A
+shortDescription: Ensure that the information and relationships on the screen are not only conveyed visually.
+thumbnail: WCAG 1.3.1 - Image
+source: "https://www.w3.org/Translations/WCAG21-nl/#info-en-relaties"
+layout: Layout - WCAG
+---
+
+# Info en relaties
+
+Zorg dat de informatie en relaties op het scherm ook voor gebruikers van hulpmiddelen duidelijk zijn.
+
+Informatie op het scherm moet aan hulpmiddelen worden overgebracht. Zorg dat koppen bijvoorbeeld niet alleen dikgedrukt zijn, maar ook in de code als kop zijn gemarkeerd.
+
+Relaties op het scherm moeten aan hulpmiddelen worden aangegeven. Elementen in een lijst moeten één voor één genavigeerd kunnen worden. Elementen in een tabel moeten via rijen en kolommen navigeerbaar zijn.
+
+## Impact
+
+- Voor gebruikers van hulpsoftware is het belangrijk dat in een tabel de titels van rijen en kolommen voorgelezen worden.
+- Zorg dat alinea’s door hulpsoftware apart worden voorgelezen.
+- Zorg dat het voor hulpsoftware duidelijk is dat een lijst met bullets een lijst is.
+
+## Controleren
+
+“*Is de opbouw van het scherm duidelijk bij het gebruiken van hulpmiddelen?”*
+
+Je kunt de [schermlezer](/nl/stats/screen-reader) gebruiken om dit te controleren.
+
+## Oplossing
+
+Bij websites wordt vaak gebruik gemaakt van [WAI-ARIA](https://www.w3.org/WAI/standards-guidelines/aria/) attributen om informatie en relaties correct over te brengen. Bij apps kun je geen gebruik maken van deze attributen, omdat apps niet in HTML geschreven zijn. Voor een deel van deze  attributen zijn er alternatieven beschikbaar, maar niet voor allemaal.
+
+### Accessibility role instelllen
+
+<CodeSample id="accessibility-role" locale="nl"/>
+
+### Accessibility modal aangeven
+
+<CodeSample id="accessibility-modal" locale="nl"/>
+
+### Elementen groeperen
+
+<CodeSample id="accessibility-group" locale="nl"/>
+
+## Bronnen
+
+- [WCAG 2.1 - Succescriterium 1.3.1 - Info en relaties](https://www.w3.org/Translations/WCAG21-nl/#info-en-relaties)

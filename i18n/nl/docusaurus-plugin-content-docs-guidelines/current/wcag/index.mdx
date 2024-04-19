@@ -1,42 +1,158 @@
 ---
 locale: nl
-id: 2OYB3OfXUMOdDIR7WPn3jR
-type: pageGuidelinePage
-title: Non-text Content
-prefix: Success Criterion
 slug: /wcag
-shortDescription: Ensure that alternative text is available for all content without text.
-thumbnail: WCAG 1.1.1 - Image
-source: https://www.w3.org/TR/WCAG22/#non-text-content
-layout: Layout - WCAG
+contentfulID: 69cPPehtdKZ1aMmFoj0YWa
+type: pageContentPage
+title: Web Content Accessibility Guidelines (WCAG)
+shortDescription: De Web Content Accessibility Guidelines (WCAG) bevatten een groot aantal aanbevelingen om apps toegankelijker te maken. 
+thumbnail: W3C image
+seo.title: Web Content Accessibility Guidelines (WCAG)
+seo.name: WCAG - SEO
+seo.description: The WCAG documents explain how to make web content more accessible to people with disabilities.
+source: "https://www.w3.org/Translations/WCAG21-nl/"
+layout: Layout - In page navigation
+pagination_next: null
+pagination_prev: null
 ---
 
-# Non-text Content
+De Web Content Accessibility Guidelines (WCAG) zijn een reeks richtlijnen om digitale inhoud toegankelijker te maken voor mensen met een beperking.
 
-Ensure that alternative text is available for all content without text. These include images, icons and graphs. Describe the meaning of this content is. Blind people use their screen reader to read out this description. Alternative text can also be useful for anyone who is unsure about the meaning of the content.
+Laat je niet misleiden door de naam, want deze richtlijnen gelden ook voor apps. Met welke eisen je rekening dient te houden is afhankelijk van waar in de wereld jouw app beschikbaar is. 
 
-Make sure alt text is available for all non-text content. These include images, icons and graphs. Describe what the meaning of this content is. People who are blind have this description read aloud through their screen reader. Alternative text can also be useful for anyone unsure about the meaning of non-text content.
+<LinkList title="List of international standards" isHighlighted={true}>
+  <LinkListItem url="/nl/guidelines/en-301-549" title="EN 301 549 overzicht" pageTitle="EN 301 549" shortDescription="EN 301 549 is de Europese norm die eisen beschrijft waaraan apps moeten voldoen om toegankelijk te zijn." icon="/img/light/eu-flag.svg" iconAlt="De vlag van de Europese Unie"/>
+  <LinkListItem url="/nl/guidelines/section-508" title="Section 508 overzicht" pageTitle="Section 508" shortDescription="Sectie 508 vereist dat federale agentschappen van de Verenigde Staten hun apps voor iedereen toegankelijk maken." icon="/img/light/us-flag.svg" iconAlt="De vlag van de Verenigde Staten van Amerika"/>
+</LinkList>
 
-## Impact
+## WCAG structuur
 
-- Alternative text can help anyone understand the meaning of icons, photos, and other images.
-- People with a [visual impairment](https://appt.org/en/articles/disabilities/visual) can use their [screen reader](https://appt.org/en/stats/screen-reader) to read what is being shown.
-- People who are deafblind can read the content in braille.
+Versie 2.2 van de WCAG bestaat uit 4 principes, 13 richtlijnen en 87 succescriteria. De succescriteria zijn onderverdeeld in drie niveaus van conformiteit.
 
-## Check
+1. **Niveau A**: zorgt voor een minimumniveau van toegankelijkheid. Er zijn 32 criteria waaraan moet worden voldaan. Als je app niet voldoet aan niveau A, dan heeft deze waarschijnlijk ernstige toegankelijkheidsproblemen. Hierdoor kunnen gebruikers met een beperking je app waarschijnlijk niet volledig kunnen gebruiken.
+2. **Niveau AA**: zorgt voor een hoge mate van toegankelijkheid. Er zijn 24 criteria waaraan moet worden voldaan, plus 32 criteria vanuit niveau A. Wanneer je app voldoet aan niveau AA, dan kan deze door de meeste gebruikers met een beperking gebruikt worden.
+3. **Niveau AAA**: zorgt voor het hoogste niveau van toegankelijkheid. Er zijn 31 criteria waaraan moet worden voldaan, plus 56 criteria vanuit niveau A en AA. Let op: het is niet voor alle inhoud mogelijk om te voldoen aan de eisen vanuit niveau AAA.
 
-_"Is alternative text available for all non-text content?”_
+We raden aan om te voldoen aan niveau AA, en waar mogelijk aan niveau AAA.
 
-You can use the [screen reader](https://appt.org/en/stats/screen-reader) or [voice control](https://appt.org/en/stats/voice-control) to check alternative text.
+<Image src="/img/light/WCAG 2.2 - NL - Light.svg" dark="/img/dark/WCAG 2.2 - NL - Dark.svg" alt="WCAG 2.2 - NL - Light"/>
 
-Exception: It is not necessary to provide alternative text for decorative images. In this case, you should also make sure that assistive technologies cannot focus on the image.
+## WCAG handleidingen
 
-## Solution
+Op zoek naar een eenvoudige manier om met WCAG aan de slag te gaan? Neem dan een kijkje bij onze beginnersgidsen.
 
-### Set accessibility label
+<LinkList title="WCAG Beginners Link List" isHighlighted={true}>
+  <LinkListItem url="/nl/guidelines/wcag-beginners-guide" title="WCAG beginnersgids" pageTitle="WCAG beginnersgids" shortDescription="Voor het eerst aan de slag met WCAG? Start hier." icon="/img/light/Ontwikkeling.svg" iconAlt="Ontwikkeling"/>
+  <LinkListItem url="/nl/guidelines/beginnersguide-accessibility-testing" title="Beginnersgids toegankelijkheid testen" pageTitle="Beginnersgids toegankelijkheid testen" shortDescription="Hoe test je zelf of je app toegankelijk is?" icon="/img/light/features.svg" iconAlt="Features icon"/>
+  <LinkListItem url="/nl/handbook" title="Handboek app toegankelijkheid" pageTitle="Handboek app toegankelijkheid" shortDescription="Ons handboek is ontworpen om jou op eenvoudige wijze de basisprincipes van app toegankelijkheid te leren."/>
+</LinkList>
 
-<CodeSample id="accessibility-label" locale="en" />
+De lijst hieronder bevat links naar onze handleidingen voor elk principe, richtlijn en succescriterium.
 
-### Disable accessibility focus
+- [Principe 1 - Waarneembaar](/nl/guidelines/wcag/principle-1)
+   - [Richtlijn 1.1 - Teksalternatieven](/nl/guidelines/wcag/guideline-1-1)
+      - [Succescriterium 1.1.1 - Niet-tekstuele Content - Niveau A](/nl/guidelines/wcag/success-criterion-1-1-1)
+   - [Richtlijn 1.2 - Op tijd gebaseerde media](/nl/guidelines/wcag/guideline-1-2)
+      - [Succescriterium 1.2.1 - Louter-geluid en louter-videobeeld (vooraf opgenomen) - Niveau A](/nl/guidelines/wcag/success-criterion-1-2-1)
+      - [Succescriterium 1.2.2 - Ondertitels voor doven en slechthorenden (vooraf opgenomen) - Niveau A](/nl/guidelines/wcag/success-criterion-1-2-2)
+      - [Succescriterium 1.2.3 - Audiodescriptie of media-alternatief (vooraf opgenomen) - Niveau A](/nl/guidelines/wcag/success-criterion-1-2-3)
+      - [Succescriterium 1.2.4 - Ondertitels voor doven en slechthorenden (live) - Niveau AA](/nl/guidelines/wcag/success-criterion-1-2-4)
+      - [Succescriterium 1.2.5 - Audiodescriptie (vooraf opgenomen) - Niveau AA](/nl/guidelines/wcag/success-criterion-1-2-5)
+      - [Succescriterium 1.2.6 - Gebarentaal (vooraf opgenomen) - Niveau AAA](/nl/guidelines/wcag/success-criterion-1-2-6)
+      - [Succescriterium 1.2.7 - Verlengde audiodescriptie (vooraf opgenomen) - Niveaul AAA](/nl/guidelines/wcag/success-criterion-1-2-7)
+      - [Succescriterium 1.2.8 - Media-alternatief (vooraf opgenomen) - Niveau AAA](/nl/guidelines/wcag/success-criterion-1-2-8)
+      - [Succescriterium 1.2.9 - Louter-geluid (live) - Niveau AAA](/nl/guidelines/wcag/success-criterion-1-2-9)
+   - [Richtlijn 1.3 - Aanpasbaar](/nl/guidelines/wcag/guideline-1-3)
+      - [Succescriterium 1.3.1 - Info en relaties - Niveau A](/nl/guidelines/wcag/success-criterion-1-3-1)
+      - [Succescriterium 1.3.2 - Betekenisvolle volgorde - Niveau A](/nl/guidelines/wcag/success-criterion-1-3-2)
+      - [Succescriterium 1.3.3 - Zintuiglijke eigenschappen - Niveau A](/nl/guidelines/wcag/success-criterion-1-3-3)
+      - [Succescriterium 1.3.4 - Weergavestand - Niveau AA](/nl/guidelines/wcag/success-criterion-1-3-4)
+      - [Succescriterium 1.3.5 - Identificeer het doel van de input - Niveau AA](/nl/guidelines/wcag/success-criterion-1-3-5)
+      - [Succescriterium 1.3.6 - Identificeer het doel - Niveau AA](/nl/guidelines/wcag/success-criterion-1-3-6)
+   - [Richtlijn 1.4 - Onderscheidbaar](/nl/guidelines/wcag/guideline-1-4)
+      - [Succescriterium 1.4.1 - Gebruik van kleur - Niveau A](/nl/guidelines/wcag/success-criterion-1-4-1)
+      - [Succescriterium 1.4.2 - Geluidsbediening -  Niveau A](/nl/guidelines/wcag/success-criterion-1-4-2)
+      - [Succescriterium 1.4.3 - Contrast (minimum) - Niveau AA](/nl/guidelines/wcag/success-criterion-1-4-3)
+      - [Succescriterium 1.4.4 - Herschalen van tekst - Niveau AA](/nl/guidelines/wcag/success-criterion-1-4-4)
+      - [Succescriterium 1.4.5 - Afbeeldingen van tekst - Niveau AA](/nl/guidelines/wcag/success-criterion-1-4-5)
+      - [Succescriterium 1.4.6 - Contrast (versterkt) - Niveau AAA](/nl/guidelines/wcag/success-criterion-1-4-6)
+      - [Succescriterium 1.4.7 - Weinig of geen achtergrondgeluid - Niveau AAA](/nl/guidelines/wcag/success-criterion-1-4-7)
+      - [Succescriterium 1.4.8 - Visuele weergave  - Niveau  AAA](/nl/guidelines/wcag/success-criterion-1-4-8)
+      - [Succescriterium 1.4.9 - Afbeeldingen van tekst (geen uitzondering) - Niveau AAA](/nl/guidelines/wcag/success-criterion-1-4-9)
+      - [Succescriterium 1.4.10 - Reflow - Niveau AA](/nl/guidelines/wcag/success-criterion-1-4-10)
+      - [Succescriterium 1.4.11 - Contrast van niet-tekstuele content - Niveau AA](/nl/guidelines/wcag/success-criterion-1-4-11)
+      - [Succescriterium 1.4.12 - Tekstafstand - Niveau AA](/nl/guidelines/wcag/success-criterion-1-4-12)
+      - [Succescriterium 1.4.13 - Content bij hover of focus - Niveau AA](/nl/guidelines/wcag/success-criterion-1-4-13)
+- [Principe 2 - Bedienbaar](/nl/guidelines/wcag/principle-2)
+   - [Richtlijn 2.1 - Toetsenbordtoegankelijk](/nl/guidelines/wcag/guideline-2-1)
+      - [Succescriterium 2.1.1 - Toetsenbord - Niveau A](/nl/guidelines/wcag/success-criterion-2-1-1)
+      - [Succescriterium 2.1.2 - Geen toetsenbordval - Niveau A](/nl/guidelines/wcag/success-criterion-2-1-2)
+      - [Succescriterium 2.1.3 - Toetsenbord (geen uitzondering) - Niveau AAA](/nl/guidelines/wcag/success-criterion-2-1-3)
+      - [Succescriterium 2.1.4 - Enkel teken sneltoetsen - Niveau A](/nl/guidelines/wcag/success-criterion-2-1-4)
+   - [Richtlijn 2.2 - Genoeg tijd](/nl/guidelines/wcag/guideline-2-2)
+      - [Succescriterium 2.2.1 - Timing aanpasbaar - Niveau A](/nl/guidelines/wcag/success-criterion-2-2-1)
+      - [Succescriterium 2.2.2 - Pauzeren, stoppen, verbergen - Niveau A](/nl/guidelines/wcag/success-criterion-2-2-2)
+      - [Succescriterium 2.2.3 - Geen timing - Niveau AAA](/nl/guidelines/wcag/success-criterion-2-2-3)
+      - [Succescriterium 2.2.4 - Onderbrekingen - Niveau AAA](/nl/guidelines/wcag/success-criterion-2-2-4)
+      - [Succescriterium 2.2.5 - Herauthentisering - Niveau AAA](/nl/guidelines/wcag/success-criterion-2-2-5)
+      - [Succescriterium 2.2.6 - Time-outs - Niveau AAA](/nl/guidelines/wcag/success-criterion-2-2-6)
+   - [Richtlijn 2.3 - Toevallen en fysieke reacties](/nl/guidelines/wcag/guideline-2-3)
+      - [Succescriterium 2.3.1 - Drie flitsen of beneden drempelwaarde - Niveau A](/nl/guidelines/wcag/success-criterion-2-3-1)
+      - [Succescriterium 2.3.2 - Drie flitsen - Niveau AAA](/nl/guidelines/wcag/success-criterion-2-3-2)
+      - [Succescriterium 2.3.3 - Animatie uit interacties - Niveau AAA](/nl/guidelines/wcag/success-criterion-2-3-3)
+   - [Richtlijn 2.4 - Navigeerbaar](/nl/guidelines/wcag/guideline-2-4)
+      - [Succescriterium 2.4.1 - Blokken omzeilen - Niveau A](/nl/guidelines/wcag/success-criterion-2-4-1)
+      - [Succescriterium 2.4.2 - Paginatitel - Niveau A](/nl/guidelines/wcag/success-criterion-2-4-2)
+      - [Succescriterium 2.4.3 - Focus volgorde - Niveau A](/nl/guidelines/wcag/success-criterion-2-4-3)
+      - [Succescriterium 2.4.4 - Linkdoel (in context) - Niveau  A](/nl/guidelines/wcag/success-criterion-2-4-4)
+      - [Succescriterium 2.4.5 - Meerdere manieren - Niveau AA](/nl/guidelines/wcag/success-criterion-2-4-5)
+      - [Succescriterium 2.4.6 - Koppen en labels - Niveau AA](/nl/guidelines/wcag/success-criterion-2-4-6)
+      - [Succescriterium 2.4.7 - Focus zichtbaar - Niveau AA](/nl/guidelines/wcag/success-criterion-2-4-7)
+      - [Succescriterium 2.4.8 - Locatie - Niveau AAA](/nl/guidelines/wcag/success-criterion-2-4-8)
+      - [Succescriterium 2.4.9 - Linkdoel (alleen link) - Niveau  AAA](/nl/guidelines/wcag/success-criterion-2-4-9)
+      - [Succescriterium 2.4.10 - Paragraafkoppen - Niveau AAA](/nl/guidelines/wcag/success-criterion-2-4-10)
+      - [Succescriterium 2.4.11 - Focus niet verborgen (minimum) - Niveau AA](/nl/guidelines/wcag/success-criterion-2-4-11)
+      - [Succescriterium 2.4.12 - Focus niet verborgen (versterkt) - Niveau AAA](/nl/guidelines/wcag/success-criterion-2-4-12)
+      - [Succescriterium 2.4.13 - Focus weergave - Niveau AAA](/nl/guidelines/wcag/success-criterion-2-4-13)
+   - [Richtlijn 2.5 - Input modaliteiten](/nl/guidelines/wcag/guideline-2-5)
+      - [Succescriterium 2.5.1 - Aanwijzergebaren](/nl/guidelines/wcag/success-criterion-2-5-1)
+      - [Succescriterium 2.5.2 - Aanwijzerannulering - Niveau A](/nl/guidelines/wcag/success-criterion-2-5-2)
+      - [Succescriterium 2.5.3 - Label in naam - Niveau A](/nl/guidelines/wcag/success-criterion-2-5-3)
+      - [Succescriterium 2.5.4 - Bewegingsactivering - Niveau A](/nl/guidelines/wcag/success-criterion-2-5-4)
+      - [Succescriterium 2.5.5 - Grootte van het aanwijsgebied - Niveau AAA](/nl/guidelines/wcag/success-criterion-2-5-5)
+      - [Succescriterium 2.5.6 - Input gelijktijdige invoermechanismen - Niveau AAA](/nl/guidelines/wcag/success-criterion-2-5-6)
+      - [Succescriterium 2.5.7 - Slepende bewegingen - Niveau AA](/nl/guidelines/wcag/success-criterion-2-5-7)
+      - [Succescriterium 2.5.8 - Grootte van het aanwijsgebied (minimum) - Niveau AA](/nl/guidelines/wcag/success-criterion-2-5-8)
+- [Principe 3 - Begrijpelijk](/nl/guidelines/wcag/principle-3)
+   - [Richtlijn 3.1 - Leesbaar](/nl/guidelines/wcag/guideline-3-1)
+      - [Succescriterium 3.1.1 - Taal van de pagina - Niveau A](/nl/guidelines/wcag/success-criterion-3-1-1)
+      - [Succescriterium 3.1.2 - Taal van onderdelen - Niveau AA](/nl/guidelines/wcag/success-criterion-3-1-2)
+      - [Succescriterium 3.1.3 - Ongebruikelijke woorden - Niveau AAA](/nl/guidelines/wcag/success-criterion-3-1-3)
+      - [Succescriterium 3.1.4 - Afkortingen - Niveau AAA](/nl/guidelines/wcag/success-criterion-3-1-4)
+      - [Succescriterium 3.1.5 - Leesniveau - Niveau AAA](/nl/guidelines/wcag/success-criterion-3-1-5)
+      - [Succescriterium 3.1.6 - Uitspraak - Niveau  AAA](/nl/guidelines/wcag/success-criterion-3-1-6)
+   - [Richtlijn 3.2 - Voorspelbaar](/nl/guidelines/wcag/guideline-3-2)
+      - [Succescriterium 3.2.1 - Bij focus - Niveau A](/nl/guidelines/wcag/success-criterion-3-2-1)
+      - [Succescriterium 3.2.2 - Bij input - Niveau A](/nl/guidelines/wcag/success-criterion-3-2-2)
+      - [Succescriterium 3.2.3 - Consistente navigatie - Niveau AA](/nl/guidelines/wcag/success-criterion-3-2-3)
+      - [Succescriterium 3.2.4 - Consistente identificatie - Niveau AA](/nl/guidelines/wcag/success-criterion-3-2-4)
+      - [Succescriterium 3.2.5 - Verandering op verzoek - Niveau AAA](/nl/guidelines/wcag/success-criterion-3-2-5)
+      - [Succescriterium 3.2.6 - Consistente hulp - Niveau A](/nl/guidelines/wcag/success-criterion-3-2-6)
+   - [Richtlijn 3.3 - Assistentie bij invoer](/nl/guidelines/wcag/guideline-3-3)
+      - [Succescriterium 3.3.1 - Foutidentificatie - Niveau A](/nl/guidelines/wcag/success-criterion-3-3-1)
+      - [Succescriterium 3.3.2 - Labels of instructies - Niveau A](/nl/guidelines/wcag/success-criterion-3-3-2)
+      - [Succescriterium 3.3.3 - Foutsuggestie - Niveau AA](/nl/guidelines/wcag/success-criterion-3-3-3)
+      - [Succescriterium 3.3.4 - Foutpreventie (wettelijk, financieel, gegevens) - Niveau AA](/nl/guidelines/wcag/success-criterion-3-3-4)
+      - [Succescriterium 3.3.5 - Hulp - Niveau AAA](/nl/guidelines/wcag/success-criterion-3-3-5)
+      - [Succescriterium 3.3.6 - Foutpreventie (alle) - Niveau AAA](/nl/guidelines/wcag/success-criterion-3-3-6)
+      - [Succescriterium 3.3.7 - Overtollige invoer - Niveau A](/nl/guidelines/wcag/success-criterion-3-3-7)
+      - [Succescriterium 3.3.8 - Toegankelijke authenticatie (minimum) - Niveau AA](/nl/guidelines/wcag/success-criterion-3-3-8)
+      - [Succescriterium 3.3.9 - Toegankelijke authenticatie (versterkt) - Niveau AAA](/nl/guidelines/wcag/success-criterion-3-3-9)
+- [Principe 4 - Robuust](/nl/guidelines/wcag/principle-4)
+   - [Richtlijn 4.1 - Compatibel](/nl/guidelines/wcag/guideline-4-1)
+      - [Succescriterium 4.1.1 - Parsen - Niveau A](/nl/guidelines/wcag/success-criterion-4-1-1)
+      - [Succescriterium 4.1.2 - Naam, rol, waarde - Niveau A](/nl/guidelines/wcag/success-criterion-4-1-2)
+      - [Succescriterium 4.1.3 - Statusberichten - Niveau AA](/nl/guidelines/wcag/success-criterion-4-1-3)
 
-<CodeSample id="accessibility-focusable" />
+## Bronnen
+
+- [Web Content Accessibility Guidelines (WCAG) 2.1 NL](https://www.w3.org/Translations/WCAG21-nl/)
