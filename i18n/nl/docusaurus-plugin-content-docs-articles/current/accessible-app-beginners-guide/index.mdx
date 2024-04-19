@@ -1,0 +1,139 @@
+---
+locale: nl
+slug: /toegankelijke-app-beginnersgids
+contentfulID: 4bOXm8grN7j6BiDK1jwR8a
+type: pageContentPage
+title: Een toegankelijke app. Waar begin je?
+shortDescription: "Je app toegankelijk maken voor iedereen: waar begin je? Dit zijn de eerste zes stappen om te nemen."
+thumbnail: Oplossingen - icon
+seo.title: Een toegankelijke app. Waar begin je?
+seo.name: Accessible App Beginnersguide  - SEO
+seo.description: "Je app toegankelijk maken voor iedereen: waar begin je? Dit zijn de eerste zes stappen om te nemen."
+hero.title: Een toegankelijke app. Waar begin je?
+hero.introText: "Je app toegankelijk maken voor iedereen: waar begin je? Hieronder volgen de belangrijkste stappen die je helpen om je app bruikbaar te maken voor een zo groot mogelijke groep mensen, waaronder mensen met een beperking. 
+"
+hero.useThumbnail: false
+---
+
+<Hero
+  title="Een toegankelijke app. Waar begin je?"
+  introText="Je app toegankelijk maken voor iedereen: waar begin je? Hieronder volgen de belangrijkste stappen die je helpen om je app bruikbaar te maken voor een zo groot mogelijke groep mensen, waaronder mensen met een beperking. 
+"
+/>
+
+#### 1 november 2023
+
+<Image src="/img/light/usability-testing.71ee77e.jpg" alt="Testen voor toegankelijkheid met iemand die blind is"/>
+
+Het kan heel ingewikkeld lijken en zelfs intimiderend zijn als je je verdiept in de enorme hoeveelheid informatie over digitale toegankelijkheid. Hoe verwerk je al die richtlijnen, inzichten en codevoorbeelden in een app? Om je op weg te helpen hebben we de zes belangrijkste stappen voor je op een rij gezet. 
+
+1. Gebruik een schermlezer!
+2. Bied tekstuele alternatieven.
+3. Maak duidelijk wat het doel is.
+4. Zorg dat tekst kan worden vergroot.
+5. Zorg voor voldoende contrast.
+6. Toon focus en zorg voor logische volgorde.
+
+Hieronder volgt een uitgebreide toelichting per stap. Tot slot leggen we uit hoe je kunt testen of het werkt als bedoeld.
+
+**Let op!** Deze lijst is niet uitputtend en zal je app niet volledig toegankelijk maken. Maar is bedoeld om door middel van een paar eenvoudige stappen een zo groot mogelijk verschil te maken.
+
+## **1. Gebruik een schermlezer!**
+
+Om goed te kunnen testen of je app toegankelijk is loont het om te leren werken met een [schermlezer](https://appt.org/nl/stats/screen-reader). 
+
+Een schermlezer wordt vooral gebruikt door mensen met een visuele beperking. Door je app hiervoor  te optimaliseren zorg je er echter voor dat een veel grotere groep mensen gebruik kan maken van jouw app. Gebruikers van [stem-, toetsenbord- en schakelbediening](https://appt.org/nl/articles/assistive-technologies) zullen hier ook baat bij hebben en je houdt automatisch rekening met heel veel succescriteria uit de [WCAG](https://appt.org/nl/guidelines/wcag).
+
+Dit maakt de schermlezer het ideale middel om te testen voor toegankelijkheid. Maar het kan even wennen zijn. Het werkt allemaal net even anders dan je gewend bent. Met de [ScreenReader app](https://screenreader.app/) leer je alle gebaren en mogelijkheden al doende kennen.
+
+## **2. Bied tekstuele alternatieven**
+
+Hebben alle knoppen een duidelijk label? Hebben o.a. iconen, afbeeldingen, grafieken een tekstueel alternatief? 
+
+Zorg dat er alternatieve tekst beschikbaar is voor alle inhoud zonder tekst. Dat zijn onder andere afbeeldingen, icoontjes en grafieken. Beschrijf wat er te zien is. Mensen die blind zijn laten deze beschrijving voorlezen via hun schermlezer. Alternatieve tekst kan ook handig zijn voor iedereen die twijfelt over de betekenis van de inhoud.
+
+Dit doe je door een accessibility label in te stellen. Hoe je dat kunt doen voor jouw app zie je in het voorbeeld hieronder.
+
+<CodeSample id="accessibility-label" locale="nl"/>
+
+## **3. Maak duidelijk wat het doel is**
+
+Is het duidelijk welke actie er kan worden uitgevoerd? 
+
+Stel een naam in. De naam wordt gebruikt ter identificatie. Door een naam in te stellen kunnen hulpmiddelen zoals stembediening gerichte acties uitvoeren.
+
+### Accessibility naam instellen
+
+<CodeSample id="accessibility-name" locale="nl"/>
+
+Stel een rol in. Bij de rol “knop” is het duidelijk dat er een actie plaatsvindt bij het activeren. Bij de rol “link” is het duidelijk dat je naar een andere locatie wordt verwezen. Door een rol in te stellen is het voor gebruikers van hulpmiddelen duidelijk wat ze kunnen doen.
+
+### Accessibility rol instellen
+
+<CodeSample id="accessibility-role" locale="nl"/>
+
+Stel een waarde in. Bij een selectievakje is de waarde “geselecteerd” of “niet geselecteerd”. Bij een volumeregelaar kan de waarde “50%” zijn. Door een waarde in te stellen kan dit ook tekstueel aan hulpmiddelen worden doorgegeven.
+
+### Accessibility waarde instellen
+
+<CodeSample id="accessibility-value" locale="nl"/>
+
+## **4. Zorg dat tekst kan worden vergroot**
+
+Is het mogelijk om tekst vergroot weer te geven? Blijft tekst leesbaar als het vergroot wordt weergegeven?
+
+Zorg ervoor dat de tekst vergroot kan worden weergegeven. Via de systeeminstellingen kunnen gebruikers hun gewenste lettergrootte instellen. Tekst moet met deze lettergrootte in de app worden weergegeven. Dit is vooral belangrijk voor slechtziende gebruikers omdat ze de tekst anders minder goed of niet kunnen lezen. Tekst mag niet worden ingekort met puntjes.
+
+### Tekst schalen ondersteunen
+
+<CodeSample id="text-scale" locale="nl"/>
+
+Zorg dat alle inhoud op het scherm ook bij het grootste lettertype te lezen blijft. Inhoud moet te lezen zijn zonder dat er gescrold hoeft te worden in twee richtingen. Doordat de tekst groter weergeven wordt kan het voorkomen dat andere elementen van het scherm vallen. Maak het mogelijk om deze elementen alsnog te bereiken.
+
+### Tekst afkapping voorkomen
+
+<CodeSample id="text-truncation" locale="nl"/>
+
+## **5. Zorg voor voldoende contrast**
+
+Heeft tekst voldoende contrast ten opzichte van de achtergrond? Hebben elementen op het scherm voldoende contrast onderling en ten opzichte van de achtergrond?
+
+Zorg dat de inhoud op het scherm een contrast van minimaal 3:1 heeft met de omliggende kleur. Denk hierbij aan grafische elementen zoals iconen, knoppen en invoervelden. Door deze verhouding aan te houden kunnen slechtziende en kleurenblinde gebruikers de inhoud goed onderscheiden. Daarnaast is een app hierdoor voor iedereen makkelijker te gebruiken, bijvoorbeeld buiten in de zon.
+
+Zorg dat de contrastverhouding tussen de tekstkleur en achtergrondkleur minimaal 4,5:1 is. Voor dikgedrukte en grote tekst voldoet een verhouding van 3:1. Door deze verhoudingen aan te houden kunnen slechtziende en kleurenblinde gebruikers de tekst goed lezen. Daarnaast is een app hierdoor voor iedereen makkelijker te gebruiken, bijvoorbeeld buiten in de zon.
+
+## **6. Toon focus en zorg voor logische volgorde**
+
+Is het duidelijk waar de focus zich bevindt? Is de volgorde waarin de focus zich verplaatst logisch?
+
+Zorg dat het duidelijk is waar de focus van hulpmiddelen zich bevindt. Vaak wordt de focus weergeven door een kader om het element heen te plaatsen. Zorg ervoor dat de plaatsing van het kader klopt en dat de kleur duidelijk te zien is. Voor apps is het niet mogelijk om de de kleur van het kader aan te passen. Het is echter wel mogelijk om elementen een andere achtergrondkleur te geven wanneer ze focus hebben.
+
+### Accessibility focus indicator toevoegen
+
+<CodeSample id="accessibility-focus-indicator" locale="nl"/>
+
+Zorg dat hulpmiddelen een logische focus volgorde aanhouden bij het navigeren. De volgorde om door een scherm te navigeren is meestal van links naar rechts, van boven naar onder. Zorg dat de focus van hulpmiddelen gelijk is. 
+
+### Volgorde voor toetsenbord aanpassen
+
+<CodeSample id="keyboard-order" locale="nl"/>
+
+### Volgorde voor hulpmiddelen aanpassen
+
+<CodeSample id="accessibility-order" locale="nl"/>
+
+### Accessibility focus verplaatsen
+
+<CodeSample id="accessibility-focus" locale="nl"/>
+
+## Testen
+
+De meeste stappen kun je testen met de [Accessibility Scanner app](https://developer.android.com/guide/topics/ui/accessibility/testing#accessibility-scanner) en [Xcode's Accessibility Inspector](https://developer.apple.com/library/archive/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html). Ook contrast issues kun je hiermee  automatisch detecteren. Je kunt ook een schermafbeelding maken van een app om de kleurcodes te bepalen en het contrast te berekenen. Dit kan bijvoorbeeld met de [Contrast Checker van WebAIM](https://webaim.org/resources/contrastchecker/). 
+
+Controleer daarnaast of het goed werkt door de [schermlezer](https://appt-production-o4ale4roda-ez.a.run.apphttps://appt.org/nl/stats/schermlezer) te gebruiken.
+
+Om te testen of tekst schalen goed wordt ondersteund stel je een groot lettertype in. Dit kun je doen op een telefoon onder de [toegankelijkheidsinstellingen](https://appt.org/nl/stats/font-size).
+
+## Vragen?
+
+Door deze stappen te volgen maak je je app voor een heel grote groep mensen toegankelijk. Mis je iets? Is er iets niet helemaal duidelijk? Laat het weten in [het slack kanaal van Appt](https://appt.li/slack).

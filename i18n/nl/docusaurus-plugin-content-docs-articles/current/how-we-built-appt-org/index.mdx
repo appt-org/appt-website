@@ -1,0 +1,80 @@
+---
+locale: nl
+slug: /hoe-we-appt-org-hebben-gebouwd
+contentfulID: 2RjUoJSUjsyQvJYNkn3Pv1
+type: pageContentPage
+title: Hoe we appt.org hebben gebouwd
+shortDescription: We hebben appt.org gebouwd door Contentful te gebruiken in combinatie met Next.js, Typescript, Tailwind CSS en Google Cloud Run.
+thumbnail: Web globe - Icon
+layout: Layout - In page navigation
+---
+
+#### 11 april 2024
+
+Als je kennis over toegankelijkheid wilt delen, moet je ervoor zorgen dat je eigen website ook toegankelijk is. Vanaf het begin hebben we toegankelijkheid onderdeel gemaakt van onze processen en het beïnvloedde de beslissingen die we namen.
+
+## Content Management System (CMS)
+
+We wilden onze inhoud kunnen beheren via een bestaand CMS. Een belangrijke eis was uitstekende ondersteuning voor vertalingen. We wilden een eigen front-end bouwen, waardoor het ons logisch leek om op zoek te gaan naar een Headless CMS.
+
+Headless betekent dat de inhoud, de *"body"*, gescheiden is van de weergave, de *"head"*. Met deze opzet kun je de inhoud op één plaats beheren, en die inhoud publiceren in front-end(s) naar keuze.
+
+Na het vergelijken van onze opties kozen we voor [Contentful](https://www.contentful.com/) als ons CMS. Contentful dwingt je om na te denken over de manier waarop je inhoud gestructureerd is. Je moet een Content Model maken voor elk stuk inhoud. 
+
+Onze website bevat bijvoorbeeld veel codevoorbeelden. We hebben een `CodeSample` object gemaakt, dat één of meer `CodeBlock` objecten bevat. Een CodeBlock is geschreven in een bepaalde `ProgrammingLanguage`, en die ProgrammingLanguage is beschikbaar op een bepaald `Platform`. Deze opzet maakt het mogelijk om multi-platform codevoorbeelden op een gestructureerde manier te schrijven.
+
+Ons team vond het ook prettig dat Contentful een GraphQL API heeft om inhoud op te halen. Met onze [Appt API](/nl/appt-api) kun je al onze inhoud op een gestructureerde manier ophalen.
+
+<Image src="/img/light/Screenshot 2023-01-26 at 15.55.29.png" alt="Het codevoorbeeld met de naam 'Accessibility label' bestaat uit vijf codeblokken in onze Contentful-editor"/>
+
+## Front-end stack
+
+Contentful is een volledig aanpasbare *achterkant*. Maar de *voorkant* moesten we zelf bouwen. Dat wilden we ook, om er zeker van te zijn dat het resultaat volledig toegankelijk zou zijn. We vergeleken moderne stacks, die een 100% performance score op Google Lighthouse konden halen. Verder wilden we 100% scoren op toegankelijkheid, en een goede zoekmachineoptimalisatie (SEO) hebben. 
+
+Na het zorgvuldig vergelijken van onze opties kozen we voor Next.js, Typescript, Tailwind CSS en Google Cloud Run als onze front-end stack.
+
+### Next.js
+
+[Next.js](https://nextjs.org/) is een [React](https://reactjs.org/) framework dat je bouwstenen geeft om webapplicaties te maken. Het framework gedeelte houdt in dat Next.js de tooling en configuratie afhandelt die nodig zijn voor React, en daarnaast extra structuur, functies en optimalisaties biedt.
+
+Enkele voordelen van Next.js zijn server-side rendering, uitstekende prestaties, lazy loading en het automatisch splitsen van code.
+
+### TypeScript
+
+[TypeScript](https://www.typescriptlang.org/) is een superset van [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), dat compileert naar JavaScript. Het belangrijkste voordeel van TypeScript is dat het een typesysteem heeft. Hiermee kun je je eigen types definiëren, waardoor we de data modellen uit Contentful konden repliceren.
+
+Een bijkomend voordeel voor ons was dat Contentful een [client library voor TypeScript](https://github.com/contentful/contentful.js) heeft gepubliceerd. Deze client bespaarde ons een hoop ontwikkelingstijd.
+
+### Tailwind CSS
+
+[Tailwind CSS](https://tailwindcss.com/) is een utility-first CSS framework vol met helper classes. De `pt-4` klasse voegt bijvoorbeeld `padding-top: 1rem;` toe aan een element. Deze helper classes betekenen dat je minder aangepaste CSS hoeft te schrijven, en geen eigen class namen hoeft te verzinnen. Tailwind bevat een purge systeem om ongebruikte helper classes in je productieomgeving te verwijderen.
+
+Tailwind heeft ook nadelen, zoals de leercurve, het kost tijd om de syntax te leren. Het grootste nadeel voor ons was dat de [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction) veel groter wordt wegens het gebruik van veel classes. Maar, voor ons wogen de voordelen zwaarder dan de nadelen.
+
+### Google Cloud Run
+
+We gebruiken [Google Cloud Run](https://cloud.google.com/run) om te deployen naar onze ontwikkel- en productieomgevingen. Cloud Run is een managed compute platform waarmee je direct containers kunt draaien bovenop de schaalbare infrastructuur van Google. We hebben voor Cloud Run gekozen omdat ons team er al goede ervaringen mee had.
+
+Een forse concurrent was [Vercel](https://vercel.com/solutions/nextjs), dit zijn de makers van Next.js. We hebben Vercel uitgeprobeerd, maar het had voor ons net niet genoeg voordelen om het boven Cloud Run te verkiezen.
+
+## Resultaat
+
+Het resultaat is de website waar je nu naar kijkt! We kunnen gemakkelijk onze eigen aangepaste inhoudstypen invoegen op onze pagina's. Het codevoorbeeld uit de bovenstaande afbeelding ziet er bijvoorbeeld zo uit:
+
+[start van codevoorbeeld]
+
+<CodeSample id="accessibility-label" locale="nl"/>
+
+[einde van codevoorbeeld]
+
+Wanneer we nieuwe codevoorbeelden toevoegen, bijvoorbeeld voor 'Toegankelijkheidslabel' in Jetpack Compose, zal deze toevoeging worden weerspiegeld op alle pagina's waar dit codevoorbeeld is ingevoegd.
+
+## Perfecte score
+
+De volledige controle over de manier waarop onze inhoud is gestructureerd en de keuze voor een moderne stack stelden ons in staat om onze doelen te bereiken. Onze website scoort 100% op Performance, Accessibility, Best Practices en SEO in Google Lighthouse.
+
+<Image src="/img/light/Screenshot 2023-01-27 at 12.23.40.png" alt="Een animatie met vuurwerk laat zien dat appt.org een 100% score heeft behaald op Performance, Accessibility, Best Practices en SEO"/>
+
+Onze keuzes hebben geresulteerd in een toegankelijke website, met geweldige prestaties. We hebben een solide basis gelegd voor de komende jaren!
+
+De broncode van appt.org is beschikbaar op [Github](https://github.com/appt-org/appt-org). We willen [Contentful](https://www.contentful.com/) bedanken voor het ter beschikking stellen van een Pro-Bono plan. Daarnaast willen we [Q42](https://www.q42.nl/) bedanken voor het bouwen van de website. We willen ook [Abra](https://abra.nl/) bedanken voor het bijdragen van honderden codevoorbeelden. Tot slot willen we het [SIDN fonds](https://www.sidnfonds.nl/) bedanken voor het sponsoren van ons project.

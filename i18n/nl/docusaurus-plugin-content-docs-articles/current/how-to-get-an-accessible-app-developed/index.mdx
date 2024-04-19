@@ -1,0 +1,162 @@
+---
+locale: nl
+slug: /zo-laat-je-een-toegankelijke-app-ontwikkelen
+contentfulID: H5vzMG1Fh1Jzpk6nY3D6b
+type: pageContentPage
+title: Zo laat je een toegankelijke app ontwikkelen
+shortDescription: Dit artikel, gericht op niet-developers, legt uit waar je moet beginnen als je een app toegankelijk wilt laten maken.
+thumbnail: Development - Icon
+seo.title: Zo laat je een toegankelijke app ontwikkelen
+seo.name: Accessible App - Guide for non-developers - SEO
+seo.description: In dit artikel geven we je tips waar je moet beginnen en waar je rekening mee moet houden als je een app toegankelijk wilt maken voor een zo groot mogelijke groep gebruikers, waaronder mensen met een beperking.
+hero.title: Zo laat je een toegankelijke app ontwikkelen
+hero.introText: In dit artikel geven we je tips waar je moet beginnen en waar je rekening mee moet houden als je een app toegankelijk wilt maken voor een zo groot mogelijke groep gebruikers, waaronder mensen met een beperking. 
+hero.useThumbnail: false
+---
+
+<Hero
+  title="Zo laat je een toegankelijke app ontwikkelen"
+  introText="In dit artikel geven we je tips waar je moet beginnen en waar je rekening mee moet houden als je een app toegankelijk wilt maken voor een zo groot mogelijke groep gebruikers, waaronder mensen met een beperking. "
+/>
+
+#### 1 november 2023
+
+<Image src="/img/light/Q42 Amsterdam - Real User Feedback Thursday -5 met blinden en slechtzienden (9).jpg" alt="een man bedient zijn telefoon. Het scherm is ingezoomd."/>
+
+## Wat is toegankelijkheid?
+
+Toegankelijkheid is zorgen dat iedereen jouw app kan gebruiken, ongeacht beperking, situatie, voorkeuren of afhankelijkheid. Dit artikel legt uit hoe verschillende mensen omgaan met apps in het algemeen en wat jij kunt doen om ervoor te zorgen dat zij jouw app kunnen gebruiken.
+
+Als je geen of weinig ervaring hebt met het ontwikkelen van een toegankelijke app dan kan het best complex lijken. Je moet ergens beginnen. Dit artikel helpt je op weg aan de hand van drie vragen.
+
+1. Voor wie doe je het eigenlijk?
+2. Wat moet er gebeuren?
+3. Hoe doe je dat dan?
+
+## 1. Voor wie doe je het eigenlijk?
+
+*Mensen gebruiken jouw app anders dan jij gewend bent.*
+
+Het begint allemaal met het bewustzijn dat mensen jouw app op een hele andere manier gebruiken en ervaren dan jezelf gewend bent. Voor mensen met een beperking is het lastiger om apps te gebruiken. Het is belangrijk dat je weet wat een beperking is, [welke beperkingen er zijn](https://appt.org/nl/articles/disabilities) en welk effect ze hebben op apps. 
+
+Belangrijk om te weten is dat niet alleen mensen met langdurige beperkingen baat hebben bij een toegankelijke app. Veel mensen maken gebruik van de instellingen die mobiele telefoons bieden om een telefoon in te stellen naar eigen behoeften, zoals het verhogen van het contrast. Deze functies zijn terug te vinden onder **Instellingen > Toegankelijkheid**. 
+
+Deze functies worden dus niet alleen gebruikt door mensen met een langdurige beperking zo blijkt uit [ons onderzoek](/nl/stats) naar het gebruik ervan. Er zijn ook andere redenen waarom iemand bijvoorbeeld de lettergrootte aanpast. Denk daarbij aan slechter zicht als iemand ouder wordt. Of als iemand ondertiteling in de bus of trein activeert, wanneer een koptelefoon vergeten is.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'Tekstgrootte aanpassen', key: 'ios-non_default_content_size-true', isPercentage: true },
+          { title: 'Donkere modus', key: 'ios-preference_ui_style-dark', isPercentage: true },
+          { title: 'Scherm inzoomen', key: 'ios-screen_zoomed-true', isPercentage: true },
+          { title: 'Vette tekst', key: 'ios-accessibility_is_bold_text_enabled-true', isPercentage: true },
+          { title: 'Herstel door schudden uit', key: 'ios-accessibility_is_shake_to_undo_enabled-false', isPercentage: true }
+        ]}
+        linkLabel="Alle gebruiksstatistieken"
+        linkUrl="/nl/stats">
+        Meest gebruikte functies op iOS
+      </PercentageBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'Donkere modus', key: 'android-preference_is_nightmode_enabled-true', isPercentage: true },
+          { title: 'Ondertiteling', key: 'android-accessibility_is_closed_captioning_enabled-true', isPercentage: true },
+          { title: 'Scherm oriëntatie landscape', key: 'android-screen_orientation-landscape', isPercentage: true },
+          { title: 'Weergavegrootte', key: 'android-screen_display_scale_default_comparison-bigger', isPercentage: true },
+          { title: 'Tekstgrootte aanpassen', key: 'android-default_screen_font_scale-false', isPercentage: true }
+        ]}
+        linkLabel="Alle gebruiksstatistieken"
+        linkUrl="/nl/stats">
+        Meest gebruikte functies op Android
+      </PercentageBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+Om je een idee te geven hoe en waarom mensen deze instellingen gebruiken, hebben we een aantal mensen geïnterviewd. Zij lichten toe welke instellingen ze hebben geactiveerd op hun telefoon. 
+
+<Quote
+  quote="Hoeveel uur ik per dag mijn telefoon gebruik? Hoeveel uur gebruik jij je ogen?"
+  name="Jesse"
+  imageSrc="/img/light/Jesse.png"
+  alt="Foto Jesse"
+  linkLabel="Bekijk alle interviews"
+  url="https://appt.org/nl/articles/interviews"
+/>
+
+Naast deze functies gebruiken veel mensen met een beperking externe hulpmiddelen om toegang te krijgen tot digitale media. Ben je benieuwd welke hulpmiddelen er bestaan om apps te gebruiken? De meest gebruikte hulpmiddelen zijn de schermlezer, stembediening, schakelbediening en toetsenbordbediening. Wat dat zijn en hoe ze werken leggen we uit op [de pagina hulpmiddelen](https://appt.org/nl/articles/assistive-technologies).
+
+Maar hoe zorg je dan dat je app ook gebruikt kan worden met al deze aanpassingen en hulpmiddelen? Dat leggen we in het volgende deel van dit artikel uit.
+
+## **2. Wat moet er gebeuren?**
+
+Als je een bestaande app hebt, wil je graag weten hoe het er voor staat. Maar ook als je vanaf scratch een toegankelijke app ontwikkelt, zul je op een gegeven moment willen weten hoe het ervoor staat. Er zijn twee belangrijke pijlers die bepalen of je app succesvol toegankelijk is, namelijk:
+
+1. Voldoet jouw app aan de WCAG-richtlijnen?
+2. Kunnen mensen met een beperking jouw app echt gebruiken?
+
+Een goed toegankelijke app wordt regelmatig getest op deze beide uitgangspunten.
+
+### Voldoet jouw app aan de WCAG-richtlijnen?
+
+De Web Content Accessibility Guidelines ([WCAG](https://appt.org/nl/guidelines/wcag)) zijn een reeks richtlijnen om digitale inhoud toegankelijker te maken voor mensen met een beperking. De richtlijnen zijn opgebouwd uit in totaal 78 succescriteria. Laat je niet misleiden door de naam, want deze richtlijnen gelden ook voor apps. Maar niet allemaal. Met [welke richtlijnen](https://appt.org/nl/guidelines) je rekening dient te houden, is afhankelijk van waar in de wereld jouw app beschikbaar is. 
+
+Om je een goed beeld te geven hoe je ervoor staat ten aanzien van de officiële richtlijnen, kun je een audit laten doen. Een audit levert je een duidelijk overzicht met verbeter- en aandachtspunten voor jouw app. 
+
+### Zelf testen
+
+Maar er is een makkelijkere manier om een eerste indruk te krijgen van de toegankelijkheidstatus van jouw app. Je kunt het namelijk ook zélf testen (of met een collega). Die test zal nooit zo volledig zijn als een audit die wordt uitgevoerd door een expert. Zonder ervaring een app testen op de volledige WCAG-succescriteria is erg omvangrijk en complex. Om je app volledig te testen volgens de richtlijnen heb je tevens kennis van de hulpmiddelen nodig. Maar om je op weg te helpen hebben we een test opzet gemaakt waarmee je al snel een idee krijgt hoe het ervoor staat.
+
+<LinkList title="WCAG Testing for Beginners Link" isHighlighted={true}>
+  <LinkListItem url="https://appt.org/nl/guidelines/beginnersguide-accessibility-testing" title="Beginnersgids toegankelijkheid testen" pageTitle="Beginnersgids toegankelijkheid testen" shortDescription="Hoe test je zelf of je app toegankelijk is?" icon="/img/light/features.svg" iconAlt="Features icon"/>
+</LinkList>
+
+### Kunnen mensen met een beperking jouw app gebruiken?
+
+Het meest volledige beeld van de toegankelijkheid van jouw app krijg je door naast de officiële richtlijnen voor toegankelijkheid te volgen ook te testen met gebruikers.
+
+Mensen bezig zien met jouw app helpt je ook om te begrijpen hoe anders de interactie kan zijn. Test daarom óók regelmatig met mensen met beperkingen. Stel een zo divers mogelijk panel samen. Een persoon die op een andere manier interactie heeft, levert meestal al heel veel inzichten op waarmee je jouw app kunt verbeteren. 
+
+Om je alvast een idee te geven waar je rekening mee moet houden hebben we een aantal [interviews met gebruikers](https://appt.org/nl/articles/interviews) gedaan. 
+
+### **Resultaten en prioriteiten**
+
+Al die onderzoeken en testen geven je weer een hoop inzichten maar vooral ook een hoop werk. Waar kun je nu het beste mee beginnen? Als dit niet logischerwijs uit een test naar voren komt, laat [de cijfers op deze website](/nl/stats) je dan verder helpen. Onze statistieken geven een indicatie met welke aanpassingen je de meeste impact kunt hebben. Door te kijken welke functies het meest gebruikt worden en in hoeverre jouw app deze niet ondersteunt, kun je de volgorde bepalen waarin je deze punten oppakt met jouw team.
+
+## 3. Hoe bouw je een toegankelijke app?
+
+Of je nu helemaal opnieuw begint of een bestaande app toegankelijk wilt maken, onze [startersgids voor developers](https://appt.org/nl/articles/accessible-app-beginners-guide) helpt programmeurs op weg. Handig om te delen met je developmentteam!
+
+Samengevat vertelt dat artikel het volgende:
+
+1. Bied tekstuele alternatieven voor alles wat alleen visueel wordt weergegeven.
+2. Maak duidelijk welke acties een gebruiker kan uitvoeren.
+3. Zorg dat duidelijk is waar iemand zich bevindt en dat alles in een logische volgorde wordt aangeboden.
+4. Zorg dat tekst kan worden vergroot.
+5. Zorg voor voldoende contrast.
+
+Developers die meer ervaring hebben met het bouwen van toegankelijke apps en precies weten wat ze nodig hebben, bieden we op deze website zeer uitgebreide documentatie in de vorm van [codevoorbeelden](https://appt.org/nl/docs).
+
+Om te weten of wat er gebouwd wordt, ook daadwerkelijk toegankelijk is, moet je vooral veel testen. Hierboven legden we al uit hoe je dit kunt doen. Naast testen op WCAG en met gebruikers kun je tijdens de ontwikkeling al een hoop accessibilty issues voorkomen door ook technisch te testen. Hiervoor hebben Apple en Google tools ontwikkeld. [Android's Accessibility Scanner app](https://developer.android.com/guide/topics/ui/accessibility/testing#accessibility-scanner) en [Xcode's Accessibility Inspector](https://developer.apple.com/library/archive/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html). Helaas kent deze tooling z’n tekortkomingen, waardoor het zicht op de toegankelijkheid van jouw app beperkt blijft. Testen tijdens de bouw van een app is handwerk waarbij je vooral de schermlezer zult gebruiken. Het loont daarom om te leren werken met een [schermlezer](https://appt.org/nl/stats/screen-reader). 
+
+Een schermlezer wordt vooral gebruikt door mensen met een visuele beperking. Door je app hiervoor te optimaliseren zorg je ervoor dat een veel grotere groep mensen gebruik kan maken van jouw app. Gebruikers van [stem-, toetsenbord- en schakelbediening](https://appt.org/nl/articles/assistive-technologies) zullen hier ook baat bij hebben. Bovendien houd je zo automatisch rekening met heel veel succescriteria uit de [WCAG](https://appt.org/nl/guidelines/wcag).
+
+Dit maakt de schermlezer het ideale middel om te testen op accessibility. Het kan wel even wennen zijn: het werkt namelijk allemaal net even anders dan je gewend bent. Met de [ScreenReader app](https://screenreader.app/) leer je alle gebaren en mogelijkheden al doende kennen. Door tijd te steken in het werken met een schermlezer kun je op een laagdrempelige en goedkope manier heel veel toegankelijkheidsissues voorkomen.
+
+## Moeite met het overtuigen van anderen?
+
+Aan de hand van dit artikel kun je als bedrijf de eerste stappen zetten om een toegankelijke app te laten ontwikkelen. Een andere belangrijke stap is om iedereen in je organisatie te overtuigen van het belang van toegankelijkheid.
+
+Ervaring leert dat organisaties geen prioriteit geven aan accessibility vanwege de gedachte dat mensen met een beperking een kleine doelgroep vormen. Dat is een misvatting. Bijna de helft van alle mensen met een mobiele telefoon gebruikt toegankelijkheidsfuncties. Het aantal mensen dat baat heeft bij een toegankelijke app, is dus veel groter dan doorgaans wordt aangenomen. Dit blijkt uit ons [uitgebreide onderzoek onder iOS- en Android-gebruiker](/nl/stats).
+
+De statistieken uit dit onderzoek worden mogen vrijelijk worden gebruikt. Zet ze dus in om een (business)case te bouwen en teamleden of management te overtuigen. Je kunt hiervoor makkelijk [deze slides](https://appt.org/nl/stats/download-stats) downloaden die elke maand worden bijgewerkt met actuele cijfers.
+
+En wil je nóg relevantere data? Via Appt.org stellen we [gratis documentatie en open source code](https://appt.org/nl/articles/gather-your-own-accessibility-data) beschikbaar waarmee organisaties zélf hun eigen app kunnen onderzoeken.
+
+## Vragen?
+
+Heb je specifieke vragen over accessibility of zoek je hulp bij het bouwen van een toegankelijke app, neem dan contact op met [Johan Huijkman](mailto:johan@q42.nl) van Q42 of [Jan Jaap de Groot](mailto:janjaap@abra.nl) van Abra.
