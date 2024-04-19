@@ -24,7 +24,7 @@ export default function DocRootLayout({ children }: Props): JSX.Element {
     : 'mx-auto px-4 sm:px-8 flex flex-col md:flex-row max-w-xl';
 
   return (
-    <div className="">
+    <div>
       <BackToTopButton />
       <div className={classNames}>
         {sidebar && (
