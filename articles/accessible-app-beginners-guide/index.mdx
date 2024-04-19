@@ -1,0 +1,140 @@
+---
+locale: en
+slug: /accessible-app-beginners-guide
+contentfulID: 4bOXm8grN7j6BiDK1jwR8a
+type: pageContentPage
+title: An accessible app. Where to start?
+shortDescription: "Making your app accessible to everyone: where do you start? These are the first steps you should take."
+thumbnail: Oplossingen - icon
+seo.title: An accessible app. Where to start?
+seo.name: Accessible App Beginnersguide  - SEO
+seo.description: "Making your app accessible to everyone: where do you start? These are the first steps you should take."
+hero.title: An Accessible App. Where to start?
+hero.introText: "Making your app accessible to everyone: where do you start? Below are the main steps that will help you make your app usable for the widest possible group of people, including people with disabilities."
+hero.useThumbnail: false
+hide_title: true
+---
+
+<Hero
+  title="An Accessible App. Where to start?"
+  introText="Making your app accessible to everyone: where do you start? Below are the main steps that will help you make your app usable for the widest possible group of people, including people with disabilities."
+/>
+
+#### November 1, 2023
+
+<Image src="/img/light/usability-testing.71ee77e.jpg" alt="Testing for accessibility with someone who is blind"/>
+
+It can seem very complicated and even intimidating when you delve into the vast amount of information on digital accessibility. How do you incorporate all those guidelines, insights and code examples into an app? To get you started, we have listed the six most important steps for you. 
+
+1. Use a screen reader!
+2. Offer textual alternatives.
+3. Make it clear what the purpose is.
+4. Make sure text can be resized.
+5. Provide sufficient contrast.
+6. Show focus and offer a logical order.
+
+Below is a detailed explanation of each step. Finally, we explain how you can test whether it works as intended.
+
+**Note** that this list is not exhaustive and will not make your app fully accessible. But is meant to make the biggest possible difference through a few simple steps.
+
+## 1. Use a screen reader!
+
+To properly test whether your app is accessible, it pays to learn how to use a [screen reader](/en/stats/screen-reader). 
+
+A screen reader is mainly used by visually impaired people. However, by optimising your app for this, you ensure that a much larger group of people can use your app. Users of [voice, keyboard and switch controls](/en/articles/assistive-technologies) will also benefit, and you automatically take into account a lot of success criteria from the [WCAG](/en/guidelines).
+
+This makes the screen reader the ideal tool to test for accessibility. But it can take some getting used to. It all works a little differently from what you are used to. With the [ScreenReader app](https://screenreader.app/), you learn all the gestures and possibilities as you go.
+
+## 2. Offer textual alternatives
+
+Do all buttons have a clear label? Do icons, images, graphics, among others, have a textual alternative? 
+
+Make sure alternative text is available for all content without text. These include images, icons and graphs. Describe what can be seen. People who are blind have this description read aloud through their screen reader. Alternative text can also be useful for anyone who is unsure about the meaning of the content.
+
+You do this by setting an accessibility label. You can see how to do this for your app in the example below.
+
+<CodeSample id="accessibility-label" locale="en"/>
+
+## 3. Make clear what the purpose is
+
+Is it clear what action can be performed? 
+
+Set a name. The name is used for identification. Setting a name allows tools such as voice control to perform targeted actions.
+
+### Set accessibility name
+
+<CodeSample id="accessibility-name" locale="en"/>
+
+Set a role. With the role "button", it is clear that an action takes place on activation. With the role "link", it is clear that you are directed to another location. Setting a role makes it clear to tool users what they can do.
+
+### Set accessibility role
+
+<CodeSample id="accessibility-role" locale="en"/>
+
+Set a value. For a checkbox, the value is "selected" or "not selected". For a volume control, the value can be "50%". By setting a value, this can also be passed textually to tools.
+
+### Set accessibility value
+
+<CodeSample id="accessibility-value" locale="en"/>
+
+## **4. Make sure text can be resized**
+
+Is it possible to display text in a larger font size? Does text remain readable with a larger font size?
+
+Ensure that the text in your app supports resizing. Users specify their preferred font size in the system settings. Text in your app should resize according to the preferred font size. This is especially important for visually impaired users because otherwise they might not be able to read the text. Text should not be abbreviated with dots.
+
+### Support text scaling
+
+<CodeSample id="text-scale" locale="en"/>
+
+Ensure that all content on the screen remains readable even with the largest font. Content should be readable without having to scroll in two directions. Because the text is displayed larger, it can push other elements off the screen. Ensure content can still be reached, for example, by scrolling vertically.
+
+### Prevent text truncation
+
+<CodeSample id="text-truncation" locale="en"/>
+
+## **5. Provide sufficient contrast**
+
+Does text have sufficient contrast relative to the background? Do elements on the screen have sufficient contrast against each other and in relation to the background?
+
+Ensure that the content on the screen has a contrast of at least 3:1 with the surrounding colour. Think of graphic elements such as icons, buttons and input fields. 
+
+Ensure that the contrast ratio between the text colour and background colour is at least 4.5:1. For bold and large text, a ratio of 3:1 is sufficient. 
+
+By maintaining these ratios, visually impaired and colour blind users can usually read the text well. In addition, this makes an app easier for everyone to use, for example outside in the sun.
+
+## **6. Show focus and offer a logical order**
+
+Is it clear where the focus is? Is the order in which the focus moves logical?
+
+Ensure that elements focused by assistive technologies are clearly indicated. Focus is often shown by placing a box around the element. Make sure that the placement is correct and that the colour is clearly visible. For apps it is not possible to adjust the colour of the frame. However, it is possible to give elements a different background colour when they have focus.
+
+### Add accessibility focus indicator
+
+<CodeSample id="accessibility-focus-indicator" locale="en"/>
+
+Ensure assistive technologies use a logical focus order when navigating. The order of navigating a screen is usually from left to right, from top to bottom. Make sure assistive technologies use an equivalent focus order. 
+
+### Adjust order for keyboard
+
+<CodeSample id="keyboard-order" locale="en"/>
+
+### Adjust order for assistive technologies
+
+<CodeSample id="accessibility-order" locale="en"/>
+
+### Move accessibility focus
+
+<CodeSample id="accessibility-focus" locale="en"/>
+
+## Testing
+
+You can test most of the steps with the [Accessibility Scanner app](https://developer.android.com/guide/topics/ui/accessibility/testing#accessibility-scanner) and [Xcode's Accessibility Inspector](https://developer.apple.com/library/archive/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html). You can also detect contrast issues automatically with these. another option is to take a screenshot of an app to determine the colour codes and calculate the contrast. This can be done with [WebAIM's Contrast Checker](https://webaim.org/resources/contrastchecker/), for example. 
+
+In addition, check that it works properly by using the [screen reader](/en/stats/screen-reader).
+
+To test whether text scaling is properly supported, set a large font size. You can do this on a phone under the [accessibility settings](/en/stats/font-size).
+
+## Questions?
+
+By following these steps, you will make your app accessible to a very large group of people. Anything missing? Is something not quite clear? Let us know in the [slack channel of Appt](https://appt.li/slack).
