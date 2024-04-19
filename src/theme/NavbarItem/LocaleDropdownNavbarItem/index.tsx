@@ -1,11 +1,10 @@
-import React from 'react';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 import { translate } from '@docusaurus/Translate';
 import { useLocation } from '@docusaurus/router';
-import DropdownNavbarItem from '@theme/NavbarItem/DropdownNavbarItem';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import type { LinkLikeNavbarItemProps } from '@theme/NavbarItem';
+import DropdownNavbarItem from '@theme/NavbarItem/DropdownNavbarItem';
 import type { Props } from '@theme/NavbarItem/LocaleDropdownNavbarItem';
-import BrowserOnly from '@docusaurus/BrowserOnly';
 
 import { ChevronIcon } from '@site/src/icons';
 import clsx from 'clsx';
@@ -31,8 +30,10 @@ export default function LocaleDropdownNavbarItem({
       })
     : localeConfigs[currentLocale]!.label;
 
-  const navbarLabelClass = clsx({ 'flex items-center font-normal': !mobile });
-  const chevronClass = clsx({ 'w-8 h-8 ml-8': !mobile, hidden: mobile });
+  const navbarLabelClass = 'w-full flex justify-between items-center text-body';
+  const chevronClass = clsx('w-8 h-8 ml-8 chevron transition-transform text-body');
+
+  const navbarItemClasses = clsx('bg-onsurface', props.className);
 
   return (
     <BrowserOnly>
@@ -52,9 +53,7 @@ export default function LocaleDropdownNavbarItem({
                 ? // Similar idea as DefaultNavbarItem: select the right Infima active
                   // class name. This cannot be substituted with isActive, because the
                   // target URLs contain `pathname://` and therefore are not NavLinks!
-                  mobile
-                  ? 'menu__link--active'
-                  : 'dropdown__link--active'
+                  'dropdown__link--active'
                 : '',
           };
         });
@@ -64,6 +63,7 @@ export default function LocaleDropdownNavbarItem({
         return (
           <DropdownNavbarItem
             {...props}
+            className={navbarItemClasses}
             mobile={mobile}
             label={
               <span className={navbarLabelClass}>

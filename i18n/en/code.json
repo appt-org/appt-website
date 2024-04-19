@@ -285,5 +285,47 @@
   "theme.unlistedContent.message": {
     "message": "This page is unlisted. Search engines will not index it, and only users having a direct link can access it.",
     "description": "The unlisted content banner message"
+  },
+  "footer.partners.created": {
+    "message": "Created by"
+  },
+  "footer.partners.supported": {
+    "message": "Supported by"
+  },
+  "footer.text.intro": {
+    "message": "The Appt® platform is an initiative of the {aboutLink}, a non-profit organisation. Our mission is to make apps accessible for everyone. We try to achieve this by sharing free content and open-source code."
+  },
+  "footer.text.intro.linkLabel": {
+    "message": "Appt Foundation"
+  },
+  "footer.text.intro.linkUrl": {
+    "message": "/about"
+  },
+  "footer.text.listItem0": {
+    "message": "Content is available under the {link}"
+  },
+  "footer.text.listItem0.linkLabel": {
+    "message": "CC BY-SA 4.0 license"
+  },
+  "footer.text.listItem0.linkUrl": {
+    "message": "/licenses"
+  },
+  "footer.text.listItem1": {
+    "message": "Code samples are available under the {link}"
+  },
+  "footer.text.listItem1.linkLabel": {
+    "message": "MIT license"
+  },
+  "footer.text.listItem1.linkUrl": {
+    "message": "/licenses"
+  },
+  "footer.text.listItem2": {
+    "message": "The source code of this website is available on {link}"
+  },
+  "footer.text.listItem2.linkLabel": {
+    "message": "Github"
+  },
+  "footer.text.listItem2.linkUrl": {
+    "message": "https://github.com/appt-org/appt-org"
   }
 }
