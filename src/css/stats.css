@@ -1,0 +1,8 @@
+/* Styling for Stats index page */
+.plugin-id-stats.docs-doc-id-index .theme-doc-breadcrumbs {
+  display: none;
+}
+
+.plugin-id-stats.docs-doc-id-index main {
+  padding-top: 0;
+}

@@ -1,0 +1,66 @@
+---
+locale: nl
+slug: /geautomatiseerd-toegankelijkheid-testen-android-ios-apps
+contentfulID: 3mEO4ypDKn6x4WAD3aYutB
+type: pageContentPage
+title: Geautomatiseerd toegankelijkheid testen van Android en iOS apps
+shortDescription: Je kunt geautomatiseerd toegankelijkheidstests uitvoeren om te controleren of jouw Android of iOS app voldoet aan de toegankelijkheidseisen. Dit artikel geeft een overzicht van tools om automatisch de toegankelijkheid van jouw app te testen.
+thumbnail: Icon of a robot
+seo.title: Geautomatiseerd toegankelijkheid testen van Android en iOS apps
+seo.name: SEO - Automated accessibility testing of Android and iOS apps
+seo.description: Je kunt geautomatiseerd toegankelijkheidstests uitvoeren om te controleren of jouw Android of iOS app voldoet aan de toegankelijkheidseisen. Dit artikel geeft een overzicht van tools om automatisch de toegankelijkheid van jouw app te testen.
+layout: Layout - In page navigation
+---
+
+#### 10 april 2024
+
+Het is essentieel dat ontwikkelaars toegankelijkheidsfuncties in hun apps inbouwen om alle gebruikers een geweldige gebruikerservaring te bieden. Je kunt geautomatiseerd toegankelijkheidstests uitvoeren om te controleren of jouw app voldoet aan de [toegankelijkheidseisen](https://appt.org/nl/guidelines). Dit proces kan worden gebruikt om problemen op te sporen die gebruikers beperken om jouw app te gebruiken, zoals een [slecht contrast](https://appt.org/nl/guidelines/wcag/success-criterion-1-4-11), [ontbrekende labels](https://appt.org/nl/guidelines/wcag/success-criterion-1-1-1) of [ontbrekende namen, rollen of waardes](https://appt.org/nl/guidelines/wcag/success-criterion-4-1-2).
+
+## Automatisch de toegankelijkheid van een app testen
+
+Je kunt op verschillende manieren geautomatiseerd toegankelijkheidstests uitvoeren op Android- en iOS-apparaten. Meestal worden geautomatiseerde toegankelijkheidstests uitgevoerd met een platformspecifieke tool, zoals [UI Automator op Android](https://developer.android.com/training/testing/other-components/ui-automator) en [XCTest op iOS](https://developer.apple.com/documentation/xctest). Daarnaast zijn er cross-platform tools zoals [Appium](https://appium.io/), en framework tools zoals [Widget Tests op Flutter](https://docs.flutter.dev/testing#widget-tests) en [Component Tests op React Native](https://reactnative.dev/docs/testing-overview#component-tests).
+
+Wanneer je gebruik maakt van deze tools, moet je zelf toegankelijkheidstests schrijven. Je kunt bijvoorbeeld een testcase schrijven waarin je controleert of er een toegankelijkheidslabel is ingesteld voor een afbeelding. Of je kunt controleren of de toegankelijkheidsrol 'knop' is toegepast op alle knoppen in je app.
+
+Gelukkig zijn er ook mensen die tools hebben gemaakt waarmee je automatisch de toegankelijkheid van je app kunt testen.
+
+## Gratis tools om automatisch toegankelijkheid te testen
+
+| Naam | Beschrijving | Platform |
+| --- | --- | --- |
+| [Accessibility Test Framework for Android](https://github.com/google/Accessibility-Test-Framework-for-Android) | Deze bibliotheek voert verschillende toegankelijkheidsgerelateerde controles uit op Android-objecten. | Android |
+| [Accessibility Scanner](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor) | Accessibility Scanner is een tool die de gebruikersinterface van een app scant en aanbevelingen doet om de toegankelijkheid van de app te verbeteren. | Android |
+| [Accessibility Insights for Android](https://accessibilityinsights.io/docs/android/reference/releases/) (gearchiveerd) | Accessibility Insights for Android is een gratis, open source tool die ontwikkelaars helpt bij het vinden en oplossen van toegankelijkheidsproblemen in Android-apps. | Android |
+| [Axe Android](https://github.com/dequelabs/axe-android) (gearchiveerd) | Axe Android is een toegankelijkheidsbibliotheek voor het uitvoeren van WCAG 2.0 en WCAG 2.1 tests op Android. | Android |
+| [A11yUITests](https://mobilea11y.com/blog/a11yuitests/) (gearchiveerd) | A11yUITests is een uitbreiding op XCTestCase die tests toevoegt voor veelvoorkomende toegankelijkheidsproblemen die kunnen worden uitgevoerd als onderdeel van een XCUITestsuite. | iOS |
+| [AccessibilitySnapshot](https://github.com/cashapp/AccessibilitySnapshot) | AccessibilitySnapshot maakt het eenvoudig om regressietests toe te voegen voor toegankelijkheid in iOS-apps. Het raamwerk vergelijkt snapshots van de toegankelijkheidshiërarchie. | iOS |
+| [GSCX](https://github.com/google/GSCXScanner) | GSCX, Google Scanner for Accessibility, is een assistent voor ontwikkelaars, die in het proces van een iOS-app zit en deze scant op toegankelijkheidsproblemen om ze op te vangen nog voordat de ontwikkelaar er een test voor schrijft. | iOS |
+| [GTXiLib](https://github.com/google/GTXiLib) | GTXiLib, Google Toolbox for Accessibility voor het iOS-platform, is een uitbreiding op XCTests met toegankelijkheidscontroles. | iOS |
+| [SwiftLint](https://github.com/realm/SwiftLint) | SwiftLint is een hulpmiddel om Swift-stijl en -conventies af te dwingen, het bevat 1 regel voor toegankelijkheid. | iOS |
+| [Xcode Accessibility Inspector](https://developer.apple.com/videos/play/wwdc2019/257/) | Met de Accessibility Inspector kun je onderdelen van je app identificeren die niet toegankelijk zijn en krijg je feedback over hoe je ze toegankelijk kunt maken. | iOS |
+| [XCUIAccessibilityAudit](https://developer.apple.com/videos/play/wwdc2023/10035/) | Met de XCUIAccessibilityAudit API's kun je een accessibility audit uitvoeren, het bevat 9 soorten testen | iOS |
+| [xiblint](https://github.com/lyft/xiblint) | Het xiblint script test .xib en .storyboard bestanden op conformiteit, het bevat 4 regels voor toegankelijkheid. | iOS |
+
+## Betaalde tools om automatisch toegankelijkheid te testen
+
+| Naam | Beschrijving | Platform |
+| --- | --- | --- |
+| [Abra Desktop](https://abra.nl/producten/desktop) | Abra Desktop detecteert automatisch toegankelijkheidsfouten in Android en iOS apps. | Android en iOS |
+| [axe DevTools Mobile](https://docs.deque.com/devtools-mobile/2022.11.17/en/intro) | axe DevTools Mobile identificeert toegankelijkheidsproblemen in mobiele apps en biedt oplossingen. | Android en iOS |
+| [Evinced Mobile Flow Analyzer](https://www.evinced.com/products/flow-analyzer-for-mobile)`<br>``<br>`[Evinced Mobile Automation SDK](https://www.evinced.com/products/auto-test-sdks) | Evinced analyseert automatisch de toegankelijkheid van één of meerdere schermen in je app. | Android en iOS |
+| [Reveal Accessibility Workspace](https://revealapp.com/news/introducing-the-accessibility-workspace/) | Reveal's Accessibility Workspace geeft je tools om te inspecteren, ervaren en controleren of je app toegankelijk is voor alle gebruikers. | iOS |
+
+## Conclusie
+
+Kortom, tools voor het geautomatiseerd testen van de toegankelijkheid zijn essentieel voor ontwikkelaars om ervoor te zorgen dat hun apps toegankelijk zijn voor alle gebruikers. Er zijn verschillende tools beschikbaar voor Android en iOS, zowel gratis als betaald. Ontwikkelaars moeten een tool kiezen die het beste bij hun behoeften en budget past.
+
+Mocht je een tool hebben geschreven voor het automatisch testen van app toegankelijkheid die nog niet in de lijst staat, neem dan [contact met ons op](https://appt.org/nl/about).
+
+## Leermiddelen
+
+- [Slides: Testing for Accessibility, SwiftConf 2022](https://speakerdeck.com/robinkanatzar/testing-for-accessibility-swiftconf-2022)
+- [Video: Accessibility test framework on Android](https://www.youtube.com/watch?v=DLN2s16HwcE)
+- [Video: XCUITest Automation on iOS ](https://www.youtube.com/watch?v=BzI2jZk035A)
+- [Video: Accessibility Inspector - WWDC 2019](https://developer.apple.com/videos/play/wwdc2019/257/)
+- [Video: Flutter Widget Testing](https://www.youtube.com/watch?v=pgMI5nmAem0)
+- [Video: React Native Component Testing](https://www.youtube.com/watch?v=VuNPrFH9H0E)
