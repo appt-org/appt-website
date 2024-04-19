@@ -1,0 +1,81 @@
+---
+locale: en
+slug: /how-we-built-appt-org
+contentfulID: 2RjUoJSUjsyQvJYNkn3Pv1
+type: pageContentPage
+title: How we built appt.org
+shortDescription: We built appt.org by using Contentful in combination with Next.js, Typescript, Tailwind CSS and Google Cloud Run.
+thumbnail: Web globe - Icon
+layout: Layout - In page navigation
+---
+
+#### April 11, 2024
+
+When you want to share knowledge about accessibility, you need to make sure your own website is accessible. From the start, we embedded accessibility in our processes and it influenced the decisions we made.
+
+## Content Management System (CMS)
+
+We wanted to be able to manage our content by using an existing CMS. A big requirement was to have excellent built-in support for translations. We wanted to build own front-end, which meant that it made sense to look for a Headless CMS.
+
+Headless means that the content repository, the *"body"*, is separated from the content presentation, the *"head"*. This setup allows you to manage content in one place, and publish that content in any front-end(s) you choose.
+
+After carefully comparing our options, we chose [Contentful](https://www.contentful.com/) as our CMS. Contentful forces you to think about the way your content is structured. You need to create a Content Model for each different piece of content.
+
+For example, our website is heavily based on code samples. We have created a `CodeSample` object, which contains one or more `CodeBlock` objects. A CodeBlock is written in a certain `ProgrammingLanguage`, and that ProgrammingLanguage is available on a certain `Platform`. This setup allowed us to write multi-platform 
+code samples in a structured way.
+
+Our team also liked that Contentful comes with a GraphQL API to retrieve content. Our [Appt API](/en/appt-api) allows you to retrieve all of our content in a structured way.
+
+<Image src="/img/light/Screenshot 2023-01-26 at 15.55.29.png" alt="The code sample named 'Accessibility label' consists of five code blocks in our Contentful editor"/>
+
+## Front-end stack
+
+Contentful is a fully customizable *back-end*. But we had to build the *front-end* ourselves. This is something we wanted, to make sure the result would be fully accessible. We compared modern stacks, which could achieve a 100% performance score on Google Lighthouse. Furthermore, we wanted to score 100% on accessibility, and have good Search Engine Optimization (SEO). 
+
+After carefully comparing our options, we chose Next.js, Typescript, Tailwind CSS and Google Cloud Run as our front-end stack.
+
+### Next.js
+
+[Next.js](https://nextjs.org/) is a [React](https://reactjs.org/) framework which gives you building blocks to create web applications. The Next.js framework handles the tooling and configuration needed for React, and provides additional structure, features, and optimizations for your application.
+
+Some of the advantages of Next.js are server-side rendering, excellent performance, lazy loading and automatic code splitting.
+
+### TypeScript
+
+[TypeScript](https://www.typescriptlang.org/) is a superset of [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), that compiles to JavaScript. The key benefit of TypeScript is that it provides a type system. This allows you to define your types, allowing us to replicate the data models defined in Contentful.
+
+An additional benefit for us was that Contentful has published a [client library for TypeScript](https://github.com/contentful/contentful.js). This client saved us a ton of development time.
+
+### Tailwind CSS
+
+[Tailwind CSS](https://tailwindcss.com/) is a utility-first CSS framework packed with helper classes. For example the `pt-4` class adds `padding-top: 1rem;` to your element. These helper classes means that you need to write less custom CSS, and don't have to invent your own class names. Tailwind includes a purge strategy to remove unused helper classes in production environments.
+
+Tailwind also has downsides, such as the learning curve, it takes time to learn the syntax. The biggest downside for us was that the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction) gets bloated with all the classes. However, the benefits outweighed the downsides for us.
+
+### Google Cloud Run
+
+We use [Google Cloud Run](https://cloud.google.com/run) to deploy to our development and production environments. Cloud Run is a managed compute platform that lets you run containers directly on top of Google's scalable infrastructure. We chose Cloud Run because our team already had good experiences with it.
+
+A strong competitor was deploying with [Vercel](https://vercel.com/solutions/nextjs), the creators of Next.js. We tried out Vercel but for us it didn't have enough advantages to choose it above Cloud Run.
+
+## Result
+
+The result is the website you are currently looking at! We can easily insert our own custom content types into our content pages. For example, the code sample shown in the image above renders like this:
+
+[start of code sample]
+
+<CodeSample id="accessibility-label" locale="en"/>
+
+[end of code sample]
+
+When we add new code samples for 'Accessibility label', for example in Jetpack Compose, this addition will be reflected on all pages where this code sample has been inserted.
+
+## Perfect score
+
+Having full control over the way our content is structured, and choosing a modern stack allowed us to achieve our goals. Our website scores 100% on Performance, Accessibility, Best Practices and SEO in Google Lighthouse.
+
+<Image src="/img/light/Screenshot 2023-01-27 at 12.23.40.png" alt="An animation with fireworks shows that appt.org has achieved a 100% score on Performance, Accessibility, Best Practices and SEO"/>
+
+Our choices have resulted in an accessible website, with amazing performance. We have created a solid foundation for the years to come!
+
+The source code of appt.org is available on [Github](https://github.com/appt-org/appt-org). We would like to thank [Contentful](https://www.contentful.com/) for providing us with a Pro-Bono plan. In addition, we would like to thank [Q42](https://www.q42.nl/en) for building the website. We would also like to thank [Abra](https://abra.nl/en/) for contributing hundreds of code samples. Last, but not least, we would like to thank the [SIDN fund](https://www.sidnfonds.nl/excerpt) for sponsoring our project.

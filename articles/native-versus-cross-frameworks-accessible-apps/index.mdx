@@ -1,0 +1,200 @@
+---
+locale: en
+slug: /native-versus-cross-frameworks-accessible-apps
+contentfulID: 74SxK2UULnsCz2VfqNtHS4
+type: pageContentPage
+title: Native versus cross-platform frameworks to develop accessible apps
+shortDescription: What framework to choose if you want to build an accessible app? Native has it benefits, but cross-platform frameworks are catching up.
+layout: Layout - In page navigation
+---
+
+#### April 10, 2024
+
+It's important to consider accessibility when developing an app. Over 1 billion people in the world [have a disability](/en/articles/disabilities). And 50% of all people [use accessibility features](/en/stats) on their mobile devices.
+
+A question we are often asked is: *"Which framework should I choose to develop an accessible app?"*
+
+In this article, we are comparing the pros and cons of Android, iOS, Flutter, React Native and Xamarin. And we added Web equivalents. A conclusion is drawn at the end.
+
+## 1. Orientation
+
+Apps should support multiple orientations (portrait and landscape) to ensure users can hold devices in their preferred way.
+
+<Image src="/img/light/orientation.png" alt="Screenshot of an app in landscape mode, the layout has changed to two columns"/>
+
+| Framework | Feature | Pros | Cons |
+| --- | --- | --- | --- |
+| Android | [android:screenOrientation](https://developer.android.com/guide/topics/manifest/activity-element#screen) | All orientations supported by default |  |
+| iOS | [UISupportedInterfaceOrientations](https://developer.apple.com/documentation/bundleresources/information_property_list/uisupportedinterfaceorientations) |  | 'Upside Down' disabled by default |
+| Flutter | [setPreferredOrientations](https://api.flutter.dev/flutter/services/SystemChrome/setPreferredOrientations.html) | Flexible |  |
+| React Native | [expo-screen-orientation](https://docs.expo.dev/versions/latest/sdk/screen-orientation/) or native | Flexible |  |
+| Xamarin | [Device Orientation](https://learn.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/device-orientation?tabs=macos) or native | Flexible |  |
+| Web | [@media query](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) | Extensive |  |
+
+## 2. Text scaling
+
+Apps should support text scaling, to ensure users can read text in the font size they need.
+
+<Image src="/img/light/scaling.png" alt="Screenshot of an app with increased font size, none of the text is truncated"/>
+
+| Framework | Feature | Pros | Cons |
+| --- | --- | --- | --- |
+| Android | [Scale-independent Pixels (sp)](https://developer.android.com/guide/topics/resources/more-resources.html#Dimension) | Scales automatically |  |
+| iOS | [UIFontMetrics](https://developer.apple.com/documentation/uikit/uifontmetrics) |  | Write scaling implementation |
+| Flutter | [fontSize](https://api.flutter.dev/flutter/painting/TextStyle/fontSize.html) | Scales automatically |  |
+| React Native | [fontSize](https://reactnative.dev/docs/text-style-props#fontsize) | Scales automatically |  |
+| Xamarin | [SetEnableAccessibilityScalingForNamedFontSizes](https://learn.microsoft.com/en-us/dotnet/api/xamarin.forms.platformconfiguration.iosspecific.application.setenableaccessibilityscalingfornamedfontsizes?view=xamarin-forms#xamarin-forms-platformconfiguration-iosspecific-application-setenableaccessibilityscalingfornamedfontsizes(xamarin-forms-bindableobject-system-boolean)) |  | Write scaling implementation |
+| Web | [(r)em unit](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units) / [Browser zoom](https://support.mozilla.org/en-US/kb/font-size-and-zoom-increase-size-of-web-pages) | Scales automatically |  |
+
+## 3. Contrast
+
+Apps should have sufficient contrast, to ensure users can read text and distinguish interface elements.
+
+<Image src="/img/light/contrast.png" alt="Screenshot of an app, text colors are picked using a color picker, the contrast ratio is 4,77:1"/>
+
+| Framework | Feature | Pros | Cons |
+| --- | --- | --- | --- |
+| Android | [Color](https://developer.android.com/guide/topics/resources/more-resources#Color) |  |  |
+| iOS | [Color](https://developer.apple.com/design/human-interface-guidelines/color) | Built-in high contrast support |  |
+| Flutter | [Color](https://api.flutter.dev/flutter/dart-ui/Color-class.html) |  |  |
+| React Native | [Color](https://reactnative.dev/docs/colors) |  |  |
+| Xamarin | [Color](https://learn.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/colors) |  |  |
+| Web | [`<color>`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) |  |  |
+
+## 4. Name
+
+Apps should provide an accessible name for interactive elements, to ensure users of assistive technologies can identify them.
+
+<Image src="/img/light/name.png" alt="Screenshot of an app with Voice Control enabled, numbers and labels are indicated by tooltips"/>
+
+| Framework | Feature | Pros | Cons |
+| --- | --- | --- | --- |
+| Android | [contentDescription](https://developer.android.com/reference/android/view/View.html#attr_android:contentDescription) | Flexible |  |
+| iOS | [accessibilityLabel](https://developer.apple.com/documentation/objectivec/nsobject/1615181-accessibilitylabel) | Flexible |  |
+| Flutter | [semanticsLabel](https://api.flutter.dev/flutter/widgets/Text/semanticsLabel.html) | Flexible |  |
+| React Native | [accessibilityLabel](https://reactnative.dev/docs/accessibility#accessibilitylabel) | Flexible |  |
+| Xamarin | [AutomationProperties.Name](https://learn.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/accessibility/automation-properties#automationpropertiesname) | Flexible |  |
+| Web | [aria-label](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) | Flexible |  |
+
+## 5. Role
+
+Apps should provide an accessible role for elements, to ensure users of assistive technologies know their intent.
+
+<Image src="/img/light/role.png" alt="Screenshot of an app showing that the role of elements has been marked for assistive technologies"/>
+
+| Framework | Feature | Pros | Cons |
+| --- | --- | --- | --- |
+| Android | [setRoleDescription](https://developer.android.com/reference/androidx/core/view/accessibility/AccessibilityNodeInfoCompat#setRoleDescription(java.lang.CharSequence)) or [setClassName](https://developer.android.com/reference/androidx/core/view/accessibility/AccessibilityNodeInfoCompat#setClassName(java.lang.CharSequence)) | Custom roles |  |
+| iOS | [accessibilityTraits](https://developer.apple.com/documentation/objectivec/nsobject/1615202-accessibilitytraits) |  | No custom roles |
+| Flutter | [Semantics](https://api.flutter.dev/flutter/widgets/Semantics-class.html) → role |  | No custom roles |
+| React Native | [accessibilityRole](https://reactnative.dev/docs/accessibility#accessibilityrole) |  | No custom roles |
+| Xamarin | [SemanticEffect](https://github.com/xamarin/XamarinCommunityToolkit/blob/main/src/CommunityToolkit/Xamarin.CommunityToolkit/Effects/Semantic/SemanticEffect.shared.cs) → [setDescription](https://github.com/xamarin/XamarinCommunityToolkit/blob/main/src/CommunityToolkit/Xamarin.CommunityToolkit/Effects/Semantic/SemanticEffect.shared.cs#L30) |  | 3rd party library, uses contentDescription |
+| Web | [role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles) / [aria-roledescription](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) | Custom roles |  |
+
+## 6. Value
+
+Apps should provide an accessible value for elements, to ensure users of assistive technologies know their current value.
+
+<Image src="/img/light/value.png" alt="Screenshot of an app showing that a selected item has been marked as selected for assistive technologies"/>
+
+| Framework | Feature | Pros | Cons |
+| --- | --- | --- | --- |
+| Android | [AccessibilityNodeInfoCompat](https://developer.android.com/reference/androidx/core/view/accessibility/AccessibilityNodeInfoCompat) |  | Limited types |
+| iOS | [accessibilityValue](https://developer.apple.com/documentation/uikit/uiaccessibilityelement/1619583-accessibilityvalue) | Flexible |  |
+| Flutter | [Semantics](https://api.flutter.dev/flutter/widgets/Semantics/Semantics.html) → value | Flexible |  |
+| React Native | [accessibilityValue](https://reactnative.dev/docs/accessibility#accessibilityvalue) | Flexible |  |
+| Xamarin | **Not supported** |  | Can’t set accessibility value |
+| Web | [aria-valuenow](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) / [aria-valuetext](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) | Flexible |  |
+
+## 7. State
+
+Apps should provide an accessible state for elements, to ensure users of assistive technologies know their current state.
+
+<Image src="/img/light/status.png" alt="Screenshot of an app announcing a status message for screen reader users when loading or when errors are displayed"/>
+
+| Framework | Feature | Pros | Cons |
+| --- | --- | --- | --- |
+| Android | [setStateDescription](https://developer.android.com/reference/androidx/core/view/ViewCompat#setStateDescription(android.view.View,java.lang.CharSequence)) and [AccessibilityNodeInfoCompat](https://developer.android.com/reference/androidx/core/view/accessibility/AccessibilityNodeInfoCompat) | Flexible | Requires Android 11 (API 30) |
+| iOS | [accessibilityTraits](https://developer.apple.com/documentation/objectivec/nsobject/1615202-accessibilitytraits) |  | No custom states |
+| Flutter | [Semantics](https://api.flutter.dev/flutter/widgets/Semantics/Semantics.html) → state |  | No custom states |
+| React Native | [accessibilityState](https://reactnative.dev/docs/accessibility#accessibilitystate) |  | No custom states |
+| Xamarin | **Not supported** |  | Can’t set accessibility state |
+| Web | [ARIA states](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes), e.g. [aria-selected](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) | Extensive |  |
+
+## 8. Focus order
+
+Apps should provide a logical focus order, allowing users of assistive technologies to navigate efficiently.
+
+<Image src="/img/light/order.png" alt="Screenshot of an app, showing the focus order using numbers displayed by Voice Control"/>
+
+| Platform | Feature | Pros | Cons |
+| --- | --- | --- | --- |
+| Android | [setAccessibilityTraversalBefore](https://developer.android.com/reference/android/view/View#setAccessibilityTraversalBefore(int))/[After](https://developer.android.com/reference/android/view/View#setAccessibilityTraversalAfter(int)) | Single adjustment | Two API’s |
+| iOS | [accessibilityElements](https://developer.apple.com/documentation/objectivec/nsobject/1615147-accessibilityelements) | Full control | Keep array up-to-date |
+| Flutter | [SemanticsSortKey](https://api.flutter.dev/flutter/semantics/SemanticsSortKey-class.html) | Flexible |  |
+| React Native | **Not supported** |  | Can’t change accessibility order |
+| Xamarin | [TabIndex](https://learn.microsoft.com/en-us/dotnet/api/xamarin.forms.visualelement.tabindex?view=xamarin-forms) and [IsTabStop](https://learn.microsoft.com/en-us/dotnet/api/xamarin.forms.visualelement.istabstop?view=xamarin-forms) | Flexible | Keep indices up-to-date |
+| Web | [tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex?retiredLocale=nl) | Flexible | Keep indices up-to-date |
+
+## 9. Focus change
+
+Apps might need to move the focus of assistive technologies, to ensure users end up at the right element.
+
+<Image src="/img/light/focus.png" alt="Screenshot of an app showing two scenarios where you might forcefully move the focus of assistive technologies, e.g. after scanning a QR-code or entering a pincode"/>
+
+| Platform | Feature | Pros | Cons |
+| --- | --- | --- | --- |
+| Android | [AccessibilityEvent](https://developer.android.com/reference/android/view/accessibility/AccessibilityEvent) → [TYPE_VIEW_FOCUSED](https://developer.android.com/reference/android/view/accessibility/AccessibilityEvent#TYPE_VIEW_FOCUSED) |  |  |
+| iOS | [UIAccessibility.Notification](https://developer.apple.com/documentation/uikit/uiaccessibility/notification) → [screenChanged](https://developer.apple.com/documentation/uikit/uiaccessibility/notification/1620198-screenchanged/) or [layoutChanged](https://developer.apple.com/documentation/uikit/uiaccessibility/notification/1620186-layoutchanged) | Two types |  |
+| Flutter | **Not supported** |  | Can’t change accessibility focus |
+| React Native | [setAccessibilityFocus](https://reactnative.dev/docs/accessibilityinfo#setaccessibilityfocus) |  |  |
+| Xamarin | [SemanticExtensions](https://github.com/xamarin/XamarinCommunityToolkit/blob/main/src/CommunityToolkit/Xamarin.CommunityToolkit/Extensions/Semantic/SemanticExtensions.shared.cs) → [SetSemanticFocus](https://github.com/xamarin/XamarinCommunityToolkit/blob/main/src/CommunityToolkit/Xamarin.CommunityToolkit/Extensions/Semantic/SemanticExtensions.shared.cs#L11) |  | 3rd party library |
+| Web | [tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex?retiredLocale=nl) / [focus()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus) | Multiple options |  |
+
+## 10. Status messages
+
+Apps should communicate major interface changes to assistive technologies, to ensure users know what's going on.
+
+<Image src="/img/light/status.png" alt="Screenshot of an app announcing a status message for screen reader users when loading or when errors are displayed"/>
+
+| Platform | Feature | Pros | Cons |
+| --- | --- | --- | --- |
+| Android | [AccessibilityEvent](https://developer.android.com/reference/android/view/accessibility/AccessibilityEvent) → [TYPE_ANNOUNCEMENT](https://developer.android.com/reference/android/view/accessibility/AccessibilityEvent#TYPE_ANNOUNCEMENT)`<br>``<br>`or`<br>``<br>`[View.announceFor Accessibility](https://developer.android.com/reference/android/view/View#announceForAccessibility(java.lang.CharSequence)) | Two options |  |
+| iOS | [UIAccessibility.Notification](https://developer.apple.com/documentation/uikit/uiaccessibility/notification) → [announcement](https://developer.apple.com/documentation/uikit/uiaccessibility/notification/1620176-announcement) | Simple |  |
+| Flutter | [SemanticsService](https://api.flutter.dev/flutter/semantics/SemanticsService-class.html) → [announce](https://api.flutter.dev/flutter/semantics/SemanticsService/announce.html) | Easy |  |
+| React Native | [AccessibilityInfo](https://reactnative.dev/docs/accessibilityinfo) → [announceForAccessibility](https://reactnative.dev/docs/accessibilityinfo#announceforaccessibility) | Easy |  |
+| Xamarin | [SemanticExtensions](https://github.com/xamarin/XamarinCommunityToolkit/blob/main/src/CommunityToolkit/Xamarin.CommunityToolkit/Extensions/Semantic/SemanticExtensions.shared.cs) → [Announce](https://github.com/xamarin/XamarinCommunityToolkit/blob/main/src/CommunityToolkit/Xamarin.CommunityToolkit/Extensions/Semantic/SemanticExtensions.shared.cs) | Easy | 3rd party library |
+| Web | [aria-live](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) |  | Less control |
+
+## Conclusion
+
+So, which framework do we recommend for accessible app development? Native frameworks provide the best accessibility support.
+
+It may not be feasible to maintain two codebases and two development teams. Fortunately, cross-platform frameworks are expanding their support for accessibility features.
+
+But beware, when using cross-platform frameworks you may not be able to access certain accessibility features due to layers of abstraction. If you want to develop the most accessible app, native is always the best choice.
+
+| Framework | Score | Verdict |
+| --- | --- | --- |
+| Android | 100% | Full support |
+| iOS | 100% | Full support |
+| Web | 100% | Full support |
+| Flutter | 90% | Good support, lacks accessibility focus change |
+| React Native | 90% | Good support, lacks accessibility order change |
+| Xamarin | 50-80% | Mediocre support, lacks accessibility state/value, requires 3rd party libraries |
+
+Check our in-depth documentation for further guidance:
+
+<LinkList title="List of docs" isHighlighted={true}>
+  <LinkListItem url="/en/docs/android" title="Learn about Android accessibility" pageTitle="Android accessibility" shortDescription="Android has an accessibility layer that helps users to navigate their Android devices more easily. By integrating accessibility features, you can improve your app's usability, particularly for users with disabilities." icon="/img/light/Android.svg" iconAlt="Android logo (light)"/>
+  <LinkListItem url="/en/docs/ios" title="Learn about iOS accessibility" pageTitle="iOS accessibility" shortDescription="iOS has built-in accessibility features, accessibility APIs, and developer tools which provide an extraordinary opportunity to deliver a superior mobile experience to every user, including those with disabilities." icon="/img/light/iOS.svg" iconAlt="iOS logo (light)"/>
+  <LinkListItem url="/en/docs/flutter" title="Learn about Flutter accessibility" pageTitle="Flutter accessibility" shortDescription="Flutter is committed to supporting developers in making their apps more accessible. It has built-in support for accessibility features provided by the underlying operating system." icon="/img/light/flutter.svg" iconAlt="Flutter logo (light)"/>
+  <LinkListItem url="/en/docs/react-native" title="Learn about React Native accessibility" pageTitle="React Native accessibility" shortDescription="React Native has accessibility APIs which let your app accommodate all users. You can integrate apps with assistive technologies like the screen readers VoiceOver and TalkBack." icon="/img/light/React Native.svg" iconAlt="React Native logo (light)"/>
+  <LinkListItem url="/en/docs/xamarin" title="Learn about Xamarin accessibility" pageTitle="Xamarin accessibility" shortDescription="Xamarin has features to create apps which work well with accessibility features such as large type, high contrast, zoom in, screen reading, visual or haptic feedback cues, and alternative input methods." icon="/img/light/Xamarin.svg" iconAlt="Xamarin logo (light)"/>
+</LinkList>
+
+## Credits
+
+This article is an adapted version of the talk Jan Jaap de Groot gave at the [#id24 conference](https://inclusivedesign24.org/) on 21 September 2023. You can watch the recording for more details.
+
+<Video youTubeId="X8aioKWLNJM" title="Video: Jan Jaap de Groot / Native mobile accessibility testing #id24 2023 " name="Video: Jan Jaap de Groot / Native mobile accessibility testing #id24 2023 "/>

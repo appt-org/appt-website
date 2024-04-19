@@ -1,0 +1,259 @@
+---
+locale: en
+slug: /android/features/switch-access
+contentfulID: 5iZ33LG6cia2k3bLikq0fF
+type: pageContentPage
+title: Switch Access for Android
+shortDescription: This article provides in-depth information about using Switch Access to control your Android with switches.
+thumbnail: Switch Access icon
+layout: Layout - Assistive technologies
+tag: Android accessibility feature
+---
+
+With the 'Switch Access' function, you can use switches to control your Android device. This is especially useful for people with a motor disability.
+
+<Image src="/img/light/blue2-user.jpg" alt="Blue2 user - Switch control"/>
+
+*Example of an external switch in use.*
+
+## What are switches?
+
+A switch can be turned on or off by pressing it. Android has support for three types of switches:
+
+1. **External switch:** a separate device that sends a signal when pressed. Choose a Bluetooth switch or a USB switch.
+2. **External keyboard:** one or more keys can be used as a switch. You can connect almost all USB and Bluetooth keyboards to your device.
+3. **Buttons on the device:** You can use the built-in buttons such as volume up and down as a switch. This option is primarily intended for developers.
+
+<Image src="/img/light/Blue2.jpg" alt="Blue2 - Switch control"/>
+
+*Example of an external switch: the Blue2 Bluetooth Switch.*
+
+## Set switches
+
+We recommend that you set up switches before enabling switch access. Here are the steps:
+
+### Step 1: Connect Switches
+
+Connect the desired switch(es) via USB and/or Bluetooth.
+
+You connect a USB switch by plugging the cable into your device. Note: many switches have a so-called USB-A connection. Most Android phones have a micro-USB or USB-c connection.
+
+You connect a Bluetooth switch by opening the **Settings** app and then tapping **Bluetooth**. Your device will now search for Bluetooth devices, make sure the switch can be found. Tap the switch once it appears in the list to connect.
+
+### Step 2: Set scan method
+
+There are three different ways to highlight elements on the screen. If you use one switch, you can only choose **automatic scanning**. With two or more switches you can also choose **step scanning** or **group selection**.
+
+#### Set Auto Scan
+
+Auto-scanning automatically moves the highlight through the items on the screen until you make a selection. You press the switch to start scanning, then press the switch again to select the highlighted item.
+
+1. To set up automatic scanning:
+2. Open the **Settings** app.
+3. Scroll to the bottom of the screen, and tap **Accessibility**.
+4. Scroll to the center of the screen, and tap **Switch Access**.
+5. Tap **Settings**.
+6. Tap **Auto scan**.
+7. Turn on the **Auto Scan** switch.
+   - If Auto-scan doesn't appear, tap **Scanning method** and select **Linear scanning** or **Row-column.**
+   - Optional: Adjust auto-scan settings, including auto-scan time, delay on first item, and number of scans.
+8. Tap the back button.
+9. Tap **Assign switches for scanning**.
+10. Tap **Auto-scan**.
+11. Press your switch once the dialog is shown.
+12. Finally, tap **Save**.
+
+#### Set up step scanning
+
+With step scanning, press one switch to move the highlight across the screen. This is the **Next** switch. Press the other switch to select the highlighted item. This is the **Select** switch.
+
+This is how you set up scanning in steps:
+
+1. Open the **Settings** app.
+2. Scroll to the bottom of the screen, and tap **Accessibility**.
+3. Scroll to the center of the screen, and tap **Switch Access**.
+4. Tap **Settings**.
+5. Make sure **'Auto-scan'** is turned off.
+   - If automatic scanning is on, tap **'Auto-scan'**, then turn off the switch at the top of the screen.
+6. Tap **Assign switches for scanning**.
+7. Set the Next switch:
+   - Tap **Next**.
+   - Press the switch you want to use next when the dialog is shown.
+   - Tap **Save**.
+8. Set the Select switch:
+   - Tap **Select**.
+   - Press the switch you want to use for selection when the dialog box is displayed.
+   - Tap **Save**.
+
+#### Set group selection
+
+Group selection highlights groups of items on your screen, letting you narrow down the size of the group until you reach your choice. Group selection can be faster than auto-scanning or step scanning. On some devices, this is called "Option scanning."
+
+This is how you set up group selection:
+
+1. Open the **Settings** app.
+2. Scroll to the bottom of the screen, and tap **Accessibility**.
+3. Scroll to the center of the screen, and tap **Switch Access**.
+4. Tap **Settings**.
+5. Make sure 'Auto-scan' is turned off.
+   - If automatic scanning is on, tap **'Auto-scan'**, then turn off the switch at the top of the screen.
+6. Tap **Scan method**.
+7. Select the **Group selection** option.
+8. Tap **Assign switches for scanning**.
+9. Set the first switch:
+   - Tap **Group selection switch 1**.
+   - Press the switch you want to use when the dialog is displayed.
+   - Tap **Save**.
+10. Set the second switch:
+   - Tap **Group selection switch 2**.
+   - Press the switch you want to use when the dialog is displayed.
+   - Tap **Save**.
+11. Optional: set more switches:
+   - To set up more switches (up to a total of five switches), repeat steps 7-9 for each switch. If you assign more than two switches, items on the screen are divided into more groups. As a result, each group is smaller, and you need fewer switch presses to reach the item that you want to select.
+
+### Step 3: Enable On-Screen Keyboard
+
+Note: This step is optional. After you connect an external switch device or keyboard, Android automatically hides the on-screen keyboard. To enter text with Switch Access, you need to re-enable the keyboard.
+
+Here's how to turn the onscreen keyboard back on:
+
+1. Open the **Settings** app.
+2. Open **Language and Input**.
+   - It differs per device where this setting is, often under **System**.
+3. Show the on-screen keyboard:
+   1. Android 7 and above:
+      1. Tap **Physical keyboard**.
+      2. Turn on **Show virtual keyboard**.
+   2. Android 6 and below:
+      1. Tap **Current keyboard**.
+      2. Turn on **Hardware (display input method)**.
+
+### Step 4: Enable Voice Feedback
+
+Note: This step is optional. You can enable the spoken feedback feature if you want items on the screen to be read aloud. This is how you do it:
+
+1. Open the **Settings** app.
+2. Scroll to the bottom of the screen, and tap **Accessibility**.
+3. Scroll to the center of the screen, and tap **Switch Access**.
+4. Tap **Settings**.
+5. Scroll to the bottom of the screen, and tap **Speech, Sound & Vibration**.
+6. Turn on the **Spoken feedback** switch.
+7. You can adjust the following options to your liking:
+   - **Speak descriptive text:** Hear spoken feedback for items with available actions and for items that have descriptive text. This setting might be useful if you're unable to see the screen.
+   - **Verbosity Level:** Choose the amount of information that is spoken
+   - **Keyboard Echo:** Speak typed keys for the on-screen keyboard 
+   - **Speak usage tips:** Usage tips are spoken after a short delay during navigation.
+      - **Speak info about lists and grids:** Information about lists and grids is spoken.
+      - **Speak element type:** The element type is spoken for items that have focus.
+      - **Speak selected item or group:** Have an item or group speak the name when it is selected.
+      - **Order of element description:** choose the order of element description
+      - **Speak first and last item:** When multiple items are marked, the first and last elements are spoken.
+      - **Read the number of items:** when multiple items are marked, the number of items is read aloud.
+      - **Read all marked items:** When multiple items are marked, they will all be read aloud.
+      - **Read element IDs:** Element IDs are read for unlabeled buttons. **Use different pitches:** Speak keyboard feedback with a lower pitch.
+   - **Text-to-speech (TTS) settings:** Change your device's TTS settings.
+   - **Complete speech before moving:** Enable this setting to wait for the spoken feedback to complete before reading the next item. This option is only for 'automatic scanning'.
+   - **Other feedback:** Enable vibration or sound feedback and adjust sound settings.
+
+## Enable switch access
+
+After you configure Switch Access, you can only turn it on in way 1 the first time.
+
+### Way 1: via settings
+
+1. Open the **Settings app**
+2. Scroll to the bottom of the screen, tap **Accessibility**
+3. Scroll to the center of the screen, tap **Switch Access**
+4. Turn on the **switch**
+5. Tap **Allow** in the dialog box
+
+You can now control your device using the method you set!
+
+If you haven't added any switches yet, the 'Switch Access Setup Guide' will start automatically.
+
+### Way 2: Via Shortcut
+
+1. Open the **Settings app**
+2. Scroll down, tap **Accessibility**
+3. Tap **Volume key shortcut**
+4. Turn on the **switch**
+5. Tap **Shortcut service**
+6. Tap **Switch Access**
+7. Press and hold **both volume buttons for** three seconds
+
+**Note:** this only works on devices with Android version 8 or higher.
+
+## Disable switch access
+
+If you get confused with switching, the easiest way to turn off switch access is the second way: press and hold both volume buttons for three seconds.
+
+If you use an older device, your only option is to navigate back to the settings via switches.
+
+## Using switch access
+
+The way of navigation depends on which scanning method you prefer. It will often happen that you cannot fully control apps with switches.
+
+### Auto Scan
+
+1. Press the switch to start scanning.
+2. When the desired item is highlighted, press the switch to select the item.
+
+### Scan in steps
+
+1. Press the **Next** switch to start scanning.
+2. Keep pressing **Next** until you reach the item you want.
+3. Press the **Select** switch to select the highlighted item.
+
+### Group selection
+
+1. Press a switch to start scanning.
+2. View the item you want to select. Check the colour marker used for the group the item is in.
+3. Press the switch that corresponds to the colour of the group.
+4. Repeat steps 2 and 3 until you can select the item. The colour markings change every time you press a switch.
+
+To clear or reset markers you have two options. If you have a switch with no associated items, you can press it. The second option is to select the **Menu** button and then select the **Cancel** option.
+
+### General menu
+
+When you scan the screen and select the **Menu** button, a general menu of navigation options is displayed:
+
+1. **Back:** returns to the previous page, or hides the keyboard if it is visible.
+2. **Homepage:** Goes to the home screen.
+3. **Overview:** This shows the recently opened apps.
+4. **Notifications:** Opens the notification panel.
+5. **Quick Settings:** Displays the Quick Settings window
+6. **Volume:** change the volume of your device.
+7. **Auto-select:** The general menu contains an option that allows you to enable or disable the auto-select feature.
+   - If 'Automatic selection' is **enabled**: Clicking on an item on the screen will automatically select that item.
+   - If Auto Select is **Off**: If more than one action is available, clicking on an item will open the Actions menu. If only one action is available, perform that action by clicking on an item.
+8. **Point scan:** Point scan lets you select a specific location on the screen to tap, swipe, or zoom. Lines move across the screen so you can choose a specific horizontal and vertical location.
+   - Scan the screen using your usual scanning method.
+   - Select the **Menu** button.
+   - Select **Point scan**.
+   - Press your **select** or **auto scan** switch to start the point scan feature.
+   - Once the dot scan line reaches the correct vertical location, hit the switch.
+   - Once the dot scan line reaches the correct horizontal location, hit the switch.
+   - Use the **Actions** menu to select an action.
+9. **Cancel:** Close the general menu without performing any actions.
+10. **Back**, **Homepage** and **Overview** are equivalent to using the buttons in the navigation bar of your device.
+11. **Notifications** are equivalent to swiping down from the top of the screen.
+12. **Quick settings** are equivalent to swiping down from the top of the screen when notifications are visible.
+
+### Actions menu
+
+The 'Actions' menu opens when you click on an item that supports multiple actions and 'Automatic selection' is turned off. The menu displays options such as Expand, Collapse, Select, Tap and Hold, Scroll Forward, Scroll Back, Cut, Copy, and Paste.
+
+Tips when using actions:
+
+- If the item can scroll in multiple directions, the menu will include '**Scrolling**' option for each direction
+- If the same action can be applied to multiple items, the menu contains the action multiple times. A number has been added to these actions, such as **Scroll (1)** and **Scroll (2)**.
+- For text fields, the menu contains the options '**Cut**', '**Copy**', '**Paste**', '**Mark**', '**Prev**', '**Next**', '**Delete**' and '**Undo**'.
+- Select **Cancel** to close the menu without taking any action.
+
+## Learn Switch Access
+
+Want to learn even more about using switch access? Google has written several guides:
+
+- [Tips for Using Switch Access](https://support.google.com/accessibility/android/answer/6395627)
+- [Edit text with Switch Access](https://support.google.com/accessibility/android/answer/7560166)
+- [Customize Switch Access Settings](https://support.google.com/accessibility/android/answer/6301497)
