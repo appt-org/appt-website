@@ -182,3 +182,7 @@ main.container > .row > .col.col--8 {
 .footer {
   background-color: theme(colors.surface);
 }
+
+.footer__link-item {
+  line-height: theme(lineHeight.normal);
+}

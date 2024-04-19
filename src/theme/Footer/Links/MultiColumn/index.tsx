@@ -48,9 +48,11 @@ export default function FooterLinksMultiColumn({ columns }: Props): JSX.Element 
         <TextColumn />
       </Column>
       <div className="flex flex-col flex-1 gap-8 sm:flex-row">
-        {columns.map((column, i) => (
-          <Column key={i} column={column} />
-        ))}
+        <div className="flex flex-col flex-1 justify-between gap-8 xs:flex-row ">
+          {columns.map((column, i) => (
+            <Column key={i} column={column} />
+          ))}
+        </div>
         <Column className="flex flex-col flex-1 gap-8 ">
           <PartnerColumn />
         </Column>

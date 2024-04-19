@@ -2,6 +2,7 @@ import { Image } from '@site/src/components';
 import type { Props } from '@theme/Footer/Layout';
 import clsx from 'clsx';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function FooterLayout({ style, links, logo, copyright }: Props): JSX.Element {
   return (
     <footer

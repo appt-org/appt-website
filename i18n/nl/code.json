@@ -291,5 +291,41 @@
   },
   "footer.partners.supported": {
     "message": "Ondersteund door"
+  },
+  "footer.text.intro": {
+    "message": "Het Appt® platform is een initiatief van {aboutLink}, een stichting zonder winstoogmerk. Onze missie is om apps voor iedereen toegankelijk te maken. Dit proberen we te bereiken door gratis informatie en open source code te delen."
+  },
+  "footer.text.intro.linkLabel": {
+    "message": "Stichting Appt"
+  },
+  "footer.text.intro.linkUrl": {
+    "message": "/over"
+  },
+  "footer.text.listItem0": {
+    "message": "Informatie is beschikbaar onder de {link}"
+  },
+  "footer.text.listItem0.linkLabel": {
+    "message": "CC BY-SA 4.0 licenties"
+  },
+  "footer.text.listItem0.linkUrl": {
+    "message": "/licenties"
+  },
+  "footer.text.listItem1": {
+    "message": "Codevoorbeelden zijn beschikbaar onder de {link}"
+  },
+  "footer.text.listItem1.linkLabel": {
+    "message": "MIT licentie"
+  },
+  "footer.text.listItem1.linkUrl": {
+    "message": "/licenties"
+  },
+  "footer.text.listItem2": {
+    "message": "De broncode van deze website is beschikbaar op {link}"
+  },
+  "footer.text.listItem2.linkLabel": {
+    "message": "Github"
+  },
+  "footer.text.listItem2.linkUrl": {
+    "message": "https://github.com/appt-org/appt-org"
   }
 }
