@@ -30,7 +30,7 @@ export function Column({
     <div className="flex flex-col flex-1 gap-8 sm:flex-row" {...props}>
       {column && (
         <>
-          <div className="footer__title">{column?.title}</div>
+          {column.title && <div className="footer__title">{column?.title}</div>}
           <ul className="flex flex-1 flex-col -ml-2">
             {column?.items.map((item, i) => <ColumnLinkItem key={i} item={item} />)}
           </ul>
