@@ -62,7 +62,13 @@ const config: Config = {
           editUrl: 'https://github.com/appt-org/appt-docusaurus/',
         },
         theme: {
-          customCss: ['./src/css/globals.css', './src/css/markdown.css', './src/css/layout.css', './src/css/stats.css'],
+          customCss: [
+            './src/css/globals.css',
+            './src/css/markdown.css',
+            './src/css/layout.css',
+            './src/css/stats.css',
+            './src/css/partners.css',
+          ],
         },
       } satisfies Preset.Options,
     ],

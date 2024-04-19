@@ -97,7 +97,7 @@ export const docusaurusContentDocsConfig = [
       id: 'partners',
       path: 'partners',
       routeBasePath: getTranslatedPath('partners'),
-      sidebarPath: false,
+      sidebarPath: './sidebarPartners.ts',
     },
   ],
   [
