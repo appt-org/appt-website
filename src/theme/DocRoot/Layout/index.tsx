@@ -9,7 +9,7 @@ export default function DocRootLayout({ children }: Props): JSX.Element {
   const sidebar = useDocsSidebar();
   const [hiddenSidebarContainer, setHiddenSidebarContainer] = useState(false);
 
-  const isSideBarHidden = sidebar.items.every(category => {
+  const isSideBarHidden = sidebar?.items.every(category => {
     if ('items' in category && category.items.length > 0) {
       return category.items.every(item => {
         return item.customProps?.isHidden;
