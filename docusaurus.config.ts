@@ -68,6 +68,7 @@ const config: Config = {
             './src/css/layout.css',
             './src/css/stats.css',
             './src/css/partners.css',
+            './src/css/sidebar.css',
           ],
         },
       } satisfies Preset.Options,
