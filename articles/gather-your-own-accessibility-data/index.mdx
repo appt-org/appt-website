@@ -1,0 +1,130 @@
+---
+locale: en
+contentfulID: kJbwL6RlKsF3PhsfDw51I
+type: pageContentPage
+title: Gather your own accessibility data
+shortDescription: All ingredients to gain insight into the use of accessibility features in your own app.
+thumbnail: Services - icon
+seo.title: Gather your own accessibility data
+seo.name: Gather your own accessibility data - SEO
+seo.description: All ingredients to gain insight into the use of accessibility features in your own app.
+hero.title: Gather your own accessibility data
+hero.introText: All ingredients to gain insight into the use of accessibility features in your own app.
+hero.useThumbnail: false
+---
+
+<Hero
+  title="Gather your own accessibility data"
+  introText="All ingredients to gain insight into the use of accessibility features in your own app."
+/>
+
+<Image src="/img/light/arend-2.463821b.jpg" alt="A blind young man interacting with his phone"/>
+
+Data on the use of accessibility features in your own app provides more focus on accessibility. It gives insight into the needs of your users and helps make targeted choices. Your own dataset can help you in the following ways.
+
+- Persuade and apply focus on accessibility. Data makes it clear that there is a need and it highlights the need to support digital accessibility. It helps in making a business case and convincing decision-makers.
+- Understanding your users' needs. The data shows you exactly which functions are used and how much. This gives you the chance to determine which steps to take to best serve the largest possible share of your users.
+- Help with prioritisation. It gives you insight into which changes will have the most impact. This allows you to decide what to pick up first and what to pick up next.
+- More detailed insights. By collecting the data over a longer period of time, you get increasingly detailed insights into the use of features for accessibility on your users' phones. For example, at one client we initially saw no use of a screen reader. But after a few months, this number had risen to several hundred.
+
+## Do it yourself? Here are the ingredients.
+
+To collect your own data, you need the following:
+
+1. A piece of code in the app to retrieve the data. 
+2. A place where you can store the data.
+3. A way to share the collected data.
+
+To make it easy for you to do the same, here we share how we collected the data for this website. 
+N.B. All code is open source and free for you to use. All we ask is that you refer to its original creator, namely [Q42](https://q42.com).
+
+## Step 1. Collecting data
+
+To do this, we have developed a library (a small piece of software) that is added to their apps in consultation with our customers. This library checks which accessibility options users have activated on their phone when the app is launched. Querying this data is something every app does. This is because it is necessary to know which settings on the phone the app needs to support. Think dark mode, for example. Our piece of code also requests this data. 
+We have developed two libraries. One for iOS and one for Android. These are open source and free to use for everyone.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Q42Stats library for iOS
+        
+        Collect stats for Q42 internal usage, shared accross multiple iOS projects. 
+        <CustomLink url="https://github.com/Q42/Q42Stats" label="Q42Stats library for iOS on Github" external={true}/>
+      </TextBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Q42Stats library for Android
+        
+        Collect stats for Q42 internal usage, shared accross multiple Android projects. 
+        <CustomLink url="https://github.com/Q42/Q42Stats.Android" label="Q42Stats library for Android on Github" external={true}/>
+      </TextBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+## Step 2. Building a pipeline
+
+To process the data, we set up what we call a data pipeline. This consists of several parts, namely: for each app, we use an instance of Firestore. In this, the data from the apps is collected for 24 hours. Every 24 hours, this data is processed to BigQuery. Then the data is deleted in Firestore. This is to keep costs as low as possible. In BigQuery, the data is merged with all historical data. The data is stripped of any duplicates and added to the already stored set.
+That's the simple explanation. Our pipeline is open source and more extensively documented on github.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Accessibility pipeline
+        
+        This project facilitates the greater part of an initiative to gather information about usage of accessibility settings on mobile phones. 
+        <CustomLink url="https://github.com/Q42/accessibility-data-pipeline" label="Accessibility data pipeline on Github" external={true}/>
+      </TextBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={false}>
+         
+      </TextBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+## Step 3. Giving insight
+
+How you want to share the data next is, of course, entirely up to you. Sometimes a simple table with all the collected data is enough. We have chosen to share the data with our customers via Google's datastudio. We cannot share that data but we can give an example of what that looks like.
+
+<Image src="/img/light/data-dashboard.png" alt="Example of an accessibility data dashboard"/>
+
+What we can share are the aggregated data of all these customers combined. That's the data you see on this site.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Accessibility statistics
+        
+        Almost half of all people with a mobile phone use accessibility features. Much more than you would expect. We researched the real use of all these features. 
+        <CustomLink url="/en/stats" label="All accessibility stats" icon="/img/light/Research statistics accessibility use mobiel phones.jpg" darkIcon="/img/dark/Research statistics accessibility use mobiel phones.jpg" iconAlt="Research statistics accessibility use mobile phones (screen shot)" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={false}>
+         
+      </TextBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+## Any questions?
+
+With this documentation and code, you should be able to start your own collection of accessibility data. Is there anything missing? Is something not quite clear? Then contact [johan@q42.nl](mailto:johan@q42.nl) or let us know in [Appt's slack channel](https://appt.li/slack).

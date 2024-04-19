@@ -4,6 +4,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import tailwindPlugin from './plugins/tailwind-config';
 import 'dotenv/config';
 import { getTranslatedPath } from './src/utils/route-translations';
+import { docusaurusContentDocsConfig } from './docusaurus-content-docs-config';
 
 const config: Config = {
   title: 'Appt',
@@ -66,36 +67,7 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-  plugins: [
-    tailwindPlugin,
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'guidelines',
-        path: 'guidelines',
-        routeBasePath: getTranslatedPath('guidelines'),
-        sidebarPath: './sidebarsGuidelines.ts',
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'articles',
-        path: 'articles',
-        routeBasePath: getTranslatedPath('articles'),
-        sidebarPath: false,
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'stats',
-        path: 'stats',
-        routeBasePath: getTranslatedPath('stats'),
-        sidebarPath: false,
-      },
-    ],
-  ],
+  plugins: [tailwindPlugin, ...docusaurusContentDocsConfig],
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -113,7 +85,7 @@ const config: Config = {
         { to: '/docs', label: 'Docs', position: 'right' },
         { to: `/${getTranslatedPath('guidelines')}`, label: getTranslatedPath('guidelines', true), position: 'right' },
         { to: `/${getTranslatedPath('articles')}`, label: getTranslatedPath('articles', true), position: 'right' },
-        // { to: `/${getTranslatedPath('partners')}`, label: 'Partners', position: 'right' },
+        { to: `/${getTranslatedPath('partners')}`, label: 'Partners', position: 'right' },
         {
           type: 'localeDropdown',
           position: 'right',
@@ -140,6 +112,34 @@ const config: Config = {
             {
               label: 'Twitter',
               href: 'https://twitter.com/docusaurus',
+            },
+          ],
+        },
+        {
+          items: [
+            {
+              label: getTranslatedPath('about', true),
+              to: getTranslatedPath('about'),
+            },
+            {
+              label: getTranslatedPath('community', true),
+              to: getTranslatedPath('community'),
+            },
+            {
+              label: getTranslatedPath('newsletter', true),
+              to: getTranslatedPath('newsletter'),
+            },
+            {
+              label: 'Appt App',
+              to: getTranslatedPath('appt-app'),
+            },
+            {
+              label: getTranslatedPath('licenses', true),
+              to: getTranslatedPath('licenses'),
+            },
+            {
+              label: getTranslatedPath('privacy', true),
+              to: getTranslatedPath('privacy'),
             },
           ],
         },
