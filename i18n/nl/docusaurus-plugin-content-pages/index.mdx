@@ -1,1 +1,148 @@
-## TODO
+---
+locale: nl
+slug: /
+contentfulID: 2jOzisDPSeDJXqFiGjnON9
+type: pageHomePage
+title: Appt | Toegankelijkheid voor app-ontwikkelaars
+shortDescription: Appt.org helpt ontwikkelaars en organisaties bij het bouwen van toegankelijke apps voor iedereen door het bieden van actuele stats over het gebruik van toegankelijkheidsfuncties, codedocumentatie voor iOS, Android en andere platformen, richtlijnen en tips.
+thumbnail: Appt - Open Graph Image
+seo.title: Appt.org | Gids voor het maken van toegankelijke apps
+seo.name: Home - SEO
+seo.description: Appt.org helpt ontwikkelaars en organisaties bij het bouwen van toegankelijke apps voor iedereen door het bieden van actuele stats over het gebruik van toegankelijkheidsfuncties, codedocumentatie voor iOS, Android en andere platformen, richtlijnen en tips.
+seo.keywords: appt, toegankelijkheid, android, ios, flutter, react native, xamarin
+hero.title: Gids voor het maken van toegankelijke apps
+hero.image: App Wheelchair
+hero.useThumbnail: false
+hide_title: true
+hide_table_of_contents: true
+---
+
+<Hero
+  title="Gids voor het maken van toegankelijke apps"
+  imageSrc="/img/light/app_wheelchair.svg"
+  alt="app_wheelchair.svg"
+/>
+
+Appt.org helpt ontwikkelaars en organisaties bij het bouwen van toegankelijke apps voor iedereen. Op deze website vind je actuele statistieken over het gebruik van toegankelijkheidsfuncties op mobiele telefoons, codedocumentatie voor iOS, Android en andere platformen, officiële richtlijnen, verdiepende artikelen en tips.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={false}>
+        ## **iOS** 
+      </TextBlock>
+    </ColumnRow>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'At least one feature on iOS', number: 45, isPercentage: true }
+        ]}>
+        Almost half of the Dutch iOS users surveyed have one or more accessibility settings activated on their phone.
+      </PercentageBlock>
+    </ColumnRow>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'At least one feature on iOS', number: 15, isPercentage: true }
+        ]}>
+        What is more, a large group even uses two or more accessibility features on iOS.
+      </PercentageBlock>
+    </ColumnRow>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'Adjust text size', key: 'ios-non_default_content_size-true', isPercentage: true },
+          { title: 'Dark mode', key: 'ios-preference_ui_style-dark', isPercentage: true },
+          { title: 'Zoom', key: 'ios-screen_zoomed-true', isPercentage: true },
+          { title: 'Bold text', key: 'ios-accessibility_is_bold_text_enabled-true', isPercentage: true },
+          { title: 'Shake to undo off', key: 'ios-accessibility_is_shake_to_undo_enabled-false', isPercentage: true }
+        ]}
+        linkLabel="All accessibility stats"
+        linkUrl="/en/stats">
+        Most commonly used features on iOS
+      </PercentageBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={false}>
+        ## **Android** 
+      </TextBlock>
+    </ColumnRow>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'At least 1 feature on Android', key: 'android-accessibility_features-1+', isPercentage: true }
+        ]}>
+        More than half of the Dutch Android users surveyed have one or more accessibility settings activated on their phone.
+      </PercentageBlock>
+    </ColumnRow>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'At least two features on Android', key: 'android-accessibility_features-2+', isPercentage: true }
+        ]}>
+        Also on Android, a large group even uses two or more accessibility features.
+      </PercentageBlock>
+    </ColumnRow>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'Dark mode', key: 'android-preference_is_nightmode_enabled-true', isPercentage: true },
+          { title: 'Live captions', key: 'android-accessibility_is_closed_captioning_enabled-true', isPercentage: true },
+          { title: 'Screen orientation landscape', key: 'android-screen_orientation-landscape', isPercentage: true },
+          { title: 'Bigger display size', key: 'android-screen_display_scale_default_comparison-bigger', isPercentage: true },
+          { title: 'Adjust text size', key: 'android-default_screen_font_scale-false', isPercentage: true }
+        ]}
+        linkLabel="All accessibility stats"
+        linkUrl="/en/stats">
+        Most commonly used features on Android
+      </PercentageBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+<PercentageBlock
+  metrics={[
+    { title: 'Semi literate people', number: 2500000, isPercentage: false },
+    { title: 'The deaf and hard of hearing', number: 812000, isPercentage: false },
+    { title: 'Colour blind people', number: 742000, isPercentage: false },
+    { title: 'People with seriously impaired motor skills', number: 472000, isPercentage: false },
+    { title: 'Dyslexic people', number: 450000, isPercentage: false },
+    { title: 'Visually impaired people', number: 200000, isPercentage: false },
+    { title: 'Blind people', number: 80000, isPercentage: false },
+    { title: 'People with a mild intellectual disability', number: 68000, isPercentage: false }
+  ]}>
+  In Nederland zijn er 4,5 miljoen mensen met een aantoonbare beperking. Dat is ruim een kwart van de bevolking (17,8 miljoen)
+
+Ook mensen met een fysieke of intellectuele handicap dienen apps en websites te kunnen gebruiken. Dit heet digitale toegankelijkheid. Het toegankelijk maken van digitale diensten en producten staat ook wel bekend onder de Engelse naam accessibility.
+
+Bekijk meer cijfers over het [aantal mensen met een beperking](/en/articles/disabilities).
+</PercentageBlock>
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Accessibility statistics
+        
+        Almost half of all people with a mobile phone use accessibility features. Much more than you would expect. We researched the real use of all these features. 
+        <CustomLink url="/en/stats" label="All accessibility stats" icon="/img/light/Research statistics accessibility use mobiel phones.jpg" darkIcon="/img/dark/Research statistics accessibility use mobiel phones.jpg" iconAlt="Research statistics accessibility use mobile phones (screen shot)" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### In-depth documentation
+        
+        Each platform provides different features to make an app more accessible. This website offers in-depth documentation for iOS, Android, React Native, Flutter and Xamarin. 
+        <CustomLink url="/en/docs" label="All code documentation" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
