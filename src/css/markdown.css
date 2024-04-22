@@ -17,7 +17,7 @@ article ol li {
 
 article > p,
 .theme-doc-markdown > p {
-  margin-block: theme(spacing.4) auto;
+  margin-block: theme(spacing.4);
   max-width: theme(maxWidth.prose);
   font-size: theme(fontSize.paragraph);
   line-height: theme(lineHeight.paragraph);
@@ -26,6 +26,10 @@ article > p,
 .theme-doc-markdown {
   max-width: theme(maxWidth.md);
   margin: auto;
+}
+
+.theme-doc-markdown > img {
+  margin-block: theme(spacing.10) theme(spacing.12);
 }
 
 h1 {
