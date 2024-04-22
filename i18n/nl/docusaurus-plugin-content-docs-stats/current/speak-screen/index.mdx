@@ -1,5 +1,6 @@
 ---
 locale: nl
+slug: /spreek-scherm-uit
 contentfulID: 5yiFgQhsCfsAsbOT4p7NtR
 type: pageContentPage
 title: Spreek scherm uit
@@ -10,7 +11,7 @@ Spraakinstellingen helpen als de gebruiker niet in staat is om naar het scherm t
 
 De toegankelijkheidssetting om de inhoud van het hele scherm te laten voorlezen, is alleen aanwezig op iPhones. Deze instelling werkt door met twee vingers naar beneden te vegen. Android kent geen vergelijkbare feature.
 
-Op basis van ons onderzoek is de schatting dat ongeveer 200.000 Nederlanders deze functie hebben ingeschakeld op hun iOS-telefoon. NB. Nog meer mensen laten [geselecteerde tekst voorlezen](/nl/stats/speak-selection) op hun iPhone.
+Op basis van ons onderzoek is de schatting dat ongeveer 200.000 Nederlanders deze functie hebben ingeschakeld op hun iOS-telefoon. NB. Nog meer mensen laten [geselecteerde tekst voorlezen](/nl/stats/spreek-selectie-uit) op hun iPhone.
 
 <TwoColumnBlock>
   <LeftColumn>
@@ -19,9 +20,9 @@ Op basis van ons onderzoek is de schatting dat ongeveer 200.000 Nederlanders dez
         metrics={[
           { title: 'iOS - speak screen metric', key: 'ios-accessibility_is_speak_screen_enabled-true', isPercentage: true }
         ]}
-        linkLabel="More about speak screen"
-        linkUrl="/nl/stats/speak-screen">
-        use the speak screen feature on iOS.
+        linkLabel="Meer over scherm uitspreken"
+        linkUrl="/nl/stats/spreek-scherm-uit">
+        laat de inhoud van het scherm uitspreken op iOS.
       </PercentageBlock>
     </ColumnRow>
   </LeftColumn>
@@ -29,27 +30,25 @@ Op basis van ons onderzoek is de schatting dat ongeveer 200.000 Nederlanders dez
     <ColumnRow>
       <TextBlock
         showBackgroundColor={true}>
-        The speak screen feature is not available on Android. 
-        <CustomLink url="/nl/stats/speak-screen" label="More about speak screen" external={false}/>
+        De scherm uitspreken functie is niet beschikbaar op Android. 
+        <CustomLink url="/nl/stats/spreek-scherm-uit" label="Meer over scherm uitspreken" external={false}/>
       </TextBlock>
     </ColumnRow>
   </RightColumn>
 </TwoColumnBlock>
 
-
-
-<Quote>
+<Quote
   quote="Mijn iPhone is mijn derde oog."
   name="Jeroen"
   imageSrc="/img/light/Blinde app gebruiker Jeroen.jpg"
   alt="Jeroen - Asset"
-  linkLabel="Read the interview with Jeroen"
-  url="/nl/articles/jeroen"
-</Quote>
+  linkLabel="Lees het interview met Jeroen"
+  url="/nl/artikelen/jeroen"
+/>
 
 ## VoiceOver
 
-De inhoud van het scherm laten uitspreken is overigens niet hetzelfde als [VoiceOver](/nl/stats/screen-reader). Uit onze resultaten komt geen significant gebruik van voice-over naar voren. Maar om VoiceOver, speak screen en speak selection goed te laten werken voor een gebruiker moet alle niet-tekstuele inhoud een tekstalternatief hebben dat hetzelfde doel dient. 
+De inhoud van het scherm laten uitspreken is overigens niet hetzelfde als [VoiceOver](/nl/stats/schermlezer). Uit onze resultaten komt geen significant gebruik van voice-over naar voren. Maar om VoiceOver, speak screen en speak selection goed te laten werken voor een gebruiker moet alle niet-tekstuele inhoud een tekstalternatief hebben dat hetzelfde doel dient. 
 
 ## Ondersteuning in apps
 
@@ -62,5 +61,5 @@ Niet-tekstuele inhoud zoals knoppen en afbeeldingen dienen te zijn voorzien van 
 Dit hoort bij het volgende succescriterium van de WCAG:
 
 <LinkList title="Text alternatives - link list" isHighlighted={false}>
-  <LinkListItem url="https://appt.org/nl/guidelines/wcag/success-criterion-1-1-1" title="Success Criterion 1.1.1 - Non-text Content - Level A"/>
+  <LinkListItem url="/nl/richtlijnen/wcag/succescriterium-1-1-1" title="Succescriterium 1.1.1 - Niet-tekstuele content - Niveau A"/>
 </LinkList>
