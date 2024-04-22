@@ -1,76 +1,147 @@
 ---
 locale: en
-id: 2jOzisDPSeDJXqFiGjnON9
+slug: /
+contentfulID: 2jOzisDPSeDJXqFiGjnON9
 type: pageHomePage
 title: Appt | Accessibility for app developers
 shortDescription: Appt.org empowers developers and organizations to build accessible apps for everyone by offering current stats on the use of accessibility features, code documentation for iOS, Android and other platforms, guidelines, tips and how-to's.
 thumbnail: Appt - Open Graph Image
 seo.title: Appt.org | A guide for making apps accessible
 seo.name: Home - SEO
-hide_table_of_contents: true
 seo.description: Appt.org empowers developers and organizations to build accessible apps for everyone by offering current stats on the use of accessibility features, code documentation for iOS, Android and other platforms, guidelines, tips and how-to's.
 seo.keywords: appt, accessibility, android, ios, flutter, react native, xamarin
+hero.title: A guide for making apps accessible
+hero.image: App Wheelchair
+hero.useThumbnail: false
+hide_table_of_contents: true
 ---
 
-<> 
-    <Hero
-        title="A guide for making apps accessible"
-        imageSrc="img/light/app-wheelchair.svg"
-    />
+<Hero
+  title="A guide for making apps accessible"
+  imageSrc="/img/light/app_wheelchair.svg"
+  alt="app_wheelchair.svg"
+/>
 
-    ## Heading 2
-    Een normale `<p>` d.m.v. markdown met daarin een mooie tekst.
+Appt.org empowers developers and organizations to build accessible apps for everyone. On this website you will find current statistics about the use of accessibility features on mobile phones, code documentation for iOS, Android and other platforms, official guidelines, in-depth articles and tips.
 
-## Unordered list
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={false}>
+        ## **iOS** 
+      </TextBlock>
+    </ColumnRow>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'At least one feature on iOS', number: 45, isPercentage: true }
+        ]}>
+        Almost half of the Dutch iOS users surveyed have one or more accessibility settings activated on their phone.
+      </PercentageBlock>
+    </ColumnRow>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'At least one feature on iOS', number: 15, isPercentage: true }
+        ]}>
+        What is more, a large group even uses two or more accessibility features on iOS.
+      </PercentageBlock>
+    </ColumnRow>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'Adjust text size', key: 'ios-non_default_content_size-true', isPercentage: true },
+          { title: 'Dark mode', key: 'ios-preference_ui_style-dark', isPercentage: true },
+          { title: 'Zoom', key: 'ios-screen_zoomed-true', isPercentage: true },
+          { title: 'Bold text', key: 'ios-accessibility_is_bold_text_enabled-true', isPercentage: true },
+          { title: 'Shake to undo off', key: 'ios-accessibility_is_shake_to_undo_enabled-false', isPercentage: true }
+        ]}
+        linkLabel="All accessibility stats"
+        linkUrl="/en/stats">
+        Most commonly used features on iOS
+      </PercentageBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={false}>
+        ## **Android** 
+      </TextBlock>
+    </ColumnRow>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'At least 1 feature on Android', key: 'android-accessibility_features-1+', isPercentage: true }
+        ]}>
+        More than half of the Dutch Android users surveyed have one or more accessibility settings activated on their phone.
+      </PercentageBlock>
+    </ColumnRow>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'At least two features on Android', key: 'android-accessibility_features-2+', isPercentage: true }
+        ]}>
+        Also on Android, a large group even uses two or more accessibility features.
+      </PercentageBlock>
+    </ColumnRow>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'Dark mode', key: 'android-preference_is_nightmode_enabled-true', isPercentage: true },
+          { title: 'Live captions', key: 'android-accessibility_is_closed_captioning_enabled-true', isPercentage: true },
+          { title: 'Screen orientation landscape', key: 'android-screen_orientation-landscape', isPercentage: true },
+          { title: 'Bigger display size', key: 'android-screen_display_scale_default_comparison-bigger', isPercentage: true },
+          { title: 'Adjust text size', key: 'android-default_screen_font_scale-false', isPercentage: true }
+        ]}
+        linkLabel="All accessibility stats"
+        linkUrl="/en/stats">
+        Most commonly used features on Android
+      </PercentageBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
 
-    - First item
-    - Second item
-    - Third item
-    - Fourth item
+<PercentageBlock
+  metrics={[
+    { title: 'Semi literate people', number: 2500000, isPercentage: false },
+    { title: 'The deaf and hard of hearing', number: 812000, isPercentage: false },
+    { title: 'Colour blind people', number: 742000, isPercentage: false },
+    { title: 'People with seriously impaired motor skills', number: 472000, isPercentage: false },
+    { title: 'Dyslexic people', number: 450000, isPercentage: false },
+    { title: 'Visually impaired people', number: 200000, isPercentage: false },
+    { title: 'Blind people', number: 80000, isPercentage: false },
+    { title: 'People with a mild intellectual disability', number: 68000, isPercentage: false }
+  ]}>
+  There are 4.5 million people in the Netherlands with a demonstrable disability. That is more than one quarter of the population (17.8 million).
 
-    <TwoColumnBlock hasContentNavigation={false} hasSideNavigation={false}>
-        <LeftColumn>
-            <ColumnRow>
-                ## **iOS**
-            </ColumnRow>
-            <ColumnRow>
-                <PercentageBlock metrics={[{ title: 'Screen display scale', key: 'screen_display_scale_default_comparison', isPercentage: true }]}>
-                    Almost half of the Dutch iOS users surveyed have one or more accessibility settings activated on their phone.
-                </PercentageBlock>
-            </ColumnRow>
-        </LeftColumn>
-        <RightColumn>
-              <ColumnRow>
-                ## **Android**
-            </ColumnRow>
-            <ColumnRow>
-                  <PercentageBlock metrics={[{ title: 'Screen display scale', key: 'screen_display_scale_default_comparison', isPercentage: true }]}>
-                    Almost half of the Dutch iOS users surveyed have one or more accessibility settings activated on their phone.
-                </PercentageBlock>
-            </ColumnRow>
-        </RightColumn>
-    </TwoColumnBlock>
-        <TwoColumnBlock hasContentNavigation={false} hasSideNavigation={false}>
-        <LeftColumn>
-            <ColumnRow>
-                ## **iOS**
-            </ColumnRow>
-            <ColumnRow>
-               <PercentageBlock metrics={[{ title: 'Screen display scale', key: 'screen_display_scale_default_comparison', isPercentage: true }, { title: 'Screen display scale', key: 'screen_display_scale_default_comparison', isPercentage: true }]} linkUrl="https://www.appt.org/nl/android/tekstgrootte" linkLabel="Meer over lettergrootte">
-                    De meeste mensen maken tekst groter op iOS, als ze het lettertype aanpassen.
-                </PercentageBlock>
-            </ColumnRow>
-        </LeftColumn>
-        <RightColumn>
-              <ColumnRow>
-                ## **Android**
-            </ColumnRow>
-            <ColumnRow>
-                <PercentageBlock metrics={[{ title: 'Screen display scale', key: 'screen_display_scale_default_comparison', isPercentage: true }, { title: 'Screen display scale', key: 'screen_display_scale_default_comparison', isPercentage: true }]} linkUrl="https://www.appt.org/nl/android/tekstgrootte" linkLabel="Meer over lettergrootte">
-                    De meeste mensen maken tekst groter op iOS, als ze het lettertype aanpassen.
-                </PercentageBlock>
-            </ColumnRow>
-        </RightColumn>
-    </TwoColumnBlock>
+Apps and websites also need to be accessible to people with a physical or intellectual handicap. This is known as digital accessibility.
 
-</>
+Read more about the [amount of people with disabilities](/en/articles/disabilities).
+</PercentageBlock>
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### Accessibility statistics
+        
+        Almost half of all people with a mobile phone use accessibility features. Much more than you would expect. We researched the real use of all these features. 
+        <CustomLink url="/en/stats" label="All accessibility stats" icon="/img/light/Research statistics accessibility use mobiel phones.jpg" darkIcon="/img/dark/Research statistics accessibility use mobiel phones.jpg" iconAlt="Research statistics accessibility use mobile phones (screen shot)" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <TextBlock
+        showBackgroundColor={true}>
+        ### In-depth documentation
+        
+        Each platform provides different features to make an app more accessible. This website offers in-depth documentation for iOS, Android, React Native, Flutter and Xamarin. 
+        <CustomLink url="/en/docs" label="All code documentation" external={false}/>
+      </TextBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
