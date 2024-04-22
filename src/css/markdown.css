@@ -15,24 +15,10 @@ article ol li {
   margin-left: theme(spacing.7);
 }
 
-/* Fix spacing for markdown items that are not placed within e.g. a two column block  */
-article > .markdown-content,
-article > p,
-article > ol {
-  padding-inline: theme(spacing.4);
-}
-
-@media (min-width: theme(screens.sm)) {
-  article > .markdown-content,
-  article > p {
-    padding-inline: theme(spacing.8);
-  }
-}
-
 article > p,
 .theme-doc-markdown > p {
-  max-width: theme(maxWidth.md);
-  margin: theme(spacing.4) auto;
+  margin-block: theme(spacing.4) auto;
+  max-width: theme(maxWidth.prose);
   font-size: theme(fontSize.paragraph);
   line-height: theme(lineHeight.paragraph);
 }

@@ -38,21 +38,20 @@ export function Hero({ title, introText, imageSrc, imageDarkSrc, alt }: HeroProp
       setHeight(positions.height);
       setTop(positions.top);
     };
-
     getHeight();
     window.addEventListener('resize', getHeight);
     return () => window.removeEventListener('resize', getHeight);
-  }, [heroRef.current]);
+  }, [heroRef.current?.clientHeight]);
 
   const containerClasses = clsx('max-w-md mx-auto px-0 py-8 sm:py-16 sm:px-8', { 'w-full': !imageSrc });
 
   return (
     <>
       <div
-        className="absolute top-0 left-0 right-0 w-full bg-surface shadow-md"
+        className="absolute top-0 left-0 right-0 w-full bg-surface shadow-md hero"
         style={{ height: `${height + top}px` }}
       />
-      <div className="bg-surface px-4 lg:px-8 relative" ref={heroRef}>
+      <div className="bg-surface px-4 lg:px-8 relative mb-10" ref={heroRef}>
         <div className={containerClasses}>
           <div className={classes}>
             {!!imageSrc && (
