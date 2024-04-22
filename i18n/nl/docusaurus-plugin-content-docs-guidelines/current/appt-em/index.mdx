@@ -1,0 +1,300 @@
+---
+locale: nl
+slug: /appt-em
+contentfulID: 1ppnG6wr4v6T6i7ZHVcVMh
+type: pageContentPage
+title: Appt Evaluatiemethode (Appt-EM)
+shortDescription: De Appt Evaluatiemethode (Appt-EM) kan gebruikt worden om de toegankelijkheid van apps op een uniforme en reproduceerbare manier vast te stellen.
+thumbnail: Services - icon
+layout: Layout - In page navigation
+pagination_next: null
+pagination_prev: null
+---
+
+*Huidige versie: 1.1.0, laatst aangepast op 4 juli 2023.*
+
+Stichting Appt heeft de Appt Evaluatiemethode (Appt-EM) ontwikkeld om de toegankelijkheid van apps op een uniforme en reproduceerbare manier vast te stellen.
+
+Vanuit [Europese norm EN 301 549 V3.2.1 (2021-03)](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf) zijn apps verplicht om te voldoen aan een deel van de [Web Content Accessibility Guidelines 2.1 (WCAG 2.1)](https://www.w3.org/Translations/WCAG21-nl/). De bijpassende evaluatiemethode is de [Website Accessibility Conformance Evaluation Methodology (WCAG-EM)](https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/). 
+
+Zowel de WCAG, als WCAG-EM, zijn echter geschreven voor websites en daardoor niet zomaar toepasbaar op apps. Appt-EM is specifiek geschreven voor apps en is gebaseerd op WCAG-EM.
+
+## Basisvoorwaarden
+
+Om Appt-EM succesvol te gebruiken wordt aangenomen dat er een goed begrip is van WCAG en toegankelijkheidsfuncties van Android en iOS.
+
+## Evaluatieprocedure
+
+Dit hoofdstuk beschrijft de stappen en activiteiten van de evaluatieprocedure. Bij elke stap voer je een aantal activiteiten uit. Het kan zijn dat je één of meerdere stappen terug moet doen wanneer je nieuwe inzichten opgedaan hebt.
+
+De stappen van Appt-EM zijn vergelijkbaar met die van WCAG-EM:
+
+- Stap 1 – Bepaal scope
+- Stap 2 – Onderzoek app
+- Stap 3 – Selecteer schermen
+- Stap 4 – Voer audit uit
+- Stap 5 – Rapporteer resultaten
+
+### Stap 1 – Bepaal scope
+
+In deze stap wordt de scope van de evaluatie bepaald. Om de scope te bepalen moet duidelijk worden wat binnen en buiten de scope van het onderzoek valt.
+
+#### Stap 1a – Bepaal scope app
+
+Het bepalen van de scope start met het vaststellen van het besturingssysteem, de installatiemethode en het versienummer. Bepaal vervolgens de schermen die onderdeel uitmaken van het onderzoek.
+
+##### Bepaal besturingssysteem
+
+Apps zijn vaak beschikbaar voor Android en iOS. Leg vast op welk besturingssysteem je het onderzoek uitvoert. Per besturingssysteem moet er een los onderzoek gedaan worden. We raden aan om per besturingssysteem een los rapport op te leveren.
+
+##### Bepaal installatiemethode
+
+Een app is vaak via een app store te downloaden en heeft dan een unieke downloadlink. Het is belangrijk om de volledige downloadlink over te nemen, inclusief alle URL parameters. Per land kunnen er namelijk verschillende versies van een app beschikbaar zijn. Daarnaast kunnen er ook verschillende varianten beschikbaar zijn, zoals een ‘lite’ versie. 
+
+Indien een app (nog) niet gepubliceerd is, dan kan deze ook beschikbaar worden gemaakt via een installatiebestand. Het installatiebestand heet op Android een Android Application Package (.apk) en op iOS een iOS App Store Package (.ipa). Neem in dit geval de downloadlink en/of de volledige naam van het installatiebestand op.
+
+##### Bepaal versienummer
+
+Het versienummer kun je vinden in de app store. Na installatie kun je het versienummer ook vinden bij de instellingen van je toestel. Het versienummer staat vaak ook ergens in de app vermeld.
+
+##### Bepaal schermen
+
+Bij apps is meestal geen sitemap beschikbaar met een overzicht van alle schermen. Daarnaast hebben schermen meestal geen unieke URL. Leg daarom het pad vast dat je bent doorlopen om op het scherm te komen. Gebruik hiervoor de namen van de schermen, bijvoorbeeld: Home → Profiel → Wijzigen. Indien een scherm geen naam heeft, dan zul je zelf een beschrijvende naam moeten bedenken.
+
+De beschikbare schermen binnen een app kun je op verschillende manieren bepalen. Meestal komt het erop neer dat je door alle schermen van de app zal moeten navigeren.
+
+#### Stap 1.b – Bepaal het conformiteitsniveau
+
+Bepaal het conformiteitsniveau dat getoetst wordt: niveau A, AA of AAA. Het conformiteitsniveau AA wordt veel gebruikt. Vanuit de Nederlandse wetgeving wordt ook naar dit niveau verwezen voor overheidsorganisaties.
+
+**Let op**: vanuit de [EN 301 549](/nl/richtlijnen/en-301-549) zijn 6 succescriteria uitgezonderd voor apps, zie [Bijlage I](https://appt.org/nl/richtlijnen/appt-em#bijlage-i-toegankelijkheidseisen-uit-de-en-301-549-v321).
+
+#### Stap 1.c – Bepaal scope hardware/software
+
+##### Bepaal scope hardware
+
+Afhankelijk van de hardware is het mogelijk dat een app anders reageert. 
+
+- *Bepaal de toestellen*
+- *Bepaal de schermafmetingen*
+
+##### Bepaal scope software
+
+Afhankelijk van de software is het mogelijk dat een app anders reageert. Het is belangrijk om het versienummer van het besturingssysteem te noteren. 
+
+Bij apps zijn de toegankelijkheidsfuncties ingebouwd in het besturingssysteem. De toegankelijkheidsfuncties verschillen per fabrikant. Ondersteunende hulpmiddelen zoals de schermlezer, stembediening, schakelbediening en toetsenbordbediening hebben vaak een eigen versienummer, noteer deze. 
+
+Noteer tot slot relevante systeeminstellingen die invloed hebben op het gedrag van de app, zoals taal en locatie.
+
+We raden aan om tenminste te testen met tekstvergroting en de schermlezer. Aanvullend kun je testen met toetsenbordbediening, stembediening, schakelbediening en andere beschikbare toegankelijkheidsfuncties.
+
+- *Bepaal versienummer van besturingssysteem*
+- *Bepaal toegankelijkheidsfuncties en hun versienummers*
+- *Bepaal relevante systeeminstellingen*
+- *Bepaal met welke hulpmiddelen en toegankelijkheidsfuncties er getest moet worden*
+
+### Stap 2 – Onderzoek app
+
+In deze stap wordt het gebruik, doel en functionaliteit van de app vastgesteld. Hiervoor moeten de schermen nader onderzocht worden. 
+
+#### Stap 2.a – Bepaal belangrijkste schermen
+
+Bepaal of er schermen zijn die gebruikers meerdere keren tegenkomen bij het gebruik van de app. En bepaal op welke schermen gebruikers de meeste tijd doorbrengen.
+
+Kies in ieder geval schermen die functionaliteit bevatten die essentieel zijn om de app te kunnen gebruiken, zoals registreren, inloggen, wachtwoord resetten, etc. Schermen die direct benaderbaar zijn vanuit het hoofdscherm van de app zijn vaak ook belangrijk om te onderzoeken.
+
+#### Stap 2.b – Bepaal essentiële functionaliteit
+
+Bepaal welke flows essentieel zijn in de app. Een flow bestaat uit meerdere stappen of schermen die je moet doorlopen om een taak uit te voeren. Door de belangrijke flows van de app te omschrijven kun je vervolgens alle schermen van deze flows testen.
+
+#### Stap 2.c – Bepaal veelvoorkomende elementen
+
+Bepaal welke soort elementen gebruikt worden in de app. In de onderstaande tabel staat een overzicht van veelvoorkomende Android, iOS, Flutter en React Native elementen.
+
+| Element | Android | iOS | Flutter | React Native |
+| --- | --- | --- | --- | --- |
+| Afbeelding | [ImageView](https://developer.android.com/reference/android/widget/ImageView) | [UIImageView](https://developer.apple.com/documentation/uikit/uiimageview) | [Image](https://api.flutter.dev/flutter/widgets/Image-class.html) | [Image](https://reactnative.dev/docs/image) |
+| Video | [MediaPlayer](https://developer.android.com/reference/androidx/media2/player/MediaPlayer) | [AVPlayer](https://developer.apple.com/documentation/avfoundation/avplayer/) | [VideoPlayer](https://pub.dev/packages/video_player) | [Video](https://docs.expo.dev/versions/latest/sdk/video/) |
+| Audio | [MediaPlayer](https://developer.android.com/reference/androidx/media2/player/MediaPlayer) | [AVPlayer](https://developer.apple.com/documentation/avfoundation/avplayer/) | [AudioPlayer](https://pub.dev/packages/just_audio) | [Audio](https://docs.expo.dev/versions/latest/sdk/audio/) |
+| Tekst | [TextView](https://developer.android.com/reference/android/widget/TextView) | [UILabel](https://developer.apple.com/documentation/uikit/uilabel/) | [Text](https://api.flutter.dev/flutter/widgets/Text-class.html) | [Text](https://reactnative.dev/docs/text) |
+| Knop | [Button](https://developer.android.com/reference/android/widget/Button) | [UIButton](https://developer.apple.com/documentation/uikit/uibutton/) | [TextButton](https://api.flutter.dev/flutter/material/TextButton-class.html) | [Button](https://reactnative.dev/docs/button) |
+| Link | [URLSpan](https://developer.android.com/reference/android/text/style/URLSpan) | [NSAttributedString](https://developer.apple.com/documentation/foundation/nsattributedstring/) | [TextSpan](https://api.flutter.dev/flutter/painting/TextSpan-class.html) | [Text](https://reactnative.dev/docs/text) |
+| Invoerveld | [EditText](https://developer.android.com/reference/android/widget/EditText) | [UITextField](https://developer.apple.com/documentation/uikit/uitextfield/) | [TextField](https://api.flutter.dev/flutter/material/TextField-class.html) | [TextInput](https://reactnative.dev/docs/textinput) |
+| Selectievakje | [CheckBox](https://developer.android.com/reference/android/widget/CheckBox.html) | [UISwitch](https://developer.apple.com/documentation/uikit/uiswitch/) | [Checkbox](https://api.flutter.dev/flutter/material/Checkbox-class.html) | [Switch](https://reactnative.dev/docs/switch) |
+| Navigatiebalk | [Toolbar](https://developer.android.com/reference/androidx/appcompat/widget/Toolbar) | [UINavigationBar](https://developer.apple.com/documentation/uikit/uinavigationbar/) | [AppBar](https://api.flutter.dev/flutter/material/AppBar-class.html) | [NavigationBar](https://docs.expo.dev/versions/latest/sdk/navigation-bar/) |
+| Tabbladbalk | [TabLayout](https://developer.android.com/reference/com/google/android/material/tabs/TabLayout) | [UITabBar](https://developer.apple.com/documentation/uikit/uitabbar/) | [AppBar](https://api.flutter.dev/flutter/material/AppBar-class.html) | [BottomTabs](https://reactnavigation.org/docs/bottom-tab-navigator/) |
+
+#### Stap 2.d – Gebruikte technieken
+
+Bepaal welke technieken er gebruikt zijn om de app te ontwikkelen. 
+
+- Programmeertalen, bijvoorbeeld Swift of Kotlin
+- Frameworks, bijvoorbeeld SwiftUI of React Native
+- Libraries, bijvoorbeeld Alamofire of Expo
+
+#### Stap 2.e – Overige relevante schermen
+
+Bepaal of er specifieke functionaliteiten of schermen aanwezig zijn voor gebruikers met een beperking. Voeg schermen met uitleg over de app of met contactinformatie ook toe aan het onderzoek.
+
+### Stap 3 – Selecteer schermen
+
+Selecteer de schermen die deel uitmaken van het onderzoek. Je kan kiezen om alle schermen van de app te onderzoeken. Of je kan een representatieve steekproef nemen bestaande uit een gestructureerde steekproef en willekeurig gekozen schermen.
+
+#### Stap 3.a – Gestructureerde steekproef
+
+Bij een gestructureerde steekproef selecteer je schermen die een goede weerspiegeling zijn van alle schermen van de app. 
+
+Selecteer de schermen als volgt:
+
+1. De belangrijkste schermen zoals bepaald in stap 2.a
+2. De overige relevante schermen zoals bepaald in stap 2.e
+3. Als de schermen van stap 2.a en 2.e niet voldoende zijn voor een representatieve gestructureerde steekproef, voeg dan deze schermen toe:
+   - Schermen met essentiële functionaliteit uit stap 2.b
+   - Schermen met veelvoorkomende elementen uit stap 2.c
+   - Schermen die gebruik maken van de technieken uit stap 2.d
+
+#### Stap 3.b – Voeg willekeurige schermen toe
+
+Kies willekeurig één of meerdere schermen om te controleren of de gestructureerde steekproef een goede afspiegeling is van de app. Het aantal willekeurige schermen moet minimaal 10% van het aantal schermen in de steekproef zijn.
+
+Bijvoorbeeld: bij 20 schermen in de steekproef moet je minimaal 2 willekeurig gekozen schermen toevoegen ter controle.
+
+#### Stap 3.c – Voeg flows toe
+
+Bekijk of er schermen uit stap 3.a en 3.b zijn die deel uitmaken van een flow. Voeg de schermen van de gevonden flows toe aan de selectie. 
+
+Apps bestaan voornamelijk uit flows van meerdere schermen. Het kan dus zijn dat je uiteindelijk (bijna) alle schermen moet testen.
+
+### Stap 4 – Voer audit uit
+
+Beoordeel de schermen volgens het gekozen conformiteitsniveau uit stap 1.b. 
+
+Voer de volgende stappen uit:
+
+- Stap 4.a Beoordeel alle schermen
+- Stap 4.b Beoordeel alle flows volledig
+- Stap 4.c Vergelijk structurele steekproef met willekeurig gekozen schermen
+
+**Let op:** Anders dan bij websites is het bij apps belangrijk om de schermafbeelding mee te sturen. Als je een scherm herlaadt dan zal de content wellicht de volgende keer anders zijn waardoor het niet reproduceerbaar is zonder schermafbeelding.
+
+### Stap 5 – Rapporteer resultaten
+
+Een auditrapport moet aan bepaalde vormvereisten voldoen. Zie [hoofdstuk 5 van WCAG-EM](https://www.w3.org/TR/WCAG-EM/#step5) voor verdere toelichting. 
+
+Voor apps zijn er afwijkingen en aanbevelingen die hieronder worden toegelicht. Hierdoor voldoen de rapporten aan de minimale kenmerken die nodig zijn om de bevindingen te reproduceren.
+
+#### Afwijkingen
+
+##### Benamingen en definities
+
+Een app heeft specifieke benamingen en definities. Er is bijvoorbeeld geen sprake van een webpagina, maar van een scherm. Gebruik de juiste benamingen en definities voor apps.
+
+##### Rapporteer pad
+
+Bij apps worden meestal geen URL’s gebruikt om schermen te identificeren. Rapporteer in plaats van de URL het pad dat je hebt afgelegd om op het scherm te komen.
+
+#### Aanbevelingen
+
+##### Voeg oplossingen en codevoorbeelden toe
+
+Bij de definities van de WCAG succescriteria staan alleen oplossingen en codevoorbeelden voor websites. Rapporteer oplossingen en codevoorbeelden voor apps, bijvoorbeeld door naar relevante pagina’s uit de [Appt kennisbank](https://appt.org) te verwijzen. Je kunt gebruik maken van onze WCAG shortlinks, [appt.nl/1.1.1](https://appt.nl/1.1.1) verwijst bijvoorbeeld naar onze uitleg over succescriterium 1.1.1.
+
+##### Voeg schermafbeeldingen toe
+
+Bij apps is het belangrijk om schermafbeeldingen toe te voegen aan het rapport. Apps zijn veel dynamischer dan websites waardoor het moeilijk is om de fout te reproduceren. Een schermafbeelding toont precies hoe de app er uit zag op het moment van rapporteren.
+
+## Bijlage I: Toegankelijkheidseisen uit de EN 301 549 v3.2.1
+
+De [Europese norm EN 301 549 V3.2.1 (2021-03)](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf) bevat toegankelijkheidseisen voor software, waaronder mobiele applicaties (apps). Apps vallen onder de categorie ‘Open functionality’. In hoofdstuk 11 zijn 44 succescriteria uit de [Web Content Accessibility Guidelines 2.1 (WCAG 2.1)](https://www.w3.org/Translations/WCAG21-nl/) opgenomen. Dit zijn er 6 minder dan voor websites.
+
+### Closed en open functionality
+
+In de norm worden de termen “Open functionality” en “Closed functionality” gebruikt. De gegeven definitie voor “Closed functionality” is: *“Computers that do not allow end-users to adjust settings or install software are functionally closed”.* Bij mobiele telefoons is het mogelijk om (systeem)instellingen aan te passen en om apps te installeren. Mobiele telefoons en apps zien wij daarom als “Open functionality”.
+
+### Verplichte succescriteria uit WCAG 2.1
+
+In hoofdstuk 11 zijn alle succescriteria met niveau A en AA uit de WCAG 2.1 opgenomen. In totaal zijn er 6 succescriteria niet van toepassing. Bij 13 succescriteria is er een kleine aanpassing in de notities of definities. De gedachte en het doel achter deze succescriteria is hetzelfde, alleen is de term “*webpage*” vervangen door “*software*”.
+
+**Let op**: Apps hoeven dus maar aan 44 succescriteria te voldoen in plaats van 50.
+
+Een overzicht van de afwijkingen:
+
+- 6 succescriteria zijn niet van toepassing.
+   - [2.4.1 Blokken omzeilen](https://appt.nl/2.4.1)
+   - [2.4.2 Paginatitel](https://appt.nl/2.4.2)
+   - [2.4.5 Meerdere manieren](https://appt.nl/2.4.5)
+   - [3.1.2 Taal van onderdelen](https://appt.nl/3.1.2)
+   - [3.2.3 Consistente navigatie](https://appt.nl/3.2.3)
+   - [3.2.4 Consistente identificatie](https://appt.nl/3.2.4).
+- 13 succescriteria hebben kleine aanpassingen in de notities of definities. De context is grotendeels hetzelfde.
+   - [1.4.2 Geluidsbediening](https://appt.nl/1.4.2)
+   - [1.4.10 Reflow](https://appt.nl/1.4.10)
+   - [2.1.2 Geen toetsenbordval](https://appt.nl/2.1.2)
+   - [2.2.1 Timing aanpasbaar](https://appt.nl/2.2.1)
+   - [2.2.2 Pauze, stoppen, verbergen](https://appt.nl/2.2.2)
+   - [2.3.1 Drie flitsen of beneden drempelwaarde](https://appt.nl/2.3.1)
+   - [2.4.3 Focus volgorde](https://appt.nl/2.4.3)
+   - [2.5.1 Aanwijzergebaren](https://appt.nl/2.5.1)
+   - [2.5.2 Aanwijzerannulering](https://appt.nl/2.5.2)
+   - [3.1.1 Taal van de pagina](https://appt.nl/3.1.1)
+   - [3.3.4 Foutpreventie (wettelijk, financieel, gegevens)](https://appt.nl/3.3.4)
+   - [4.1.1 Parsen](https://appt.nl/4.1.1)
+   - [4.1.2 Naam, rol, waarde](https://appt.nl/4.1.2)
+- 31 succescriteria zijn direct toepasbaar zonder aanpassingen.
+
+In onderstaande tabel staat een volledig overzicht met de opmerkingen per succescriterium.
+
+| Succescriterium | Niveau | Opmerking uit EN 301 549 |
+| --- | --- | --- |
+| [1.1.1 Niet-tekstuele content](https://appt.nl/1.1.1) | A | Geen afwijkingen |
+| [1.2.1 Louter-geluid en louter-videobeeld (vooraf opgenomen)](https://appt.nl/1.2.1) | A | Geen afwijkingen |
+| [1.2.2 Ondertitels voor doven en slechthorenden (vooraf opgenomen)](https://appt.nl/1.2.2) | A | Geen afwijkingen |
+| [1.2.3 Audiodescriptie of media-alternatief (vooraf opgenomen)](https://appt.nl/1.2.3) | A | Geen afwijkingen |
+| [1.2.4 Ondertitels voor doven en slechthorenden (live)](https://appt.nl/1.2.4) | AA | Geen afwijkingen |
+| [1.2.5 Audiodescriptie (vooraf opgenomen)](https://appt.nl/1.2.5) | AA | Geen afwijkingen |
+| [1.3.1 Info en relaties](https://appt.nl/1.3.1) | A | Geen afwijkingen |
+| [1.3.2 Betekenisvolle volgorde](https://appt.nl/1.3.2) | A | Geen afwijkingen |
+| [1.3.3 Zintuiglijke eigenschappen](https://appt.nl/1.3.3) | A | Geen afwijkingen |
+| [1.3.4 Weergavestand](https://appt.nl/1.3.4) | AA | Geen afwijkingen |
+| [1.3.5 Identificeer het doel van de input](https://appt.nl/1.3.5) | AA | Geen afwijkingen |
+| [1.4.1 Gebruik van kleur](https://appt.nl/1.4.1) | A | Geen afwijkingen |
+| [1.4.2 Geluidsbediening](https://appt.nl/1.4.2) | A | Kleine aanpassingen in de notities of definities |
+| [1.4.3 Contrast (minimum)](https://appt.nl/1.4.3) | AA | Geen afwijkingen |
+| [1.4.4 Herschalen van tekst](https://appt.nl/1.4.4) | AA | Geen afwijkingen |
+| [1.4.5 Afbeeldingen van tekst](https://appt.nl/1.4.5) | AA | Geen afwijkingen |
+| [1.4.10 Reflow](https://appt.nl/1.4.10) | AA | Kleine aanpassingen in de notities of definities |
+| [1.4.11 Contrast van niet-tekstuele content](https://appt.nl/1.4.11) | AA | Geen afwijkingen |
+| [1.4.12 Tekstafstand](https://appt.nl/1.4.12) | AA | Geen afwijkingen |
+| [1.4.13 Content bij hover of focus](https://appt.nl/1.4.13) | AA | Geen afwijkingen |
+| [2.1.1 Toetsenbord](https://appt.nl/2.1.1) | A | Geen afwijkingen |
+| [2.1.2 Geen toetsenbordval](https://appt.nl/2.1.2) | A | Kleine aanpassingen in de notities of definities |
+| [2.1.4 Enkel teken sneltoetsen](https://appt.nl/2.1.4) | A | Geen afwijkingen |
+| [2.2.1 Timing aanpasbaar](https://appt.nl/2.2.1) | A | Kleine aanpassingen in de notities of definities |
+| [2.2.2 Pauzeren, stoppen, verbergen](https://appt.nl/2.2.2) | A | Kleine aanpassingen in de notities of definities |
+| [2.3.1 Drie flitsen of beneden drempelwaarde](https://appt.nl/2.3.1) | A | Kleine aanpassingen in de notities of definities |
+| [2.4.1 Blokken omzeilen](https://appt.nl/2.4.1) | A | **Niet van toepassing op apps** |
+| [2.4.2 Paginatitel](https://appt.nl/2.4.2) | A | **Niet van toepassing op apps** |
+| [2.4.3 Focus volgorde](https://appt.nl/2.4.3) | A | Kleine aanpassingen in de notities of definities |
+| [2.4.4 Linkdoel (in context)](https://appt.nl/2.4.4) | A | Geen afwijkingen |
+| [2.4.5 Meerdere manieren](https://appt.nl/2.4.5) | AA | **Niet van toepassing op apps** |
+| [2.4.6 Koppen en labels](https://appt.nl/2.4.6) | AA | Geen afwijkingen |
+| [2.4.7 Focus zichtbaar](https://appt.nl/2.4.7) | AA | Geen afwijkingen |
+| [2.5.1 Aanwijzergebaren](https://appt.nl/2.5.1) | A | Kleine aanpassingen in de notities of definities |
+| [2.5.2 Aanwijzerannulering](https://appt.nl/2.5.2) | A | Kleine aanpassingen in de notities of definities |
+| [2.5.3 Label in naam](https://appt.nl/2.5.3) | A | Geen afwijkingen |
+| [2.5.4 Bewegingsactivering](https://appt.nl/2.5.4) | A | Geen afwijkingen |
+| [3.1.1 Taal van de pagina](https://appt.nl/3.1.1) | AA | Kleine aanpassingen in de notities of definities |
+| [3.1.2 Taal van onderdelen](https://appt.nl/3.1.2) | AA | **Niet van toepassing op apps** |
+| [3.2.1 Bij focus](https://appt.nl/3.2.1) | A | Geen afwijkingen |
+| [3.2.2 Bij input](https://appt.nl/3.2.2) | A | Geen afwijkingen |
+| [3.2.3 Consistente navigatie](https://appt.nl/3.2.3) | AA | **Niet van toepassing op apps** |
+| [3.2.4 Consistente identificatie](https://appt.nl/3.2.4) | AA | **Niet van toepassing op apps** |
+| [3.3.1 Foutidentificatie](https://appt.nl/3.3.1) | A | Geen afwijkingen |
+| [3.3.2 Labels of instructies](https://appt.nl/3.3.2) | A | Geen afwijkingen |
+| [3.3.3 Foutsuggestie](https://appt.nl/3.3.3) | AA | Geen afwijkingen |
+| [3.3.4 Foutpreventie (wettelijk, financieel, gegevens)](https://appt.nl/3.3.4) | AA | Kleine aanpassingen in de notities of definities |
+| [4.1.1 Parsen](https://appt.nl/4.1.1) | A | Kleine aanpassingen in de notities of definities |
+| [4.1.2 Naam, rol, waarde](https://appt.nl/4.1.2) | A | Kleine aanpassingen in de notities of definities |
+| [4.1.3 Statusberichten](https://appt.nl/4.1.3) | AA | Geen afwijkingen |
+
+Voor de volledige toelichting zie hoofdstuk 11 van de [Europese norm EN 301 549 V3.2.1 (2021-03)](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf).

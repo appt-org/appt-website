@@ -1,0 +1,164 @@
+---
+locale: en
+slug: /how-to-get-an-accessible-app-developed
+contentfulID: H5vzMG1Fh1Jzpk6nY3D6b
+type: pageContentPage
+title: How to get an accessible app developed
+shortDescription: This article, aimed at non-developers, explains where to start if you want to have an app made accessible.
+thumbnail: Development - Icon
+seo.title: How to get an accessible app developed
+seo.name: Accessible App - Guide for non-developers - SEO
+seo.description: In this article, we give you tips on where to start and what to consider if you want to make an app accessible to the widest possible range of users, including people with disabilities.
+hero.title: How to get an accessible app developed
+hero.introText: In this article, we give you tips on where to start and what to consider if you want to make an app accessible to the widest possible range of users, including people with disabilities.
+hero.useThumbnail: false
+hide_title: true
+---
+
+<Hero
+  title="How to get an accessible app developed"
+  introText="In this article, we give you tips on where to start and what to consider if you want to make an app accessible to the widest possible range of users, including people with disabilities."
+/>
+
+#### November 1, 2023
+
+<Image src="/img/light/Q42 Amsterdam - Real User Feedback Thursday -5 met blinden en slechtzienden (9).jpg" alt="A man interacting with his phone. The screen is zoomed in."/>
+
+## What is Accessibility?
+
+Accessibility is making sure everyone can use your app, regardless of disability, situation, preferences or dependency. This article explains how different people interact with apps in general and what you can do to make sure they can use your app.
+
+If you have no or little experience developing an accessible app, it can seem quite complex. You have to start somewhere. This article will help you get started using three questions.
+
+1. Who are you actually doing it for?
+2. What needs to be done?
+3. How do you do it?
+
+## 1. Who are you actually doing it for?
+
+*People use your app in a different way from what you are used to.*
+
+It all starts with the awareness that people use and experience your app in a completely different way than you are used to. For people with disabilities, it is more difficult to use apps. It's important to know what a disability is, what [different disabilities](/en/articles/disabilities) there are and what effect they have on apps. 
+
+It is important to know that not only people with long-term disabilities benefit from an accessible app. Many people use the settings that mobile phones offer to set a phone to their own needs, such as increasing contrast. These features can be found under **Settings > Accessibility**.
+
+So these features are not only used by people with long-term disabilities according to [our research](/en/stats) into their use. There are also other reasons why someone might adjust the font size, for example. Think of worse vision as someone gets older. Or if someone activates subtitles on the bus or train, when headphones have been forgotten.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'Adjust text size', key: 'ios-non_default_content_size-true', isPercentage: true },
+          { title: 'Dark mode', key: 'ios-preference_ui_style-dark', isPercentage: true },
+          { title: 'Zoom', key: 'ios-screen_zoomed-true', isPercentage: true },
+          { title: 'Bold text', key: 'ios-accessibility_is_bold_text_enabled-true', isPercentage: true },
+          { title: 'Shake to undo off', key: 'ios-accessibility_is_shake_to_undo_enabled-false', isPercentage: true }
+        ]}
+        linkLabel="All accessibility stats"
+        linkUrl="/en/stats">
+        Most commonly used features on iOS
+      </PercentageBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'Dark mode', key: 'android-preference_is_nightmode_enabled-true', isPercentage: true },
+          { title: 'Live captions', key: 'android-accessibility_is_closed_captioning_enabled-true', isPercentage: true },
+          { title: 'Screen orientation landscape', key: 'android-screen_orientation-landscape', isPercentage: true },
+          { title: 'Bigger display size', key: 'android-screen_display_scale_default_comparison-bigger', isPercentage: true },
+          { title: 'Adjust text size', key: 'android-default_screen_font_scale-false', isPercentage: true }
+        ]}
+        linkLabel="All accessibility stats"
+        linkUrl="/en/stats">
+        Most commonly used features on Android
+      </PercentageBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+To give you an idea of how and why people use these settings, we interviewed a number of people. They explain which settings they have activated on their phones. 
+
+<Quote
+  quote="How many hours a day I use my phone? How many hours do you use your eyes?"
+  name="Jesse"
+  imageSrc="/img/light/Jesse.png"
+  alt="Photo Jesse"
+  linkLabel="See all interviews"
+  url="/en/articles/interviews"
+/>
+
+Besides these features, many people with disabilities use external aids to access digital media. Are you curious what tools exist to use apps? The most commonly used aids are screen reader, voice control, switch control and keyboard control. We explain what these are and how they work on the page about [assistive technologies](/en/articles/assistive-technologies).
+
+But how do you make sure your app can be used with all these adaptations and tools? We explain that in the next part of this article.
+
+## 2. What needs to be done?
+
+If you have an existing app, you will want to know how it is doing. But even if you are developing an accessible app from scratch, at some point you will want to know how it is doing. There are two main pillars that determine whether your app is successfully accessible, namely:
+
+1. Does your app meet the WCAG guidelines?
+2. Can people with disabilities actually use your app?
+
+A good accessible app is regularly tested against both these principles.
+
+### Does your app meet the WCAG guidelines?
+
+The Web Content Accessibility Guidelines ([WCAG](/en/guidelines/wcag)) are a set of guidelines for making digital content more accessible to people with disabilities. The guidelines are made up of a total of 78 success criteria. Don't let the name fool you, as these guidelines also apply to apps. But not all of them. [Which guidelines](/en/guidelines) you need to take into account depends on where in the world your app is available. 
+
+To give you a good idea of where you stand in relation to the official guidelines, you can have an audit done. An audit provides you with a clear overview of areas for improvement and points of attention for your app. 
+
+### Test it yourself
+
+There is an easier way to get a first impression of the accessibility status of your app. Namely, you can test it yourself (or with a colleague). That test will never be as complete as an audit performed by an expert. Without experience, testing an app against the full WCAG success criteria is very extensive and complex. To fully test your app according to the guidelines, you also need knowledge of the tools. But to get you started, we have created a test outline that will give you a quick idea of where you stand.
+
+<LinkList title="WCAG Testing for Beginners Link" isHighlighted={true}>
+  <LinkListItem url="https://appt.org/en/guidelines/beginnersguide-accessibility-testing" title="Beginners' Guide to Accessibility Testing" pageTitle="Beginners' Guide to Accessibility Testing" shortDescription="Test whether your app is accessible yourself." icon="/img/light/features.svg" iconAlt="Features icon"/>
+</LinkList>
+
+### Can people with disabilities use your app?
+
+The most complete picture of your app's accessibility can be obtained by testing with users in addition to following official accessibility guidelines.
+
+Seeing people interacting with your app also helps you understand how different the interaction can be. Test regularly with people with disabilities. Put together as diverse a panel as possible. One person interacting differently usually provides a lot of insights that you can use to improve your app. 
+
+To give you an idea of what to take into account, we have done some [interviews with users](/en/articles/interviews).
+
+### Outcomes and priorities
+
+All that research and testing gives you a lot of insights but, more importantly, a lot of work. So where is the best place to start? If this does not logically emerge from a test, let [the figures on this website](/en/stats) help you further. Our statistics give an indication of which adjustments you can make the most impact with. By looking at which features are used the most and the extent to which your app does not support them, you can determine the order in which you pick up these points with your team.
+
+## 3. How do you build an accessible app?
+
+Whether you're starting from scratch or want to make an existing app accessible, our [starter's guide for developers](/en/articles/accessible-app-beginners-guide) helps programmers get started. Handy to share with your development team!
+
+In a nutshell, it comes down to this:
+
+1. Offer textual alternatives.
+2. Make it clear what the purpose is.
+3. Make sure text can be resized.
+4. Provide sufficient contrast.
+5. Show focus and offer a logical order.
+
+Developers who are more experienced in building accessible apps and know exactly what they need, we offer very comprehensive documentation in the form of [code samples](/en/docs) on this website.
+
+In order to know whether what is being built is actually accessible, you need to do a lot of testing. We already explained how to do this above. Besides WCAG and user testing, you can prevent a lot of accessibility issues during development by testing technically. Apple and Google have developed tools for this purpose.  [Android's Accessibility Scanner app](https://developer.android.com/guide/topics/ui/accessibility/testing#accessibility-scanner) and [Xcode's Accessibility Inspector](https://developer.apple.com/library/archive/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html). Unfortunately, this tooling has its shortcomings, limiting the visibility of your app's accessibility. Testing while building an app is manual work where you will mainly use the screen reader. It therefore pays to learn to work with a [screen reader](/en/stats/screen-reader). 
+
+A screen reader is mainly used by people with visual impairments. By optimising your app for this, you ensure that a much larger group of people can use your app. Users of [voice, keyboard and switch controls](/en/articles/assistive-technologies) will also benefit from this. Moreover, you will automatically take into account a lot of success criteria from the [WCAG](/en/guidelines/wcag).
+
+This makes the screen reader the ideal tool for testing for accessibility. It may take some getting used to: it all works slightly differently from what you are used to. With the [ScreenReader app](https://screenreader.app/), you can learn all the gestures and possibilities by doing. By investing time in working with a screen reader, you can prevent many accessibility issues in an accessible and inexpensive way. 
+
+## Difficulty convincing others?
+
+Based on this article, you can take the first steps as a company to have an accessible app developed. Another important step is to convince everyone in your organisation of the importance of accessibility.
+
+Experience shows that organisations do not prioritise accessibility because of the idea that people with disabilities are a small target group. This is a misconception. Almost half of all people with a mobile phone use accessibility features. So the number of people who would benefit from an accessible app is much larger than usually assumed. This is evident from [our extensive survey of iOS and Android users](/en/stats).
+
+The statistics from this study are allowed to be used freely. So use them to build a (business) case and convince team members or management. To do this, you can easily download [these slides](/en/stats/download-stats) that are updated every month with current figures.
+
+Do you want even more relevant data? Via Appt.org, we provide [free documentation and open source code](/en/stats/download-stats) for organisations to research their own app.
+
+## Questions?
+
+If you have specific questions about accessibility or are looking for help building an accessible app, please contact [Johan Huijkman](mailto:johan@q42.nl) of Q42 or [Jan Jaap de Groot](mailto:janjaap@abra.nl) of Abra.

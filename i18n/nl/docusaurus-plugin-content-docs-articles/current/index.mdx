@@ -1,24 +1,101 @@
 ---
 locale: nl
+slug: /
 contentfulID: 7H0PEL6zZSzijLj91seKOB
 type: pageContentPage
 title: Artikelen over toegankelijkheid
 shortDescription: Lees uitgebreide informatie over toegankelijkheid en gerelateerde onderwerpen.
+hero.title: Artikelen over toegankelijkheid
+hero.useThumbnail: false
+hide_title: true
 ---
+
+<Hero
+  title="Artikelen over toegankelijkheid"
+/>
 
 Lees uitgebreide informatie over toegankelijkheid en gerelateerde onderwerpen.
 
 ## Tips en artikelen
 
 <LinkList title="Accessibility articles - Link list" isHighlighted={true}>
-  <LinkListItem url="https://appt.org/en/articles/disabilities" title="Disabilities" pageTitle="Disabilities when using apps" shortDescription="This article provides a summary of the different disabilities. Here you can also find the number of Dutch people with a disability." icon="/img/light/Beperkingen.svg" iconAlt="Disabilities"/>
-  <LinkListItem url="https://appt.org/en/articles/assistive-technologies" title="Assistive technologies" pageTitle="Assistive technologies for using apps" shortDescription="This article provides a summary of the different assistive technologies." icon="/img/light/Hulpmiddelen.svg" iconAlt="Assistive Technologies"/>
-  <LinkListItem url="https://appt.org/en/articles/accessible-app-beginners-guide" title="An Accessible App. Where to start?" pageTitle="An accessible app. Where to start?" shortDescription="Making your app accessible to everyone: where do you start? These are the first steps you should take." icon="/img/light/Oplossingen.svg" iconAlt="Solutions"/>
-  <LinkListItem url="https://appt.org/en/articles/gather-your-own-accessibility-data" title="Gather your own accessibility data" pageTitle="Gather your own accessibility data" shortDescription="All ingredients to gain insight into the use of accessibility features in your own app." icon="/img/light/Diensten.svg" iconAlt="Services"/>
-  <LinkListItem url="https://appt.org/en/articles/how-to-get-an-accessible-app-developed" title="How to get an accessible app developed" pageTitle="How to get an accessible app developed" shortDescription="This article, aimed at non-developers, explains where to start if you want to have an app made accessible." icon="/img/light/Ontwikkeling.svg" iconAlt="Development"/>
-  <LinkListItem url="https://appt.org/en/articles/how-we-built-appt-org" title="How we built appt.org" pageTitle="How we built appt.org" shortDescription="We built appt.org by using Contentful in combination with Next.js, Typescript, Tailwind CSS and Google Cloud Run." icon="/img/light/Web.svg" iconAlt="Web globe icon"/>
-  <LinkListItem url="https://appt.org/en/articles/automated-accessibility-testing-android-ios-apps" title="Automated accessibility testing of Android and iOS apps" pageTitle="Automated accessibility testing of Android and iOS apps" shortDescription="You can run automated accessibility tests to check if your Android or iOS app meets accessibility requirements. This article lists tools to automatically test the accessibility of your app." icon="/img/light/Robot.svg" iconAlt="Icon of a robot's face, in a pink color"/>
-  <LinkListItem url="https://appt.org/en/articles/contribute-code-samples-for-accessible-apps" title="Contribute code samples" pageTitle="Contribute code samples for accessible apps" shortDescription="Contribute to our mission by sharing code samples of accessible apps." icon="/img/light/4.1.1.svg" iconAlt="WCAG 4.1.1 - Logo"/>
-  <LinkListItem url="https://appt.org/en/handbook" title="App accessibility handbook" pageTitle="App accessibility handbook" shortDescription="Our handbook is designed to learn the basic principles of app accessibility in straightforward way. "/>
-  <LinkListItem url="https://appt.org/en/articles/native-versus-cross-frameworks-accessible-apps" title="Native versus cross-platform frameworks to develop accessible apps" pageTitle="Native versus cross-platform frameworks to develop accessible apps" shortDescription="What framework to choose if you want to build an accessible app? Native has it benefits, but cross-platform frameworks are catching up."/>
+  <LinkListItem url="https://appt.org/nl/articles/disabilities" title="Beperkingen" pageTitle="Beperkingen bij het gebruiken van apps" shortDescription="Dit artikel bevat een samenvatting van de verschillende soorten beperkingen. Hier vind je ook het aantal Nederlanders met een beperking." icon="/img/light/Beperkingen.svg" iconAlt="Beperkingen"/>
+  <LinkListItem url="https://appt.org/nl/articles/assistive-technologies" title="Hulpmiddelen" pageTitle="Hulpmiddelen om apps te gebruiken" shortDescription="Dit artikel bevat een samenvatting van de verschillende soorten hulpmiddelen." icon="/img/light/Hulpmiddelen.svg" iconAlt="Hulpmiddelen"/>
+  <LinkListItem url="https://appt.org/nl/articles/accessible-app-beginners-guide" title="Een toegankelijke app. Waar begin je?" pageTitle="Een toegankelijke app. Waar begin je?" shortDescription="Je app toegankelijk maken voor iedereen: waar begin je? Dit zijn de eerste zes stappen om te nemen." icon="/img/light/Oplossingen.svg" iconAlt="Oplossingen"/>
+  <LinkListItem url="https://appt.org/nl/articles/gather-your-own-accessibility-data" title="Verzamel jouw eigen toegankelijkheidsdata" pageTitle="Verzamel jouw eigen toegankelijkheidsdata" shortDescription="Alle ingrediënten om inzicht te krijgen in het gebruik van toegankelijkheidsfeatures in jouw eigen app." icon="/img/light/Diensten.svg" iconAlt="Diensten"/>
+  <LinkListItem url="https://appt.org/nl/articles/how-to-get-an-accessible-app-developed" title="Zo laat je een toegankelijke app ontwikkelen" pageTitle="Zo laat je een toegankelijke app ontwikkelen" shortDescription="Dit artikel, gericht op niet-developers, legt uit waar je moet beginnen als je een app toegankelijk wilt laten maken." icon="/img/light/Ontwikkeling.svg" iconAlt="Ontwikkeling"/>
+  <LinkListItem url="https://appt.org/nl/articles/how-we-built-appt-org" title="Hoe we appt.org hebben gebouwd" pageTitle="Hoe we appt.org hebben gebouwd" shortDescription="We hebben appt.org gebouwd door Contentful te gebruiken in combinatie met Next.js, Typescript, Tailwind CSS en Google Cloud Run." icon="/img/light/Web.svg" iconAlt="Web globe icon"/>
+  <LinkListItem url="https://appt.org/nl/articles/automated-accessibility-testing-android-ios-apps" title="Geautomatiseerd toegankelijkheid testen van Android en iOS apps" pageTitle="Geautomatiseerd toegankelijkheid testen van Android en iOS apps" shortDescription="Je kunt geautomatiseerd toegankelijkheidstests uitvoeren om te controleren of jouw Android of iOS app voldoet aan de toegankelijkheidseisen. Dit artikel geeft een overzicht van tools om automatisch de toegankelijkheid van jouw app te testen." icon="/img/light/Robot.svg" iconAlt="Icoontje van het gezicht van een robot, in een roze kleur"/>
+  <LinkListItem url="https://appt.org/nl/articles/contribute-code-samples-for-accessible-apps" title="Deel codevoorbeelden" pageTitle="Deel codevoorbeelden voor toegankelijke apps" shortDescription="Draag bij aan onze missie door codevoorbeelden van toegankelijke apps te delen." icon="/img/light/4.1.1.svg" iconAlt="WCAG 4.1.1 - Logo"/>
+  <LinkListItem url="https://appt.org/nl/handbook" title="Handboek app toegankelijkheid" pageTitle="Handboek app toegankelijkheid" shortDescription="Ons handboek is ontworpen om jou op eenvoudige wijze de basisprincipes van app toegankelijkheid te leren."/>
+  <LinkListItem url="https://appt.org/nl/articles/native-versus-cross-frameworks-accessible-apps" title="Native versus cross-platform frameworks om toegankelijke apps te ontwikkelen" pageTitle="Native versus cross-platform frameworks om toegankelijke apps te ontwikkelen" shortDescription="Welk framework kies je om een toegankelijke app te bouwen? Native heeft zijn voordelen, maar cross-platform frameworks worden steeds beter."/>
 </LinkList>
+
+## Interviews
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <Quote
+        quote="Hoeveel uur ik per dag mijn telefoon gebruik? Hoeveel uur gebruik jij je ogen?"
+        name="Jesse"
+        imageSrc="/img/light/Jesse.png"
+        alt="Foto Jesse"
+        linkLabel="Lees het interview met Jesse"
+        url="https://appt.org/nl/articles/jesse"
+      />
+    </ColumnRow>
+    <ColumnRow>
+      <Quote
+        quote="Ik heb geen beperking, de wereld maakt mij beperkt."
+        name="Darice"
+        imageSrc="/img/light/Interview met dove eindgebruiken over inzetten van toegankelijkheid in mobiele apps.jpg"
+        alt="Foto Darice"
+        linkLabel="Lees het interview met Darice"
+        url="https://appt.org/nl/articles/darice"
+      />
+    </ColumnRow>
+    <ColumnRow>
+      <Quote
+        quote="Mijn iPhone is mijn derde oog."
+        name="Jeroen"
+        imageSrc="/img/light/Blinde app gebruiker Jeroen.jpg"
+        alt="Jeroen - Asset"
+        linkLabel="Lees het interview met Jeroen"
+        url="https://appt.org/nl/articles/jeroen"
+      />
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <Quote
+        quote="Ik probeer overprikkeling op mijn telefoon te verminderen."
+        name="Colinda"
+        imageSrc="/img/light/colinda.jpg"
+        alt="Colinda"
+        linkLabel="Lees het interview met Colinda"
+        url="https://appt.org/nl/articles/colinda"
+      />
+    </ColumnRow>
+    <ColumnRow>
+      <Quote
+        quote="Toegankelijkheid mag wat mij betreft ook mooi zijn."
+        name="Onno"
+        imageSrc="/img/light/Interview met slechtziende gebruiker over mobiele applicaties op telefoons.jpg"
+        alt="Foto Onno"
+        linkLabel="Lees het interview met Onno"
+        url="https://appt.org/nl/articles/onno"
+      />
+    </ColumnRow>
+    <ColumnRow>
+      <Quote
+        quote="De grootte van teksten aanpassen is voor mij noodzakelijk."
+        name="Edith"
+        imageSrc="/img/light/Edith-s.jpg"
+        alt="Foto van Edith"
+        linkLabel="Lees het interview met Edith"
+        url="https://appt.org/nl/articles/edith"
+      />
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>

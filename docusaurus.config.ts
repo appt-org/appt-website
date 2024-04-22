@@ -1,10 +1,10 @@
 import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
-import { themes as prismThemes } from 'prism-react-renderer';
-import tailwindPlugin from './plugins/tailwind-config';
 import 'dotenv/config';
-import { getTranslatedPath } from './src/utils/route-translations';
+import { themes as prismThemes } from 'prism-react-renderer';
 import { docusaurusContentDocsConfig } from './docusaurus-content-docs-config';
+import tailwindPlugin from './plugins/tailwind-config';
+import { getTranslatedPath } from './src/utils/route-translations';
 
 const config: Config = {
   title: 'Appt',
@@ -62,7 +62,14 @@ const config: Config = {
           editUrl: 'https://github.com/appt-org/appt-docusaurus/',
         },
         theme: {
-          customCss: ['./src/css/globals.css', './src/css/markdown.css', './src/css/layout.css'],
+          customCss: [
+            './src/css/globals.css',
+            './src/css/markdown.css',
+            './src/css/layout.css',
+            './src/css/stats.css',
+            './src/css/partners.css',
+            './src/css/sidebar.css',
+          ],
         },
       } satisfies Preset.Options,
     ],
@@ -74,8 +81,8 @@ const config: Config = {
     navbar: {
       logo: {
         alt: 'Logo Appt',
-        src: 'img/light/appt-logo-light.svg',
-        srcDark: 'img/dark/appt-logo-dark.svg',
+        src: 'img/light/logos/appt-logo-light.svg',
+        srcDark: 'img/dark/logos/appt-logo-dark.svg',
         className: 'nav-logo',
         href: 'https://appt.org',
       },
@@ -99,19 +106,30 @@ const config: Config = {
     footer: {
       links: [
         {
-          title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Home',
+              to: '/',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: getTranslatedPath('stats', true),
+              to: getTranslatedPath('stats'),
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: getTranslatedPath('docs', true),
+              to: getTranslatedPath('docs'),
+            },
+            {
+              label: getTranslatedPath('guidelines', true),
+              to: getTranslatedPath('guidelines'),
+            },
+            {
+              label: getTranslatedPath('articles', true),
+              to: getTranslatedPath('articles'),
+            },
+            {
+              label: getTranslatedPath('partners', true),
+              to: getTranslatedPath('partners'),
             },
           ],
         },
@@ -130,7 +148,7 @@ const config: Config = {
               to: getTranslatedPath('newsletter'),
             },
             {
-              label: 'Appt App',
+              label: 'Appt app',
               to: getTranslatedPath('appt-app'),
             },
             {
@@ -144,7 +162,6 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.okaidia,
