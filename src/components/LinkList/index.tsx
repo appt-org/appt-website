@@ -14,7 +14,7 @@ export function LinkList({ isHighlighted, children }: PropsWithChildren<LinkList
   }
 
   return (
-    <div className="">
+    <div>
       <Card className="p-4" tag="ul">
         {children}
       </Card>
