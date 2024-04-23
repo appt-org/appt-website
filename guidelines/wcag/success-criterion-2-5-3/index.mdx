@@ -1,0 +1,39 @@
+---
+locale: en
+slug: /wcag/success-criterion-2-5-3
+contentfulID: 7w7kw9JbBZEMXzL0VpGfD6
+type: pageGuidelinePage
+title: Label in Name
+prefix: Success Criterion
+chapter: 2.5.3
+suffix: Level A
+shortDescription: Ensure the technical name of elements contain the visual name.
+thumbnail: WCAG 2.5.3 - Image
+source: "https://www.w3.org/TR/WCAG22/#label-in-name"
+layout: Layout - WCAG
+---
+
+# Label in Name
+
+Ensure that the technical name of operable elements includes the visual name. A user should be able to activate a button with the text 'Log in' via this name. This is not possible if the technical name is different. In addition, it is confusing for screen reader users if they hear a different name compared to what is shown on the screen.
+
+## Impact
+
+- With voice control, the visual name is used to activate a button. This only works if the technical name matches.
+- For visually impaired people using the screen reader, matching labels can improve ease of use.
+
+## Check
+
+*“Is the visual name a part of the technical name for all elements on the screen?"*
+
+This can be tested with the [screen reader](/en/stats/screen-reader) or [voice control](/en/stats/voice-control).
+
+## Solution
+
+### Set accessibility name
+
+<CodeSample id="accessibility-name" locale="en"/>
+
+## Resources
+
+- [WCAG 2.2 - Success Criterion 2.5.3 - Label in Name](https://www.w3.org/TR/WCAG22/#label-in-name)
