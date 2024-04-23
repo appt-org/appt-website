@@ -7,6 +7,7 @@
   padding: 0;
   box-shadow: none;
   background-color: theme(colors.surface);
+  position: relative;
 }
 
 .navbar__inner {
@@ -201,4 +202,33 @@ main.container > .row > .col.col--8 {
 
 .breadcrumbs__link svg {
   display: inline;
+}
+
+.main-wrapper:not(:has(.theme-doc-markdown)) {
+  max-width: theme(maxWidth.md) !important;
+  margin-inline: auto;
+  padding-inline: theme(spacing.4);
+}
+
+.main-wrapper main {
+  flex: 1 1 auto;
+  padding-block-end: theme(spacing.6);
+  overflow: hidden;
+}
+
+.main-wrapper:not(:has(.hero, .theme-doc-sidebar-container)) {
+  padding-block-start: theme(spacing.6);
+}
+
+@media (min-width: theme(screens.sm)) {
+  .main-wrapper {
+    padding-inline: theme(spacing.8);
+  }
+  .main-wrapper main {
+    padding-block-end: theme(spacing.12);
+  }
+}
+
+.theme-doc-toc-desktop:has(.table-of-contents) {
+  top: 0;
 }

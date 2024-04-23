@@ -24,7 +24,7 @@ export function Hero({ title, introText, imageSrc, imageDarkSrc, alt }: HeroProp
     'justify-center': !!imageSrc,
   });
 
-  const [height, setHeight] = useState(0);
+  const [height, setHeight] = useState(400);
   const [top, setTop] = useState(0);
   const heroRef = useRef<HTMLDivElement>();
 
@@ -33,26 +33,25 @@ export function Hero({ title, introText, imageSrc, imageDarkSrc, alt }: HeroProp
   // This is a workaround to avoid using a custom layout component. It may seem overly complicated, but other approaches require a lot more 'hacks' and code changes/restructuring
   // Additionally, Docusaurus uses different layouts for e.g. docs and pages and this is a universal approach that works in all layouts */
   useEffect(() => {
-    setHeight(heroRef?.current?.clientHeight);
-    setTop(heroRef?.current?.offsetTop);
     const getHeight = () => {
-      setHeight(heroRef.current.clientHeight);
-      setTop(heroRef.current.offsetTop);
+      const positions = heroRef?.current.getBoundingClientRect();
+      setHeight(positions.height);
+      setTop(positions.top);
     };
-
+    getHeight();
     window.addEventListener('resize', getHeight);
     return () => window.removeEventListener('resize', getHeight);
-  }, []);
+  }, [heroRef.current?.clientHeight]);
 
   const containerClasses = clsx('max-w-md mx-auto px-0 py-8 sm:py-16 sm:px-8', { 'w-full': !imageSrc });
 
   return (
     <>
       <div
-        className="absolute top-0 left-0 right-0 w-full bg-surface shadow-md"
-        style={{ height: `${height + 50}px`, top: `${top - 50}px` }}
+        className="absolute top-0 left-0 right-0 w-full bg-surface shadow-md hero"
+        style={{ height: `${height + top}px` }}
       />
-      <div className="bg-surface px-4 lg:px-8 relative" ref={heroRef}>
+      <div className="bg-surface px-4 lg:px-8 relative mb-10" ref={heroRef}>
         <div className={containerClasses}>
           <div className={classes}>
             {!!imageSrc && (

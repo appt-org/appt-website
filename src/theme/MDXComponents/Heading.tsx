@@ -17,7 +17,7 @@ export default function MDXHeading(props: Props): JSX.Element {
     size: headingSize[props.as as TypographySize],
     tag: props.as,
     withMargins: true,
-    className: 'mx-auto max-w-md markdown-content',
+    className: 'mx-auto max-w-md markdown-content w-full',
   });
 
   return <Heading className={classes} {...props} />;

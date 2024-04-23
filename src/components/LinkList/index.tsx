@@ -8,13 +8,13 @@ export type LinkListProps = {
 
 export function LinkList({ isHighlighted, children }: PropsWithChildren<LinkListProps>) {
   if (isHighlighted) {
-    const classes = clsx('grid grid-cols-1 gap-4 md:grid-cols-2 px-4 md:px-8');
+    const classes = clsx('grid grid-cols-1 gap-4 md:grid-cols-2');
 
     return <ul className={classes}>{children}</ul>;
   }
 
   return (
-    <div className="px-4 md:px-8">
+    <div className="">
       <Card className="p-4" tag="ul">
         {children}
       </Card>
