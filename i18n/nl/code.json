@@ -12,7 +12,7 @@
     "description": "The copy button label on code blocks"
   },
   "theme.ErrorPageContent.title": {
-    "message": "Deze pagina is gecrasht.",
+    "message": "Oeps! Er is iets misgegaan.",
     "description": "The title of the fallback page when the page crashed"
   },
   "theme.BackToTopButton.buttonAriaLabel": {
@@ -272,7 +272,7 @@
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.ErrorPageContent.tryAgain": {
-    "message": "Probeer opnieuw",
+    "message": "Probeer deze pagina te vernieuwen of neem contact met ons op als het probleem zich blijft voordoen.",
     "description": "The label of the button to try again rendering when the React error boundary captures an error"
   },
   "theme.common.skipToMainContent": {

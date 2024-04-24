@@ -12,7 +12,7 @@
     "description": "The copy button label on code blocks"
   },
   "theme.ErrorPageContent.title": {
-    "message": "This page crashed.",
+    "message": "Oops, something went wrong.",
     "description": "The title of the fallback page when the page crashed"
   },
   "theme.blog.archive.title": {
@@ -271,7 +271,7 @@
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.ErrorPageContent.tryAgain": {
-    "message": "Try again",
+    "message": "Try to refresh this page or contact us if the problem persists.",
     "description": "The label of the button to try again rendering when the React error boundary captures an error"
   },
   "theme.common.skipToMainContent": {
