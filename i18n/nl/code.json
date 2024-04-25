@@ -12,7 +12,7 @@
     "description": "The copy button label on code blocks"
   },
   "theme.ErrorPageContent.title": {
-    "message": "Deze pagina is gecrasht.",
+    "message": "Oeps! Er is iets misgegaan.",
     "description": "The title of the fallback page when the page crashed"
   },
   "theme.BackToTopButton.buttonAriaLabel": {
@@ -203,13 +203,18 @@
     "description": "The ARIA label for the main navigation"
   },
   "theme.NotFound.p1": {
-    "message": "We kunnen niet vinden waar je naar op zoek bent.",
+    "message": "De pagina die je zoekt is verplaatst, verwijderd of heeft nooit bestaan.",
     "description": "The first paragraph of the 404 page"
   },
-  "theme.NotFound.p2": {
-    "message": "Neem contact op met de eigenaar van de website die naar de originele URL heeft geleid en laat weten dat de link niet meer werkt.",
-    "description": "The 2nd paragraph of the 404 page"
+  "theme.NotFound.homePageLinkLabel": {
+    "message": "Naar de homepage",
+    "description": "The label of the link to the homepage"
   },
+  "theme.NotFound.homePageLinkHref": {
+    "message": "/nl",
+    "description": "The link to the homepage including the locale suffix"
+  },
+
   "theme.navbar.mobileLanguageDropdown.label": {
     "message": "Talen",
     "description": "The label for the mobile language switcher dropdown"
@@ -267,7 +272,7 @@
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.ErrorPageContent.tryAgain": {
-    "message": "Probeer opnieuw",
+    "message": "Probeer deze pagina te vernieuwen of neem contact met ons op als het probleem zich blijft voordoen.",
     "description": "The label of the button to try again rendering when the React error boundary captures an error"
   },
   "theme.common.skipToMainContent": {
