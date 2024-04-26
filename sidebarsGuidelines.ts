@@ -98,7 +98,154 @@ const sidebars: SidebarsConfig = {
             type: 'doc',
             id: 'wcag/guideline-1-1/index',
           },
-          items: [],
+          items: [
+            {
+              type: 'doc',
+              label: '1.1.1 Non-text Content',
+              id: 'wcag/success-criterion-1-1-1/index',
+            },
+
+            {
+              type: 'doc',
+              label: '1.2.1 Audio-only and Video-only (Prerecorded)',
+              id: 'wcag/success-criterion-1-2-1/index',
+            },
+            {
+              type: 'doc',
+              label: '1.2.2 Captions (Prerecorded)',
+              id: 'wcag/success-criterion-1-2-2/index',
+            },
+            {
+              type: 'doc',
+              label: '1.2.3 Audio Description or Media Alternative (Prerecorded)',
+              id: 'wcag/success-criterion-1-2-3/index',
+            },
+            {
+              type: 'doc',
+              label: '1.2.4 Captions (Live)',
+              id: 'wcag/success-criterion-1-2-4/index',
+            },
+            {
+              type: 'doc',
+              label: '1.2.5 Audio Description (Prerecorded)',
+              id: 'wcag/success-criterion-1-2-5/index',
+            },
+            {
+              type: 'doc',
+              label: '1.2.6 Sign Language (Prerecorded)',
+              id: 'wcag/success-criterion-1-2-6/index',
+            },
+            {
+              type: 'doc',
+              label: '1.2.7 Extended Audio Description (Prerecorded)',
+              id: 'wcag/success-criterion-1-2-7/index',
+            },
+            {
+              type: 'doc',
+              label: '1.2.8 Media Alternative (Prerecorded)',
+              id: 'wcag/success-criterion-1-2-8/index',
+            },
+            {
+              type: 'doc',
+              label: '1.2.9 Audio-only (Live)',
+              id: 'wcag/success-criterion-1-2-9/index',
+            },
+            {
+              type: 'doc',
+              label: '1.3.1 Info and Relationships',
+              id: 'wcag/success-criterion-1-3-1/index',
+            },
+            {
+              type: 'doc',
+              label: '1.3.2 Meaningful Sequence',
+              id: 'wcag/success-criterion-1-3-2/index',
+            },
+            {
+              type: 'doc',
+              label: '1.3.3 Sensory Characteristics',
+              id: 'wcag/success-criterion-1-3-3/index',
+            },
+            {
+              type: 'doc',
+              label: '1.3.4 Orientation',
+              id: 'wcag/success-criterion-1-3-4/index',
+            },
+            {
+              type: 'doc',
+              label: '1.3.5 Audio-only and Video-only (Prerecorded)',
+              id: 'wcag/success-criterion-1-3-5/index',
+            },
+            {
+              type: 'doc',
+              label: '1.3.6 Captions (Prerecorded)',
+              id: 'wcag/success-criterion-1-3-6/index',
+            },
+            {
+              type: 'doc',
+              label: '1.4.1 Audio Description or Media Alternative (Prerecorded)',
+              id: 'wcag/success-criterion-1-4-1/index',
+            },
+            {
+              type: 'doc',
+              label: '1.4.2 Captions (Prerecorded)',
+              id: 'wcag/success-criterion-1-4-2/index',
+            },
+            {
+              type: 'doc',
+              label: '1.4.3 Audio Description or Media Alternative (Prerecorded)',
+              id: 'wcag/success-criterion-1-4-3/index',
+            },
+            {
+              type: 'doc',
+              label: '1.4.4 Captions (Live)',
+              id: 'wcag/success-criterion-1-4-4/index',
+            },
+            {
+              type: 'doc',
+              label: '1.4.5 Audio Description (Prerecorded)',
+              id: 'wcag/success-criterion-1-4-5/index',
+            },
+            {
+              type: 'doc',
+              label: '1.4.6 Sign Language (Prerecorded)',
+              id: 'wcag/success-criterion-1-4-6/index',
+            },
+            {
+              type: 'doc',
+              label: '1.4.7 Extended Audio Description (Prerecorded)',
+              id: 'wcag/success-criterion-1-4-7/index',
+            },
+            {
+              type: 'doc',
+              label: '1.4.8 Media Alternative (Prerecorded)',
+              id: 'wcag/success-criterion-1-4-8/index',
+            },
+            {
+              type: 'doc',
+              label: '1.4.9 Audio-only (Live)',
+              id: 'wcag/success-criterion-1-4-9/index',
+            },
+            {
+              type: 'doc',
+              label: '1.4.10 Info and Relationships',
+              id: 'wcag/success-criterion-1-4-10/index',
+            },
+            {
+              type: 'doc',
+              label: '1.4.11 Meaningful Sequence',
+              id: 'wcag/success-criterion-1-4-11/index',
+            },
+            {
+              type: 'doc',
+              label: '1.4.12 Sensory Characteristics',
+              id: 'wcag/success-criterion-1-4-12/index',
+            },
+            {
+              type: 'doc',
+              label: '1.4.13 Orientation',
+              id: 'wcag/success-criterion-1-4-13/index',
+            },
+          ],
         },
         {
           type: 'category',
@@ -107,7 +254,9 @@ const sidebars: SidebarsConfig = {
             type: 'doc',
             id: 'wcag/guideline-1-2/index',
           },
-          items: [],
+          items: [
+            // Add success-criterion items here
+          ],
         },
         {
           type: 'category',
@@ -116,7 +265,9 @@ const sidebars: SidebarsConfig = {
             type: 'doc',
             id: 'wcag/guideline-1-3/index',
           },
-          items: [],
+          items: [
+            // Add success-criterion items here
+          ],
         },
         {
           type: 'category',
@@ -125,7 +276,9 @@ const sidebars: SidebarsConfig = {
             type: 'doc',
             id: 'wcag/guideline-1-4/index',
           },
-          items: [],
+          items: [
+            // Add success-criterion items here
+          ],
         },
       ],
     },
@@ -144,7 +297,9 @@ const sidebars: SidebarsConfig = {
             type: 'doc',
             id: 'wcag/guideline-2-1/index',
           },
-          items: [],
+          items: [
+            // Add success-criterion items here
+          ],
         },
         {
           type: 'category',
@@ -153,7 +308,9 @@ const sidebars: SidebarsConfig = {
             type: 'doc',
             id: 'wcag/guideline-2-2/index',
           },
-          items: [],
+          items: [
+            // Add success-criterion items here
+          ],
         },
         {
           type: 'category',
@@ -162,7 +319,9 @@ const sidebars: SidebarsConfig = {
             type: 'doc',
             id: 'wcag/guideline-2-3/index',
           },
-          items: [],
+          items: [
+            // Add success-criterion items here
+          ],
         },
         {
           type: 'category',
@@ -171,7 +330,9 @@ const sidebars: SidebarsConfig = {
             type: 'doc',
             id: 'wcag/guideline-2-4/index',
           },
-          items: [],
+          items: [
+            // Add success-criterion items here
+          ],
         },
         {
           type: 'category',
@@ -180,7 +341,9 @@ const sidebars: SidebarsConfig = {
             type: 'doc',
             id: 'wcag/guideline-2-5/index',
           },
-          items: [],
+          items: [
+            // Add success-criterion items here
+          ],
         },
       ],
     },
@@ -199,7 +362,9 @@ const sidebars: SidebarsConfig = {
             type: 'doc',
             id: 'wcag/guideline-3-1/index',
           },
-          items: [],
+          items: [
+            // Add success-criterion items here
+          ],
         },
         {
           type: 'category',
@@ -208,7 +373,9 @@ const sidebars: SidebarsConfig = {
             type: 'doc',
             id: 'wcag/guideline-3-2/index',
           },
-          items: [],
+          items: [
+            // Add success-criterion items here
+          ],
         },
         {
           type: 'category',
@@ -217,7 +384,9 @@ const sidebars: SidebarsConfig = {
             type: 'doc',
             id: 'wcag/guideline-3-3/index',
           },
-          items: [],
+          items: [
+            // Add success-criterion items here
+          ],
         },
       ],
     },
@@ -236,7 +405,9 @@ const sidebars: SidebarsConfig = {
             type: 'doc',
             id: 'wcag/guideline-4-1/index',
           },
-          items: [],
+          items: [
+            // Add success-criterion items here
+          ],
         },
       ],
     },
