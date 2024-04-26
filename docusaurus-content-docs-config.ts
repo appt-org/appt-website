@@ -7,7 +7,7 @@ export const docusaurusContentDocsConfig = [
       id: 'guidelines',
       path: 'guidelines',
       routeBasePath: getTranslatedPath('guidelines'),
-      sidebarPath: './sidebarsGuidelines.ts',
+      sidebarPath: './sidebars/sidebarsGuidelines.ts',
     },
   ],
   [
@@ -25,7 +25,7 @@ export const docusaurusContentDocsConfig = [
       id: 'stats',
       path: 'stats',
       routeBasePath: getTranslatedPath('stats'),
-      sidebarPath: './sidebarStats.ts',
+      sidebarPath: './sidebars/sidebarStats.ts',
     },
   ],
   [
@@ -97,7 +97,7 @@ export const docusaurusContentDocsConfig = [
       id: 'partners',
       path: 'partners',
       routeBasePath: getTranslatedPath('partners'),
-      sidebarPath: './sidebarPartners.ts',
+      sidebarPath: './sidebars/sidebarPartners.ts',
     },
   ],
   [
