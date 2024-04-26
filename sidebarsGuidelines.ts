@@ -1,5 +1,80 @@
 import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 
+const labels = {
+  principle1: {
+    en: '1. Perceivable',
+    nl: '1. Waarneembaar',
+  },
+  guideline11: {
+    en: '1.1 Text Alternatives',
+    nl: '1.1 Tekstalternatieven',
+  },
+  guideline12: {
+    en: '1.2 Time-based Media',
+    nl: '1.2 Tijdgebaseerde media',
+  },
+  guideline13: {
+    en: '1.3 Adaptable',
+    nl: '1.3 Aanpasbaar',
+  },
+  guideline14: {
+    en: '1.4 Distinguishable',
+    nl: '1.4 Onderscheidbaar',
+  },
+  principle2: {
+    en: '2. Operable',
+    nl: '2. Bedienbaar',
+  },
+  guideline21: {
+    en: '2.1 Keyboard Accessible',
+    nl: '2.1 Toegankelijk met toetsenbord',
+  },
+  guideline22: {
+    en: '2.2 Enough Time',
+    nl: '2.2 Voldoende tijd',
+  },
+  guideline23: {
+    en: '2.3 Seizures and Physical Reactions',
+    nl: '2.3 Epilepsie en fysieke reacties',
+  },
+  guideline24: {
+    en: '2.4 Navigable',
+    nl: '2.4 Navigeerbaar',
+  },
+  guideline25: {
+    en: '2.5 Input Modalities',
+    nl: '2.5 Invoermodaliteiten',
+  },
+  principle3: {
+    en: '3. Understandable',
+    nl: '3. Begrijpelijk',
+  },
+  guideline31: {
+    en: '3.1 Readable',
+    nl: '3.1 Leesbaar',
+  },
+  guideline32: {
+    en: '3.2 Predictable',
+    nl: '3.2 Voorspelbaar',
+  },
+  guideline33: {
+    en: '3.3 Input Assistance',
+    nl: '3.3 Invoerondersteuning',
+  },
+  principle4: {
+    en: '4. Robust',
+    nl: '4. Robuust',
+  },
+  guideline41: {
+    en: '4.1 Compatible',
+    nl: '4.1 Compatibel',
+  },
+};
+
+const getLabel = (key: string) => {
+  return process.env.DOCUSAURUS_CURRENT_LOCALE === 'nl' ? labels[key].nl : labels[key].en;
+};
+
 const sidebars: SidebarsConfig = {
   sidebar: [
     { type: 'doc', id: 'index' },
@@ -10,7 +85,7 @@ const sidebars: SidebarsConfig = {
     { type: 'doc', id: 'wcag-beginners-guide/index' },
     {
       type: 'category',
-      label: 'WCAG',
+      label: getLabel('principle1'),
       link: {
         type: 'doc',
         id: 'wcag/index',
@@ -18,160 +93,150 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'category',
-          label: '1 Perceivable',
+          label: getLabel('guideline11'),
           link: {
             type: 'doc',
-            id: 'wcag/principle-1/index',
+            id: 'wcag/guideline-1-1/index',
           },
-          items: [
-            {
-              type: 'category',
-              label: '1.1 Text Alternatives',
-              link: {
-                type: 'doc',
-                id: 'wcag/guideline-1-1/index',
-              },
-              items: [],
-            },
-            {
-              type: 'category',
-              label: '1.2 Time-based Media',
-              link: {
-                type: 'doc',
-                id: 'wcag/guideline-1-2/index',
-              },
-              items: [],
-            },
-            {
-              type: 'category',
-              label: '1.3 Adaptable',
-              link: {
-                type: 'doc',
-                id: 'wcag/guideline-1-3/index',
-              },
-              items: [],
-            },
-            {
-              type: 'category',
-              label: '1.4 Distinguishable',
-              link: {
-                type: 'doc',
-                id: 'wcag/guideline-1-4/index',
-              },
-              items: [],
-            },
-          ],
+          items: [],
         },
         {
           type: 'category',
-          label: '2 Operable',
+          label: getLabel('guideline12'),
           link: {
             type: 'doc',
-            id: 'wcag/principle-2/index',
+            id: 'wcag/guideline-1-2/index',
           },
-          items: [
-            {
-              type: 'category',
-              label: '2.1 Keyboard Accessible',
-              link: {
-                type: 'doc',
-                id: 'wcag/guideline-2-1/index',
-              },
-              items: [],
-            },
-            {
-              type: 'category',
-              label: '2.2 Enough Time',
-              link: {
-                type: 'doc',
-                id: 'wcag/guideline-2-2/index',
-              },
-              items: [],
-            },
-            {
-              type: 'category',
-              label: '2.3 Seizures and Physical Reactions',
-              link: {
-                type: 'doc',
-                id: 'wcag/guideline-2-3/index',
-              },
-              items: [],
-            },
-            {
-              type: 'category',
-              label: '2.4 Navigable',
-              link: {
-                type: 'doc',
-                id: 'wcag/guideline-2-4/index',
-              },
-              items: [],
-            },
-            {
-              type: 'category',
-              label: '2.5 Input Modalities',
-              link: {
-                type: 'doc',
-                id: 'wcag/guideline-2-5/index',
-              },
-              items: [],
-            },
-          ],
+          items: [],
         },
         {
           type: 'category',
-          label: '3 Understandable',
+          label: getLabel('guideline13'),
           link: {
             type: 'doc',
-            id: 'wcag/principle-3/index',
+            id: 'wcag/guideline-1-3/index',
           },
-          items: [
-            {
-              type: 'category',
-              label: '3.1 Readable',
-              link: {
-                type: 'doc',
-                id: 'wcag/guideline-3-1/index',
-              },
-              items: [],
-            },
-            {
-              type: 'category',
-              label: '3.2 Predictable',
-              link: {
-                type: 'doc',
-                id: 'wcag/guideline-3-2/index',
-              },
-              items: [],
-            },
-            {
-              type: 'category',
-              label: '3.3 Input Assistance',
-              link: {
-                type: 'doc',
-                id: 'wcag/guideline-3-3/index',
-              },
-              items: [],
-            },
-          ],
+          items: [],
         },
         {
           type: 'category',
-          label: '4 Robust',
+          label: getLabel('guideline14'),
           link: {
             type: 'doc',
-            id: 'wcag/principle-4/index',
+            id: 'wcag/guideline-1-4/index',
           },
-          items: [
-            {
-              type: 'category',
-              label: '4.1 Compatible',
-              link: {
-                type: 'doc',
-                id: 'wcag/guideline-4-1/index',
-              },
-              items: [],
-            },
-          ],
+          items: [],
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: getLabel('principle2'),
+      link: {
+        type: 'doc',
+        id: 'wcag/principle-2/index',
+      },
+      items: [
+        {
+          type: 'category',
+          label: getLabel('guideline21'),
+          link: {
+            type: 'doc',
+            id: 'wcag/guideline-2-1/index',
+          },
+          items: [],
+        },
+        {
+          type: 'category',
+          label: getLabel('guideline22'),
+          link: {
+            type: 'doc',
+            id: 'wcag/guideline-2-2/index',
+          },
+          items: [],
+        },
+        {
+          type: 'category',
+          label: getLabel('guideline23'),
+          link: {
+            type: 'doc',
+            id: 'wcag/guideline-2-3/index',
+          },
+          items: [],
+        },
+        {
+          type: 'category',
+          label: getLabel('guideline24'),
+          link: {
+            type: 'doc',
+            id: 'wcag/guideline-2-4/index',
+          },
+          items: [],
+        },
+        {
+          type: 'category',
+          label: getLabel('guideline25'),
+          link: {
+            type: 'doc',
+            id: 'wcag/guideline-2-5/index',
+          },
+          items: [],
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: getLabel('principle3'),
+      link: {
+        type: 'doc',
+        id: 'wcag/principle-3/index',
+      },
+      items: [
+        {
+          type: 'category',
+          label: getLabel('guideline31'),
+          link: {
+            type: 'doc',
+            id: 'wcag/guideline-3-1/index',
+          },
+          items: [],
+        },
+        {
+          type: 'category',
+          label: getLabel('guideline32'),
+          link: {
+            type: 'doc',
+            id: 'wcag/guideline-3-2/index',
+          },
+          items: [],
+        },
+        {
+          type: 'category',
+          label: getLabel('guideline33'),
+          link: {
+            type: 'doc',
+            id: 'wcag/guideline-3-3/index',
+          },
+          items: [],
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: getLabel('principle4'),
+      link: {
+        type: 'doc',
+        id: 'wcag/principle-4/index',
+      },
+      items: [
+        {
+          type: 'category',
+          label: getLabel('guideline41'),
+          link: {
+            type: 'doc',
+            id: 'wcag/guideline-4-1/index',
+          },
+          items: [],
         },
       ],
     },
