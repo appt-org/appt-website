@@ -2,6 +2,10 @@
   border-right: none !important;
 }
 
+.theme-doc-sidebar-container > div {
+  position: relative;
+}
+
 .theme-doc-sidebar-container .menu {
   padding-block: theme(spacing.8);
   padding-inline: 0;
@@ -15,7 +19,6 @@
 }
 
 .theme-doc-sidebar-menu .menu__link {
-  color: theme(colors.accent);
   font-weight: theme(fontWeight.normal);
   font-size: theme(fontSize.heading-xs);
 }
@@ -30,7 +33,14 @@
 
 .theme-doc-sidebar-menu .menu__link--sublist {
   font-weight: theme(fontWeight.medium);
-  color: theme(colors.body);
+}
+
+.theme-doc-sidebar-menu .menu__link--active:not(.menu__link--sublist),
+.theme-doc-sidebar-menu .menu__list-item-collapsible--active {
+  background-color: unset;
+  text-decoration-line: underline;
+  text-underline-offset: 0.15rem;
+  text-decoration-thickness: 0.075rem;
 }
 
 .theme-doc-sidebar-menu .menu__caret:hover {
@@ -43,15 +53,6 @@
 
 .theme-doc-sidebar-menu .menu__list-item--collapsed .menu__caret:before {
   transform: rotate(0deg);
-}
-
-.theme-doc-sidebar-menu .menu__link--active:not(.menu__link--sublist),
-.theme-doc-sidebar-menu .menu__list-item-collapsible--active {
-  color: theme(colors.body);
-  background-color: unset;
-  text-decoration-line: underline;
-  text-underline-offset: 0.15rem;
-  text-decoration-thickness: 0.075rem;
 }
 
 @media (min-width: theme(screens.md)) {

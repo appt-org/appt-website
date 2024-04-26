@@ -221,9 +221,6 @@ main.container > .row > .col.col--8 {
 }
 
 @media (min-width: theme(screens.sm)) {
-  .main-wrapper {
-    padding-inline: theme(spacing.8);
-  }
   .main-wrapper main {
     padding-block-end: theme(spacing.12);
   }
