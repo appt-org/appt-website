@@ -1,9 +1,9 @@
 .theme-doc-sidebar-container {
   border-right: none !important;
+}
 
-  > div {
-    position: relative;
-  }
+.theme-doc-sidebar-container > div {
+  position: relative;
 }
 
 .theme-doc-sidebar-container .menu {
