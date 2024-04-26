@@ -16,14 +16,18 @@ type WithoutImageProps = {
 export type HeroProps = {
   title: string;
   introText?: string;
+  prefix?: string;
+  suffix?: string;
 } & (WithImageProps | WithoutImageProps);
 
-export function Hero({ title, introText, imageSrc, imageDarkSrc, alt }: HeroProps) {
+export function Hero({ title, introText, prefix, suffix, imageSrc, imageDarkSrc, alt }: HeroProps) {
   const wrapperClasses = clsx('relative', { 'mb-10': imageSrc || introText });
   const classes = clsx('flex flex-col items-center flex-1 md:flex-row', {
     'justify-center': !!imageSrc,
   });
   const containerClasses = clsx('max-w-md mx-auto', { 'w-full': !imageSrc }, { 'py-8 sm:py-16': imageSrc });
+
+  const prefixSuffixText = prefix && suffix ? `${prefix} - ${suffix}` : prefix ? prefix : suffix ? suffix : undefined;
 
   return (
     <div className={wrapperClasses}>
@@ -34,9 +38,16 @@ export function Hero({ title, introText, imageSrc, imageDarkSrc, alt }: HeroProp
               <Image src={imageSrc} dark={imageDarkSrc} alt={alt} />
             </div>
           )}
-          <Typography className="w-full" tag="h1" size="heading-xl">
-            {title}
-          </Typography>
+          <div>
+            {prefixSuffixText && (
+              <Typography size="paragraph" className="uppercase">
+                {prefixSuffixText}
+              </Typography>
+            )}
+            <Typography className="w-full" tag="h1" size="heading-xl">
+              {title}
+            </Typography>
+          </div>
         </div>
         {introText && (
           <Typography className="pt-4" tag="p" size="paragraph-intro">
