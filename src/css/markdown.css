@@ -32,8 +32,10 @@ h1 {
   line-height: theme(lineHeight.heading-xl);
   font-size: theme(fontSize.mobile-heading-xl);
   font-weight: theme(fontWeight.light);
+}
 
-  @media (min-width: theme(screens.sm)) {
+@media (min-width: theme(screens.sm)) {
+  h1 {
     font-size: theme(fontSize.heading-xl);
   }
 }
