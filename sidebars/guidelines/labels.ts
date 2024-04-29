@@ -25,7 +25,7 @@ const labels = {
   },
   '2.1': {
     en: '2.1 Keyboard Accessible',
-    nl: '2.1 Toetsenbordtoegankelijk',
+    nl: '2.1 Toetsenbord toegankelijk',
   },
   '2.2': {
     en: '2.2 Enough Time',
