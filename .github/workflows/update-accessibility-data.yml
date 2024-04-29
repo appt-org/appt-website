@@ -22,7 +22,7 @@ jobs:
           echo DATA_STORAGE_FILE=${{ secrets.DATA_STORAGE_FILE }} >> .env.secrets
 
       - name: Update accessibility data
-      - run: 'npm ci && npm run update-accessibility-data'
+        run: 'npm ci && npm run update-accessibility-data'
       
       - name: Check if there are any changes
         id: verify_diff
