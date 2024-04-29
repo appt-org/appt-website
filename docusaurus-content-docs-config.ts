@@ -7,7 +7,7 @@ export const docusaurusContentDocsConfig = [
       id: 'guidelines',
       path: 'guidelines',
       routeBasePath: getTranslatedPath('guidelines'),
-      sidebarPath: './sidebars/sidebarsGuidelines.ts',
+      sidebarPath: './sidebars/guidelines/sidebars.ts',
     },
   ],
   [
