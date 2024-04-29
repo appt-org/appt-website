@@ -319,6 +319,90 @@ const labels = {
     en: '2.5.8 Target Size (Minimum)',
     nl: '2.5.8 Doelgrootte (minimum)',
   },
+  '3.1.1': {
+    en: '3.1.1 - Language of Page',
+    nl: '3.1.1 - Taal van de pagina',
+  },
+  '3.1.2': {
+    en: '3.1.2 - Language of Parts',
+    nl: '3.1.2 - Taal van onderdelen',
+  },
+  '3.1.3': {
+    en: '3.1.3 - Unusual Words',
+    nl: '3.1.3 - Ongebruikelijke woorden',
+  },
+  '3.1.4': {
+    en: '3.1.4 - Abbreviations',
+    nl: '3.1.4 - Afkortingen',
+  },
+  '3.1.5': {
+    en: '3.1.5 - Reading Level',
+    nl: '3.1.5 - Leesniveau',
+  },
+  '3.1.6': {
+    en: '3.1.6 - Pronunciation',
+    nl: '3.1.6 - Uitspraak',
+  },
+  '3.2.1': {
+    en: '3.2.1 - On Focus',
+    nl: '3.2.1 - Bij focus',
+  },
+  '3.2.2': {
+    en: '3.2.2 - On Input',
+    nl: '3.2.2 - Bij invoer',
+  },
+  '3.2.3': {
+    en: '3.2.3 - Consistent Navigation',
+    nl: '3.2.3 - Consistente navigatie',
+  },
+  '3.2.4': {
+    en: '3.2.4 - Consistent Identification',
+    nl: '3.2.4 - Consistente identificatie',
+  },
+  '3.2.5': {
+    en: '3.2.5 - Change on Request',
+    nl: '3.2.5 - Wijziging op verzoek',
+  },
+  '3.2.6': {
+    en: '3.2.6 - Input Assistance',
+    nl: '3.2.6 - Hulp bij invoer',
+  },
+  '3.3.1': {
+    en: '3.3.1 - Error Identification',
+    nl: '3.3.1 - Foutidentificatie',
+  },
+  '3.3.2': {
+    en: '3.3.2 - Labels or Instructions',
+    nl: '3.3.2 - Labels of instructies',
+  },
+  '3.3.3': {
+    en: '3.3.3 - Error Suggestion',
+    nl: '3.3.3 - Foutvoorstel',
+  },
+  '3.3.4': {
+    en: '3.3.4 - Error Prevention (Legal, Financial, Data)',
+    nl: '3.3.4 - Foutpreventie (Juridisch, Financieel, Gegevens)',
+  },
+  '3.3.5': {
+    en: '3.3.5 - Help',
+    nl: '3.3.5 - Hulp',
+  },
+  '3.3.6': {
+    en: '3.3.6 - Error Prevention (All)',
+    nl: '3.3.6 - Foutpreventie (Alles)',
+  },
+  '3.3.7': {
+    en: '3.3.7 - Accessible Authentication',
+    nl: '3.3.7 - Toegankelijke authenticatie',
+  },
+  '3.3.8': {
+    en: '3.3.8 - Redundant Entry',
+    nl: '3.3.8 - Overbodige invoer',
+  },
+  '3.3.9': {
+    en: '3.3.9 - Error Prevention (Legal, Financial, Data)',
+    nl: '3.3.9 - Foutpreventie (Juridisch, Financieel, Gegevens)',
+  },
 };
 
 export const getLabel = (key: string) => {
