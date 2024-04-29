@@ -11,7 +11,7 @@ export default function MDXA(props: Props): JSX.Element {
   const showExternalIcon = props.href.includes('https') && !isCodeLabel;
 
   return (
-    <Link className="underline text-accent hover:no-underline inline-flex items-center font-normal" {...props}>
+    <Link className="underline text-accent hover:no-underline inline font-normal" {...props}>
       {props.children}
       {showExternalIcon && <ExternalIcon className="w-8 h-8 inline-block" />}
     </Link>
