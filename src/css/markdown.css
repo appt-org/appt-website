@@ -24,10 +24,6 @@ article > p,
   margin: auto;
 }
 
-.theme-doc-markdown > img {
-  margin-block: theme(spacing.10) theme(spacing.12);
-}
-
 h1 {
   line-height: theme(lineHeight.heading-xl);
   font-size: theme(fontSize.mobile-heading-xl);
@@ -38,4 +34,33 @@ h1 {
   h1 {
     font-size: theme(fontSize.heading-xl);
   }
+}
+
+.theme-doc-markdown > .markdown-block,
+.theme-doc-markdown > img {
+  margin-top: theme(spacing.10);
+  margin-bottom: theme(spacing.12);
+}
+
+.theme-doc-markdown > img {
+  display: block !important;
+  width: 100%;
+}
+
+.theme-doc-markdown > img + p {
+  margin-top: -1.5rem;
+}
+
+.theme-doc-markdown > .markdown-block:last-child {
+  margin-bottom: 0px;
+}
+
+@media (min-width: theme(screens.md)) {
+  .theme-doc-markdown > .markdown-block {
+    margin-bottom: theme(spacing.20);
+  }
+}
+
+table thead th {
+  text-align: left;
 }

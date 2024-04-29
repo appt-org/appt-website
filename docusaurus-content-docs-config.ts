@@ -19,6 +19,7 @@ export const docusaurusContentDocsConfig = [
       routeBasePath: getTranslatedPath('articles'),
       sidebarPath: false,
       editUrl: 'https://github.com/appt-org/appt-docusaurus/tree/develop/',
+      showLastUpdateTime: true,
     },
   ],
   [

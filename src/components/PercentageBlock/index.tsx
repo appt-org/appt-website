@@ -4,6 +4,9 @@ import { Card, CustomLink, PercentageProgress, Typography } from '@site/src/comp
 import _kebabCase from 'lodash/kebabCase';
 import { v4 as uuidv4 } from 'uuid';
 
+import styles from './styles.module.css';
+import clsx from 'clsx';
+
 type ManualAccessibilityMetricApiModel = {
   title: string;
   number: number;
@@ -96,6 +99,8 @@ export function PercentageBlock({ metrics, linkLabel, linkUrl, baseValue, childr
    */
   function renderMetric() {
     const metric = allMetrics[0];
+    const classNames = clsx('flex-1 first:children:mt-0 first:children:mb-0', styles.percentageBlockContent);
+
     return (
       <>
         {metric.isPercentage && <PercentageProgress className="mb-4" percentage={metric.number} />}
@@ -103,7 +108,7 @@ export function PercentageBlock({ metrics, linkLabel, linkUrl, baseValue, childr
           <Typography className="mr-0 break-all sm:mr-8" tag="p" size="heading-xl">
             {getMetricText(metric, locale)}
           </Typography>
-          <div className="flex-1 first:children:mt-0 first:children:mb-0" id={id}>
+          <div className={classNames} id={id}>
             {children}
           </div>
         </div>
@@ -116,10 +121,14 @@ export function PercentageBlock({ metrics, linkLabel, linkUrl, baseValue, childr
    */
   function renderMetrics() {
     const baseVal = baseValue ?? Math.max(...allMetrics.map(metric => metric.number));
+    const classNames = clsx(
+      'flex-1 mb-4 md:mb-0 md:mr-8 first:children:mt-0 first:children:mb-0',
+      styles.percentageBlockContent,
+    );
 
     return (
       <div className="flex flex-col md:flex-row">
-        <div className="flex-1 mb-4 md:mb-0 md:mr-8 first:children:mt-0 first:children:mb-0" id={id}>
+        <div className={classNames} id={id}>
           {children}
         </div>
         <ul className="flex-1" aria-labelledby={id}>
@@ -150,7 +159,7 @@ export function PercentageBlock({ metrics, linkLabel, linkUrl, baseValue, childr
   }
 
   return (
-    <Card className="flex-1">
+    <Card className="markdown-block flex-1">
       {allMetrics.length === 1 ? renderMetric() : renderMetrics()}
       {linkLabel && linkUrl && (
         <div className="flex justify-end mt-4">

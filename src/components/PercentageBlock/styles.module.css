@@ -1,0 +1,3 @@
+.percentageBlockContent p + p {
+  margin-top: theme(spacing.4);
+}
