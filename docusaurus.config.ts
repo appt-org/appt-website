@@ -67,6 +67,9 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    colorMode: {
+      respectPrefersColorScheme: true,
+    },
     navbar: {
       logo: {
         alt: 'Logo Appt',
@@ -95,7 +98,7 @@ const config: Config = {
     },
     tableOfContents: {
       minHeadingLevel: 2,
-      maxHeadingLevel: 2,
+      maxHeadingLevel: 4,
     },
     footer: {
       links: [

@@ -35,7 +35,7 @@ export function Quote({
   linkLabel,
   url,
 }: QuoteProps) {
-  const classes = clsx('flex flex-col items-center justify-center md:flex-row mb-12 md:mb-20', {
+  const classes = clsx('markdown-block flex flex-col items-center justify-center md:flex-row mb-12 md:mb-20', {
     'md:flex-row-reverse': !isImageLeft,
   });
   return (
@@ -45,13 +45,13 @@ export function Quote({
           <Image className="absolute object-cover w-full h-full" src={imageSrc} dark={imageDarkSrc} alt={alt} />
         </div>
       )}
-      <div className="flex-1 flex flex-col max-w-sm text-center md:first:mr-6">
-        <blockquote className="border-none">
+      <div className="flex-1 flex flex-col max-w-sm md:first:mr-6">
+        <blockquote className="border-none p-0">
           <Typography className="before:content-[open-quote] after:content-[close-quote]" tag="p" size="quote">
             {quote}
           </Typography>
         </blockquote>
-        <Typography className="mt-4 mx-auto" tag="p" size="paragraph">
+        <Typography className="mt-4" tag="p" size="paragraph">
           {name}
         </Typography>
         {extraInfo && (

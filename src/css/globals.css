@@ -32,21 +32,15 @@ html {
   /* Docusaurus theme variables */
   --ifm-font-family-base: 'Rubik', sans-serif;
   --ifm-color-primary: rgb(var(--color-accent));
-
   --ifm-menu-link-sublist-icon: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgY2xhc3M9ImFic29sdXRlIHJpZ2h0LTQgdG9wLTEvMiB0cmFuc2l0aW9uLXRyYW5zZm9ybSBkdXJhdGlvbi0zMDAgb3V0LXF1aW50IHRyYW5zZm9ybSBvcmlnaW4tY2VudGVyIC10cmFuc2xhdGUteS0xLzIgdy04IGgtOCByb3RhdGUtMTgwIiBhcmlhLWhpZGRlbj0idHJ1ZSI+PHBhdGggZD0iTTE2IDIwYS45OTYuOTk2IDAgMCAxLS43MDctLjI5M2wtNS01YTEgMSAwIDEgMSAxLjQxNC0xLjQxNGw0LjI5MiA0LjI5NCA0LjI5NC00LjI5M2ExIDEgMCAxIDEgMS40MTQgMS40MTRsLTUgNUEuOTk3Ljk5NyAwIDAgMSAxNiAyMFoiIGZpbGw9ImN1cnJlbnRDb2xvciI+PC9wYXRoPjwvc3ZnPg==");
-
-  /* TODO */
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 0.9rem;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-table-background: rgb(var(--color-background));
+  --ifm-table-stripe-background: rgb(var(--color-background));
 }
 
 /* Dark theme */
+html[data-theme='dark'],
 [data-theme='dark'] {
   --color-accent: 249 103 233; /* #F967E9 */
   --color-accent-hover: 248 69 228; /* #f845e4 */
@@ -57,16 +51,11 @@ html {
   --color-placeholder: 148 148 148; /* #949494 */
   --color-background: 28 28 28; /* #323232 */
 
+  /* Docusaurus theme variables */
   --ifm-color-primary: rgb(var(--color-accent));
-
-  /* TODO */
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-table-background: rgb(var(--color-background));
+  --ifm-table-stripe-background: rgb(var(--color-background));
 }
 
 body {
