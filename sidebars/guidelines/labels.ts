@@ -1,69 +1,69 @@
 const labels = {
-  principle1: {
+  '1': {
     en: '1. Perceivable',
     nl: '1. Waarneembaar',
   },
-  guideline11: {
+  '1.1': {
     en: '1.1 Text Alternatives',
     nl: '1.1 Tekstalternatieven',
   },
-  guideline12: {
+  '1.2': {
     en: '1.2 Time-based Media',
     nl: '1.2 Tijdgebaseerde media',
   },
-  guideline13: {
+  '1.3': {
     en: '1.3 Adaptable',
     nl: '1.3 Aanpasbaar',
   },
-  guideline14: {
+  '1.4': {
     en: '1.4 Distinguishable',
     nl: '1.4 Onderscheidbaar',
   },
-  principle2: {
+  '2': {
     en: '2. Operable',
     nl: '2. Bedienbaar',
   },
-  guideline21: {
+  '2.1': {
     en: '2.1 Keyboard Accessible',
     nl: '2.1 Toegankelijk met toetsenbord',
   },
-  guideline22: {
+  '2.2': {
     en: '2.2 Enough Time',
     nl: '2.2 Voldoende tijd',
   },
-  guideline23: {
+  '2.3': {
     en: '2.3 Seizures and Physical Reactions',
     nl: '2.3 Epilepsie en fysieke reacties',
   },
-  guideline24: {
+  '2.4': {
     en: '2.4 Navigable',
     nl: '2.4 Navigeerbaar',
   },
-  guideline25: {
+  '2.5': {
     en: '2.5 Input Modalities',
     nl: '2.5 Invoermodaliteiten',
   },
-  principle3: {
+  '3': {
     en: '3. Understandable',
     nl: '3. Begrijpelijk',
   },
-  guideline31: {
+  '3.1': {
     en: '3.1 Readable',
     nl: '3.1 Leesbaar',
   },
-  guideline32: {
+  '3.2': {
     en: '3.2 Predictable',
     nl: '3.2 Voorspelbaar',
   },
-  guideline33: {
+  '3.3': {
     en: '3.3 Input Assistance',
     nl: '3.3 Invoerondersteuning',
   },
-  principle4: {
+  '4': {
     en: '4. Robust',
     nl: '4. Robuust',
   },
-  guideline41: {
+  '4.1': {
     en: '4.1 Compatible',
     nl: '4.1 Compatibel',
   },

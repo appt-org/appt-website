@@ -3,7 +3,7 @@ import { getLabel } from './labels';
 export const principleThreeItems = [
   {
     type: 'category',
-    label: getLabel('guideline31'),
+    label: getLabel('3.1'),
     link: {
       type: 'doc',
       id: 'wcag/guideline-3-1/index',
@@ -43,7 +43,7 @@ export const principleThreeItems = [
   },
   {
     type: 'category',
-    label: getLabel('guideline32'),
+    label: getLabel('3.2'),
     link: {
       type: 'doc',
       id: 'wcag/guideline-3-2/index',
@@ -83,7 +83,7 @@ export const principleThreeItems = [
   },
   {
     type: 'category',
-    label: getLabel('guideline33'),
+    label: getLabel('3.3'),
     link: {
       type: 'doc',
       id: 'wcag/guideline-3-3/index',

@@ -3,7 +3,7 @@ import { getLabel } from './labels';
 export const principleOneItems = [
   {
     type: 'category',
-    label: getLabel('guideline11'),
+    label: getLabel('1.1'),
     link: {
       type: 'doc',
       id: 'wcag/guideline-1-1/index',
@@ -18,7 +18,7 @@ export const principleOneItems = [
   },
   {
     type: 'category',
-    label: getLabel('guideline12'),
+    label: getLabel('1.2'),
     link: {
       type: 'doc',
       id: 'wcag/guideline-1-2/index',
@@ -73,7 +73,7 @@ export const principleOneItems = [
   },
   {
     type: 'category',
-    label: getLabel('guideline13'),
+    label: getLabel('1.3'),
     link: {
       type: 'doc',
       id: 'wcag/guideline-1-3/index',
@@ -113,7 +113,7 @@ export const principleOneItems = [
   },
   {
     type: 'category',
-    label: getLabel('guideline14'),
+    label: getLabel('1.4'),
     link: {
       type: 'doc',
       id: 'wcag/guideline-1-4/index',

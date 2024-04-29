@@ -15,7 +15,7 @@ const sidebars: SidebarsConfig = {
     { type: 'doc', id: 'wcag-beginners-guide/index' },
     {
       type: 'category',
-      label: getLabel('principle1'),
+      label: getLabel('1'),
       link: {
         type: 'doc',
         id: 'wcag/index',
@@ -24,7 +24,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: getLabel('principle2'),
+      label: getLabel('2'),
       link: {
         type: 'doc',
         id: 'wcag/principle-2/index',
@@ -33,7 +33,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: getLabel('principle3'),
+      label: getLabel('3'),
       link: {
         type: 'doc',
         id: 'wcag/principle-3/index',
@@ -42,7 +42,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: getLabel('principle4'),
+      label: getLabel('4'),
       link: {
         type: 'doc',
         id: 'wcag/principle-4/index',

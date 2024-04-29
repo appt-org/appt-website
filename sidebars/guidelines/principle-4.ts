@@ -3,7 +3,7 @@ import { getLabel } from './labels';
 export const principleFourItems = [
   {
     type: 'category',
-    label: getLabel('guideline41'),
+    label: getLabel('4.1'),
     link: {
       type: 'doc',
       id: 'wcag/guideline-4-1/index',
