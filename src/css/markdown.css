@@ -60,3 +60,7 @@ h1 {
     margin-bottom: theme(spacing.20);
   }
 }
+
+table thead th {
+  text-align: left;
+}
