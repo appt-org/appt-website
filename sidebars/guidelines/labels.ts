@@ -403,6 +403,18 @@ const labels = {
     en: '3.3.9 - Error Prevention (Legal, Financial, Data)',
     nl: '3.3.9 - Foutpreventie (Juridisch, Financieel, Gegevens)',
   },
+  '4.1.1': {
+    en: '4.1.1 - Parsing',
+    nl: '4.1.1 - Parsen',
+  },
+  '4.1.2': {
+    en: '4.1.2 - Name, Role, Value',
+    nl: '4.1.2 - Naam, Rol, Waarde',
+  },
+  '4.1.3': {
+    en: '4.1.3 - Status Messages',
+    nl: '4.1.3 - Statusberichten',
+  },
 };
 
 export const getLabel = (key: string) => {

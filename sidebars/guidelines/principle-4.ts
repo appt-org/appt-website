@@ -9,7 +9,21 @@ export const principleFourItems = [
       id: 'wcag/guideline-4-1/index',
     },
     items: [
-      // Add success-criterion items here
+      {
+        type: 'doc',
+        label: getLabel('4.1.1'),
+        id: 'wcag/success-criterion-4-1-1/index',
+      },
+      {
+        type: 'doc',
+        label: getLabel('4.1.2'),
+        id: 'wcag/success-criterion-4-1-2/index',
+      },
+      {
+        type: 'doc',
+        label: getLabel('4.1.3'),
+        id: 'wcag/success-criterion-4-1-3/index',
+      },
     ],
   },
 ];
