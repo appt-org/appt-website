@@ -150,7 +150,7 @@ export function PercentageBlock({ metrics, linkLabel, linkUrl, baseValue, childr
   }
 
   return (
-    <Card className="flex-1">
+    <Card className="markdown-block flex-1">
       {allMetrics.length === 1 ? renderMetric() : renderMetrics()}
       {linkLabel && linkUrl && (
         <div className="flex justify-end mt-4">
