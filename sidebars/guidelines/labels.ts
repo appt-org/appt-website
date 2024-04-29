@@ -9,7 +9,7 @@ const labels = {
   },
   '1.2': {
     en: '1.2 Time-based Media',
-    nl: '1.2 Tijdgebaseerde media',
+    nl: '1.2 Op tijd gebaseerde media',
   },
   '1.3': {
     en: '1.3 Adaptable',
@@ -25,15 +25,15 @@ const labels = {
   },
   '2.1': {
     en: '2.1 Keyboard Accessible',
-    nl: '2.1 Toegankelijk met toetsenbord',
+    nl: '2.1 Toetsenbordtoegankelijk',
   },
   '2.2': {
     en: '2.2 Enough Time',
-    nl: '2.2 Voldoende tijd',
+    nl: '2.2 Genoeg tijd',
   },
   '2.3': {
     en: '2.3 Seizures and Physical Reactions',
-    nl: '2.3 Epilepsie en fysieke reacties',
+    nl: '2.3 Toevallen en fysieke reacties',
   },
   '2.4': {
     en: '2.4 Navigable',
@@ -41,7 +41,7 @@ const labels = {
   },
   '2.5': {
     en: '2.5 Input Modalities',
-    nl: '2.5 Invoermodaliteiten',
+    nl: '2.5 Input Modaliteiten',
   },
   '3': {
     en: '3. Understandable',
@@ -57,7 +57,7 @@ const labels = {
   },
   '3.3': {
     en: '3.3 Input Assistance',
-    nl: '3.3 Invoerondersteuning',
+    nl: '3.3 Assistentie bij invoer',
   },
   '4': {
     en: '4. Robust',
@@ -69,27 +69,27 @@ const labels = {
   },
   '1.1.1': {
     en: '1.1.1 Non-text Content',
-    nl: '1.1.1 Niet-tekstinhoud',
+    nl: '1.1.1 Niet-tekstuele content',
   },
   '1.2.1': {
     en: '1.2.1 Audio-only and Video-only (Prerecorded)',
-    nl: '1.2.1 Alleen audio en alleen video (vooraf opgenomen)',
+    nl: '1.2.1 Louter-geluid en louter-videobeeld (vooraf opgenomen)',
   },
   '1.2.2': {
     en: '1.2.2 Captions (Prerecorded)',
-    nl: '1.2.2 Ondertiteling (vooraf opgenomen)',
+    nl: '1.2.2 Ondertitels voor doven en slechthorenden (vooraf opgenomen)',
   },
   '1.2.3': {
     en: '1.2.3 Audio Description or Media Alternative (Prerecorded)',
-    nl: '1.2.3 Audiobeschrijving of media-alternatief (vooraf opgenomen)',
+    nl: '1.2.3 Audiodescriptie of media-alternatief (vooraf opgenomen)',
   },
   '1.2.4': {
     en: '1.2.4 Captions (Live)',
-    nl: '1.2.4 Ondertiteling (live)',
+    nl: '1.2.4 Ondertitels voor doven en slechthorenden (live)',
   },
   '1.2.5': {
     en: '1.2.5 Audio Description (Prerecorded)',
-    nl: '1.2.5 Audiobeschrijving (vooraf opgenomen)',
+    nl: '1.2.5 Audiodescriptie (vooraf opgenomen)',
   },
   '1.2.6': {
     en: '1.2.6 Sign Language (Prerecorded)',
@@ -97,7 +97,7 @@ const labels = {
   },
   '1.2.7': {
     en: '1.2.7 Extended Audio Description (Prerecorded)',
-    nl: '1.2.7 Uitgebreide audiobeschrijving (vooraf opgenomen)',
+    nl: '1.2.7 Verlengde audiodescriptie (vooraf opgenomen)',
   },
   '1.2.8': {
     en: '1.2.8 Media Alternative (Prerecorded)',
@@ -105,11 +105,11 @@ const labels = {
   },
   '1.2.9': {
     en: '1.2.9 Audio-only (Live)',
-    nl: '1.2.9 Alleen audio (live)',
+    nl: '1.2.9 Louter-geluid (live)',
   },
   '1.3.1': {
     en: '1.3.1 Info and Relationships',
-    nl: '1.3.1 Informatie en relaties',
+    nl: '1.3.1 Info en relaties',
   },
   '1.3.2': {
     en: '1.3.2 Meaningful Sequence',
@@ -117,71 +117,71 @@ const labels = {
   },
   '1.3.3': {
     en: '1.3.3 Sensory Characteristics',
-    nl: '1.3.3 Zintuiglijke kenmerken',
+    nl: '1.3.3 Zintuiglijke eigenschappen',
   },
   '1.3.4': {
     en: '1.3.4 Orientation',
-    nl: '1.3.4 Oriëntatie',
+    nl: '1.3.4 Weergavestand',
   },
   '1.3.5': {
     en: '1.3.5 Identify Input Purpose',
-    nl: '1.3.5 Alleen audio en alleen video (vooraf opgenomen)',
+    nl: '1.3.5 Identificeer het doel van de invoer',
   },
   '1.3.6': {
     en: '1.3.6 Identify Purpose',
-    nl: '1.3.6 Ondertiteling (vooraf opgenomen)',
+    nl: '1.3.6 Identificeer het doel',
   },
   '1.4.1': {
     en: '1.4.1 Use of Color',
-    nl: '1.4.1 Audiobeschrijving of media-alternatief (vooraf opgenomen)',
+    nl: '1.4.1 Gebruik van kleur',
   },
   '1.4.2': {
     en: '1.4.2 Audio Control',
-    nl: '1.4.2 Ondertiteling (vooraf opgenomen)',
+    nl: '1.4.2 Geluidsbediening',
   },
   '1.4.3': {
     en: '1.4.3 Contrast (Minimum)',
-    nl: '1.4.3 Audiobeschrijving of media-alternatief (vooraf opgenomen)',
+    nl: '1.4.3 Contrast (minimum)',
   },
   '1.4.4': {
     en: '1.4.4 Resize Text',
-    nl: '1.4.4 Ondertiteling (live)',
+    nl: '1.4.4 Herschalen van tekst',
   },
   '1.4.5': {
     en: '1.4.5 Images of Text',
-    nl: '1.4.5 Audiobeschrijving (vooraf opgenomen)',
+    nl: '1.4.5 Afbeeldingen van tekst',
   },
   '1.4.6': {
     en: '1.4.6 Contrast (Enhanced)',
-    nl: '1.4.6 Gebarentaal (vooraf opgenomen)',
+    nl: '1.4.6 Contrast (versterkt)',
   },
   '1.4.7': {
     en: '1.4.7 Low or No Background Audio',
-    nl: '1.4.7 Uitgebreide audiobeschrijving (vooraf opgenomen)',
+    nl: '1.4.7 Weining of geen achtergrondgeluid',
   },
   '1.4.8': {
     en: '1.4.8 Visual Presentation',
-    nl: '1.4.8 Media-alternatief (vooraf opgenomen)',
+    nl: '1.4.8 Visuele weergave',
   },
   '1.4.9': {
     en: '1.4.9 Images of Text (No Exception)',
-    nl: '1.4.9 Alleen audio (live)',
+    nl: '1.4.9 Afbeeldingen van tekst (geen uitzondering)',
   },
   '1.4.10': {
     en: '1.4.10 Reflow',
-    nl: '1.4.10 Informatie en relaties',
+    nl: '1.4.10 Reflow',
   },
   '1.4.11': {
     en: '1.4.11 Non-text Contrast',
-    nl: '1.4.11 Betekenisvolle volgorde',
+    nl: '1.4.11 Contrast van niet-tekstuele content',
   },
   '1.4.12': {
     en: '1.4.12 Text Spacing',
-    nl: '1.4.12 Zintuiglijke kenmerken',
+    nl: '1.4.12 Tekstafstand',
   },
   '1.4.13': {
     en: '1.4.13 Content on Hover or Focus',
-    nl: '1.4.13 Oriëntatie',
+    nl: '1.4.13 Content bij hover of focus',
   },
   '2.1.1': {
     en: '2.1.1 Keyboard',
@@ -197,15 +197,15 @@ const labels = {
   },
   '2.1.4': {
     en: '2.1.4 Character Key Shortcuts',
-    nl: '2.1.4 Sneltoetsen met karaktertoetsen',
+    nl: '2.1.4 Enkel teken sneltoetsen',
   },
   '2.2.1': {
     en: '2.2.1 Timing Adjustable',
-    nl: '2.2.1 Instelbare timing',
+    nl: '2.2.1 Timing aanpasbaar',
   },
   '2.2.2': {
     en: '2.2.2 Pause, Stop, Hide',
-    nl: '2.2.2 Pauze, stop, verbergen',
+    nl: '2.2.2 Pauzeren, stoppen, verbergen',
   },
   '2.2.3': {
     en: '2.2.3 No Timing',
@@ -217,7 +217,7 @@ const labels = {
   },
   '2.2.5': {
     en: '2.2.5 Re-authenticating',
-    nl: '2.2.5 Opnieuw authenticeren',
+    nl: '2.2.5 Herauthentisering',
   },
   '2.2.6': {
     en: '2.2.6 Timeouts',
@@ -225,7 +225,7 @@ const labels = {
   },
   '2.3.1': {
     en: '2.3.1 Three Flashes or Below Threshold',
-    nl: '2.3.1 Drie flitsen of onder drempelwaarde',
+    nl: '2.3.1 Drie flitsen of beneden drempelwaarde',
   },
   '2.3.2': {
     en: '2.3.2 Three Flashes',
@@ -233,7 +233,7 @@ const labels = {
   },
   '2.3.3': {
     en: '2.3.3 Animation from Interactions',
-    nl: '2.3.3 Animatie door interacties',
+    nl: '2.3.3 Animatie uit interacties',
   },
   '2.4.1': {
     en: '2.4.1 Bypass Blocks',
@@ -241,15 +241,15 @@ const labels = {
   },
   '2.4.2': {
     en: '2.4.2 Page Titled',
-    nl: '2.4.2 Pagina getiteld',
+    nl: '2.4.2 Paginatitel',
   },
   '2.4.3': {
     en: '2.4.3 Focus Order',
-    nl: '2.4.3 Focusvolgorde',
+    nl: '2.4.3 Focus volgorde',
   },
   '2.4.4': {
     en: '2.4.4 Link Purpose (In Context)',
-    nl: '2.4.4 Doel van de link (in context)',
+    nl: '2.4.4 Linkdoel (in context)',
   },
   '2.4.5': {
     en: '2.4.5 Multiple Ways',
@@ -269,23 +269,23 @@ const labels = {
   },
   '2.4.9': {
     en: '2.4.9 Link Purpose (Link Only)',
-    nl: '2.4.9 Doel van de link (alleen link)',
+    nl: '2.4.9 Linkdoel (alleen link)',
   },
   '2.4.10': {
     en: '2.4.10 Section Headings',
-    nl: '2.4.10 Sectiekoppen',
+    nl: '2.4.10 Paragraafkoppen',
   },
   '2.4.11': {
     en: '2.4.11 Focus Not Obscured (Minimum)',
-    nl: '2.4.11 Focusweergave (minimum)',
+    nl: '2.4.11 Focus niet verborgen (minimum)',
   },
   '2.4.12': {
     en: '2.4.12 Focus Not Obscured (Enhanced)',
-    nl: '2.4.12 Focusweergave (verbeterd)',
+    nl: '2.4.12 Focus niet verborgen (versterkt)',
   },
   '2.4.13': {
     en: '2.4.13 Focus Appearance',
-    nl: '2.4.13 Vaste referentiepunten',
+    nl: '2.4.13 Focus weergave',
   },
   '2.5.1': {
     en: '2.5.1 Pointer Gestures',
@@ -305,19 +305,19 @@ const labels = {
   },
   '2.5.5': {
     en: '2.5.5 Target Size',
-    nl: '2.5.5 Doelgrootte',
+    nl: '2.5.5 Grootte van het aanwijsgebied',
   },
   '2.5.6': {
     en: '2.5.6 Concurrent Input Mechanisms',
-    nl: '2.5.6 Gelijktijdige invoermechanismen',
+    nl: '2.5.6 Inpurt gelijktijdige invoermechanismen',
   },
   '2.5.7': {
     en: '2.5.7 Dragging Movements',
-    nl: '2.5.7 Aanwijzerdoelafstand',
+    nl: '2.5.7 Slepende bewegingen',
   },
   '2.5.8': {
     en: '2.5.8 Target Size (Minimum)',
-    nl: '2.5.8 Doelgrootte (minimum)',
+    nl: '2.5.8 Grootte van het aanwijsgebied (minimum)',
   },
   '3.1.1': {
     en: '3.1.1 Language of Page',
@@ -349,7 +349,7 @@ const labels = {
   },
   '3.2.2': {
     en: '3.2.2 On Input',
-    nl: '3.2.2 Bij invoer',
+    nl: '3.2.2 Bij inpurt',
   },
   '3.2.3': {
     en: '3.2.3 Consistent Navigation',
@@ -361,11 +361,11 @@ const labels = {
   },
   '3.2.5': {
     en: '3.2.5 Change on Request',
-    nl: '3.2.5 Wijziging op verzoek',
+    nl: '3.2.5 Verandering op verzoek',
   },
   '3.2.6': {
     en: '3.2.6 Consistent Help',
-    nl: '3.2.6 Hulp bij invoer',
+    nl: '3.2.6 Consistente hulp',
   },
   '3.3.1': {
     en: '3.3.1 Error Identification',
@@ -377,11 +377,11 @@ const labels = {
   },
   '3.3.3': {
     en: '3.3.3 Error Suggestion',
-    nl: '3.3.3 Foutvoorstel',
+    nl: '3.3.3 Foutsuggestie',
   },
   '3.3.4': {
     en: '3.3.4 Error Prevention (Legal, Financial, Data)',
-    nl: '3.3.4 Foutpreventie (Juridisch, Financieel, Gegevens)',
+    nl: '3.3.4 Foutpreventie (wettelijk, financieel, gegevens)',
   },
   '3.3.5': {
     en: '3.3.5 Help',
@@ -389,19 +389,19 @@ const labels = {
   },
   '3.3.6': {
     en: '3.3.6 Error Prevention (All)',
-    nl: '3.3.6 Foutpreventie (Alles)',
+    nl: '3.3.6 Foutpreventie (alle)',
   },
   '3.3.7': {
     en: '3.3.7 Redundant Entry',
-    nl: '3.3.7 Toegankelijke authenticatie',
+    nl: '3.3.7 Overtollige invoer',
   },
   '3.3.8': {
     en: '3.3.8 Accessible Authentication (Minimum)',
-    nl: '3.3.8 Overbodige invoer',
+    nl: '3.3.8 Toegankeijke authenticatie (minimum)',
   },
   '3.3.9': {
     en: '3.3.9 Accessible Authentication (Enhanced)',
-    nl: '3.3.9 Foutpreventie (Juridisch, Financieel, Gegevens)',
+    nl: '3.3.9 Toegankelijke authenticatie (versterkt)',
   },
   '4.1.1': {
     en: '4.1.1 Parsing',
@@ -409,7 +409,7 @@ const labels = {
   },
   '4.1.2': {
     en: '4.1.2 Name, Role, Value',
-    nl: '4.1.2 Naam, Rol, Waarde',
+    nl: '4.1.2 Naam, rol, waarde',
   },
   '4.1.3': {
     en: '4.1.3 Status Messages',
