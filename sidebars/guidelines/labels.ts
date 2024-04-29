@@ -183,6 +183,142 @@ const labels = {
     en: '1.4.13 Orientation',
     nl: '1.4.13 Oriëntatie',
   },
+  '2.1.1': {
+    en: '2.1.1 Keyboard',
+    nl: '2.1.1 Toetsenbord',
+  },
+  '2.1.2': {
+    en: '2.1.2 No Keyboard Trap',
+    nl: '2.1.2 Geen toetsenbordval',
+  },
+  '2.1.3': {
+    en: '2.1.3 Keyboard (No Exception)',
+    nl: '2.1.3 Toetsenbord (geen uitzondering)',
+  },
+  '2.1.4': {
+    en: '2.1.4 Character Key Shortcuts',
+    nl: '2.1.4 Sneltoetsen met karaktertoetsen',
+  },
+  '2.2.1': {
+    en: '2.2.1 Timing Adjustable',
+    nl: '2.2.1 Instelbare timing',
+  },
+  '2.2.2': {
+    en: '2.2.2 Pause, Stop, Hide',
+    nl: '2.2.2 Pauze, stop, verbergen',
+  },
+  '2.2.3': {
+    en: '2.2.3 No Timing',
+    nl: '2.2.3 Geen timing',
+  },
+  '2.2.4': {
+    en: '2.2.4 Interruptions',
+    nl: '2.2.4 Onderbrekingen',
+  },
+  '2.2.5': {
+    en: '2.2.5 Re-authenticating',
+    nl: '2.2.5 Opnieuw authenticeren',
+  },
+  '2.2.6': {
+    en: '2.2.6 Timeouts',
+    nl: '2.2.6 Time-outs',
+  },
+  '2.3.1': {
+    en: '2.3.1 Three Flashes or Below Threshold',
+    nl: '2.3.1 Drie flitsen of onder drempelwaarde',
+  },
+  '2.3.2': {
+    en: '2.3.2 Three Flashes',
+    nl: '2.3.2 Drie flitsen',
+  },
+  '2.3.3': {
+    en: '2.3.3 Animation from Interactions',
+    nl: '2.3.3 Animatie door interacties',
+  },
+  '2.4.1': {
+    en: '2.4.1 Bypass Blocks',
+    nl: '2.4.1 Blokken omzeilen',
+  },
+  '2.4.2': {
+    en: '2.4.2 Page Titled',
+    nl: '2.4.2 Pagina getiteld',
+  },
+  '2.4.3': {
+    en: '2.4.3 Focus Order',
+    nl: '2.4.3 Focusvolgorde',
+  },
+  '2.4.4': {
+    en: '2.4.4 Link Purpose (In Context)',
+    nl: '2.4.4 Doel van de link (in context)',
+  },
+  '2.4.5': {
+    en: '2.4.5 Multiple Ways',
+    nl: '2.4.5 Meerdere manieren',
+  },
+  '2.4.6': {
+    en: '2.4.6 Headings and Labels',
+    nl: '2.4.6 Koppen en labels',
+  },
+  '2.4.7': {
+    en: '2.4.7 Focus Visible',
+    nl: '2.4.7 Focus zichtbaar',
+  },
+  '2.4.8': {
+    en: '2.4.8 Location',
+    nl: '2.4.8 Locatie',
+  },
+  '2.4.9': {
+    en: '2.4.9 Link Purpose (Link Only)',
+    nl: '2.4.9 Doel van de link (alleen link)',
+  },
+  '2.4.10': {
+    en: '2.4.10 Section Headings',
+    nl: '2.4.10 Sectiekoppen',
+  },
+  '2.4.11': {
+    en: '2.4.11 Focus Appearance (Minimum)',
+    nl: '2.4.11 Focusweergave (minimum)',
+  },
+  '2.4.12': {
+    en: '2.4.12 Focus Appearance (Enhanced)',
+    nl: '2.4.12 Focusweergave (verbeterd)',
+  },
+  '2.4.13': {
+    en: '2.4.13 Fixed Reference Points',
+    nl: '2.4.13 Vaste referentiepunten',
+  },
+  '2.5.1': {
+    en: '2.5.1 Pointer Gestures',
+    nl: '2.5.1 Aanwijzergebaren',
+  },
+  '2.5.2': {
+    en: '2.5.2 Pointer Cancellation',
+    nl: '2.5.2 Aanwijzerannulering',
+  },
+  '2.5.3': {
+    en: '2.5.3 Label in Name',
+    nl: '2.5.3 Label in naam',
+  },
+  '2.5.4': {
+    en: '2.5.4 Motion Actuation',
+    nl: '2.5.4 Bewegingsactivering',
+  },
+  '2.5.5': {
+    en: '2.5.5 Target Size',
+    nl: '2.5.5 Doelgrootte',
+  },
+  '2.5.6': {
+    en: '2.5.6 Concurrent Input Mechanisms',
+    nl: '2.5.6 Gelijktijdige invoermechanismen',
+  },
+  '2.5.7': {
+    en: '2.5.7 Pointer Target Spacing',
+    nl: '2.5.7 Aanwijzerdoelafstand',
+  },
+  '2.5.8': {
+    en: '2.5.8 Target Size (Minimum)',
+    nl: '2.5.8 Doelgrootte (minimum)',
+  },
 };
 
 export const getLabel = (key: string) => {
