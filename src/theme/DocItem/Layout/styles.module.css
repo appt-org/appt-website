@@ -1,0 +1,20 @@
+.docItemContainer header + *,
+.docItemContainer article > *:first-child {
+  margin-top: 0;
+}
+
+@media (min-width: theme(screens.xl)) {
+  .docItemCol {
+    max-width: 75% !important;
+  }
+}
+
+.docTocContainer {
+  display: none;
+}
+
+@media (min-width: theme(screens.xl)) {
+  .docTocContainer {
+    display: block;
+  }
+}
