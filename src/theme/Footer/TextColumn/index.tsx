@@ -11,6 +11,7 @@ export default function TextColumn() {
           values={{
             aboutLink: (
               <CustomLink
+                className="underline text-accent hover:no-underline inline-flex items-center font-normal"
                 url={translate({ id: 'footer.text.intro.linkUrl' })}
                 label={translate({ id: 'footer.text.intro.linkLabel' })}
               />
@@ -28,6 +29,7 @@ export default function TextColumn() {
                   values={{
                     link: (
                       <CustomLink
+                        className="underline text-accent hover:no-underline inline-flex items-center font-normal"
                         url={translate({ id: `footer.text.listItem${i}.linkUrl` })}
                         label={translate({ id: `footer.text.listItem${i}.linkLabel` })}
                       />

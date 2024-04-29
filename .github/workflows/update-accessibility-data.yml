@@ -1,8 +1,5 @@
 name: Automated - Update accessibility data
 'on':
-  push:
-    branches:
-      - main
   schedule:
     - cron: '0 2 * * *'
 jobs:
@@ -10,6 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: 'main'
+
       - name: Create env file
         run: |
           touch .env.secrets
@@ -17,8 +17,16 @@ jobs:
           echo DATA_PROJECT_ID=${{ secrets.DATA_PROJECT_ID }} >> .env.secrets
           echo DATA_STORAGE_BUCKET=${{ secrets.DATA_STORAGE_BUCKET }} >> .env.secrets
           echo DATA_STORAGE_FILE=${{ secrets.DATA_STORAGE_FILE }} >> .env.secrets
-      - run: 'npm ci && npm run update-accessibility-data'
-      - name: Commit data
+
+      - name: Update accessibility data
+        run: 'npm ci && npm run update-accessibility-data'
+      
+      - name: Check if there are any changes
+        id: verify_diff
+        run: git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit & push data
+        if: steps.verify_diff.outputs.changed == 'true'
         run: |
           git config --global user.name 'Appt Stats'
           git config --global user.email '167291111+stats-appt-org@users.noreply.github.com'

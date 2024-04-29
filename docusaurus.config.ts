@@ -11,21 +11,10 @@ const config: Config = {
   tagline: 'Gids voor het maken van toegankelijke apps',
   favicon: 'favicon.ico',
   noIndex: true, //process.env.ENVIRONMENT !== 'production',
-
-  // Set the production url of your site here
   url: 'https://appt.org',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: process.env.BASE_URL,
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'appt-org', // Usually your GitHub org/user name.
-  projectName: 'appt-docusaurus', // Usually your repo name.
-
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
   headTags: [
     {
       tagName: 'link',
@@ -58,8 +47,8 @@ const config: Config = {
       'classic',
       {
         docs: {
-          sidebarPath: './sidebarsDocs.ts',
-          editUrl: 'https://github.com/appt-org/appt-docusaurus/',
+          sidebarPath: './sidebars/sidebarsDocs.ts',
+          editUrl: 'https://github.com/appt-org/appt-docusaurus/tree/develop/',
         },
         theme: {
           customCss: [
@@ -78,6 +67,9 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    colorMode: {
+      respectPrefersColorScheme: true,
+    },
     navbar: {
       logo: {
         alt: 'Logo Appt',
@@ -87,7 +79,12 @@ const config: Config = {
         href: 'https://appt.org',
       },
       items: [
-        { to: '/', label: 'Home', position: 'right' },
+        {
+          to: process.env.BASE_URL,
+          label: 'Home',
+          position: 'right',
+          activeBaseRegex: process.env.BASE_URL === '/nl' ? `^\/nl\/$` : `^\/en\/$`,
+        },
         { to: `/${getTranslatedPath('stats')}`, label: 'Stats', position: 'right' },
         { to: '/docs', label: 'Docs', position: 'right' },
         { to: `/${getTranslatedPath('guidelines')}`, label: getTranslatedPath('guidelines', true), position: 'right' },
@@ -101,7 +98,7 @@ const config: Config = {
     },
     tableOfContents: {
       minHeadingLevel: 2,
-      maxHeadingLevel: 2,
+      maxHeadingLevel: 4,
     },
     footer: {
       links: [
