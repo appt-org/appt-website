@@ -124,63 +124,63 @@ const labels = {
     nl: '1.3.4 Oriëntatie',
   },
   '1.3.5': {
-    en: '1.3.5 Audio-only and Video-only (Prerecorded)',
+    en: '1.3.5 Identify Input Purpose',
     nl: '1.3.5 Alleen audio en alleen video (vooraf opgenomen)',
   },
   '1.3.6': {
-    en: '1.3.6 Captions (Prerecorded)',
+    en: '1.3.6 Identify Purpose',
     nl: '1.3.6 Ondertiteling (vooraf opgenomen)',
   },
   '1.4.1': {
-    en: '1.4.1 Audio Description or Media Alternative (Prerecorded)',
+    en: '1.4.1 Use of Color',
     nl: '1.4.1 Audiobeschrijving of media-alternatief (vooraf opgenomen)',
   },
   '1.4.2': {
-    en: '1.4.2 Captions (Prerecorded)',
+    en: '1.4.2 Audio Control',
     nl: '1.4.2 Ondertiteling (vooraf opgenomen)',
   },
   '1.4.3': {
-    en: '1.4.3 Audio Description or Media Alternative (Prerecorded)',
+    en: '1.4.3 Contrast (Minimum)',
     nl: '1.4.3 Audiobeschrijving of media-alternatief (vooraf opgenomen)',
   },
   '1.4.4': {
-    en: '1.4.4 Captions (Live)',
+    en: '1.4.4 Resize Text',
     nl: '1.4.4 Ondertiteling (live)',
   },
   '1.4.5': {
-    en: '1.4.5 Audio Description (Prerecorded)',
+    en: '1.4.5 Images of Text',
     nl: '1.4.5 Audiobeschrijving (vooraf opgenomen)',
   },
   '1.4.6': {
-    en: '1.4.6 Sign Language (Prerecorded)',
+    en: '1.4.6 Contrast (Enhanced)',
     nl: '1.4.6 Gebarentaal (vooraf opgenomen)',
   },
   '1.4.7': {
-    en: '1.4.7 Extended Audio Description (Prerecorded)',
+    en: '1.4.7 Low or No Background Audio',
     nl: '1.4.7 Uitgebreide audiobeschrijving (vooraf opgenomen)',
   },
   '1.4.8': {
-    en: '1.4.8 Media Alternative (Prerecorded)',
+    en: '1.4.8 Visual Presentation',
     nl: '1.4.8 Media-alternatief (vooraf opgenomen)',
   },
   '1.4.9': {
-    en: '1.4.9 Audio-only (Live)',
+    en: '1.4.9 Images of Text (No Exception)',
     nl: '1.4.9 Alleen audio (live)',
   },
   '1.4.10': {
-    en: '1.4.10 Info and Relationships',
+    en: '1.4.10 Reflow',
     nl: '1.4.10 Informatie en relaties',
   },
   '1.4.11': {
-    en: '1.4.11 Meaningful Sequence',
+    en: '1.4.11 Non-text Contrast',
     nl: '1.4.11 Betekenisvolle volgorde',
   },
   '1.4.12': {
-    en: '1.4.12 Sensory Characteristics',
+    en: '1.4.12 Text Spacing',
     nl: '1.4.12 Zintuiglijke kenmerken',
   },
   '1.4.13': {
-    en: '1.4.13 Orientation',
+    en: '1.4.13 Content on Hover or Focus',
     nl: '1.4.13 Oriëntatie',
   },
   '2.1.1': {
@@ -276,15 +276,15 @@ const labels = {
     nl: '2.4.10 Sectiekoppen',
   },
   '2.4.11': {
-    en: '2.4.11 Focus Appearance (Minimum)',
+    en: '2.4.11 Focus Not Obscured (Minimum)',
     nl: '2.4.11 Focusweergave (minimum)',
   },
   '2.4.12': {
-    en: '2.4.12 Focus Appearance (Enhanced)',
+    en: '2.4.12 Focus Not Obscured (Enhanced)',
     nl: '2.4.12 Focusweergave (verbeterd)',
   },
   '2.4.13': {
-    en: '2.4.13 Fixed Reference Points',
+    en: '2.4.13 Focus Appearance',
     nl: '2.4.13 Vaste referentiepunten',
   },
   '2.5.1': {
@@ -312,7 +312,7 @@ const labels = {
     nl: '2.5.6 Gelijktijdige invoermechanismen',
   },
   '2.5.7': {
-    en: '2.5.7 Pointer Target Spacing',
+    en: '2.5.7 Dragging Movements',
     nl: '2.5.7 Aanwijzerdoelafstand',
   },
   '2.5.8': {
@@ -320,100 +320,100 @@ const labels = {
     nl: '2.5.8 Doelgrootte (minimum)',
   },
   '3.1.1': {
-    en: '3.1.1 - Language of Page',
-    nl: '3.1.1 - Taal van de pagina',
+    en: '3.1.1 Language of Page',
+    nl: '3.1.1 Taal van de pagina',
   },
   '3.1.2': {
-    en: '3.1.2 - Language of Parts',
-    nl: '3.1.2 - Taal van onderdelen',
+    en: '3.1.2 Language of Parts',
+    nl: '3.1.2 Taal van onderdelen',
   },
   '3.1.3': {
-    en: '3.1.3 - Unusual Words',
-    nl: '3.1.3 - Ongebruikelijke woorden',
+    en: '3.1.3 Unusual Words',
+    nl: '3.1.3 Ongebruikelijke woorden',
   },
   '3.1.4': {
-    en: '3.1.4 - Abbreviations',
-    nl: '3.1.4 - Afkortingen',
+    en: '3.1.4 Abbreviations',
+    nl: '3.1.4 Afkortingen',
   },
   '3.1.5': {
-    en: '3.1.5 - Reading Level',
-    nl: '3.1.5 - Leesniveau',
+    en: '3.1.5 Reading Level',
+    nl: '3.1.5 Leesniveau',
   },
   '3.1.6': {
-    en: '3.1.6 - Pronunciation',
-    nl: '3.1.6 - Uitspraak',
+    en: '3.1.6 Pronunciation',
+    nl: '3.1.6 Uitspraak',
   },
   '3.2.1': {
-    en: '3.2.1 - On Focus',
-    nl: '3.2.1 - Bij focus',
+    en: '3.2.1 On Focus',
+    nl: '3.2.1 Bij focus',
   },
   '3.2.2': {
-    en: '3.2.2 - On Input',
-    nl: '3.2.2 - Bij invoer',
+    en: '3.2.2 On Input',
+    nl: '3.2.2 Bij invoer',
   },
   '3.2.3': {
-    en: '3.2.3 - Consistent Navigation',
-    nl: '3.2.3 - Consistente navigatie',
+    en: '3.2.3 Consistent Navigation',
+    nl: '3.2.3 Consistente navigatie',
   },
   '3.2.4': {
-    en: '3.2.4 - Consistent Identification',
-    nl: '3.2.4 - Consistente identificatie',
+    en: '3.2.4 Consistent Identification',
+    nl: '3.2.4 Consistente identificatie',
   },
   '3.2.5': {
-    en: '3.2.5 - Change on Request',
-    nl: '3.2.5 - Wijziging op verzoek',
+    en: '3.2.5 Change on Request',
+    nl: '3.2.5 Wijziging op verzoek',
   },
   '3.2.6': {
-    en: '3.2.6 - Input Assistance',
-    nl: '3.2.6 - Hulp bij invoer',
+    en: '3.2.6 Consistent Help',
+    nl: '3.2.6 Hulp bij invoer',
   },
   '3.3.1': {
-    en: '3.3.1 - Error Identification',
-    nl: '3.3.1 - Foutidentificatie',
+    en: '3.3.1 Error Identification',
+    nl: '3.3.1 Foutidentificatie',
   },
   '3.3.2': {
-    en: '3.3.2 - Labels or Instructions',
-    nl: '3.3.2 - Labels of instructies',
+    en: '3.3.2 Labels or Instructions',
+    nl: '3.3.2 Labels of instructies',
   },
   '3.3.3': {
-    en: '3.3.3 - Error Suggestion',
-    nl: '3.3.3 - Foutvoorstel',
+    en: '3.3.3 Error Suggestion',
+    nl: '3.3.3 Foutvoorstel',
   },
   '3.3.4': {
-    en: '3.3.4 - Error Prevention (Legal, Financial, Data)',
-    nl: '3.3.4 - Foutpreventie (Juridisch, Financieel, Gegevens)',
+    en: '3.3.4 Error Prevention (Legal, Financial, Data)',
+    nl: '3.3.4 Foutpreventie (Juridisch, Financieel, Gegevens)',
   },
   '3.3.5': {
-    en: '3.3.5 - Help',
-    nl: '3.3.5 - Hulp',
+    en: '3.3.5 Help',
+    nl: '3.3.5 Hulp',
   },
   '3.3.6': {
-    en: '3.3.6 - Error Prevention (All)',
-    nl: '3.3.6 - Foutpreventie (Alles)',
+    en: '3.3.6 Error Prevention (All)',
+    nl: '3.3.6 Foutpreventie (Alles)',
   },
   '3.3.7': {
-    en: '3.3.7 - Accessible Authentication',
-    nl: '3.3.7 - Toegankelijke authenticatie',
+    en: '3.3.7 Redundant Entry',
+    nl: '3.3.7 Toegankelijke authenticatie',
   },
   '3.3.8': {
-    en: '3.3.8 - Redundant Entry',
-    nl: '3.3.8 - Overbodige invoer',
+    en: '3.3.8 Accessible Authentication (Minimum)',
+    nl: '3.3.8 Overbodige invoer',
   },
   '3.3.9': {
-    en: '3.3.9 - Error Prevention (Legal, Financial, Data)',
-    nl: '3.3.9 - Foutpreventie (Juridisch, Financieel, Gegevens)',
+    en: '3.3.9 Accessible Authentication (Enhanced)',
+    nl: '3.3.9 Foutpreventie (Juridisch, Financieel, Gegevens)',
   },
   '4.1.1': {
-    en: '4.1.1 - Parsing',
-    nl: '4.1.1 - Parsen',
+    en: '4.1.1 Parsing',
+    nl: '4.1.1 Parsen',
   },
   '4.1.2': {
-    en: '4.1.2 - Name, Role, Value',
-    nl: '4.1.2 - Naam, Rol, Waarde',
+    en: '4.1.2 Name, Role, Value',
+    nl: '4.1.2 Naam, Rol, Waarde',
   },
   '4.1.3': {
-    en: '4.1.3 - Status Messages',
-    nl: '4.1.3 - Statusberichten',
+    en: '4.1.3 Status Messages',
+    nl: '4.1.3 Statusberichten',
   },
 };
 
