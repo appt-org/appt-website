@@ -8,6 +8,7 @@ export const docusaurusContentDocsConfig = [
       path: 'guidelines',
       routeBasePath: getTranslatedPath('guidelines'),
       sidebarPath: './sidebars/guidelines/sidebars.ts',
+      editUrl: 'https://github.com/appt-org/appt-docusaurus/tree/develop/',
     },
   ],
   [
@@ -17,6 +18,7 @@ export const docusaurusContentDocsConfig = [
       path: 'articles',
       routeBasePath: getTranslatedPath('articles'),
       sidebarPath: false,
+      editUrl: 'https://github.com/appt-org/appt-docusaurus/tree/develop/',
     },
   ],
   [
@@ -26,6 +28,7 @@ export const docusaurusContentDocsConfig = [
       path: 'stats',
       routeBasePath: getTranslatedPath('stats'),
       sidebarPath: './sidebars/sidebarStats.ts',
+      editUrl: 'https://github.com/appt-org/appt-docusaurus/tree/develop/',
     },
   ],
   [

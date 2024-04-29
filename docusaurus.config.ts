@@ -48,7 +48,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars/sidebarsDocs.ts',
-          editUrl: 'https://github.com/appt-org/appt-docusaurus/',
+          editUrl: 'https://github.com/appt-org/appt-docusaurus/tree/develop/',
         },
         theme: {
           customCss: [
