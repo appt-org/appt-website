@@ -2,7 +2,7 @@ name: Automated - Update accessibility data
 'on':
   push:
     branches:
-      - main
+      - develop
   schedule:
     - cron: '0 2 * * *'
 jobs:
@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        ref: 'main'
       - name: Create env file
         run: |
           touch .env.secrets
