@@ -109,8 +109,7 @@ const config: Config = {
   ],
   plugins: [tailwindPlugin, ...docusaurusContentDocsConfig],
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/social-card.png',
     metadata: [
       { name: 'msapplication-TileColor', content: '#ffffff' },
       { name: 'theme-color', content: '#ffffff' },
