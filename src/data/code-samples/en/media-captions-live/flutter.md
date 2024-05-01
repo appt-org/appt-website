@@ -13,7 +13,7 @@ BetterPlayerController controller = BetterPlayerController(
         ),
     ),
     betterPlayerDataSource: BetterPlayerDataSource.network(
-        'https://appt.org/live-video',
+        'https://appt.org/live-video', 
         liveStream: true,
         useAsmsSubtitles: true,
     ),

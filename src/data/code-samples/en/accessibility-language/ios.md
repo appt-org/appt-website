@@ -6,7 +6,7 @@ In addition, the [`accessibilityLanguage`](https://developer.apple.com/documenta
 
 ```swift
 element.attributedText = NSAttributedString(
-    string: "Appt",
+    string: "Appt", 
     attributes: [.accessibilitySpeechLanguage: "nl_NL"]
 )
 

@@ -4,6 +4,6 @@ With React Native, you can use the [`accessibilityViewIsModal`](https://reactnat
 
 ```jsx
 <Modal accessibilityViewIsModal={true}>
-  <Text>Appt</Text>
+    <Text>Appt</Text>
 </Modal>
 ```

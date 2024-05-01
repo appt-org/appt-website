@@ -1,6 +1,6 @@
 # Accessibility link - Flutter
 
-In Flutter, links should have the semantic property [`link`](https://api.flutter.dev/flutter/semantics/SemanticsProperties/link.html).
+In Flutter, links should have the semantic property [`link`](https://api.flutter.dev/flutter/semantics/SemanticsProperties/link.html). 
 
 To create text links, you can use the [`RichText`](https://api.flutter.dev/flutter/widgets/RichText-class.html) widget. You can pass multiple [`TextSpan`](https://api.flutter.dev/flutter/painting/TextSpan-class.html) widgets as it's children.
 
@@ -20,7 +20,7 @@ RichText(
                 child: TextSpan(
                     text: 'Appt',
                     style: TextStyle(
-                        decoration: TextDecoration.underline,
+                        decoration: TextDecoration.underline, 
                         color: Colors.blue
                     ),
                     recognizer: TapGestureRecognizer()..onTap = () {

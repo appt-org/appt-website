@@ -9,5 +9,7 @@ When inheriting a project you may find previous developers have disabled font-sc
 The code example below shows how to have a scaling font size.
 
 ```jsx
-<Text style={{ fontSize: 16 }}>Appt</Text>
+<Text style={{ fontSize: 16 }}>
+    Appt
+</Text>
 ```

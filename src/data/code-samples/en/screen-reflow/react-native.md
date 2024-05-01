@@ -4,6 +4,8 @@ In React Native, your elements should be placed inside a scrollable layout, such
 
 ```jsx
 <ScrollView>
-  <Text>Content should scroll!</Text>
+    <Text>
+        Content should scroll!
+    </Text>
 </ScrollView>
 ```

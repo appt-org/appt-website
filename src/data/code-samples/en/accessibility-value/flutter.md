@@ -14,5 +14,5 @@ Semantics(
   increasedValue: 'Custom + 1',
   decreasedValue: 'Custom - 1',
   child: Widget(),
-);
+);      
 ```

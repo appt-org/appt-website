@@ -4,6 +4,8 @@ In React Native, you can use [`Text`](https://reactnative.dev/docs/text) to disp
 
 ```jsx
 <ScrollView>
-  <Text>Appt transcript</Text>
+    <Text>
+        Appt transcript
+    </Text>
 </ScrollView>
 ```

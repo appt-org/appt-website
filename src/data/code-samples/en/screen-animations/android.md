@@ -4,14 +4,14 @@ On Android, you should provide buttons to pause, stop or hide content. You could
 
 ```kotlin
 val duration = Settings.Global.getFloat(
-    context.getContentResolver(),
-    Settings.Global.ANIMATOR_DURATION_SCALE,
+    context.getContentResolver(), 
+    Settings.Global.ANIMATOR_DURATION_SCALE, 
     1f
 )
 
 val transition = Settings.Global.getFloat(
-    context.getContentResolver(),
-    Settings.Global.TRANSITION_ANIMATION_SCALE,
+    context.getContentResolver(), 
+    Settings.Global.TRANSITION_ANIMATION_SCALE, 
     1f
 )
 

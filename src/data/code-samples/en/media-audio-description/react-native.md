@@ -8,9 +8,9 @@ Note: The audio tracks must be encoded in the file, this is not something you ad
 import Video from 'react-native-video';
 
 <Video
-  selectedAudioTrack={{
-    type: 'audio-description',
-    value: 'en',
-  }}
-/>;
+    selectedAudioTrack={{
+        type: "audio-description",
+        value: "en"
+    }}
+/>
 ```

@@ -19,7 +19,7 @@ The following values are defined in [`TextInputType`](https://api.flutter.dev/fl
 Example of using `keyboardType`:
 
 ```dart
-TextField(
+TextField( 
   keyboardType: TextInputType.emailAddress,
 )
 ```

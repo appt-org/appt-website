@@ -4,9 +4,9 @@ On iOS, the [`pressesBegan`](https://developer.apple.com/documentation/uikit/uir
 
 ```swift
 let find = UIKeyCommand(
-    input: "f",
-    modifierFlags: .command,
-    action: #selector(findContent),
+    input: "f", 
+    modifierFlags: .command, 
+    action: #selector(findContent), 
     discoverabilityTitle: "Find"
 )
 
