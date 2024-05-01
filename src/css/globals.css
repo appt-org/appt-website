@@ -32,7 +32,7 @@ html {
   /* Docusaurus theme variables */
   --ifm-font-family-base: 'Rubik', sans-serif;
   --ifm-color-primary: rgb(var(--color-accent));
-  --ifm-menu-link-sublist-icon: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgY2xhc3M9ImFic29sdXRlIHJpZ2h0LTQgdG9wLTEvMiB0cmFuc2l0aW9uLXRyYW5zZm9ybSBkdXJhdGlvbi0zMDAgb3V0LXF1aW50IHRyYW5zZm9ybSBvcmlnaW4tY2VudGVyIC10cmFuc2xhdGUteS0xLzIgdy04IGgtOCByb3RhdGUtMTgwIiBhcmlhLWhpZGRlbj0idHJ1ZSI+PHBhdGggZD0iTTE2IDIwYS45OTYuOTk2IDAgMCAxLS43MDctLjI5M2wtNS01YTEgMSAwIDEgMSAxLjQxNC0xLjQxNGw0LjI5MiA0LjI5NCA0LjI5NC00LjI5M2ExIDEgMCAxIDEgMS40MTQgMS40MTRsLTUgNUEuOTk3Ljk5NyAwIDAgMSAxNiAyMFoiIGZpbGw9ImN1cnJlbnRDb2xvciI+PC9wYXRoPjwvc3ZnPg==");
+  --ifm-menu-link-sublist-icon: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgY2xhc3M9ImFic29sdXRlIHJpZ2h0LTQgdG9wLTEvMiB0cmFuc2l0aW9uLXRyYW5zZm9ybSBkdXJhdGlvbi0zMDAgb3V0LXF1aW50IHRyYW5zZm9ybSBvcmlnaW4tY2VudGVyIC10cmFuc2xhdGUteS0xLzIgdy04IGgtOCByb3RhdGUtMTgwIiBhcmlhLWhpZGRlbj0idHJ1ZSI+PHBhdGggZD0iTTE2IDIwYS45OTYuOTk2IDAgMCAxLS43MDctLjI5M2wtNS01YTEgMSAwIDEgMSAxLjQxNC0xLjQxNGw0LjI5MiA0LjI5NCA0LjI5NC00LjI5M2ExIDEgMCAxIDEgMS40MTQgMS40MTRsLTUgNUEuOTk3Ljk5NyAwIDAgMSAxNiAyMFoiIGZpbGw9ImN1cnJlbnRDb2xvciI+PC9wYXRoPjwvc3ZnPg==');
   --ifm-code-font-size: 0.9rem;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-table-background: rgb(var(--color-background));
@@ -110,4 +110,9 @@ body {
   text-underline-offset: 0.15rem;
   text-decoration-thickness: 0.075rem;
   text-decoration-skip-ink: all;
+}
+
+p code {
+  font-size: 0.9rem;
+  vertical-align: top;
 }
