@@ -63,6 +63,7 @@ const config: Config = {
             './src/css/stats.css',
             './src/css/partners.css',
             './src/css/sidebar.css',
+            './src/css/search.css',
           ],
         },
       } satisfies Preset.Options,
@@ -169,6 +170,11 @@ const config: Config = {
       theme: prismThemes.okaidia,
       darkTheme: prismThemes.okaidia,
       additionalLanguages: ['java', 'kotlin', 'swift', 'objectivec', 'csharp', 'dart'],
+    },
+    algolia: {
+      appId: '6XBZ8SDI3N',
+      apiKey: 'debf254ff5610709fdbaac9c297ad511',
+      indexName: 'appt',
     },
   } satisfies Preset.ThemeConfig,
 };
