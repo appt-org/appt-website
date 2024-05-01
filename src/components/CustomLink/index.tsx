@@ -39,7 +39,7 @@ export function CustomLink({ label, url, className, external, appearance, active
   const iconClassNames = clsx('w-8 h-8 inline-block');
 
   return (
-    <Link to={url} className={classNames}>
+    <Link to={url} className={classNames} target="_self">
       <span>{label}</span>
       {isExternal && (
         <ExternalIcon aria-label={i18n.currentLocale === 'en' ? 'External' : 'Extern'} className={iconClassNames} />

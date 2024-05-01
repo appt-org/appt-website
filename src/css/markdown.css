@@ -45,6 +45,12 @@ h1 {
 .theme-doc-markdown > img {
   display: block !important;
   width: 100%;
+  max-height: 90vh;
+}
+
+.plugin-docs.plugin-id-default .theme-doc-markdown > img {
+  width: auto;
+  max-width: 100%;
 }
 
 .theme-doc-markdown > img + p {
