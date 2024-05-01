@@ -20,7 +20,7 @@ const headTags: HtmlTagObject[] = [
     attributes: {
       rel: 'apple-touch-icon',
       sizes: '180x180',
-      href: '/apple-touch-icon.png',
+      href: `${process.env.BASE_URL}/apple-touch-icon.png`,
     },
   },
   {
@@ -29,7 +29,7 @@ const headTags: HtmlTagObject[] = [
       rel: 'icon',
       type: 'image/png',
       sizes: '32x32',
-      href: '/favicon-32x32.png',
+      href: `${process.env.BASE_URL}/favicon-32x32.png`,
     },
   },
   {
@@ -38,21 +38,21 @@ const headTags: HtmlTagObject[] = [
       rel: 'icon',
       type: 'image/png',
       sizes: '16x16',
-      href: '/favicon-16x16.png',
+      href: `${process.env.BASE_URL}/favicon-16x16.png`,
     },
   },
   {
     tagName: 'link',
     attributes: {
       rel: 'manifest',
-      href: '/manifest.webmanifest',
+      href: `${process.env.BASE_URL}/manifest.webmanifest`,
     },
   },
   {
     tagName: 'link',
     attributes: {
       rel: 'mask-icon',
-      href: '/safari-pinned-tab.svg',
+      href: `${process.env.BASE_URL}/safari-pinned-tab.svg`,
       color: '#5bbad5',
     },
   },
