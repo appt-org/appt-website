@@ -54,6 +54,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars/sidebarsDocs.ts',
           editUrl: 'https://github.com/appt-org/appt-docusaurus/tree/develop/',
+          showLastUpdateTime: true,
         },
         theme: {
           customCss: [
@@ -82,7 +83,7 @@ const config: Config = {
         src: 'img/light/logos/appt-logo-light.svg',
         srcDark: 'img/dark/logos/appt-logo-dark.svg',
         className: 'nav-logo',
-        href: 'https://appt.org',
+        href: process.env.BASE_URL,
       },
       items: [
         {

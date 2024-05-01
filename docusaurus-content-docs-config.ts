@@ -9,6 +9,7 @@ export const docusaurusContentDocsConfig = [
       routeBasePath: getTranslatedPath('guidelines'),
       sidebarPath: './sidebars/guidelines/sidebars.ts',
       editUrl: 'https://github.com/appt-org/appt-docusaurus/tree/develop/',
+      showLastUpdateTime: true,
     },
   ],
   [
@@ -30,6 +31,7 @@ export const docusaurusContentDocsConfig = [
       routeBasePath: getTranslatedPath('stats'),
       sidebarPath: './sidebars/sidebarStats.ts',
       editUrl: 'https://github.com/appt-org/appt-docusaurus/tree/develop/',
+      showLastUpdateTime: true,
     },
   ],
   [
@@ -39,6 +41,7 @@ export const docusaurusContentDocsConfig = [
       path: 'about',
       routeBasePath: getTranslatedPath('about'),
       sidebarPath: false,
+      showLastUpdateTime: true,
     },
   ],
   [
@@ -48,6 +51,7 @@ export const docusaurusContentDocsConfig = [
       path: 'appt-api',
       routeBasePath: getTranslatedPath('appt-api'),
       sidebarPath: false,
+      showLastUpdateTime: true,
     },
   ],
   [
@@ -57,6 +61,7 @@ export const docusaurusContentDocsConfig = [
       path: 'appt-app',
       routeBasePath: getTranslatedPath('appt-app'),
       sidebarPath: false,
+      showLastUpdateTime: true,
     },
   ],
   [
@@ -66,6 +71,7 @@ export const docusaurusContentDocsConfig = [
       path: 'community',
       routeBasePath: getTranslatedPath('community'),
       sidebarPath: false,
+      showLastUpdateTime: true,
     },
   ],
   [
@@ -75,6 +81,7 @@ export const docusaurusContentDocsConfig = [
       path: 'handbook',
       routeBasePath: getTranslatedPath('handbook'),
       sidebarPath: false,
+      showLastUpdateTime: true,
     },
   ],
   [
@@ -84,6 +91,7 @@ export const docusaurusContentDocsConfig = [
       path: 'licenses',
       routeBasePath: getTranslatedPath('licenses'),
       sidebarPath: false,
+      showLastUpdateTime: true,
     },
   ],
   [
@@ -93,6 +101,7 @@ export const docusaurusContentDocsConfig = [
       path: 'newsletter',
       routeBasePath: getTranslatedPath('newsletter'),
       sidebarPath: false,
+      showLastUpdateTime: true,
     },
   ],
   [
@@ -102,6 +111,7 @@ export const docusaurusContentDocsConfig = [
       path: 'partners',
       routeBasePath: getTranslatedPath('partners'),
       sidebarPath: './sidebars/sidebarPartners.ts',
+      showLastUpdateTime: true,
     },
   ],
   [
@@ -111,6 +121,7 @@ export const docusaurusContentDocsConfig = [
       path: 'privacy',
       routeBasePath: getTranslatedPath('privacy'),
       sidebarPath: false,
+      showLastUpdateTime: true,
     },
   ],
 ];
