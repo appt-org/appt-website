@@ -6,8 +6,7 @@
   },
   "compilerOptions": {
     "baseUrl": ".",
-    "lib": [
-      "ES2021.String"
-    ]
+    "lib": ["ES2021.String"],
+    "types": ["webpack-env"]
   }
 }
