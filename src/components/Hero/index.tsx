@@ -39,7 +39,7 @@ export function Hero({ title, introText, prefix, suffix, imageSrc, imageDarkSrc,
               <Image src={imageSrc} dark={imageDarkSrc} alt={alt} />
             </div>
           )}
-          <div>
+          <div className="min-w-0">
             {prefixSuffixText && (
               <Typography size="paragraph" className="uppercase">
                 {prefixSuffixText}
