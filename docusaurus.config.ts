@@ -64,7 +64,7 @@ const config: Config = {
   title: 'Appt',
   tagline: 'Gids voor het maken van toegankelijke apps',
   favicon: 'favicon.ico',
-  noIndex: process.env.ENVIRONMENT !== 'production',
+  noIndex: true, //process.env.ENVIRONMENT !== 'production',
   url: 'https://appt.org',
   baseUrl: process.env.BASE_URL,
   onBrokenLinks: 'throw',
