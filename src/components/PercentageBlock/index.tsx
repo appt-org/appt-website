@@ -3,9 +3,10 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { Card, CustomLink, PercentageProgress, Typography } from '@site/src/components';
 import _kebabCase from 'lodash/kebabCase';
 import { v4 as uuidv4 } from 'uuid';
+import clsx from 'clsx';
+import dataJson from '@site/src/data/data-features';
 
 import styles from './styles.module.css';
-import clsx from 'clsx';
 
 type ManualAccessibilityMetricApiModel = {
   title: string;
@@ -62,28 +63,27 @@ export function PercentageBlock({ metrics, linkLabel, linkUrl, baseValue, childr
   const [allMetrics, setAllMetrics] = useState<ManualAccessibilityMetricApiModel[]>([]);
   useEffect(() => {
     const getMetrics = () => {
-      const newMetrics = metrics.map(async metric => {
+      const newMetrics = metrics.map(metric => {
         const isGeneratedMetric = 'key' in metric;
 
         if (!isGeneratedMetric) {
           return metric as ManualAccessibilityMetricApiModel;
         } else {
-          try {
-            const module = await import(`@site/src/data/generated/data-features/${metric.key}.json`);
-            const metricJson: GeneratedAccessibilityMetricJsonModel = module.default;
+          const metricJson = dataJson[metric.key] as GeneratedAccessibilityMetricJsonModel;
 
-            return {
-              title: metric.title,
-              number: metric.isPercentage ? metricJson.percentage : metricJson.amount,
-              isPercentage: metric.isPercentage,
-            } as ManualAccessibilityMetricApiModel;
-          } catch (error) {
-            console.error(`Failed to import metric ${metric.key}:`, error);
+          if (!metricJson) {
+            return undefined;
           }
+
+          return {
+            title: metric.title,
+            number: metric.isPercentage ? metricJson.percentage : metricJson.amount,
+            isPercentage: metric.isPercentage,
+          } as ManualAccessibilityMetricApiModel;
         }
       });
 
-      return Promise.all(newMetrics);
+      return newMetrics;
     };
 
     const setMetrics = async () => {
