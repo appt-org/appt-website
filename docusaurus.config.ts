@@ -1,10 +1,23 @@
 import type * as Preset from '@docusaurus/preset-classic';
-import type { Config } from '@docusaurus/types';
+import type { Config, HtmlTagObject } from '@docusaurus/types';
 import 'dotenv/config';
 import { themes as prismThemes } from 'prism-react-renderer';
 import { docusaurusContentDocsConfig } from './docusaurus-content-docs-config';
 import tailwindPlugin from './plugins/tailwind-config';
 import { getTranslatedPath } from './src/utils/route-translations';
+import { analyticsConfig } from './docusaurus-analytics-config';
+
+const headTags: HtmlTagObject[] = [
+  {
+    tagName: 'link',
+    attributes: {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap',
+    },
+  },
+];
+
+analyticsConfig && headTags.push(analyticsConfig);
 
 const config: Config = {
   title: 'Appt',
@@ -15,15 +28,7 @@ const config: Config = {
   baseUrl: process.env.BASE_URL,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  headTags: [
-    {
-      tagName: 'link',
-      attributes: {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap',
-      },
-    },
-  ],
+  headTags,
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you

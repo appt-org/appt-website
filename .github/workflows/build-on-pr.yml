@@ -17,6 +17,14 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Create env file
+        run: |
+          touch .env.production
+          echo ENVIRONMENT=${{ secrets.PRODUCTION_ENVIRONMENT }} >> .env.production
+          echo ANALYTICS_ENABLED=${{ secrets.PRODUCTION_ANALYTICS_ENABLED }} >> .env.production
+          echo ANALYTICS_GTM_ID=${{ secrets.PRODUCTION_ANALYTICS_GTM_ID }} >> .env.production
+          echo ANALYTICS_SERVER_URL=${{ secrets.PRODUCTION_ANALYTICS_SERVER_URL }} >> .env.production
+
       - name: Run build
         run: |
           npm install
