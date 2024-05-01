@@ -5,6 +5,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import { docusaurusContentDocsConfig } from './docusaurus-content-docs-config';
 import tailwindPlugin from './plugins/tailwind-config';
 import { getTranslatedPath } from './src/utils/route-translations';
+import { analyticsConfig } from './docusaurus-analytics-config';
 
 const config: Config = {
   title: 'Appt',
@@ -23,6 +24,7 @@ const config: Config = {
         href: 'https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap',
       },
     },
+    { ...analyticsConfig },
   ],
 
   // Even if you don't use internationalization, you can use this field to set
