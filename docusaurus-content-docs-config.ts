@@ -1,4 +1,4 @@
-import { getTranslatedPath } from './src/utils/route-translations';
+import { getTranslatedPath } from './src/utils/translations';
 
 export const docusaurusContentDocsConfig = [
   [
