@@ -228,3 +228,7 @@ main.container > .row > .col.col--8 {
 .theme-doc-toc-desktop:has(.table-of-contents) {
   top: 0;
 }
+
+.plugin-docs.plugin-id-guidelines .hero-container {
+  padding: 0;
+}
