@@ -3,13 +3,31 @@ name: Deploy to PROD on push
   push:
     branches:
       - main
+  workflow_run:
+    workflows: ["Automated - Update accessibility data"]
+    types:
+      - completed
+
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: 'npm ci && npm run build:prod'
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create env file
+        run: |
+          touch .env.production
+          echo ENVIRONMENT=${{ secrets.PRODUCTION_ENVIRONMENT }} >> .env.production
+          echo ANALYTICS_ENABLED=${{ secrets.PRODUCTION_ANALYTICS_ENABLED }} >> .env.production
+          echo ANALYTICS_GTM_ID=${{ secrets.PRODUCTION_ANALYTICS_GTM_ID }} >> .env.production
+          echo ANALYTICS_SERVER_URL=${{ secrets.PRODUCTION_ANALYTICS_SERVER_URL }} >> .env.production
+      
+      - name: Build PROD
+        run: 'npm ci && npm run build:prod'
+
+      - name: Deploy PROD
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_APPT_ORG }}'
