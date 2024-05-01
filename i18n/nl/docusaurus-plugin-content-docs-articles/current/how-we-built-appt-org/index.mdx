@@ -6,9 +6,9 @@ icon: /img/light/Web.svg
 title: Hoe we appt.org hebben gebouwd
 description: We hebben appt.org gebouwd door Contentful te gebruiken in combinatie met Next.js, Typescript, Tailwind CSS en Google Cloud Run.
 authors: [janjaap]
-
-
-	
+date: 2023-01-27
+last_update:
+  date: 2024-04-11
 ---
 
 # Hoe we appt.org hebben gebouwd
@@ -21,7 +21,7 @@ We wilden onze inhoud kunnen beheren via een bestaand CMS. Een belangrijke eis w
 
 Headless betekent dat de inhoud, de *"body"*, gescheiden is van de weergave, de *"head"*. Met deze opzet kun je de inhoud op één plaats beheren, en die inhoud publiceren in front-end(s) naar keuze.
 
-Na het vergelijken van onze opties kozen we voor [Contentful](https://www.contentful.com/) als ons CMS. Contentful dwingt je om na te denken over de manier waarop je inhoud gestructureerd is. Je moet een Content Model maken voor elk stuk inhoud. 
+Na het vergelijken van onze opties kozen we voor [Contentful](https://www.contentful.com/) als ons CMS. Contentful dwingt je om na te denken over de manier waarop je inhoud gestructureerd is. Je moet een Content Model maken voor elk stuk inhoud.
 
 Onze website bevat bijvoorbeeld veel codevoorbeelden. We hebben een `CodeSample` object gemaakt, dat één of meer `CodeBlock` objecten bevat. Een CodeBlock is geschreven in een bepaalde `ProgrammingLanguage`, en die ProgrammingLanguage is beschikbaar op een bepaald `Platform`. Deze opzet maakt het mogelijk om multi-platform codevoorbeelden op een gestructureerde manier te schrijven.
 
@@ -31,7 +31,7 @@ Ons team vond het ook prettig dat Contentful een GraphQL API heeft om inhoud op 
 
 ## Front-end stack
 
-Contentful is een volledig aanpasbare *achterkant*. Maar de *voorkant* moesten we zelf bouwen. Dat wilden we ook, om er zeker van te zijn dat het resultaat volledig toegankelijk zou zijn. We vergeleken moderne stacks, die een 100% performance score op Google Lighthouse konden halen. Verder wilden we 100% scoren op toegankelijkheid, en een goede zoekmachineoptimalisatie (SEO) hebben. 
+Contentful is een volledig aanpasbare *achterkant*. Maar de *voorkant* moesten we zelf bouwen. Dat wilden we ook, om er zeker van te zijn dat het resultaat volledig toegankelijk zou zijn. We vergeleken moderne stacks, die een 100% performance score op Google Lighthouse konden halen. Verder wilden we 100% scoren op toegankelijkheid, en een goede zoekmachineoptimalisatie (SEO) hebben.
 
 Na het zorgvuldig vergelijken van onze opties kozen we voor Next.js, Typescript, Tailwind CSS en Google Cloud Run als onze front-end stack.
 
