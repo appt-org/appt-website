@@ -121,8 +121,8 @@ const config: Config = {
     navbar: {
       logo: {
         alt: 'Logo Appt',
-        src: 'img/light/logos/appt-logo-light.svg',
-        srcDark: 'img/dark/logos/appt-logo-dark.svg',
+        src: 'img/light/logos/appt.svg',
+        srcDark: 'img/dark/logos/appt.svg',
         className: 'nav-logo',
         href: process.env.BASE_URL,
       },
