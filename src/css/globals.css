@@ -116,3 +116,7 @@ p code {
   font-size: 0.9rem;
   vertical-align: top;
 }
+
+.theme-edit-this-page svg {
+  display: inline;
+}
