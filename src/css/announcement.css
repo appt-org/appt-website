@@ -1,0 +1,13 @@
+:root {
+  --docusaurus-announcement-bar-height: auto!important;
+}
+
+.announcement {
+  font-size: 1rem;
+}
+
+[class^='announcementBar'] .close,
+[class^='announcementBar'] .close svg {
+  color: theme(colors.onaccent);
+  opacity: 1;
+}

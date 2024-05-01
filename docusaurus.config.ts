@@ -4,7 +4,7 @@ import 'dotenv/config';
 import { themes as prismThemes } from 'prism-react-renderer';
 import { docusaurusContentDocsConfig } from './docusaurus-content-docs-config';
 import tailwindPlugin from './plugins/tailwind-config';
-import { getTranslatedPath } from './src/utils/route-translations';
+import { getTranslatedAnnouncement, getTranslatedPath } from './src/utils/translations';
 import { analyticsConfig } from './docusaurus-analytics-config';
 
 const headTags: HtmlTagObject[] = [
@@ -102,6 +102,7 @@ const config: Config = {
             './src/css/partners.css',
             './src/css/sidebar.css',
             './src/css/search.css',
+            './src/css/announcement.css',
           ],
         },
       } satisfies Preset.Options,
@@ -216,6 +217,12 @@ const config: Config = {
       appId: '6XBZ8SDI3N',
       apiKey: 'debf254ff5610709fdbaac9c297ad511',
       indexName: 'appt',
+    },
+    announcementBar: {
+      id: 'new_site',
+      content: getTranslatedAnnouncement(),
+      backgroundColor: 'rgb(var(--color-accent))',
+      textColor: 'rgb(var(--color-onaccent))',
     },
   } satisfies Preset.ThemeConfig,
 };
