@@ -6,10 +6,10 @@ icon: /img/light/Oplossingen.svg
 title: An accessible app. Where to start?
 description: "Making your app accessible to everyone: where do you start? These are the first steps you should take."
 authors: [johan, janjaap]
-
 hide_title: true
-
-	
+date: 2023-01-12
+last_update:
+  date: 2024-04-22
 ---
 
 <Hero
@@ -19,7 +19,7 @@ hide_title: true
 
 <Image src="/img/light/usability-testing.71ee77e.jpg" alt="Testing for accessibility with someone who is blind"/>
 
-It can seem very complicated and even intimidating when you delve into the vast amount of information on digital accessibility. How do you incorporate all those guidelines, insights and code examples into an app? To get you started, we have listed the six most important steps for you. 
+It can seem very complicated and even intimidating when you delve into the vast amount of information on digital accessibility. How do you incorporate all those guidelines, insights and code examples into an app? To get you started, we have listed the six most important steps for you.
 
 1. Use a screen reader!
 2. Offer textual alternatives.
@@ -34,7 +34,7 @@ Below is a detailed explanation of each step. Finally, we explain how you can te
 
 ## 1. Use a screen reader!
 
-To properly test whether your app is accessible, it pays to learn how to use a [screen reader](/en/stats/screen-reader). 
+To properly test whether your app is accessible, it pays to learn how to use a [screen reader](/en/stats/screen-reader).
 
 A screen reader is mainly used by visually impaired people. However, by optimising your app for this, you ensure that a much larger group of people can use your app. Users of [voice, keyboard and switch controls](/en/articles/assistive-technologies) will also benefit, and you automatically take into account a lot of success criteria from the [WCAG](/en/guidelines).
 
@@ -42,7 +42,7 @@ This makes the screen reader the ideal tool to test for accessibility. But it ca
 
 ## 2. Offer textual alternatives
 
-Do all buttons have a clear label? Do icons, images, graphics, among others, have a textual alternative? 
+Do all buttons have a clear label? Do icons, images, graphics, among others, have a textual alternative?
 
 Make sure alternative text is available for all content without text. These include images, icons and graphs. Describe what can be seen. People who are blind have this description read aloud through their screen reader. Alternative text can also be useful for anyone who is unsure about the meaning of the content.
 
@@ -52,7 +52,7 @@ You do this by setting an accessibility label. You can see how to do this for yo
 
 ## 3. Make clear what the purpose is
 
-Is it clear what action can be performed? 
+Is it clear what action can be performed?
 
 Set a name. The name is used for identification. Setting a name allows tools such as voice control to perform targeted actions.
 
@@ -92,9 +92,9 @@ Ensure that all content on the screen remains readable even with the largest fon
 
 Does text have sufficient contrast relative to the background? Do elements on the screen have sufficient contrast against each other and in relation to the background?
 
-Ensure that the content on the screen has a contrast of at least 3:1 with the surrounding colour. Think of graphic elements such as icons, buttons and input fields. 
+Ensure that the content on the screen has a contrast of at least 3:1 with the surrounding colour. Think of graphic elements such as icons, buttons and input fields.
 
-Ensure that the contrast ratio between the text colour and background colour is at least 4.5:1. For bold and large text, a ratio of 3:1 is sufficient. 
+Ensure that the contrast ratio between the text colour and background colour is at least 4.5:1. For bold and large text, a ratio of 3:1 is sufficient.
 
 By maintaining these ratios, visually impaired and colour blind users can usually read the text well. In addition, this makes an app easier for everyone to use, for example outside in the sun.
 
@@ -108,7 +108,7 @@ Ensure that elements focused by assistive technologies are clearly indicated. Fo
 
 <CodeSample id="accessibility-focus-indicator" locale="en"/>
 
-Ensure assistive technologies use a logical focus order when navigating. The order of navigating a screen is usually from left to right, from top to bottom. Make sure assistive technologies use an equivalent focus order. 
+Ensure assistive technologies use a logical focus order when navigating. The order of navigating a screen is usually from left to right, from top to bottom. Make sure assistive technologies use an equivalent focus order.
 
 ### Adjust order for keyboard
 
@@ -124,7 +124,7 @@ Ensure assistive technologies use a logical focus order when navigating. The ord
 
 ## Testing
 
-You can test most of the steps with the [Accessibility Scanner app](https://developer.android.com/guide/topics/ui/accessibility/testing#accessibility-scanner) and [Xcode's Accessibility Inspector](https://developer.apple.com/library/archive/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html). You can also detect contrast issues automatically with these. another option is to take a screenshot of an app to determine the colour codes and calculate the contrast. This can be done with [WebAIM's Contrast Checker](https://webaim.org/resources/contrastchecker/), for example. 
+You can test most of the steps with the [Accessibility Scanner app](https://developer.android.com/guide/topics/ui/accessibility/testing#accessibility-scanner) and [Xcode's Accessibility Inspector](https://developer.apple.com/library/archive/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html). You can also detect contrast issues automatically with these. another option is to take a screenshot of an app to determine the colour codes and calculate the contrast. This can be done with [WebAIM's Contrast Checker](https://webaim.org/resources/contrastchecker/), for example.
 
 In addition, check that it works properly by using the [screen reader](/en/stats/screen-reader).
 
