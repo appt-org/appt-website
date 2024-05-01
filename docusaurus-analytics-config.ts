@@ -10,8 +10,8 @@ export const analyticsConfig = isAnalyticsEnabled
 	  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	  '${process.env.NEXT_PUBLIC_ANALYTICS_SERVER_URL}/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	  })(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_ANALYTICS_GTM_ID}');
+	  '${process.env.ANALYTICS_SERVER_URL}/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	  })(window,document,'script','dataLayer','${process.env.ANALYTICS_GTM_ID}');
 	`,
     }
-  : {};
+  : null;
