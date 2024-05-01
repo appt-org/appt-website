@@ -15,6 +15,47 @@ const headTags: HtmlTagObject[] = [
       href: 'https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap',
     },
   },
+  {
+    tagName: 'link',
+    attributes: {
+      rel: 'apple-touch-icon',
+      sizes: '180x180',
+      href: '/apple-touch-icon.png',
+    },
+  },
+  {
+    tagName: 'link',
+    attributes: {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '32x32',
+      href: '/favicon-32x32.png',
+    },
+  },
+  {
+    tagName: 'link',
+    attributes: {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '16x16',
+      href: '/favicon-16x16.png',
+    },
+  },
+  {
+    tagName: 'link',
+    attributes: {
+      rel: 'manifest',
+      href: '/manifest.webmanifest',
+    },
+  },
+  {
+    tagName: 'link',
+    attributes: {
+      rel: 'mask-icon',
+      href: '/safari-pinned-tab.svg',
+      color: '#5bbad5',
+    },
+  },
 ];
 
 analyticsConfig && headTags.push(analyticsConfig);
@@ -23,16 +64,12 @@ const config: Config = {
   title: 'Appt',
   tagline: 'Gids voor het maken van toegankelijke apps',
   favicon: 'favicon.ico',
-  noIndex: true, //process.env.ENVIRONMENT !== 'production',
+  noIndex: process.env.ENVIRONMENT !== 'production',
   url: 'https://appt.org',
   baseUrl: process.env.BASE_URL,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   headTags,
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'nl'],
@@ -74,6 +111,10 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    metadata: [
+      { name: 'msapplication-TileColor', content: '#ffffff' },
+      { name: 'theme-color', content: '#ffffff' },
+    ],
     colorMode: {
       respectPrefersColorScheme: true,
     },
