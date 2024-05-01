@@ -155,12 +155,11 @@
 }
 
 .navbar__inner > .navbar__items > .navbar__toggle.clean-btn {
-  padding: theme(spacing.2);
+  padding: theme(spacing.1);
   border-radius: theme(borderRadius.lg);
   background: theme(colors.onsurface);
-  position: absolute;
-  right: 0;
   margin: 0;
+  margin-right: 0.5rem;
 }
 .navbar-sidebar__close {
   padding: theme(spacing.1);

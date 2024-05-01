@@ -1,0 +1,41 @@
+.DocSearch {
+  --docsearch-searchbox-background: theme(colors.onsurface);
+  --docsearch-text-color: theme(colors.body);
+  --docsearch-muted-color: theme(colors.body);
+  --docsearch-modal-background: theme(colors.onsurface);
+  --docsearch-primary-color: theme(colors.accent);
+
+  /* TODO: check colors when results */
+  --docsearch-searchbox-focus-background: var(--ifm-color-white);
+  --docsearch-hit-color: var(--ifm-font-color-base);
+  --docsearch-hit-active-color: var(--ifm-color-white);
+  --docsearch-hit-background: var(--ifm-color-white);
+}
+
+[data-theme='dark'] .DocSearch {
+  /* TODO: check colors when results */
+  --docsearch-searchbox-focus-background: var(--ifm-color-black);
+  --docsearch-hit-color: var(--ifm-font-color-base);
+  --docsearch-hit-active-color: var(--ifm-color-white);
+  --docsearch-hit-background: var(--ifm-color-emphasis-100);
+}
+
+.DocSearch-Button {
+  font-weight: normal !important;
+  padding: var(--ifm-navbar-item-padding-vertical) var(--ifm-navbar-item-padding-horizontal) !important;
+}
+
+.DocSearch-Screen-Icon {
+  display: inline-block;
+}
+
+[class^='navbarSearchContainer'] {
+  padding: 0 !important;
+  padding-left: var(--ifm-navbar-item-padding-vertical) !important;
+}
+
+@media (max-width: 996px) {
+  [class^='navbarSearchContainer'] {
+    right: 0 !important;
+  }
+}
