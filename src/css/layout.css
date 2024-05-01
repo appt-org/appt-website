@@ -187,6 +187,14 @@ main.container > .row > .col.col--8 {
   line-height: theme(lineHeight.normal);
 }
 
+.footer__link-item.footer__link-item--active {
+  color: theme(colors.body);
+  text-decoration: underline;
+  text-underline-offset: 0.15rem;
+  text-decoration-thickness: 0.075rem;
+  text-decoration-skip-ink: all;
+}
+
 .breadcrumbs {
   display: flex;
   align-items: center;
