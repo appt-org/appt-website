@@ -14,7 +14,7 @@ last_update:
 
 <Hero
   title="Navigeerbaar"
-  imageSrc="/img/light/2.4.svg"
+  image="/img/light/2.4.svg"
   alt="WCAG 2.4 - Logo"
   prefix="Richtlijn 2.4"
 />
@@ -24,16 +24,96 @@ Gebruikers moeten naar de informatie die ze zoeken kunnen navigeren. Het moet du
 ## Hoofdstukken
 
 <LinkList title="Hoofdstukken" isHighlighted={true}>
-  <LinkListItem url="/nl/richtlijnen/wcag/succescriterium-2-4-1" title="Succescriterium 2.4.1 - Blokken omzeilen" pageTitle="Blokken omzeilen" shortDescription="Ensure content which is shown on multiple screens can be skipped." icon="/img/light/2.4.1.svg" iconAlt="WCAG 2.4.1 - Logo"/>
-  <LinkListItem url="/nl/richtlijnen/wcag/succescriterium-2-4-2" title="Succescriterium 2.4.2 - Paginatitel" pageTitle="Paginatitel" shortDescription="Ensure each screen has a clear title." icon="/img/light/2.4.2.svg" iconAlt="WCAG 2.4.2 - Logo"/>
-  <LinkListItem url="/nl/richtlijnen/wcag/succescriterium-2-4-3" title="Succescriterium 2.4.3 - Focus volgorde" pageTitle="Focus volgorde" shortDescription="Ensure assistive technologies use a logical focus order when navigating." icon="/img/light/2.4.3.svg" iconAlt="WCAG 2.4.3 - Logo"/>
-  <LinkListItem url="/nl/richtlijnen/wcag/succescriterium-2-4-4" title="Succescriterium 2.4.4 - Linkdoel (in context)" pageTitle="Linkdoel (in context)" shortDescription="Ensure links are clear without the surrounding content." icon="/img/light/2.4.4.svg" iconAlt="WCAG 2.4.4 - Logo"/>
-  <LinkListItem url="/nl/richtlijnen/wcag/succescriterium-2-4-5" title="Succescriterium 2.4.5 - Meerdere manieren" pageTitle="Meerdere manieren" shortDescription="Ensure the screens of an app can be reached in multiple ways." icon="/img/light/2.4.5.svg" iconAlt="WCAG 2.4.5 - Logo"/>
-  <LinkListItem url="/nl/richtlijnen/wcag/succescriterium-2-4-6" title="Succescriterium 2.4.6 - Koppen en labels" pageTitle="Koppen en labels" shortDescription="Ensure to use descriptive headings and labels." icon="/img/light/2.4.6.svg" iconAlt="WCAG 2.4.6 - Logo"/>
-  <LinkListItem url="/nl/richtlijnen/wcag/succescriterium-2-4-7" title="Succescriterium 2.4.7 - Focus zichtbaar" pageTitle="Focus zichtbaar" shortDescription="Ensure that elements focused by assistive technologies are clearly indicated." icon="/img/light/2.4.7.svg" iconAlt="WCAG 2.4.7 - Logo"/>
-  <LinkListItem url="/nl/richtlijnen/wcag/succescriterium-2-4-8" title="Succescriterium 2.4.8 - Locatie" pageTitle="Locatie" shortDescription="Information about the user's location within a set of pages must be available." icon="/img/light/2.4.8.svg" iconAlt="WCAG 2.4.8 icon"/>
-  <LinkListItem url="/nl/richtlijnen/wcag/succescriterium-2-4-9" title="Succescriterium 2.4.9 - Linkdoel (alleen link)" pageTitle="Linkdoel (alleen link)" shortDescription="A mechanism must be available to allow the purpose of each link to be identified from link text alone, except where the purpose of the link would be ambiguous to users in general." icon="/img/light/2.4.9.svg" iconAlt="WCAG 2.4.9 icon"/>
-  <LinkListItem url="/nl/richtlijnen/wcag/succescriterium-2-4-10" title="Succescriterium 2.4.10 - Paragraafkoppen" pageTitle="Paragraafkoppen" shortDescription="Section headings must be used to organize the content." icon="/img/light/2.4.10.svg" iconAlt="WCAG 2.4.10 icon"/>
+  <LinkListItem
+    url="/nl/richtlijnen/wcag/succescriterium-2-4-1"
+    title="Succescriterium 2.4.1 - Blokken omzeilen"
+    appearance="link"
+    label="Blokken omzeilen"
+    description="Ensure content which is shown on multiple screens can be skipped."
+    image="/img/light/2.4.1.svg"
+    alt="WCAG 2.4.1 - Logo"
+  />
+  <LinkListItem
+    url="/nl/richtlijnen/wcag/succescriterium-2-4-2"
+    title="Succescriterium 2.4.2 - Paginatitel"
+    appearance="link"
+    label="Paginatitel"
+    description="Ensure each screen has a clear title."
+    image="/img/light/2.4.2.svg"
+    alt="WCAG 2.4.2 - Logo"
+  />
+  <LinkListItem
+    url="/nl/richtlijnen/wcag/succescriterium-2-4-3"
+    title="Succescriterium 2.4.3 - Focus volgorde"
+    appearance="link"
+    label="Focus volgorde"
+    description="Ensure assistive technologies use a logical focus order when navigating."
+    image="/img/light/2.4.3.svg"
+    alt="WCAG 2.4.3 - Logo"
+  />
+  <LinkListItem
+    url="/nl/richtlijnen/wcag/succescriterium-2-4-4"
+    title="Succescriterium 2.4.4 - Linkdoel (in context)"
+    appearance="link"
+    label="Linkdoel (in context)"
+    description="Ensure links are clear without the surrounding content."
+    image="/img/light/2.4.4.svg"
+    alt="WCAG 2.4.4 - Logo"
+  />
+  <LinkListItem
+    url="/nl/richtlijnen/wcag/succescriterium-2-4-5"
+    title="Succescriterium 2.4.5 - Meerdere manieren"
+    appearance="link"
+    label="Meerdere manieren"
+    description="Ensure the screens of an app can be reached in multiple ways."
+    image="/img/light/2.4.5.svg"
+    alt="WCAG 2.4.5 - Logo"
+  />
+  <LinkListItem
+    url="/nl/richtlijnen/wcag/succescriterium-2-4-6"
+    title="Succescriterium 2.4.6 - Koppen en labels"
+    appearance="link"
+    label="Koppen en labels"
+    description="Ensure to use descriptive headings and labels."
+    image="/img/light/2.4.6.svg"
+    alt="WCAG 2.4.6 - Logo"
+  />
+  <LinkListItem
+    url="/nl/richtlijnen/wcag/succescriterium-2-4-7"
+    title="Succescriterium 2.4.7 - Focus zichtbaar"
+    appearance="link"
+    label="Focus zichtbaar"
+    description="Ensure that elements focused by assistive technologies are clearly indicated."
+    image="/img/light/2.4.7.svg"
+    alt="WCAG 2.4.7 - Logo"
+  />
+  <LinkListItem
+    url="/nl/richtlijnen/wcag/succescriterium-2-4-8"
+    title="Succescriterium 2.4.8 - Locatie"
+    appearance="link"
+    label="Locatie"
+    description="Information about the user's location within a set of pages must be available."
+    image="/img/light/2.4.8.svg"
+    alt="WCAG 2.4.8 icon"
+  />
+  <LinkListItem
+    url="/nl/richtlijnen/wcag/succescriterium-2-4-9"
+    title="Succescriterium 2.4.9 - Linkdoel (alleen link)"
+    appearance="link"
+    label="Linkdoel (alleen link)"
+    description="A mechanism must be available to allow the purpose of each link to be identified from link text alone, except where the purpose of the link would be ambiguous to users in general."
+    image="/img/light/2.4.9.svg"
+    alt="WCAG 2.4.9 icon"
+  />
+  <LinkListItem
+    url="/nl/richtlijnen/wcag/succescriterium-2-4-10"
+    title="Succescriterium 2.4.10 - Paragraafkoppen"
+    appearance="link"
+    label="Paragraafkoppen"
+    description="Section headings must be used to organize the content."
+    image="/img/light/2.4.10.svg"
+    alt="WCAG 2.4.10 icon"
+  />
 </LinkList>
 
 ## Bronnen
