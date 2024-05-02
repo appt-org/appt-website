@@ -2,30 +2,30 @@ import { Image, Typography } from '@site/src/components';
 import clsx from 'clsx';
 
 type WithImageProps = {
-  imageSrc: string;
-  imageDarkSrc?: string;
+  image: string;
+  imageDark?: string;
   alt: string;
 };
 
 type WithoutImageProps = {
-  imageSrc: undefined;
-  imageDarkSrc: undefined;
+  image: undefined;
+  imageDark: undefined;
   alt: undefined;
 };
 
 export type HeroProps = {
   title: string;
-  introText?: string;
+  description?: string;
   prefix?: string;
   suffix?: string;
 } & (WithImageProps | WithoutImageProps);
 
-export function Hero({ title, introText, prefix, suffix, imageSrc, imageDarkSrc, alt }: HeroProps) {
-  const wrapperClasses = clsx('relative', { 'mb-10': imageSrc || introText });
+export function Hero({ title, description, prefix, suffix, image, imageDark, alt }: HeroProps) {
+  const wrapperClasses = clsx('relative', { 'mb-10': image || description });
   const containerClasses = clsx(
     'hero-container max-w-md mx-auto',
-    { 'w-full': !imageSrc },
-    { 'py-8 sm:py-16': imageSrc },
+    { 'w-full': !image },
+    { 'py-8 sm:py-16': image },
   );
 
   const prefixSuffixText = prefix && suffix ? `${prefix} - ${suffix}` : prefix ? prefix : suffix ? suffix : undefined;
@@ -34,9 +34,9 @@ export function Hero({ title, introText, prefix, suffix, imageSrc, imageDarkSrc,
     <div className={wrapperClasses}>
       <div className={containerClasses}>
         <div className="flex flex-col flex-1 md:items-center  md:flex-row">
-          {!!imageSrc && (
+          {!!image && (
             <div className="relative self-stretch grow-0 mb-8 mt-0 md:my-auto md:mr-8 md:h-auto shrink-0">
-              <Image src={imageSrc} dark={imageDarkSrc} alt={alt} />
+              <Image src={image} dark={imageDark} alt={alt} />
             </div>
           )}
           <div className="min-w-0">
@@ -50,9 +50,9 @@ export function Hero({ title, introText, prefix, suffix, imageSrc, imageDarkSrc,
             </Typography>
           </div>
         </div>
-        {introText && (
+        {description && (
           <Typography className="pt-4" tag="p" size="paragraph-intro">
-            {introText}
+            {description}
           </Typography>
         )}
       </div>

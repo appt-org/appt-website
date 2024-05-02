@@ -1,5 +1,5 @@
 export enum LinkAppearance {
   Link = 'link',
-  PrimaryButton = 'primary button',
-  SecondaryButton = 'secondary button',
+  PrimaryButton = 'primaryButton',
+  SecondaryButton = 'secondaryButton',
 }
