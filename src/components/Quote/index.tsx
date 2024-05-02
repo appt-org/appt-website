@@ -14,7 +14,7 @@ type ImageProps =
       alt: undefined;
     };
 
-type LinkProps = { linkLabel: string; url: string } | { linkLabel: undefined; url: undefined };
+type LinkProps = { label: string; url: string } | { label: undefined; url: undefined };
 
 export type QuoteProps = {
   quote: string;
@@ -32,7 +32,7 @@ export function Quote({
   image,
   imageDark,
   alt,
-  linkLabel,
+  label,
   url,
 }: QuoteProps) {
   const classes = clsx('markdown-block flex flex-col items-center justify-center md:flex-row mb-12 md:mb-20', {
@@ -59,7 +59,7 @@ export function Quote({
             {extraInfo}
           </Typography>
         )}
-        {linkLabel && url && <CustomLink className="self-end mt-4" url={url} label={linkLabel} />}
+        {label && url && <CustomLink className="self-end mt-4" url={url} label={label} />}
       </div>
     </div>
   );
