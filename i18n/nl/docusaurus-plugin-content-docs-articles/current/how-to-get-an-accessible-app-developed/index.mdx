@@ -14,7 +14,7 @@ last_update:
 
 <Hero
   title="Zo laat je een toegankelijke app ontwikkelen"
-  introText="In dit artikel geven we je tips waar je moet beginnen en waar je rekening mee moet houden als je een app toegankelijk wilt maken voor een zo groot mogelijke groep gebruikers, waaronder mensen met een beperking. "
+  description="In dit artikel geven we je tips waar je moet beginnen en waar je rekening mee moet houden als je een app toegankelijk wilt maken voor een zo groot mogelijke groep gebruikers, waaronder mensen met een beperking. "
 />
 
 <Image src="/img/light/Q42 Amsterdam - Real User Feedback Thursday -5 met blinden en slechtzienden (9).jpg" alt="een man bedient zijn telefoon. Het scherm is ingezoomd."/>
@@ -50,8 +50,8 @@ Deze functies worden dus niet alleen gebruikt door mensen met een langdurige bep
           { title: 'Vette tekst', key: 'ios-accessibility_is_bold_text_enabled-true', isPercentage: true },
           { title: 'Herstel door schudden uit', key: 'ios-accessibility_is_shake_to_undo_enabled-false', isPercentage: true }
         ]}
-        linkLabel="Alle gebruiksstatistieken"
-        linkUrl="/nl/stats">
+        label="Alle gebruiksstatistieken"
+        url="/nl/stats">
         Meest gebruikte functies op iOS
       </PercentageBlock>
     </ColumnRow>
@@ -66,8 +66,8 @@ Deze functies worden dus niet alleen gebruikt door mensen met een langdurige bep
           { title: 'Weergavegrootte', key: 'android-screen_display_scale_default_comparison-bigger', isPercentage: true },
           { title: 'Tekstgrootte aanpassen', key: 'android-default_screen_font_scale-false', isPercentage: true }
         ]}
-        linkLabel="Alle gebruiksstatistieken"
-        linkUrl="/nl/stats">
+        label="Alle gebruiksstatistieken"
+        url="/nl/stats">
         Meest gebruikte functies op Android
       </PercentageBlock>
     </ColumnRow>
@@ -78,7 +78,7 @@ Om je een idee te geven hoe en waarom mensen deze instellingen gebruiken, hebben
 <Quote
   quote="Hoeveel uur ik per dag mijn telefoon gebruik? Hoeveel uur gebruik jij je ogen?"
   name="Jesse"
-  imageSrc="/img/light/Jesse.png"
+  image="/img/light/Jesse.png"
   alt="Foto Jesse"
   linkLabel="Bekijk alle interviews"
   url="/nl/artikelen/interviews"
@@ -108,7 +108,15 @@ Om je een goed beeld te geven hoe je ervoor staat ten aanzien van de officiële 
 Maar er is een makkelijkere manier om een eerste indruk te krijgen van de toegankelijkheidstatus van jouw app. Je kunt het namelijk ook zélf testen (of met een collega). Die test zal nooit zo volledig zijn als een audit die wordt uitgevoerd door een expert. Zonder ervaring een app testen op de volledige WCAG-succescriteria is erg omvangrijk en complex. Om je app volledig te testen volgens de richtlijnen heb je tevens kennis van de hulpmiddelen nodig. Maar om je op weg te helpen hebben we een test opzet gemaakt waarmee je al snel een idee krijgt hoe het ervoor staat.
 
 <LinkList title="WCAG Testing for Beginners Link" isHighlighted={true}>
-  <LinkListItem url="/nl/richtlijnen/beginnersgids-toegankelijkheid-testen" title="Beginnersgids toegankelijkheid testen" pageTitle="Beginnersgids toegankelijkheid testen" shortDescription="Hoe test je zelf of je app toegankelijk is?" icon="/img/light/features.svg" iconAlt="Features icon"/>
+  <LinkListItem
+    url="/nl/richtlijnen/beginnersgids-toegankelijkheid-testen"
+    title="Beginnersgids toegankelijkheid testen"
+    appearance="link"
+    label="Beginnersgids toegankelijkheid testen"
+    description="Hoe test je zelf of je app toegankelijk is?"
+    image="/img/light/features.svg"
+    alt="Features icon"
+  />
 </LinkList>
 
 ### Kunnen mensen met een beperking jouw app gebruiken?
