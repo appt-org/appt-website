@@ -1,0 +1,59 @@
+---
+locale: en
+slug: /invert-colors
+contentful_id: 2hOo3PqsLQiQJwGPJqoazZ
+title: Invert colors
+description: More about invert colors
+authors: [johan, maurice]
+date: 2022-12-12
+last_update:
+  date: 2023-01-30
+---
+
+# Invert colors
+
+Color inversion makes everything appear in the opposite (complementary) color. Black becomes white, and blue becomes yellow. This can help darken light color themes, for example. Inverting colors can come in handy at times when light interferes, for example in a movie theater or at night. It also offers a solution to people who become overstimulated by light.
+
+This feature is similar to [dark mode](/en/stats/dark-mode) which is sometimes not supported by apps and by older versions of iOS and Android. Unlike dark mode, color inversion cannot be styled by app builders. For example, the corporate identity is lost if the colors are reversed. That is why it is advisable to always implement dark mode in an app.
+
+iOS devices have Smart Invert and Classic Invert. Smart Invert inverts the colors on the display, except for images, media, and some apps that use a dark color scheme. Classic Invert inverts all colors on the screen.
+
+On Android, color inversion applies to everything on the device, including media. This changes black text on a white screen to white text on a black screen.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'iOS - invert colors metric', key: 'ios-accessibility_is_invert_colors_enabled-true', isPercentage: true }
+        ]}
+        label="More about invert colors"
+        url="/en/stats/invert-colors">
+        invert colors on iOS.
+      </PercentageBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'Android - invert colors metric', key: 'android-accessibility_is_color_inversion_enabled-true', isPercentage: true }
+        ]}
+        label="More about invert colors"
+        url="/en/stats/invert-colors">
+        invert colors on Android.
+      </PercentageBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+<Quote
+  quote="My iPhone is my third eye."
+  name="Jeroen"
+  image="/img/light/Blinde-app-gebruiker-Jeroen.jpg"
+  alt="Jeroen - Asset"
+  linkLabel="Read the interview with Jeroen"
+  url="/en/articles/jeroen"
+/>
+
+In addition to color inversion, both platforms also offer the [setting for color blindness](/en/stats/color-blind-mode).
