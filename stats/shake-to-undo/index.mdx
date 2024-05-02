@@ -3,9 +3,6 @@ locale: en
 slug: /shake-to-undo
 contentful_id: 5XTmNFpdhbYB2uj2C3kymq
 title: Shake to undo
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: More about shake to undo 
 authors: [johan]
 date: 2022-06-02
@@ -26,18 +23,22 @@ People turn off this option if there is a risk that they will activate it uninte
         metrics={[
           { title: 'Shake to undo off', key: 'ios-accessibility_is_shake_to_undo_enabled-false', isPercentage: true }
         ]}
-        linkLabel="More about shake to undo"
-        linkUrl="/en/stats/shake-to-undo">
+        label="More about shake to undo"
+        url="/en/stats/shake-to-undo">
         have turned off shake to undo on iOS.
       </PercentageBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
-        The setting to turn off shake to undo is not available on Android. 
-        <CustomLink url="/en/stats/shake-to-undo" label="More about shake to undo" external={false}/>
+      <TextBlock showBackgroundColor={true}>
+        The setting to turn off shake to undo is not available on Android.
+        <CustomLink
+          url="/en/stats/shake-to-undo"
+          label="More about shake to undo"
+          external={false}
+          appearance="link"
+        />
       </TextBlock>
     </ColumnRow>
   </RightColumn>

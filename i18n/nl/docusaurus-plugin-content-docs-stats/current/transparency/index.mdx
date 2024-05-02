@@ -3,9 +3,6 @@ locale: nl
 slug: /verminderde-transparantie
 contentful_id: OVlIkBEGu53t9gzdhN5AR
 title: Verminderde transparantie
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: Meer over verminderde transparantie
 authors: [johan]
 date: 2022-06-02
@@ -28,18 +25,22 @@ Ruim 200.000 Nederlanders blijken de transparantie gedeactiveerd te hebben op hu
         metrics={[
           { title: 'iOS - transparency metric', key: 'ios-accessibility_is_reduce_transparency_enabled-true', isPercentage: true }
         ]}
-        linkLabel="Meer over doorzichtigheid"
-        linkUrl="/nl/stats/verminderde-transparantie">
+        label="Meer over doorzichtigheid"
+        url="/nl/stats/verminderde-transparantie">
         heeft de doorzichtigheid verminderd op iOS.
       </PercentageBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
-        De instelling om doorzichtigheid te verminderen is niet beschikbaar op Android. 
-        <CustomLink url="/nl/stats/verminderde-transparantie" label="Meer over doorzichtigheid" external={false}/>
+      <TextBlock showBackgroundColor={true}>
+        De instelling om doorzichtigheid te verminderen is niet beschikbaar op Android.
+        <CustomLink
+          url="/nl/stats/verminderde-transparantie"
+          label="Meer over doorzichtigheid"
+          external={false}
+          appearance="link"
+        />
       </TextBlock>
     </ColumnRow>
   </RightColumn>

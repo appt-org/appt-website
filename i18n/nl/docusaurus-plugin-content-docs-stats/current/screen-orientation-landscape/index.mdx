@@ -3,9 +3,6 @@ locale: nl
 slug: /scherm-draaien
 contentful_id: 2YiQawCXikWy8LZScRSy3X
 title: Scherm automatisch draaien
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: Meer over scherm oriëntatie landscape
 authors: [johan, janjaap]
 date: 2022-06-09
@@ -27,10 +24,14 @@ Op dit moment meten we nog geen schermoriëntatie op iOS.
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
-        De gegevens voor het uitzetten van automatisch meedraaien van het scherm zijn niet beschikbaar op iOS. 
-        <CustomLink url="/nl/stats/scherm-draaien" label="Meer over scherm automatisch draaien" external={false}/>
+      <TextBlock showBackgroundColor={true}>
+        De gegevens voor het uitzetten van automatisch meedraaien van het scherm zijn niet beschikbaar op iOS.
+        <CustomLink
+          url="/nl/stats/scherm-draaien"
+          label="Meer over scherm automatisch draaien"
+          external={false}
+          appearance="link"
+        />
       </TextBlock>
     </ColumnRow>
   </LeftColumn>
@@ -40,8 +41,8 @@ Op dit moment meten we nog geen schermoriëntatie op iOS.
         metrics={[
           { title: 'Scherm oriëntatie landscape', key: 'android-screen_orientation-landscape', isPercentage: true }
         ]}
-        linkLabel="Meer over scherm automatisch draaien"
-        linkUrl="/nl/stats/scherm-draaien">
+        label="Meer over scherm automatisch draaien"
+        url="/nl/stats/scherm-draaien">
         heeft z'n scherm standaard in landscape modus staan op Android.
       </PercentageBlock>
     </ColumnRow>
@@ -51,7 +52,7 @@ Op dit moment meten we nog geen schermoriëntatie op iOS.
 <Quote
   quote="Hoeveel uur ik per dag mijn telefoon gebruik? Hoeveel uur gebruik jij je ogen?"
   name="Jesse"
-  imageSrc="/img/light/Jesse.png"
+  image="/img/light/Jesse.png"
   alt="Foto Jesse"
   linkLabel="Lees het interview met Jesse"
   url="/nl/artikelen/jesse"

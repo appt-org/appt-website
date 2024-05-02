@@ -3,9 +3,6 @@ locale: en
 slug: /speak-screen
 contentful_id: 5yiFgQhsCfsAsbOT4p7NtR
 title: Speak screen
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: More about speak screen
 authors: [johan, janjaap]
 date: 2022-06-02
@@ -28,18 +25,22 @@ Based on our accessibility research, we estimate that about 200,000 Dutch people
         metrics={[
           { title: 'iOS - speak screen metric', key: 'ios-accessibility_is_speak_screen_enabled-true', isPercentage: true }
         ]}
-        linkLabel="More about speak screen"
-        linkUrl="/en/stats/speak-screen">
+        label="More about speak screen"
+        url="/en/stats/speak-screen">
         use the speak screen feature on iOS.
       </PercentageBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
-        The speak screen feature is not available on Android. 
-        <CustomLink url="/en/stats/speak-screen" label="More about speak screen" external={false}/>
+      <TextBlock showBackgroundColor={true}>
+        The speak screen feature is not available on Android.
+        <CustomLink
+          url="/en/stats/speak-screen"
+          label="More about speak screen"
+          external={false}
+          appearance="link"
+        />
       </TextBlock>
     </ColumnRow>
   </RightColumn>
@@ -48,7 +49,7 @@ Based on our accessibility research, we estimate that about 200,000 Dutch people
 <Quote
   quote="My iPhone is my third eye."
   name="Jeroen"
-  imageSrc="/img/light/Blinde-app-gebruiker-Jeroen.jpg"
+  image="/img/light/Blinde-app-gebruiker-Jeroen.jpg"
   alt="Jeroen - Asset"
   linkLabel="Read the interview with Jeroen"
   url="/en/articles/jeroen"
@@ -69,5 +70,9 @@ Non-text content such as buttons and images must be labeled. Below is explained 
 This is part of the WCAG's following success criterion:
 
 <LinkList title="Text alternatives - link list" isHighlighted={false}>
-  <LinkListItem url="/en/guidelines/wcag/success-criterion-1-1-1" title="Success Criterion 1.1.1 - Success Criterion 1.1.1 - Non-text Content - Level A"/>
+  <LinkListItem
+    url="/en/guidelines/wcag/success-criterion-1-1-1"
+    title="Success Criterion 1.1.1 - Non-text Content - Level A"
+    appearance="link"
+  />
 </LinkList>

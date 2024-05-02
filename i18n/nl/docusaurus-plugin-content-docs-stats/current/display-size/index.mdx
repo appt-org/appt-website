@@ -3,9 +3,6 @@ locale: nl
 slug: /weergavegrootte
 contentful_id: 5twmfZPXYBsbdR3gnx4xsz
 title: Weergavegrootte
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: Meer over weergavegrootte
 authors: [johan, maurice]
 date: 2022-12-13
@@ -24,10 +21,14 @@ Op Android zet zo'n 15% procent van de gebruikers de weergave van het scherm gro
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
-        De gegevens voor weergavegrootte op iOS zijn momenteel niet beschikbaar. 
-        <CustomLink url="/nl/stats/weergavegrootte" label="Meer over weergavegrootte" external={false}/>
+      <TextBlock showBackgroundColor={true}>
+        De gegevens voor weergavegrootte op iOS zijn momenteel niet beschikbaar.
+        <CustomLink
+          url="/nl/stats/weergavegrootte"
+          label="Meer over weergavegrootte"
+          external={false}
+          appearance="link"
+        />
       </TextBlock>
     </ColumnRow>
   </LeftColumn>
@@ -37,8 +38,8 @@ Op Android zet zo'n 15% procent van de gebruikers de weergave van het scherm gro
         metrics={[
           { title: 'Weergavegrootte', key: 'android-screen_display_scale_default_comparison-bigger', isPercentage: true }
         ]}
-        linkLabel="Meer over weergavegrootte"
-        linkUrl="/nl/stats/weergavegrootte">
+        label="Meer over weergavegrootte"
+        url="/nl/stats/weergavegrootte">
         vergroot de weergave op Android.
       </PercentageBlock>
     </ColumnRow>

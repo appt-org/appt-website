@@ -3,9 +3,6 @@ locale: nl
 slug: /kleurblind-modus
 contentful_id: 1clC4nMXh2m7Lex1ciGcZw
 title: Kleurblind modus
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: Meer over kleurenblind modus
 authors: [johan]
 date: 2022-12-12
@@ -24,10 +21,14 @@ Het aanpassen van de kleuren op het scherm heet op Android Kleurcorrectie. Andro
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
-        De gegevens voor kleurenblind modus zijn op dit moment niet beschikbaar op iOS. 
-        <CustomLink url="/nl/stats/kleurblind-modus" label="Meer over kleurenblind modus" external={false}/>
+      <TextBlock showBackgroundColor={true}>
+        De gegevens voor kleurenblind modus zijn op dit moment niet beschikbaar op iOS.
+        <CustomLink
+          url="/nl/stats/kleurblind-modus"
+          label="Meer over kleurenblind modus"
+          external={false}
+          appearance="link"
+        />
       </TextBlock>
     </ColumnRow>
   </LeftColumn>
@@ -37,8 +38,8 @@ Het aanpassen van de kleuren op het scherm heet op Android Kleurcorrectie. Andro
         metrics={[
           { title: 'Kleurenblind modus', key: 'android-accessibility_is_color_blind_mode_enabled-true', isPercentage: true }
         ]}
-        linkLabel="Meer over kleurenblind modus"
-        linkUrl="/nl/stats/kleurblind-modus">
+        label="Meer over kleurenblind modus"
+        url="/nl/stats/kleurblind-modus">
         gebruikt de kleurenblind modus op Android.
       </PercentageBlock>
     </ColumnRow>

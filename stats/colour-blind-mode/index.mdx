@@ -3,9 +3,6 @@ locale: en
 slug: /colour-blind-mode
 contentful_id: 1clC4nMXh2m7Lex1ciGcZw
 title: Colour blind mode
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: More about colour blind mode
 authors: [johan]
 date: 2022-12-12
@@ -25,10 +22,14 @@ On Android, adjusting the colours on the screen is called Colour Correction. And
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
-        The metric for colour blind mode is not available on iOS at the moment. 
-        <CustomLink url="/en/stats/colour-blind-mode" label="More about colour blind mode" external={false}/>
+      <TextBlock showBackgroundColor={true}>
+        The metric for colour blind mode is not available on iOS at the moment.
+        <CustomLink
+          url="/en/stats/colour-blind-mode"
+          label="More about colour blind mode"
+          external={false}
+          appearance="link"
+        />
       </TextBlock>
     </ColumnRow>
   </LeftColumn>
@@ -38,8 +39,8 @@ On Android, adjusting the colours on the screen is called Colour Correction. And
         metrics={[
           { title: 'Colour blind mode', key: 'android-accessibility_is_color_blind_mode_enabled-true', isPercentage: true }
         ]}
-        linkLabel="More about colour blind mode"
-        linkUrl="/en/stats/colour-blind-mode">
+        label="More about colour blind mode"
+        url="/en/stats/colour-blind-mode">
         use colour blind mode on Android.
       </PercentageBlock>
     </ColumnRow>

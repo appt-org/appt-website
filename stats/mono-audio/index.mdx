@@ -3,9 +3,6 @@ locale: en
 slug: /mono-audio
 contentful_id: 3jmYe3LALs8Mj2K41AW1gS
 title: Mono audio
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: More about mono audio
 authors: [johan]
 date: 2022-06-02
@@ -28,18 +25,22 @@ Based on our accessibility research, we estimate that approximately 250,000 Dutc
         metrics={[
           { title: 'iOS - mono audio metric', key: 'ios-accessibility_is_mono_audio_enabled-true', isPercentage: true }
         ]}
-        linkLabel="More about mono audio"
-        linkUrl="/en/stats/mono-audio">
+        label="More about mono audio"
+        url="/en/stats/mono-audio">
         turn on mono audio on iOS.
       </PercentageBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
-        The metric for mono audio on Android will soon become available. 
-        <CustomLink url="/en/stats/mono-audio" label="More about mono audio" external={false}/>
+      <TextBlock showBackgroundColor={true}>
+        The metric for mono audio on Android will soon become available.
+        <CustomLink
+          url="/en/stats/mono-audio"
+          label="More about mono audio"
+          external={false}
+          appearance="link"
+        />
       </TextBlock>
     </ColumnRow>
   </RightColumn>

@@ -3,9 +3,6 @@ locale: en
 slug: /voice-control
 contentful_id: 5QWe7Pm9Zh9cdQLQK5QJ9R
 title: Voice control
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: This article provides in-depth information about voice control on Android and iOS.
 authors: [johan]
 date: 2022-08-03
@@ -22,10 +19,14 @@ It is possible to control an app with your voice via voice control. A grid appea
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
-        The metric for Voice Control on iOS will soon become available. 
-        <CustomLink url="/en/stats/voice-control" label="More about voice control" external={false}/>
+      <TextBlock showBackgroundColor={true}>
+        The metric for Voice Control on iOS will soon become available.
+        <CustomLink
+          url="/en/stats/voice-control"
+          label="More about voice control"
+          external={false}
+          appearance="link"
+        />
       </TextBlock>
     </ColumnRow>
   </LeftColumn>
@@ -35,8 +36,8 @@ It is possible to control an app with your voice via voice control. A grid appea
         metrics={[
           { title: 'Android - voice access metric', key: 'android-accessibility_is_voice_access_enabled-true', isPercentage: true }
         ]}
-        linkLabel="More about voice control"
-        linkUrl="/en/stats/voice-control">
+        label="More about voice control"
+        url="/en/stats/voice-control">
         use Voice Access on Android.
       </PercentageBlock>
     </ColumnRow>
@@ -46,6 +47,22 @@ It is possible to control an app with your voice via voice control. A grid appea
 ## Using voice control
 
 <LinkList title="List of voice control features" isHighlighted={true}>
-  <LinkListItem url="/en/docs/ios/features/voice-control" title="Voice Control for iOS" pageTitle="Voice Control for iOS" shortDescription="This article provides in-depth information about using Voice Control to control your iOS device by voice." icon="/img/light/voiceaccess.svg" iconAlt="Voice Control icon"/>
-  <LinkListItem url="/en/docs/android/features/voice-access" title="Voice Access for Android" pageTitle="Voice Access for Android" shortDescription="This article provides in-depth information about using Voice Access to control your Android device by voice." icon="/img/light/voiceaccess.svg" iconAlt="Voice Control icon"/>
+  <LinkListItem
+    url="/en/docs/ios/features/voice-control"
+    title="Voice Control for iOS"
+    appearance="link"
+    label="Voice Control for iOS"
+    description="This article provides in-depth information about using Voice Control to control your iOS device by voice."
+    image="/img/light/voiceaccess.svg"
+    alt="Voice Control icon"
+  />
+  <LinkListItem
+    url="/en/docs/android/features/voice-access"
+    title="Voice Access for Android"
+    appearance="link"
+    label="Voice Access for Android"
+    description="This article provides in-depth information about using Voice Access to control your Android device by voice."
+    image="/img/light/voiceaccess.svg"
+    alt="Voice Control icon"
+  />
 </LinkList>

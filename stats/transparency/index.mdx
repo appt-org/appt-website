@@ -3,9 +3,6 @@ locale: en
 slug: /transparency
 contentful_id: OVlIkBEGu53t9gzdhN5AR
 title: Transparency
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: More about the transparency setting
 authors: [johan]
 date: 2022-06-02
@@ -28,18 +25,22 @@ More than 200,000 Dutch people have been shown to have switched off the transpar
         metrics={[
           { title: 'iOS - transparency metric', key: 'ios-accessibility_is_reduce_transparency_enabled-true', isPercentage: true }
         ]}
-        linkLabel="More about transparency"
-        linkUrl="/en/stats/transparency">
+        label="More about transparency"
+        url="/en/stats/transparency">
         have turned off the transparency setting on iOS.
       </PercentageBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
-        The setting to turn off transparency is not available on Android. 
-        <CustomLink url="/en/stats/transparency" label="More about transparency" external={false}/>
+      <TextBlock showBackgroundColor={true}>
+        The setting to turn off transparency is not available on Android.
+        <CustomLink
+          url="/en/stats/transparency"
+          label="More about transparency"
+          external={false}
+          appearance="link"
+        />
       </TextBlock>
     </ColumnRow>
   </RightColumn>

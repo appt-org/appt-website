@@ -3,9 +3,6 @@ locale: en
 slug: /colour-contrast
 contentful_id: 2yZ21N18rSqZLiS6ruRZVZ
 title: Colour contrast
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: More about colour contrast
 authors: [johan]
 date: 2022-06-02
@@ -30,18 +27,22 @@ At the moment we are not measuring high contrast text on Android yet.
         metrics={[
           { title: 'Colour contrast', key: 'ios-accessibility_is_darker_system_colors_enabled-true', isPercentage: true }
         ]}
-        linkLabel="More about colour contrast"
-        linkUrl="/en/stats/colour-contrast">
+        label="More about colour contrast"
+        url="/en/stats/colour-contrast">
         select an increased colour contrast on iOS.
       </PercentageBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
-        The metric for high contrast text on Android will soon become available. 
-        <CustomLink url="/en/stats/colour-contrast" label="More about colour contrast" external={false}/>
+      <TextBlock showBackgroundColor={true}>
+        The metric for high contrast text on Android will soon become available.
+        <CustomLink
+          url="/en/stats/colour-contrast"
+          label="More about colour contrast"
+          external={false}
+          appearance="link"
+        />
       </TextBlock>
     </ColumnRow>
   </RightColumn>
@@ -50,7 +51,7 @@ At the moment we are not measuring high contrast text on Android yet.
 <Quote
   quote="Accessibility features could also be aesthetically pleasing."
   name="Onno"
-  imageSrc="/img/light/Interview-met-slechtziende-gebruiker-over-mobiele-applicaties-op-telefoons.jpg"
+  image="/img/light/Interview-met-slechtziende-gebruiker-over-mobiele-applicaties-op-telefoons.jpg"
   alt="Photo Onno"
   linkLabel="Read the interview with Onno"
   url="/en/articles/onno"

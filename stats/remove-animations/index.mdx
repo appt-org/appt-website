@@ -3,9 +3,6 @@ locale: en
 slug: /remove-animations
 contentful_id: 27vqrZ5O1Ewec2L8N0ZIKX
 title: Remove animations
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: More about remove animations
 authors: [johan]
 date: 2023-08-04
@@ -21,10 +18,14 @@ Information on remove animations on Android and reduce motion on iOS.
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
-        The metric for reduce motion on iOS will soon become available. 
-        <CustomLink url="/en/stats/remove-animations" label="More about remove animations" external={false}/>
+      <TextBlock showBackgroundColor={true}>
+        The metric for reduce motion on iOS will soon become available.
+        <CustomLink
+          url="/en/stats/remove-animations"
+          label="More about remove animations"
+          external={false}
+          appearance="link"
+        />
       </TextBlock>
     </ColumnRow>
   </LeftColumn>
@@ -34,8 +35,8 @@ Information on remove animations on Android and reduce motion on iOS.
         metrics={[
           { title: 'Remove animations', key: 'android-accessibility_is_animation_disabled-true', isPercentage: true }
         ]}
-        linkLabel="More about remove animations"
-        linkUrl="/en/stats/remove-animations">
+        label="More about remove animations"
+        url="/en/stats/remove-animations">
         use remove animations on Android.
       </PercentageBlock>
     </ColumnRow>

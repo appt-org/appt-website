@@ -3,9 +3,6 @@ locale: nl
 slug: /verhoogd-contrast
 contentful_id: 2yZ21N18rSqZLiS6ruRZVZ
 title: Verhoogd (kleur)contrast
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: Meer over verhoogd contrast
 authors: [johan]
 date: 2022-06-02
@@ -30,18 +27,22 @@ Op dit moment meten we tekst met hoog contrast op Android nog niet.
         metrics={[
           { title: 'Colour contrast', key: 'ios-accessibility_is_darker_system_colors_enabled-true', isPercentage: true }
         ]}
-        linkLabel="Meer over kleurcontrast"
-        linkUrl="/nl/stats/verhoogd-contrast">
+        label="Meer over kleurcontrast"
+        url="/nl/stats/verhoogd-contrast">
         selecteert een verhoogd kleurcontrast op hun iOS-apparaat.
       </PercentageBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
-        De gegevens voor tekst met hoog contrast op Android komen binnenkort beschikbaar. 
-        <CustomLink url="/nl/stats/verhoogd-contrast" label="Meer over kleurcontrast" external={false}/>
+      <TextBlock showBackgroundColor={true}>
+        De gegevens voor tekst met hoog contrast op Android komen binnenkort beschikbaar.
+        <CustomLink
+          url="/nl/stats/verhoogd-contrast"
+          label="Meer over kleurcontrast"
+          external={false}
+          appearance="link"
+        />
       </TextBlock>
     </ColumnRow>
   </RightColumn>
@@ -50,7 +51,7 @@ Op dit moment meten we tekst met hoog contrast op Android nog niet.
 <Quote
   quote="Toegankelijkheid mag wat mij betreft ook mooi zijn."
   name="Onno"
-  imageSrc="/img/light/Interview-met-slechtziende-gebruiker-over-mobiele-applicaties-op-telefoons.jpg"
+  image="/img/light/Interview met slechtziende gebruiker over mobiele applicaties op telefoons.jpg"
   alt="Foto Onno"
   linkLabel="Lees het interview met Onno"
   url="/nl/artikelen/onno"

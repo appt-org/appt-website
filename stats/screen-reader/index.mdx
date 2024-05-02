@@ -4,9 +4,6 @@ slug: /screen-reader
 contentful_id: 4kqCV7Lhdw9aSaW0kxuIjO
 icon: /img/light/screenreader.svg
 title: Screen reader
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: What is a screen reader? How to use it and support it in een app.
 authors: [johan]
 date: 2022-08-31
@@ -31,8 +28,8 @@ But it is also a powerful tool for developers to test an app for accessibility. 
         metrics={[
           { title: 'iOS - voiceover metric', key: 'ios-accessibility_is_voice_over_running-true', isPercentage: true }
         ]}
-        linkLabel="More about the screen reader"
-        linkUrl="/en/stats/screen-reader">
+        label="More about the screen reader"
+        url="/en/stats/screen-reader">
         use voiceover on iOS.
       </PercentageBlock>
     </ColumnRow>
@@ -43,8 +40,8 @@ But it is also a powerful tool for developers to test an app for accessibility. 
         metrics={[
           { title: 'Android - talkback metric', key: 'android-accessibility_is_talk_back_enabled-true', isPercentage: true }
         ]}
-        linkLabel="More about the screen reader"
-        linkUrl="/en/stats/screen-reader">
+        label="More about the screen reader"
+        url="/en/stats/screen-reader">
         use Talkback on Android.
       </PercentageBlock>
     </ColumnRow>
@@ -62,8 +59,24 @@ Below are some code samples for the most commonly used platforms and frameworks.
 A screen reader makes it possible to use apps without sight. Gestures allow you to navigate through apps and perform actions.
 
 <LinkList title="List of screen reader features" isHighlighted={true}>
-  <LinkListItem url="/en/docs/android/features/talkback" title="TalkBack for Android" pageTitle="TalkBack: screen reader for Android" shortDescription="This article provides in-depth information about the TalkBack screen reader for Android." icon="/img/light/screenreader.svg" iconAlt="Screen Reader icon"/>
-  <LinkListItem url="/en/docs/ios/features/voiceover" title="VoiceOver for iOS" pageTitle="VoiceOver: screen reader for iOS" shortDescription="This article provides in-depth information about the VoiceOver screen reader on iOS." icon="/img/light/screenreader.svg" iconAlt="Screen Reader icon"/>
+  <LinkListItem
+    url="/en/docs/android/features/talkback"
+    title="TalkBack for Android"
+    appearance="link"
+    label="TalkBack: screen reader for Android"
+    description="This article provides in-depth information about the TalkBack screen reader for Android."
+    image="/img/light/screenreader.svg"
+    alt="Screen Reader icon"
+  />
+  <LinkListItem
+    url="/en/docs/ios/features/voiceover"
+    title="VoiceOver for iOS"
+    appearance="link"
+    label="VoiceOver: screen reader for iOS"
+    description="This article provides in-depth information about the VoiceOver screen reader on iOS."
+    image="/img/light/screenreader.svg"
+    alt="Screen Reader icon"
+  />
 </LinkList>
 
 ## Interview with a screen reader user
@@ -71,7 +84,7 @@ A screen reader makes it possible to use apps without sight. Gestures allow you 
 <Quote
   quote="How many hours a day I use my phone? How many hours do you use your eyes?"
   name="Jesse"
-  imageSrc="/img/light/Jesse.png"
+  image="/img/light/Jesse.png"
   alt="Photo Jesse"
   linkLabel="Read the interview with Jesse"
   url="/en/articles/jesse"
