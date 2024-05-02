@@ -1,18 +1,6 @@
-import { CustomLink, Image, Typography } from '@site/src/components';
+import { CustomLink, Image, ImagePropsOptional, Typography } from '@site/src/components';
 
 import clsx from 'clsx';
-
-type ImageProps =
-  | {
-      image: string;
-      imageDark?: string;
-      alt: string;
-    }
-  | {
-      image: undefined;
-      imageDark: undefined;
-      alt: undefined;
-    };
 
 type LinkProps = { label: string; url: string } | { label: undefined; url: undefined };
 
@@ -21,8 +9,7 @@ export type QuoteProps = {
   name: string;
   extraInfo?: string;
   isImageLeft?: boolean;
-} & LinkProps &
-  ImageProps;
+} & LinkProps & ImagePropsOptional;
 
 export function Quote({
   quote,

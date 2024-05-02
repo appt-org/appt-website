@@ -1,17 +1,12 @@
-import { Card, CustomLink, Image, Typography } from '@site/src/components';
+import { Card, CustomLink, Image, ImagePropsOptional, Typography } from '@site/src/components';
 import { PropsWithChildren } from 'react';
-
-// Alt is only required if image is provided
-export type LinkListImage =
-  | { image: string; imageDark?: string; alt: string }
-  | { image: undefined; imageDark: undefined; alt: undefined };
 
 export type LinkListItemProps = {
   title: string;
   url: string;
   label?: string;
   description?: string;
-} & LinkListImage;
+} & ImagePropsOptional;
 
 export function LinkListItem({
   url,

@@ -1,24 +1,12 @@
-import { Image, Typography } from '@site/src/components';
+import { Image, ImagePropsOptional, Typography } from '@site/src/components';
 import clsx from 'clsx';
-
-type WithImageProps = {
-  image: string;
-  imageDark?: string;
-  alt: string;
-};
-
-type WithoutImageProps = {
-  image: undefined;
-  imageDark: undefined;
-  alt: undefined;
-};
 
 export type HeroProps = {
   title: string;
   description?: string;
   prefix?: string;
   suffix?: string;
-} & (WithImageProps | WithoutImageProps);
+} & ImagePropsOptional;
 
 export function Hero({ title, description, prefix, suffix, image, imageDark, alt }: HeroProps) {
   const wrapperClasses = clsx('relative', { 'mb-10': image || description });
