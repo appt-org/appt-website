@@ -6,6 +6,7 @@ import { docusaurusContentDocsConfig } from './docusaurus-content-docs-config';
 import tailwindPlugin from './plugins/tailwind-config';
 import { getTranslatedAnnouncement, getTranslatedPath } from './src/utils/translations';
 import { analyticsConfig } from './docusaurus-analytics-config';
+import { redirectsConfig } from './docusaurus-redirects-config';
 
 const headTags: HtmlTagObject[] = [
   {
@@ -58,6 +59,10 @@ const headTags: HtmlTagObject[] = [
   },
 ];
 
+const plugins = redirectsConfig
+  ? [tailwindPlugin, ...docusaurusContentDocsConfig, redirectsConfig]
+  : [tailwindPlugin, ...docusaurusContentDocsConfig];
+
 analyticsConfig && headTags.push(analyticsConfig);
 
 const config: Config = {
@@ -108,7 +113,7 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-  plugins: [tailwindPlugin, ...docusaurusContentDocsConfig],
+  plugins,
   themeConfig: {
     image: 'img/social-card.png',
     metadata: [
