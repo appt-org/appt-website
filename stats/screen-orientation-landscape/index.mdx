@@ -3,9 +3,6 @@ locale: en
 slug: /screen-orientation-landscape
 contentful_id: 2YiQawCXikWy8LZScRSy3X
 title: Screen orientation landscape
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: Screen orientation landscape
 authors: [johan, janjaap]
 date: 2022-06-09
@@ -27,10 +24,12 @@ At the moment we are not measuring screen orientation on iOS yet.
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
-        The metric for disabling the automatic screen rotation is not available on iOS. 
-        <CustomLink url="/en/stats/screen-orientation-landscape" label="More about screen orientation landscape" external={false}/>
+      <TextBlock showBackgroundColor={true}>
+        The metric for disabling the automatic screen rotation is not available on iOS.
+        <CustomLink
+          url="/en/stats/screen-orientation-landscape"
+          label="More about screen orientation landscape"
+        />
       </TextBlock>
     </ColumnRow>
   </LeftColumn>
@@ -40,8 +39,8 @@ At the moment we are not measuring screen orientation on iOS yet.
         metrics={[
           { title: 'Screen orientation landscape', key: 'android-screen_orientation-landscape', isPercentage: true }
         ]}
-        linkLabel="More about screen orientation landscape"
-        linkUrl="/en/stats/screen-orientation-landscape">
+        label="More about screen orientation landscape"
+        url="/en/stats/screen-orientation-landscape">
         have their screen in landscape mode per default on Android.
       </PercentageBlock>
     </ColumnRow>
@@ -51,8 +50,8 @@ At the moment we are not measuring screen orientation on iOS yet.
 <Quote
   quote="How many hours a day I use my phone? How many hours do you use your eyes?"
   name="Jesse"
-  imageSrc="/img/light/Jesse.png"
+  image="/img/light/Jesse.png"
   alt="Photo Jesse"
-  linkLabel="Read the interview with Jesse"
+  label="Read the interview with Jesse"
   url="/en/articles/jesse"
 />

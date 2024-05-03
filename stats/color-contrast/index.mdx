@@ -1,0 +1,56 @@
+---
+locale: en
+slug: /color-contrast
+contentful_id: 2yZ21N18rSqZLiS6ruRZVZ
+title: Color contrast
+description: More about color contrast
+authors: [johan]
+date: 2022-06-02
+last_update:
+  date: 2023-01-27
+---
+
+# Color contrast
+
+Adjusting the color contrast increases the contrast between the various elements on the screen. An increased color difference makes it easier to distinguish text from the background color and improves depth perception.
+
+This feature is not only used by the visually impaired, but also by people wishing to read their messages on a sunny terrace, for example.
+
+On iOS, this feature is called "increased color contrast". The foreground and background colors are adjusted to values that offer a higher contrast. Android has a support setting called 'high contrast text'. This gives text an extra outline that makes it easier to read against a background.
+
+At the moment we are not measuring high contrast text on Android yet.
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'Color contrast', key: 'ios-accessibility_is_darker_system_colors_enabled-true', isPercentage: true }
+        ]}
+        label="More about color contrast"
+        url="/en/stats/color-contrast">
+        select an increased color contrast on iOS.
+      </PercentageBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <TextBlock showBackgroundColor={true}>
+        The metric for high contrast text on Android will soon become available.
+        <CustomLink
+          url="/en/stats/color-contrast"
+          label="More about color contrast"
+        />
+      </TextBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+<Quote
+  quote="Accessibility features could also be aesthetically pleasing."
+  name="Onno"
+  image="/img/light/Interview-met-slechtziende-gebruiker-over-mobiele-applicaties-op-telefoons.jpg"
+  alt="Photo Onno"
+  label="Read the interview with Onno"
+  url="/en/articles/onno"
+/>

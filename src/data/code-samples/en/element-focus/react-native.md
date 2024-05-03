@@ -5,9 +5,7 @@ In React Native, you can use the [`onFocus`](https://reactnative.dev/docs/next/t
 Be careful when the `onFocus` callback: do not trigger any context change because they might confuse users.
 
 ```jsx
-<TextInput
-  onFocus={() => {
+<TextInput onFocus={() => {
     // Do not change context
-  }}
-/>
+}} />
 ```

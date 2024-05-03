@@ -10,15 +10,15 @@ Also make sure that the use of time limits, e.g. by using [`setTimeout`](https:/
 import { Button, Snackbar } from 'react-native-paper';
 
 <Snackbar
-  visible={visible}
-  onDismiss={onDismissSnackBar}
-  duration={Number.MAX_SAFE_INTEGER}
-  action={{
-    label: 'Close',
-    onPress: () => {
-      // Close
-    },
-  }}>
-  Appt
-</Snackbar>;
+    visible={visible}
+    onDismiss={onDismissSnackBar}
+    duration={Number.MAX_SAFE_INTEGER}
+    action={{
+        label: 'Close',
+        onPress: () => {
+            // Close
+        },
+    }}>
+    Appt
+</Snackbar>
 ```

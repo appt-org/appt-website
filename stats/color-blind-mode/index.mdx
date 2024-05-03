@@ -1,0 +1,48 @@
+---
+locale: en
+slug: /color-blind-mode
+contentful_id: 1clC4nMXh2m7Lex1ciGcZw
+title: Color blind mode
+description: More about color blind mode
+authors: [johan]
+date: 2022-12-12
+last_update:
+  date: 2023-01-29
+---
+
+# Color blind mode
+
+For people with color blindness, iOS and Android offer an option to better see the difference between colors. This setting can also be used by people who, for example, find a yellower screen light more pleasant to read on their tablet or telephone.
+
+On iOS, this accessibility feature is called Color Filters. It is possible to choose shades of gray or other filters that can also be set in intensity.
+
+On Android, adjusting the colors on the screen is called Color Correction. Android offers fewer color filters than iOS. It is, however, possible to pin a shortcut for color correction on the screen.
+
+
+<TwoColumnBlock>
+  <LeftColumn>
+    <ColumnRow>
+      <TextBlock showBackgroundColor={true}>
+        The metric for color blind mode is not available on iOS at the moment.
+        <CustomLink
+          url="/en/stats/color-blind-mode"
+          label="More about color blind mode"
+        />
+      </TextBlock>
+    </ColumnRow>
+  </LeftColumn>
+  <RightColumn>
+    <ColumnRow>
+      <PercentageBlock
+        metrics={[
+          { title: 'Color blind mode', key: 'android-accessibility_is_color_blind_mode_enabled-true', isPercentage: true }
+        ]}
+        label="More about color blind mode"
+        url="/en/stats/color-blind-mode">
+        use color blind mode on Android.
+      </PercentageBlock>
+    </ColumnRow>
+  </RightColumn>
+</TwoColumnBlock>
+
+Incidentally, both iOS and Android also offer the option to completely [invert colors](/en/stats/invert-colors).

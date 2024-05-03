@@ -18,95 +18,375 @@ Browse code samples to learn how to build more accessible Android apps.
 ## Accessibility code samples
 
 <LinkList title="List of Android Accessibility Code samples" isHighlighted={true}>
-  <LinkListItem url="/en/docs/android/samples/accessibility-action" title="Accessibility action" pageTitle="Accessibility action on Android" shortDescription="Accessibility actions provide alternative ways for users of assistive technologies to perform actions."/>
-  <LinkListItem url="/en/docs/android/samples/accessibility-announcement" title="Accessibility announcement" pageTitle="Accessibility announcement on Android" shortDescription="Users of assistive technologies should be made aware of important changes in content through accessibility announcements."/>
-  <LinkListItem url="/en/docs/android/samples/accessibility-dialog" title="Accessibility dialog" pageTitle="Accessibility dialog on Android" shortDescription="A dialog overlays the screen and offers one or more actions to proceed."/>
-  <LinkListItem url="/en/docs/android/samples/accessibility-focus-indicator" title="Accessibility focus indicator" pageTitle="Accessibility focus indicator on Android" shortDescription="Users should know which element has focus when using a keyboard or assistive technology."/>
-  <LinkListItem url="/en/docs/android/samples/accessibility-focus" title="Accessibility focus" pageTitle="Accessibility focus on Android" shortDescription="Sometimes you need to programmatically move the accessibility focus to a specific element."/>
-  <LinkListItem url="/en/docs/android/samples/accessibility-focusability" title="Accessibility focusability" pageTitle="Accessibility focusability on Android" shortDescription="An element should indicate whether it should be focusable by assistive technologies or not."/>
-  <LinkListItem url="/en/docs/android/samples/accessibility-group" title="Accessibility group" pageTitle="Accessibility group on Android" shortDescription="It is easier and quicker for users of assistive technologies to interact with grouped elements."/>
-  <LinkListItem url="/en/docs/android/samples/accessibility-hint" title="Accessibility hint" pageTitle="Accessibility hint on Android" shortDescription="An accessibility hint helps users to understand what will happen after performing an action."/>
-  <LinkListItem url="/en/docs/android/samples/accessibility-label" title="Accessibility label" pageTitle="Accessibility label on Android" shortDescription="An accessibility label helps users of assistive technologies to identify elements on the screen."/>
-  <LinkListItem url="/en/docs/android/samples/accessibility-language" title="Accessibility language" pageTitle="Accessibility language on Android" shortDescription="When content is written in multiple languages, foreign words should ideally be indicated in their respective language."/>
-  <LinkListItem url="/en/docs/android/samples/accessibility-link" title="Accessibility link" pageTitle="Accessibility link on Android" shortDescription="Links should be accessible for users of assistive technologies."/>
-  <LinkListItem url="/en/docs/android/samples/accessibility-live-region" title="Accessibility live region" pageTitle="Accessibility live region on Android" shortDescription="A live region allows users of assistive technologies to receive updates whenever important information on the screen changes."/>
-  <LinkListItem url="/en/docs/android/samples/accessibility-modal" title="Accessibility modal" pageTitle="Accessibility modal on Android" shortDescription="A modal overlays the screen with additional content."/>
-  <LinkListItem url="/en/docs/android/samples/accessibility-name" title="Accessibility name" pageTitle="Accessibility name on Android" shortDescription="The accessibility name indicates the name used for interface elements by assistive technologies."/>
-  <LinkListItem url="/en/docs/android/samples/accessibility-order" title="Accessibility order" pageTitle="Accessibility order on Android" shortDescription="Assistive technologies try to determine a logical accessibility order based on the placement and properties of the elements on the screen."/>
-  <LinkListItem url="/en/docs/android/samples/accessibility-role" title="Accessibility role" pageTitle="Accessibility role on Android" shortDescription="An accessibility role helps users of assistive technologies to understand the purpose of elements on the screen."/>
-  <LinkListItem url="/en/docs/android/samples/accessibility-state" title="Accessibility state" pageTitle="Accessibility state on Android" shortDescription="An accessibility state helps users of assistive technologies to understand the state of elements on the screen."/>
-  <LinkListItem url="/en/docs/android/samples/accessibility-value" title="Accessibility value" pageTitle="Accessibility value on Android" shortDescription="An accessibility value helps users of assistive technologies to understand the value of elements on the screen."/>
+  <LinkListItem
+    url="/en/docs/android/samples/accessibility-action"
+    title="Accessibility action"
+    label="Accessibility action on Android"
+    description="Accessibility actions provide alternative ways for users of assistive technologies to perform actions."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/accessibility-announcement"
+    title="Accessibility announcement"
+    label="Accessibility announcement on Android"
+    description="Users of assistive technologies should be made aware of important changes in content through accessibility announcements."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/accessibility-dialog"
+    title="Accessibility dialog"
+    label="Accessibility dialog on Android"
+    description="A dialog overlays the screen and offers one or more actions to proceed."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/accessibility-focus-indicator"
+    title="Accessibility focus indicator"
+    label="Accessibility focus indicator on Android"
+    description="Users should know which element has focus when using a keyboard or assistive technology."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/accessibility-focus"
+    title="Accessibility focus"
+    label="Accessibility focus on Android"
+    description="Sometimes you need to programmatically move the accessibility focus to a specific element."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/accessibility-focusability"
+    title="Accessibility focusability"
+    label="Accessibility focusability on Android"
+    description="An element should indicate whether it should be focusable by assistive technologies or not."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/accessibility-group"
+    title="Accessibility group"
+    label="Accessibility group on Android"
+    description="It is easier and quicker for users of assistive technologies to interact with grouped elements."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/accessibility-hint"
+    title="Accessibility hint"
+    label="Accessibility hint on Android"
+    description="An accessibility hint helps users to understand what will happen after performing an action."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/accessibility-label"
+    title="Accessibility label"
+    label="Accessibility label on Android"
+    description="An accessibility label helps users of assistive technologies to identify elements on the screen."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/accessibility-language"
+    title="Accessibility language"
+    label="Accessibility language on Android"
+    description="When content is written in multiple languages, foreign words should ideally be indicated in their respective language."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/accessibility-link"
+    title="Accessibility link"
+    label="Accessibility link on Android"
+    description="Links should be accessible for users of assistive technologies."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/accessibility-live-region"
+    title="Accessibility live region"
+    label="Accessibility live region on Android"
+    description="A live region allows users of assistive technologies to receive updates whenever important information on the screen changes."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/accessibility-modal"
+    title="Accessibility modal"
+    label="Accessibility modal on Android"
+    description="A modal overlays the screen with additional content."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/accessibility-name"
+    title="Accessibility name"
+    label="Accessibility name on Android"
+    description="The accessibility name indicates the name used for interface elements by assistive technologies."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/accessibility-order"
+    title="Accessibility order"
+    label="Accessibility order on Android"
+    description="Assistive technologies try to determine a logical accessibility order based on the placement and properties of the elements on the screen."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/accessibility-role"
+    title="Accessibility role"
+    label="Accessibility role on Android"
+    description="An accessibility role helps users of assistive technologies to understand the purpose of elements on the screen."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/accessibility-state"
+    title="Accessibility state"
+    label="Accessibility state on Android"
+    description="An accessibility state helps users of assistive technologies to understand the state of elements on the screen."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/accessibility-value"
+    title="Accessibility value"
+    label="Accessibility value on Android"
+    description="An accessibility value helps users of assistive technologies to understand the value of elements on the screen."
+  />
 </LinkList>
 
 ## Element code samples
 
 <LinkList title="List of Android Element Code samples" isHighlighted={true}>
-  <LinkListItem url="/en/docs/android/samples/element-focus-change" title="Element focus change" pageTitle="Element focus change on Android" shortDescription="Whenever an element receives focus, it should not automatically trigger an event which changes context."/>
-  <LinkListItem url="/en/docs/android/samples/element-identification" title="Element identification" pageTitle="Element identification on Android" shortDescription="Functionality that is repeated on multiple screens should use consistent identification."/>
-  <LinkListItem url="/en/docs/android/samples/element-position" title="Element position" pageTitle="Element position on Android" shortDescription="Components that are repeated on multiple screens should have a consistent position."/>
+  <LinkListItem
+    url="/en/docs/android/samples/element-focus-change"
+    title="Element focus change"
+    label="Element focus change on Android"
+    description="Whenever an element receives focus, it should not automatically trigger an event which changes context."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/element-identification"
+    title="Element identification"
+    label="Element identification on Android"
+    description="Functionality that is repeated on multiple screens should use consistent identification."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/element-position"
+    title="Element position"
+    label="Element position on Android"
+    description="Components that are repeated on multiple screens should have a consistent position."
+  />
 </LinkList>
 
 ## Input code samples
 
 <LinkList title="List of Android Input Code samples" isHighlighted={true}>
-  <LinkListItem url="/en/docs/android/samples/input-cancellation" title="Input cancellation" pageTitle="Input cancellation on Android" shortDescription="Users should be able to cancel accidental interaction."/>
-  <LinkListItem url="/en/docs/android/samples/input-content-type" title="Input content type" pageTitle="Input content type on Android" shortDescription="Setting the content type for input fields helps user entering data."/>
-  <LinkListItem url="/en/docs/android/samples/input-errors" title="Input errors" pageTitle="Input errors on Android" shortDescription="Users should be notified when they make input errors."/>
-  <LinkListItem url="/en/docs/android/samples/input-gestures" title="Input gestures" pageTitle="Input gestures on Android" shortDescription="Gesture activated functionality should also be available without the use of gestures."/>
-  <LinkListItem url="/en/docs/android/samples/input-instructions" title="Input instructions" pageTitle="Input instructions on Android" shortDescription="When a label might not describe the requested input sufficiently, you should add additional instructions."/>
-  <LinkListItem url="/en/docs/android/samples/input-keyboard-type" title="Input keyboard type" pageTitle="Input keyboard type on Android" shortDescription="Setting the keyboard type for input fields helps user entering data."/>
-  <LinkListItem url="/en/docs/android/samples/input-label" title="Input label" pageTitle="Input label on Android" shortDescription="Input fields should have labels so that users know what input data is expected."/>
-  <LinkListItem url="/en/docs/android/samples/input-motion" title="Input motion" pageTitle="Input motion on Android" shortDescription="Provide an alternative way for actions activated by motion, to allow everyone to use the functionality."/>
-  <LinkListItem url="/en/docs/android/samples/input-predictable" title="Input predictable" pageTitle="Input predictable on Android" shortDescription="Whenever a user provides input, there should be no change of context."/>
+  <LinkListItem
+    url="/en/docs/android/samples/input-cancellation"
+    title="Input cancellation"
+    label="Input cancellation on Android"
+    description="Users should be able to cancel accidental interaction."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/input-content-type"
+    title="Input content type"
+    label="Input content type on Android"
+    description="Setting the content type for input fields helps user entering data."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/input-errors"
+    title="Input errors"
+    label="Input errors on Android"
+    description="Users should be notified when they make input errors."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/input-gestures"
+    title="Input gestures"
+    label="Input gestures on Android"
+    description="Gesture activated functionality should also be available without the use of gestures."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/input-instructions"
+    title="Input instructions"
+    label="Input instructions on Android"
+    description="When a label might not describe the requested input sufficiently, you should add additional instructions."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/input-keyboard-type"
+    title="Input keyboard type"
+    label="Input keyboard type on Android"
+    description="Setting the keyboard type for input fields helps user entering data."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/input-label"
+    title="Input label"
+    label="Input label on Android"
+    description="Input fields should have labels so that users know what input data is expected."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/input-motion"
+    title="Input motion"
+    label="Input motion on Android"
+    description="Provide an alternative way for actions activated by motion, to allow everyone to use the functionality."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/input-predictable"
+    title="Input predictable"
+    label="Input predictable on Android"
+    description="Whenever a user provides input, there should be no change of context."
+  />
 </LinkList>
 
 ## Keyboard code samples
 
 <LinkList title="List of Android Keyboard Code samples" isHighlighted={true}>
-  <LinkListItem url="/en/docs/android/samples/keyboard-order" title="Keyboard order" pageTitle="Keyboard order on Android" shortDescription="By adjusting the keyboard order, you can provide a great experience for users that control their device using a hardware keyboard."/>
-  <LinkListItem url="/en/docs/android/samples/keyboard-shortcuts" title="Keyboard shortcuts" pageTitle="Keyboard shortcuts on Android" shortDescription="Most people operate their smartphones with touch, but some people use an external keyboard."/>
+  <LinkListItem
+    url="/en/docs/android/samples/keyboard-order"
+    title="Keyboard order"
+    label="Keyboard order on Android"
+    description="By adjusting the keyboard order, you can provide a great experience for users that control their device using a hardware keyboard."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/keyboard-shortcuts"
+    title="Keyboard shortcuts"
+    label="Keyboard shortcuts on Android"
+    description="Most people operate their smartphones with touch, but some people use an external keyboard."
+  />
 </LinkList>
 
 ## Quality code samples
 
 <LinkList title="List of Android Quality Code samples" isHighlighted={true}>
-  <LinkListItem url="/en/docs/android/samples/linting" title="Linting" pageTitle="Linting on Android" shortDescription="Linting is the process of running a tool which analyzes your code for potential errors."/>
+  <LinkListItem
+    url="/en/docs/android/samples/linting"
+    title="Linting"
+    label="Linting on Android"
+    description="Linting is the process of running a tool which analyzes your code for potential errors."
+  />
 </LinkList>
 
 ## Media code samples
 
 <LinkList title="List of Android Media Code samples" isHighlighted={true}>
-  <LinkListItem url="/en/docs/android/samples/audio-control" title="Audio control" pageTitle="Audio control on Android" shortDescription="Users should be able to control audio whenever it plays automatically."/>
-  <LinkListItem url="/en/docs/android/samples/audio-description" title="Audio description" pageTitle="Audio description on Android" shortDescription="Videos should include audio description when important visual details are shown which you cannot hear."/>
-  <LinkListItem url="/en/docs/android/samples/live-captions" title="Live captions" pageTitle="Live captions on Android" shortDescription="Captions should be provided in real-time to enable users to understand what is being said in live videos."/>
-  <LinkListItem url="/en/docs/android/samples/captions" title="Captions" pageTitle="Captions on Android" shortDescription="Captions should be provided to enable users to understand what is being said in videos."/>
-  <LinkListItem url="/en/docs/android/samples/transcript" title="Transcript" pageTitle="Transcript on Android" shortDescription="Videos should contain a transcript to allow users to read what is shown in media, such as a video or podcast."/>
+  <LinkListItem
+    url="/en/docs/android/samples/audio-control"
+    title="Audio control"
+    label="Audio control on Android"
+    description="Users should be able to control audio whenever it plays automatically."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/audio-description"
+    title="Audio description"
+    label="Audio description on Android"
+    description="Videos should include audio description when important visual details are shown which you cannot hear."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/live-captions"
+    title="Live captions"
+    label="Live captions on Android"
+    description="Captions should be provided in real-time to enable users to understand what is being said in live videos."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/captions"
+    title="Captions"
+    label="Captions on Android"
+    description="Captions should be provided to enable users to understand what is being said in videos."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/transcript"
+    title="Transcript"
+    label="Transcript on Android"
+    description="Videos should contain a transcript to allow users to read what is shown in media, such as a video or podcast."
+  />
 </LinkList>
 
 ## Screen code samples
 
 <LinkList title="List of Android Screen Code samples" isHighlighted={true}>
-  <LinkListItem url="/en/docs/android/samples/reduced-animations" title="Reduced animations" pageTitle="Reduced animations on Android" shortDescription="Content which conveys a sense of motion can be a barrier for users."/>
-  <LinkListItem url="/en/docs/android/samples/contrast" title="Contrast" pageTitle="Contrast on Android" shortDescription="Apps should provide enough contrast between text and its background so that it can be read by people with moderately low vision."/>
-  <LinkListItem url="/en/docs/android/samples/dark-mode" title="Dark mode" pageTitle="Dark mode on Android" shortDescription="Dark mode darkens background colours and provides a more comfortable viewing experience in low light."/>
-  <LinkListItem url="/en/docs/android/samples/frequent-flashes" title="Frequent flashes" pageTitle="Frequent flashes on Android" shortDescription="Rapidly flashing images or views can cause seizures for some users."/>
-  <LinkListItem url="/en/docs/android/samples/descriptive-headers" title="Descriptive headers" pageTitle="Descriptive headers on Android" shortDescription="Screens should have descriptive headers, this helps users find specific content and orient themselves within your app."/>
-  <LinkListItem url="/en/docs/android/samples/descriptive-labels" title="Descriptive labels" pageTitle="Descriptive labels on Android" shortDescription="Screens should have descriptive labels, these help users recognize which purpose controls have."/>
-  <LinkListItem url="/en/docs/android/samples/screen-orientation" title="Screen orientation" pageTitle="Screen orientation on Android" shortDescription="Apps should adapt to the preferred display orientation of the user."/>
-  <LinkListItem url="/en/docs/android/samples/reflow" title="Reflow" pageTitle="Reflow on Android" shortDescription="Content on the screen should reflow based on the users' preferences."/>
-  <LinkListItem url="/en/docs/android/samples/search-functionality" title="Search functionality" pageTitle="Search functionality on Android" shortDescription="Users might have difficulty finding a specific screen."/>
-  <LinkListItem url="/en/docs/android/samples/skip-content" title="Skip content" pageTitle="Skip content on Android" shortDescription="It can be helpful for users to skip repeated blocks of content."/>
-  <LinkListItem url="/en/docs/android/samples/adjustable-timing" title="Adjustable timing" pageTitle="Adjustable timing on Android" shortDescription="Everyone, including people with disabilities, should have adequate time to interact with your app."/>
-  <LinkListItem url="/en/docs/android/samples/screen-title" title="Screen title" pageTitle="Screen title on Android" shortDescription="Each screen should have a descriptive title, which helps users with identifying the screen."/>
+  <LinkListItem
+    url="/en/docs/android/samples/reduced-animations"
+    title="Reduced animations"
+    label="Reduced animations on Android"
+    description="Content which conveys a sense of motion can be a barrier for users."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/contrast"
+    title="Contrast"
+    label="Contrast on Android"
+    description="Apps should provide enough contrast between text and its background so that it can be read by people with moderately low vision."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/dark-mode"
+    title="Dark mode"
+    label="Dark mode on Android"
+    description="Dark mode darkens background colors and provides a more comfortable viewing experience in low light."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/frequent-flashes"
+    title="Frequent flashes"
+    label="Frequent flashes on Android"
+    description="Rapidly flashing images or views can cause seizures for some users."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/descriptive-headers"
+    title="Descriptive headers"
+    label="Descriptive headers on Android"
+    description="Screens should have descriptive headers, this helps users find specific content and orient themselves within your app."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/descriptive-labels"
+    title="Descriptive labels"
+    label="Descriptive labels on Android"
+    description="Screens should have descriptive labels, these help users recognize which purpose controls have."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/screen-orientation"
+    title="Screen orientation"
+    label="Screen orientation on Android"
+    description="Apps should adapt to the preferred display orientation of the user."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/reflow"
+    title="Reflow"
+    label="Reflow on Android"
+    description="Content on the screen should reflow based on the users' preferences."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/search-functionality"
+    title="Search functionality"
+    label="Search functionality on Android"
+    description="Users might have difficulty finding a specific screen."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/skip-content"
+    title="Skip content"
+    label="Skip content on Android"
+    description="It can be helpful for users to skip repeated blocks of content."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/adjustable-timing"
+    title="Adjustable timing"
+    label="Adjustable timing on Android"
+    description="Everyone, including people with disabilities, should have adequate time to interact with your app."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/screen-title"
+    title="Screen title"
+    label="Screen title on Android"
+    description="Each screen should have a descriptive title, which helps users with identifying the screen."
+  />
 </LinkList>
 
 ## Text code samples
 
 <LinkList title="List of Android Text Code samples" isHighlighted={true}>
-  <LinkListItem url="/en/docs/android/samples/bold-text" title="Bold text" pageTitle="Bold text on Android" shortDescription="Apps should use bold text when users have indicated this as a preference in the system settings."/>
-  <LinkListItem url="/en/docs/android/samples/text-element" title="Text element" pageTitle="Text element on Android" shortDescription="Always use text elements to display text, unless this is not possible due to styling, such as text logo's."/>
-  <LinkListItem url="/en/docs/android/samples/localization" title="Localization" pageTitle="Localization on Android" shortDescription="Assistive technologies, such as the screen reader, use the locale for the pronunciation of utterances."/>
-  <LinkListItem url="/en/docs/android/samples/scale-text" title="Scale text" pageTitle="Scale text on Android" shortDescription="Apps should scale text to the size specified by users in the system settings."/>
-  <LinkListItem url="/en/docs/android/samples/text-spacing" title="Text spacing" pageTitle="Text spacing on Android" shortDescription="Content should adapt to increased spacing between lines, words, letters, and paragraphs."/>
-  <LinkListItem url="/en/docs/android/samples/text-truncation" title="Text truncation" pageTitle="Text truncation on Android" shortDescription="Text should never get truncated in your app, even when users have enlarged their font size."/>
+  <LinkListItem
+    url="/en/docs/android/samples/bold-text"
+    title="Bold text"
+    label="Bold text on Android"
+    description="Apps should use bold text when users have indicated this as a preference in the system settings."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/text-element"
+    title="Text element"
+    label="Text element on Android"
+    description="Always use text elements to display text, unless this is not possible due to styling, such as text logo's."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/localization"
+    title="Localization"
+    label="Localization on Android"
+    description="Assistive technologies, such as the screen reader, use the locale for the pronunciation of utterances."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/scale-text"
+    title="Scale text"
+    label="Scale text on Android"
+    description="Apps should scale text to the size specified by users in the system settings."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/text-spacing"
+    title="Text spacing"
+    label="Text spacing on Android"
+    description="Content should adapt to increased spacing between lines, words, letters, and paragraphs."
+  />
+  <LinkListItem
+    url="/en/docs/android/samples/text-truncation"
+    title="Text truncation"
+    label="Text truncation on Android"
+    description="Text should never get truncated in your app, even when users have enlarged their font size."
+  />
 </LinkList>

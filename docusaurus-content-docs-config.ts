@@ -47,16 +47,6 @@ export const docusaurusContentDocsConfig = [
   [
     '@docusaurus/plugin-content-docs',
     {
-      id: 'appt-api',
-      path: 'appt-api',
-      routeBasePath: getTranslatedPath('appt-api'),
-      sidebarPath: false,
-      showLastUpdateTime: true,
-    },
-  ],
-  [
-    '@docusaurus/plugin-content-docs',
-    {
       id: 'appt-app',
       path: 'appt-app',
       routeBasePath: getTranslatedPath('appt-app'),

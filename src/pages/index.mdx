@@ -1,22 +1,22 @@
 ---
 locale: en
 slug: /
-hide_table_of_contents: true
 contentful_id: 2jOzisDPSeDJXqFiGjnON9
 icon: /img/social-card.png
 title: Appt.org | A guide for making apps accessible
 description: Appt.org empowers developers and organizations to build accessible apps for everyone by offering current stats on the use of accessibility features, code documentation for iOS, Android and other platforms, guidelines, tips and how-to's.
 keywords: [appt, accessibility, android, ios, flutter, react native, xamarin]
 authors: [lisa, maurice]
-hide_title: true
 date: 2022-04-06
 last_update:
   date: 2023-01-27
+hide_table_of_contents: true
+hide_title: true
 ---
 
 <Hero
   title="A guide for making apps accessible"
-  imageSrc="/img/light/app_wheelchair.svg"
+  image="/img/light/appt_cover.svg"
   alt="Appt cover, illustration of a person in a wheelchair holding a smartphone in one hand and raising the other hand"
 />
 
@@ -25,9 +25,8 @@ Appt.org empowers developers and organizations to build accessible apps for ever
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={false}>
-        ## **iOS** 
+      <TextBlock showBackgroundColor={false}>
+        ## iOS
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
@@ -55,17 +54,16 @@ Appt.org empowers developers and organizations to build accessible apps for ever
           { title: 'Bold text', key: 'ios-accessibility_is_bold_text_enabled-true', isPercentage: true },
           { title: 'Shake to undo off', key: 'ios-accessibility_is_shake_to_undo_enabled-false', isPercentage: true }
         ]}
-        linkLabel="All accessibility stats"
-        linkUrl="/en/stats">
+        label="All accessibility stats"
+        url="/en/stats">
         Most commonly used features on iOS
       </PercentageBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={false}>
-        ## **Android** 
+      <TextBlock showBackgroundColor={false}>
+        ## Android
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
@@ -93,8 +91,8 @@ Appt.org empowers developers and organizations to build accessible apps for ever
           { title: 'Bigger display size', key: 'android-screen_display_scale_default_comparison-bigger', isPercentage: true },
           { title: 'Adjust text size', key: 'android-default_screen_font_scale-false', isPercentage: true }
         ]}
-        linkLabel="All accessibility stats"
-        linkUrl="/en/stats">
+        label="All accessibility stats"
+        url="/en/stats">
         Most commonly used features on Android
       </PercentageBlock>
     </ColumnRow>
@@ -105,7 +103,7 @@ Appt.org empowers developers and organizations to build accessible apps for ever
   metrics={[
     { title: 'Semi literate people', number: 2500000, isPercentage: false },
     { title: 'The deaf and hard of hearing', number: 812000, isPercentage: false },
-    { title: 'Colour blind people', number: 742000, isPercentage: false },
+    { title: 'Color blind people', number: 742000, isPercentage: false },
     { title: 'People with seriously impaired motor skills', number: 472000, isPercentage: false },
     { title: 'Dyslexic people', number: 450000, isPercentage: false },
     { title: 'Visually impaired people', number: 200000, isPercentage: false },
@@ -122,23 +120,29 @@ Read more about the [amount of people with disabilities](/en/articles/disabiliti
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
+      <TextBlock showBackgroundColor={true}>
         ### Accessibility statistics
         
-        Almost half of all people with a mobile phone use accessibility features. Much more than you would expect. We researched the real use of all these features. 
-        <CustomLink url="/en/stats" label="All accessibility stats" icon="/img/light/Research-statistics-accessibility-use-mobiel-phones.jpg" darkIcon="/img/dark/Research-statistics-accessibility-use-mobiel-phones.jpg" iconAlt="Research statistics accessibility use mobile phones (screen shot)" external={false}/>
+        Almost half of all people with a mobile phone use accessibility features. Much more than you would expect. We researched the real use of all these features.
+        <CustomLink
+          url="/en/stats"
+          label="All accessibility stats"
+          image="/img/light/Research-statistics-accessibility-use-mobiel-phones.jpg"
+          alt="Research statistics accessibility use mobile phones (screen shot)"
+        />
       </TextBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
+      <TextBlock showBackgroundColor={true}>
         ### In-depth documentation
         
-        Each platform provides different features to make an app more accessible. This website offers in-depth documentation for iOS, Android, React Native, Flutter and Xamarin. 
-        <CustomLink url="/en/docs" label="All code documentation" external={false}/>
+        Each platform provides different features to make an app more accessible. This website offers in-depth documentation for iOS, Android, React Native, Flutter and Xamarin.
+        <CustomLink
+          url="/en/docs"
+          label="All code documentation"
+        />
       </TextBlock>
     </ColumnRow>
   </RightColumn>

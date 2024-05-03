@@ -6,6 +6,6 @@ If your app contains any videos, also check if these contain more than three fla
 
 ```jsx
 setTimeout(() => {
-  // Avoid three flashes per second
+    // Avoid three flashes per second
 }, 500);
 ```

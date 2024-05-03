@@ -161,7 +161,7 @@ Apps dienen belangrijke interfacewijzigingen te communiceren aan ondersteunende 
 
 | Platform | Functie | Voordelen | Nadelen |
 | --- | --- | --- | --- |
-| Android | [AccessibilityEvent](https://developer.android.com/reference/android/view/accessibility/AccessibilityEvent) → [TYPE_ANNOUNCEMENT](https://developer.android.com/reference/android/view/accessibility/AccessibilityEvent#TYPE_ANNOUNCEMENT)`<br>``<br>`of`<br>``<br>`[View.announceFor Accessibility](https://developer.android.com/reference/android/view/View#announceForAccessibility(java.lang.CharSequence)) | Twee opties |  |
+| Android | [AccessibilityEvent](https://developer.android.com/reference/android/view/accessibility/AccessibilityEvent) → [TYPE_ANNOUNCEMENT](https://developer.android.com/reference/android/view/accessibility/AccessibilityEvent#TYPE_ANNOUNCEMENT)<br/>of<br/>[View.announceFor Accessibility](https://developer.android.com/reference/android/view/View#announceForAccessibility(java.lang.CharSequence)) | Twee opties |  |
 | iOS | [UIAccessibility.Notification](https://developer.apple.com/documentation/uikit/uiaccessibility/notification) → [announcement](https://developer.apple.com/documentation/uikit/uiaccessibility/notification/1620176-announcement) | Makkelijk |  |
 | Flutter | [SemanticsService](https://api.flutter.dev/flutter/semantics/SemanticsService-class.html) → [announce](https://api.flutter.dev/flutter/semantics/SemanticsService/announce.html) | Eenvoudig |  |
 | React Native | [AccessibilityInfo](https://reactnative.dev/docs/accessibilityinfo) → [announceForAccessibility](https://reactnative.dev/docs/accessibilityinfo#announceforaccessibility) | Eenvoudig |  |
@@ -188,15 +188,50 @@ Maar let op, bij het gebruik van cross-platform frameworks heb je mogelijk geen 
 Bekijk onze uitgebreide documentatie voor aanvullende informatie:
 
 <LinkList title="List of docs" isHighlighted={true}>
-  <LinkListItem url="/nl/docs/android" title="Learn about Android accessibility" pageTitle="Android accessibility" shortDescription="Android heeft een toegankelijkheidslaag die gebruikers helpt om hun Android toestel te gebruiken. Door toegankelijkheidsfuncties te integreren, kun je de bruikbaarheid van jouw app verbeteren, met name voor gebruikers met een beperking." icon="/img/light/Android.svg" iconAlt="Android logo (light)"/>
-  <LinkListItem url="/nl/docs/ios" title="Learn about iOS accessibility" pageTitle="iOS accessibility" shortDescription="iOS heeft ingebouwde toegankelijkheidsfuncties, toegankelijkheids-API's en ontwikkelaarstools die een buitengewone kans bieden om elke gebruiker, waaronder met een beperking, een superieure mobiele ervaring te bieden." icon="/img/light/iOS.svg" iconAlt="iOS logo (light)"/>
-  <LinkListItem url="/nl/docs/flutter" title="Learn about Flutter accessibility" pageTitle="Flutter accessibility" shortDescription="Flutter zet zich in om ontwikkelaars te ondersteunen bij het toegankelijker maken van hun apps. Er is ingebouwde ondersteuning voor toegankelijkheidsfuncties van het onderliggende besturingssysteem." icon="/img/light/flutter.svg" iconAlt="Flutter logo (light)"/>
-  <LinkListItem url="/nl/docs/react-native" title="Learn about React Native accessibility" pageTitle="React Native accessibility" shortDescription="React Native heeft toegankelijkheids-API's waarmee je jouw app geschikt kunt maken voor alle gebruikers. Je kunt apps integreren met ondersteunende technologieën zoals de bijvoorbeeld de schermlezers VoiceOver en TalkBack." icon="/img/light/React-Native.svg" iconAlt="React Native logo (light)"/>
-  <LinkListItem url="/nl/docs/xamarin" title="Learn about Xamarin accessibility" pageTitle="Xamarin accessibility" shortDescription="Xamarin heeft functies om apps te ontwikkelen die goed werken met toegankelijkheidsfuncties van het besturingssysteem, zoals groot lettertype, hoog contrast, inzoomen, schermlezer, visuele of haptische feedback en alternatieve invoermethoden." icon="/img/light/Xamarin.svg" iconAlt="Xamarin logo (light)"/>
+  <LinkListItem
+    url="/nl/docs/android"
+    title="Learn about Android accessibility"
+    label="Android accessibility"
+    description="Android heeft een toegankelijkheidslaag die gebruikers helpt om hun Android toestel te gebruiken. Door toegankelijkheidsfuncties te integreren, kun je de bruikbaarheid van jouw app verbeteren, met name voor gebruikers met een beperking."
+    image="/img/light/Android.svg"
+    alt="Android logo (light)"
+  />
+  <LinkListItem
+    url="/nl/docs/ios"
+    title="Learn about iOS accessibility"
+    label="iOS accessibility"
+    description="iOS heeft ingebouwde toegankelijkheidsfuncties, toegankelijkheids-API's en ontwikkelaarstools die een buitengewone kans bieden om elke gebruiker, waaronder met een beperking, een superieure mobiele ervaring te bieden."
+    image="/img/light/iOS.svg"
+    alt="iOS logo (light)"
+  />
+  <LinkListItem
+    url="/nl/docs/flutter"
+    title="Learn about Flutter accessibility"
+    label="Flutter accessibility"
+    description="Flutter zet zich in om ontwikkelaars te ondersteunen bij het toegankelijker maken van hun apps. Er is ingebouwde ondersteuning voor toegankelijkheidsfuncties van het onderliggende besturingssysteem."
+    image="/img/light/flutter.svg"
+    alt="Flutter logo (light)"
+  />
+  <LinkListItem
+    url="/nl/docs/react-native"
+    title="Learn about React Native accessibility"
+    label="React Native accessibility"
+    description="React Native heeft toegankelijkheids-API's waarmee je jouw app geschikt kunt maken voor alle gebruikers. Je kunt apps integreren met ondersteunende technologieën zoals de bijvoorbeeld de schermlezers VoiceOver en TalkBack."
+    image="/img/light/React-Native.svg"
+    alt="React Native logo (light)"
+  />
+  <LinkListItem
+    url="/nl/docs/xamarin"
+    title="Learn about Xamarin accessibility"
+    label="Xamarin accessibility"
+    description="Xamarin heeft functies om apps te ontwikkelen die goed werken met toegankelijkheidsfuncties van het besturingssysteem, zoals groot lettertype, hoog contrast, inzoomen, schermlezer, visuele of haptische feedback en alternatieve invoermethoden."
+    image="/img/light/Xamarin.svg"
+    alt="Xamarin logo (light)"
+  />
 </LinkList>
 
 ## Credits
 
 Dit artikel is een aangepaste versie van de presentatie die Jan Jaap de Groot gaf op de [#id24-conferentie](https://inclusivedesign24.org/) op 21 september 2023. Je kunt de presentatie terugkijken voor uitgebreide informatie over dit onderwerp.
 
-<Video youTubeId="X8aioKWLNJM" title="Video: Jan Jaap de Groot / Native mobile accessibility testing #id24 2023 " name="Video: Jan Jaap de Groot / Native mobile accessibility testing #id24 2023 "/>
+<Video youTubeId="X8aioKWLNJM" title="Video: Jan Jaap de Groot / Native mobile accessibility testing #id24 2023 "/>

@@ -6,7 +6,6 @@ const dutchTranslations = {
   partners: 'partners',
   stats: 'stats',
   about: 'over',
-  'appt-api': 'appt-api',
   'appt-app': 'appt-app',
   handbook: 'handboek',
   licenses: 'licenties',

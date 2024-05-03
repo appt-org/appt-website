@@ -5,15 +5,15 @@ In React Native you can move accessibility focus by using the [`setAccessibility
 ```tsx
 function Component() {
   const ref = useRef(null);
-
+  
   function setFocus() {
     const reactTag = findNodeHandle(ref.current);
-
+    
     if (reactTag) {
       AccessibilityInfo.setAccessibilityFocus(reactTag);
     }
   }
 
-  return <View ref={ref} accessible accessibilityLabel="Modal" />;
-}
+  return <View ref={ref} accessible accessibilityLabel="Modal" />
+};
 ```

@@ -6,7 +6,7 @@ Be careful when using the `accessibilityElementDidBecomeFocused` method: do not 
 
 ```swift
 class View: UIView {
-
+    
     override open func accessibilityElementDidBecomeFocused() {
         // Do not change context
     }

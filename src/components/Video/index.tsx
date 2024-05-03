@@ -6,14 +6,14 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { Image } from '@site/src/components';
 
 export type VideoProps = {
-  title: string;
   youTubeId: string;
-  thumbnailSrc?: string;
-  thumbnailDarkSrc?: string;
-  thumbnailAlt?: string;
+  title: string;
+  image?: string;
+  imageDark?: string;
+  alt?: string;
 };
 
-export function Video({ youTubeId, title, thumbnailSrc, thumbnailDarkSrc, thumbnailAlt }: VideoProps) {
+export function Video({ youTubeId, title, image, imageDark, alt }: VideoProps) {
   const { i18n } = useDocusaurusContext();
   const youtubeThumbnailUrl = `https://img.youtube.com/vi/${youTubeId}/maxresdefault.jpg`;
   const fallbackYoutubeThumbnailUrl = `https://img.youtube.com/vi/${youTubeId}/hqdefault.jpg`;
@@ -29,10 +29,10 @@ export function Video({ youTubeId, title, thumbnailSrc, thumbnailDarkSrc, thumbn
   const videoLoadingText = i18n.currentLocale === 'en' ? 'Loading video' : 'Video wordt geladen';
   const playWithThumbnailText =
     i18n.currentLocale === 'en'
-      ? `Play video: ${title}. Contains image: ${thumbnailAlt}`
-      : `Video afspelen: ${title}. Bevat afbeelding: ${thumbnailAlt}`;
+      ? `Play video: ${title}. Contains image: ${alt}`
+      : `Video afspelen: ${title}. Bevat afbeelding: ${alt}`;
   const playText = i18n.currentLocale === 'en' ? `Play video: ${title}` : `Video afspelen: ${title}`;
-  const playButtonAriaLabel = thumbnailAlt ? playWithThumbnailText : playText;
+  const playButtonAriaLabel = alt ? playWithThumbnailText : playText;
 
   async function onReady() {
     setLoading(false);
@@ -44,11 +44,14 @@ export function Video({ youTubeId, title, thumbnailSrc, thumbnailDarkSrc, thumbn
       {loading && (
         <div className={videoLoaderClasses}>
           <div className="relative w-full h-full">
-            {thumbnailSrc ? (
+            {image
+         ? (
               <Image
-                src={thumbnailSrc}
-                dark={thumbnailDarkSrc}
-                alt={thumbnailAlt ?? title}
+                src={image
+              
+                }
+                dark={imageDark}
+                alt={alt ?? title}
                 className="object-cover w-full h-full"
               />
             ) : (

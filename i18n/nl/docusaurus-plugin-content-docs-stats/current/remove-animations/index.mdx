@@ -3,9 +3,6 @@ locale: nl
 slug: /animaties-verwijderen
 contentful_id: 27vqrZ5O1Ewec2L8N0ZIKX
 title: Animaties verwijderen
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: Meer over animaties verwijderen
 authors: [johan]
 date: 2023-08-04
@@ -20,10 +17,12 @@ Informatie over animaties verwijderen op Android en beweging verminderen op iOS.
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
-        De gegevens voor beweging verminderen op iOS komen binnenkort beschikbaar. 
-        <CustomLink url="/nl/stats/animaties-verwijderen" label="Meer over animaties verwijderen" external={false}/>
+      <TextBlock showBackgroundColor={true}>
+        De gegevens voor beweging verminderen op iOS komen binnenkort beschikbaar.
+        <CustomLink
+          url="/nl/stats/animaties-verwijderen"
+          label="Meer over animaties verwijderen"
+        />
       </TextBlock>
     </ColumnRow>
   </LeftColumn>
@@ -33,8 +32,8 @@ Informatie over animaties verwijderen op Android en beweging verminderen op iOS.
         metrics={[
           { title: 'Animaties verwijderen', key: 'android-accessibility_is_animation_disabled-true', isPercentage: true }
         ]}
-        linkLabel="Meer over animaties verwijderen"
-        linkUrl="/nl/stats/animaties-verwijderen">
+        label="Meer over animaties verwijderen"
+        url="/nl/stats/animaties-verwijderen">
         gebruikt animaties verwijderen op Android.
       </PercentageBlock>
     </ColumnRow>

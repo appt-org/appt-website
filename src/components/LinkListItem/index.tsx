@@ -1,51 +1,46 @@
-import { Card, CustomLink, Image, Typography } from '@site/src/components';
+import { Card, CustomLink, Image, ImagePropsOptional, Typography } from '@site/src/components';
 import { PropsWithChildren } from 'react';
-
-// Alt is only required if icon is provided
-export type LinkListImage =
-  | { icon: string; darkIcon?: string; iconAlt: string }
-  | { icon: undefined; darkIcon: undefined; iconAlt: undefined };
 
 export type LinkListItemProps = {
   title: string;
   url: string;
-  pageTitle?: string;
-  shortDescription?: string;
-} & LinkListImage;
+  label?: string;
+  description?: string;
+} & ImagePropsOptional;
 
 export function LinkListItem({
   url,
   title,
-  pageTitle,
-  shortDescription,
-  icon,
-  darkIcon,
-  iconAlt,
+  label,
+  description,
+  image,
+  imageDark,
+  alt,
 }: PropsWithChildren<LinkListItemProps>) {
-  const isHighlighted = !!shortDescription && !!pageTitle;
+  const isHighlighted = !!description && !!label;
 
   if (isHighlighted) {
     return (
       <Card className="flex flex-col justify-between" tag="li">
         <div>
           <div className="flex items-center mb-4">
-            {icon && (
+            {image && (
               <div className="mr-4 min-w-fit">
                 <Image
                   className="object-cover h-full w-full max-w-12 max-h-12"
-                  src={icon}
-                  dark={darkIcon}
-                  alt={iconAlt}
+                  src={image}
+                  dark={imageDark}
+                  alt={alt}
                 />
               </div>
             )}
 
             <Typography tag="h3" size="heading-m">
-              {pageTitle}
+              {label}
             </Typography>
           </div>
           <Typography className="mb-4" tag="p" size="paragraph">
-            {shortDescription}
+            {description}
           </Typography>
         </div>
         <CustomLink className="self-end" label={title} url={url} />
@@ -59,7 +54,7 @@ export function LinkListItem({
         className="p-3 w-full"
         url={url}
         label={title}
-        onClick={() => onLinkClick({ title: pageTitle, url })}
+        onClick={() => onLinkClick({ title: label, url })}
       />
     </div>
   );

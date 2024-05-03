@@ -12,7 +12,7 @@ export default function App() {
     setSubscription(
       Accelerometer.addListener(accelerometerData => {
         // Provide alternative
-      }),
+      })
     );
   };
 }

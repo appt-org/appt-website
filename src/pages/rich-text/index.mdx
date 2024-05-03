@@ -1,15 +1,14 @@
 ---
 locale: en
-contentfulID: 3AXhK5cXCRuULohr0VnccB
-type: pageContentPage
+slug: /
+contentful_id: 3AXhK5cXCRuULohr0VnccB
 title: Rich text
-shortDescription: Rich text
-seo.title: Rich text
-seo.name: Rich text - SEO
-seo.description: Rich text
-seo.keywords: rich, text
-layout: Layout - In page navigation
-tag: Article
+description: Rich text
+keywords: [rich, text, Article]
+authors: [djovanni, janjaap]
+date: 2022-04-12
+last_update:
+  date: 2024-04-18
 ---
 
 ## Rich text
@@ -52,38 +51,82 @@ Underline
 
 ## Links & buttons
 
-[Internal link](https://appt.org/en/)
+[Internal link](https://appt.org)
 
-[External link](https://appt.nl/)
+[External link](https://appt.nl)
 
-<CustomLink url="https://appt.org/en/" label="Primary button" appearance="primary button" />
+[Primary button](https://appt.org)
 
-<CustomLink url="https://appt.org/en/" label="Secondary button" appearance="secondary button" />
+[Secondary button](https://appt.org)
 
-<CustomLink url="https://appt.nl/" label="Primary button extern" appearance="primary button" />
+[Primary button extern](https://appt.nl)
 
-<CustomLink url="https://appt.nl/" label="Secondary button extern" appearance="secondary button" />
+[Secondary button extern](https://appt.nl)
 
-Een [internal link](https://appt.org/en/rich-text) in een tekst en een [external link](https://firebase.google.com/) in een tekst.
+Een [internal link](https://appt.org) in een tekst en een [external link](https://appt.nl) in een tekst.
 
-Een [`internal code link`](https://appt.org/en/rich-text) in een tekst en een [`external code link`](https://firebase.google.com/) in een tekst.
+Een [`internal code link`](https://appt.org) in een tekst en een [`external code link`](https://firebase.google.com) in een tekst.
 
 ## Link list - highlighted
 
 <LinkList title="List of docs" isHighlighted={true}>
-  <LinkListItem url="https://appt.org/en/docs/android" title="Learn about Android accessibility" pageTitle="Android accessibility" shortDescription="Android has an accessibility layer that helps users to navigate their Android devices more easily. By integrating accessibility features, you can improve your app's usability, particularly for users with disabilities." icon="/img/light/Android.svg" iconAlt="Android logo (light)"/>
-  <LinkListItem url="https://appt.org/en/docs/ios" title="Learn about iOS accessibility" pageTitle="iOS accessibility" shortDescription="iOS has built-in accessibility features, accessibility APIs, and developer tools which provide an extraordinary opportunity to deliver a superior mobile experience to every user, including those with disabilities." icon="/img/light/iOS.svg" iconAlt="iOS logo (light)"/>
-  <LinkListItem url="https://appt.org/en/docs/flutter" title="Learn about Flutter accessibility" pageTitle="Flutter accessibility" shortDescription="Flutter is committed to supporting developers in making their apps more accessible. It has built-in support for accessibility features provided by the underlying operating system." icon="/img/light/flutter.svg" iconAlt="Flutter logo (light)"/>
-  <LinkListItem url="https://appt.org/en/docs/react-native" title="Learn about React Native accessibility" pageTitle="React Native accessibility" shortDescription="React Native has accessibility APIs which let your app accommodate all users. You can integrate apps with assistive technologies like the screen readers VoiceOver and TalkBack." icon="/img/light/React-Native.svg" iconAlt="React Native logo (light)"/>
-  <LinkListItem url="https://appt.org/en/docs/xamarin" title="Learn about Xamarin accessibility" pageTitle="Xamarin accessibility" shortDescription="Xamarin has features to create apps which work well with accessibility features such as large type, high contrast, zoom in, screen reading, visual or haptic feedback cues, and alternative input methods." icon="/img/light/Xamarin.svg" iconAlt="Xamarin logo (light)"/>
+  <LinkListItem
+    url="https://appt.org/en/docs/android"
+    title="Learn about Android accessibility"
+    label="Android accessibility"
+    description="Android has an accessibility layer that helps users to navigate their Android devices more easily. By integrating accessibility features, you can improve your app's usability, particularly for users with disabilities."
+    image="/img/light/Android.svg"
+    alt="Android logo (light)"
+  />
+  <LinkListItem
+    url="https://appt.org/en/docs/ios"
+    title="Learn about iOS accessibility"
+    label="iOS accessibility"
+    description="iOS has built-in accessibility features, accessibility APIs, and developer tools which provide an extraordinary opportunity to deliver a superior mobile experience to every user, including those with disabilities."
+    image="/img/light/iOS.svg"
+    alt="iOS logo (light)"
+  />
+  <LinkListItem
+    url="https://appt.org/en/docs/flutter"
+    title="Learn about Flutter accessibility"
+    label="Flutter accessibility"
+    description="Flutter is committed to supporting developers in making their apps more accessible. It has built-in support for accessibility features provided by the underlying operating system."
+    image="/img/light/flutter.svg"
+    alt="Flutter logo (light)"
+  />
+  <LinkListItem
+    url="https://appt.org/en/docs/react-native"
+    title="Learn about React Native accessibility"
+    label="React Native accessibility"
+    description="React Native has accessibility APIs which let your app accommodate all users. You can integrate apps with assistive technologies like the screen readers VoiceOver and TalkBack."
+    image="/img/light/React Native.svg"
+    alt="React Native logo (light)"
+  />
+  <LinkListItem
+    url="https://appt.org/en/docs/xamarin"
+    title="Learn about Xamarin accessibility"
+    label="Xamarin accessibility"
+    description="Xamarin has features to create apps which work well with accessibility features such as large type, high contrast, zoom in, screen reading, visual or haptic feedback cues, and alternative input methods."
+    image="/img/light/Xamarin.svg"
+    alt="Xamarin logo (light)"
+  />
 </LinkList>
 
 ## Link list - regular
 
 <LinkList title="Regular link list" isHighlighted={false}>
-  <LinkListItem url="https://appt.org/en/" title="Mara Polak"/>
-  <LinkListItem url="https://appt.org/en/" title="Johan Huijkman"/>
-  <LinkListItem url="https://appt.nl/" title="Appt.nl"/>
+  <LinkListItem
+    url="https://appt.org"
+    title="Mara Polak"
+  />
+  <LinkListItem
+    url="https://appt.org"
+    title="Johan Huijkman"
+  />
+  <LinkListItem
+    url="https://appt.nl"
+    title="Appt.nl"
+  />
 </LinkList>
 
 ## Unordered list
@@ -98,7 +141,7 @@ Een [`internal code link`](https://appt.org/en/rich-text) in een tekst en een [`
 
 ## Video
 
-<Video youTubeId="20SHvU2PKsM" title="Accessibility" name="Accessibility"/>
+<Video youTubeId="20SHvU2PKsM" title="Accessibility"/>
 
 ## Image
 
@@ -118,15 +161,14 @@ Een [`internal code link`](https://appt.org/en/rich-text) in een tekst en een [`
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
+      <TextBlock showBackgroundColor={true}>
         ## Cupcake ipsum
         
         Gummi bears danish marshmallow biscuit brownie dessert topping. Sugar plum gummi bears cupcake bear claw cotton candy lollipop gummi bears liquorice. Cheesecake macaroon cake dragée jelly beans.
         
         - Liquorice croissant
         - Biscuit dessert tootsie roll
-        - Marshmallow tart bonbon cupcake sweet. 
+        - Marshmallow tart bonbon cupcake sweet.
       </TextBlock>
     </ColumnRow>
   </RightColumn>
@@ -135,35 +177,18 @@ Een [`internal code link`](https://appt.org/en/rich-text) in een tekst en een [`
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-
-    </ColumnRow>
-  </LeftColumn>
-  <RightColumn>
-    <ColumnRow>
-
-    </ColumnRow>
-  </RightColumn>
-</TwoColumnBlock>
-
-<TwoColumnBlock>
-  <LeftColumn>
-    <ColumnRow>
-
-    </ColumnRow>
-  </LeftColumn>
-  <RightColumn>
-    <ColumnRow>
-
-    </ColumnRow>
-  </RightColumn>
-</TwoColumnBlock>
-
-<TwoColumnBlock>
-  <LeftColumn>
-    <ColumnRow>
-      <LinkListItem url="https://appt.org/en/" title="Mara Polak"/>
-      <LinkListItem url="https://appt.org/en/" title="Johan Huijkman"/>
-      <LinkListItem url="https://appt.nl/" title="Appt.nl"/>
+      <LinkListItem
+        url="https://appt.org"
+        title="Mara Polak"
+      />
+      <LinkListItem
+        url="https://appt.org"
+        title="Johan Huijkman"
+      />
+      <LinkListItem
+        url="https://appt.nl"
+        title="Appt.nl"
+      />
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
@@ -176,20 +201,19 @@ Een [`internal code link`](https://appt.org/en/rich-text) in een tekst en een [`
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-<Video youTubeId="20SHvU2PKsM" title="Accessibility - no thumbnail" name="Accessibility - no thumbnail"/>
+<Video youTubeId="20SHvU2PKsM" title="Accessibility - no thumbnail"/>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
+      <TextBlock showBackgroundColor={true}>
         ## Cupcake ipsum
         
         Gummi bears danish marshmallow biscuit brownie dessert topping. Sugar plum gummi bears cupcake bear claw cotton candy lollipop gummi bears liquorice. Cheesecake macaroon cake dragée jelly beans.
         
         - Liquorice croissant
         - Biscuit dessert tootsie roll
-        - Marshmallow tart bonbon cupcake sweet. 
+        - Marshmallow tart bonbon cupcake sweet.
       </TextBlock>
     </ColumnRow>
   </RightColumn>
@@ -198,19 +222,18 @@ Een [`internal code link`](https://appt.org/en/rich-text) in een tekst en een [`
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={false}>
+      <TextBlock showBackgroundColor={false}>
         ## VoiceOver training
         
         In deze video kun je zien hoe je VoiceOver gebaren kunt oefenen met de Appt app.
         
-        Download de app gratis op appt.nl/app 
+        Download de app gratis op [appt.nl/app](https://appt.nl/app)
       </TextBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-<Video youTubeId="IcYl8qkClsc" title="VoiceOver training video" name="VoiceOver training video"/>
+        <Video youTubeId="IcYl8qkClsc" title="VoiceOver training video"/>
     </ColumnRow>
   </RightColumn>
 </TwoColumnBlock>
@@ -218,43 +241,43 @@ Een [`internal code link`](https://appt.org/en/rich-text) in een tekst en een [`
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <Quote>
+      <Quote
         quote="Do not make the mistake of treating accessibility solely as a technical issue. Every team member plays a role and has his or her own responsibility. Design and development should go hand in hand."
         name="Johan Huijkman"
-        imageSrc="/img/light/Johan.jpeg"
+        image="/img/light/Johan.jpeg"
         extraInfo="Accessibility engineer at tech agency Q42"
         alt="Johan"
-        linkLabel="Johan Huijkman"
-        url="https://appt.org/en/"
-      </Quote>
+        label="Johan Huijkman"
+        url="https://appt.org"
+      />
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <Quote>
+      <Quote
         quote="Do not make the mistake of treating accessibility solely as a technical issue. Every team member plays a role and has his or her own responsibility. Design and development should go hand in hand."
         name="Johan Huijkman"
-        imageSrc="/img/light/Johan.jpeg"
+        image="/img/light/Johan.jpeg"
         extraInfo="Accessibility engineer at tech agency Q42"
         alt="Johan"
-        linkLabel="Johan Huijkman"
-        url="/en/"
-      </Quote>
+        label="Johan Huijkman"
+        url="https://appt.nl"
+      />
     </ColumnRow>
   </RightColumn>
 </TwoColumnBlock>
 
 ## Quote block
 
-<Quote>
+<Quote
   quote="Do not make the mistake of treating accessibility solely as a technical issue. Every team member plays a role and has his or her own responsibility. Design and development should go hand in hand."
   name="Johan Huijkman"
-  imageSrc="/img/light/Johan.jpeg"
+  image="/img/light/Johan.jpeg"
   extraInfo="Accessibility engineer at tech agency Q42"
   alt="Johan"
-  linkLabel="Johan Huijkman"
-  url="/en/"
-</Quote>
+  label="Johan Huijkman"
+  url="https://appt.org"
+/>
 
 ## Percentage block - percentage
 
@@ -262,8 +285,8 @@ Een [`internal code link`](https://appt.org/en/rich-text) in een tekst en een [`
   metrics={[
     { title: 'Dark mode', key: 'ios-preference_ui_style-dark', isPercentage: true }
   ]}
-  linkLabel="Rich text"
-  linkUrl="https://appt.org/en/rich-text">
+  label="Dark mode"
+  url="https://appt.org">
   have turned on dark mode.
 </PercentageBlock>
 
@@ -274,8 +297,8 @@ Een [`internal code link`](https://appt.org/en/rich-text) in een tekst en een [`
         metrics={[
           { title: 'Dark mode', key: 'ios-preference_ui_style-dark', isPercentage: true }
         ]}
-        linkLabel="Rich text"
-        linkUrl="https://appt.org/en/rich-text">
+        label="Dark mode"
+        url="https://appt.org">
         have turned on dark mode.
       </PercentageBlock>
     </ColumnRow>
@@ -286,8 +309,8 @@ Een [`internal code link`](https://appt.org/en/rich-text) in een tekst en een [`
         metrics={[
           { title: 'Dark mode', key: 'ios-preference_ui_style-dark', isPercentage: true }
         ]}
-        linkLabel="Rich text"
-        linkUrl="https://appt.org/en/rich-text">
+        label="Dark mode"
+        url="https://appt.org">
         have turned on dark mode.
       </PercentageBlock>
     </ColumnRow>
@@ -302,8 +325,8 @@ Een [`internal code link`](https://appt.org/en/rich-text) in een tekst en een [`
     { title: 'Day', key: 'ios-preference_daytime-day', isPercentage: true },
     { title: 'Night', key: 'ios-preference_daytime-night', isPercentage: true }
   ]}
-  linkLabel="Docs"
-  linkUrl="https://appt.org/en/docs">
+  label="Docs"
+  url="https://appt.org">
   **The most commonly used accessibility feature is text size adjustment. The accessibility research looked at all phone settings and why people activate them.**
 
 We have listed the results below, including an extrapolation to the entire Dutch population.
@@ -318,8 +341,8 @@ We have listed the results below, including an extrapolation to the entire Dutch
           { title: 'Day', key: 'ios-preference_daytime-day', isPercentage: true },
           { title: 'Night', key: 'ios-preference_daytime-night', isPercentage: true }
         ]}
-        linkLabel="Docs"
-        linkUrl="https://appt.org/en/docs">
+        label="Docs"
+        url="https://appt.org">
         **The most commonly used accessibility feature is text size adjustment. The accessibility research looked at all phone settings and why people activate them.**
       
       We have listed the results below, including an extrapolation to the entire Dutch population.
@@ -334,8 +357,8 @@ We have listed the results below, including an extrapolation to the entire Dutch
           { title: 'Day', key: 'ios-preference_daytime-day', isPercentage: true },
           { title: 'Night', key: 'ios-preference_daytime-night', isPercentage: true }
         ]}
-        linkLabel="Docs"
-        linkUrl="https://appt.org/en/docs">
+        label="Docs"
+        url="https://appt.org">
         **The most commonly used accessibility feature is text size adjustment. The accessibility research looked at all phone settings and why people activate them.**
       
       We have listed the results below, including an extrapolation to the entire Dutch population.

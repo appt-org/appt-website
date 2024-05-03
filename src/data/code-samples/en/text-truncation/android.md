@@ -6,6 +6,6 @@ On Android, you can avoid text truncation by removing all instances of [`android
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="Avoid text truncation"
+    android:text="Avoid text truncation" 
     android:maxLines="REMOVE" />
 ```

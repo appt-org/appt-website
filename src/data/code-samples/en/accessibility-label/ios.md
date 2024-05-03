@@ -14,7 +14,7 @@ element.accessibilityLabel = "Appt"
 
 // Set accessibility label with Dutch speech engine
 element.attributedAccessibilityLabel = NSAttributedString(
-  string: "Appt",
+  string: "Appt", 
   attributes: [.accessibilitySpeechLanguage: "nl-NL"]
 )
 

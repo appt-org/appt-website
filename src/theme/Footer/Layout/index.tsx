@@ -11,8 +11,8 @@ export default function FooterLayout({ style, links, logo, copyright }: Props): 
       })}>
       <div className="max-w-xl mx-auto p-8 sm:p-16">
         <Image
-          src="img/light/logos/appt-logo-light.svg"
-          dark="img/dark/logos/appt-logo-dark.svg"
+          src="img/light/logos/appt.svg"
+          dark="img/dark/logos/appt.svg"
           alt="Appt logo"
           className="nav-logo"
         />

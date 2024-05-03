@@ -1,22 +1,22 @@
 ---
 locale: nl
 slug: /
-hide_table_of_contents: true
 contentful_id: 2jOzisDPSeDJXqFiGjnON9
 icon: /img/social-card.png
 title: Appt.org | Gids voor het maken van toegankelijke apps
 description: Appt.org helpt ontwikkelaars en organisaties bij het bouwen van toegankelijke apps voor iedereen door het bieden van actuele stats over het gebruik van toegankelijkheidsfuncties, codedocumentatie voor iOS, Android en andere platformen, richtlijnen en tips.
 keywords: [appt, toegankelijkheid, android, ios, flutter, react native, xamarin]
 authors: [lisa, maurice]
-hide_title: true
 date: 2022-04-06
 last_update:
   date: 2023-01-27
+hide_table_of_contents: true
+hide_title: true
 ---
 
 <Hero
   title="Gids voor het maken van toegankelijke apps"
-  imageSrc="/img/light/app_wheelchair.svg"
+  image="/img/light/appt_cover.svg"
   alt="Appt cover, illustration of a person in a wheelchair holding a smartphone in one hand and raising the other hand"
 />
 
@@ -25,9 +25,8 @@ Appt.org helpt ontwikkelaars en organisaties bij het bouwen van toegankelijke ap
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={false}>
-        ## **iOS** 
+      <TextBlock showBackgroundColor={false}>
+        ## iOS
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
@@ -55,17 +54,16 @@ Appt.org helpt ontwikkelaars en organisaties bij het bouwen van toegankelijke ap
           { title: 'Vette tekst', key: 'ios-accessibility_is_bold_text_enabled-true', isPercentage: true },
           { title: 'Herstel door schudden uit', key: 'ios-accessibility_is_shake_to_undo_enabled-false', isPercentage: true }
         ]}
-        linkLabel="Alle gebruiksstatistieken"
-        linkUrl="/nl/stats">
+        label="Alle gebruiksstatistieken"
+        url="/nl/stats">
         Meest gebruikte functies op iOS
       </PercentageBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={false}>
-        ## **Android** 
+      <TextBlock showBackgroundColor={false}>
+        ## Android
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
@@ -93,8 +91,8 @@ Appt.org helpt ontwikkelaars en organisaties bij het bouwen van toegankelijke ap
           { title: 'Weergavegrootte', key: 'android-screen_display_scale_default_comparison-bigger', isPercentage: true },
           { title: 'Tekstgrootte aanpassen', key: 'android-default_screen_font_scale-false', isPercentage: true }
         ]}
-        linkLabel="Alle gebruiksstatistieken"
-        linkUrl="/nl/stats">
+        label="Alle gebruiksstatistieken"
+        url="/nl/stats">
         Meest gebruikte functies op Android
       </PercentageBlock>
     </ColumnRow>
@@ -122,23 +120,30 @@ Bekijk meer cijfers over het [aantal mensen met een beperking](/nl/artikelen/bep
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
+      <TextBlock showBackgroundColor={true}>
         ### Statistieken over toegankelijkheid
         
-        Bijna de helft van alle mensen met een mobiele telefoon gebruikt toegankelijkheidsfuncties. Véél meer dan je zou verwachten. We hebben het echte gebruik van al deze functies onderzocht. 
-        <CustomLink url="/nl/stats" label="Alle gebruiksstatistieken" icon="/img/light/_Toegankelijkheid.jpg" darkIcon="/img/dark/_Toegankelijkheid.jpg" iconAlt="Onderzoeksstatistieken naar toegankelijkheidsinstellingen op mobiele telefoons (screenshot)" external={false}/>
+        Bijna de helft van alle mensen met een mobiele telefoon gebruikt toegankelijkheidsfuncties. Véél meer dan je zou verwachten. We hebben het echte gebruik van al deze functies onderzocht.
+        <CustomLink
+          url="/nl/stats"
+          label="Alle gebruiksstatistieken"
+          image="/img/light/_Toegankelijkheid.jpg"
+          imageDark="/img/dark/_Toegankelijkheid.jpg"
+          alt="Onderzoeksstatistieken naar toegankelijkheidsinstellingen op mobiele telefoons (screenshot)"
+        />
       </TextBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
+      <TextBlock showBackgroundColor={true}>
         ### Verdiepende documentatie
         
-        Elk platform biedt verschillende functies om een app toegankelijker te maken. Op deze website vind je verdiepende documentatie voor iOS, Android, React Native, Flutter en Xamarin. 
-        <CustomLink url="/nl/docs" label="Alle codedocumentatie" external={false}/>
+        Elk platform biedt verschillende functies om een app toegankelijker te maken. Op deze website vind je verdiepende documentatie voor iOS, Android, React Native, Flutter en Xamarin.
+        <CustomLink
+          url="/nl/docs"
+          label="Alle codedocumentatie"
+        />
       </TextBlock>
     </ColumnRow>
   </RightColumn>

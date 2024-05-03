@@ -3,9 +3,6 @@ locale: en
 slug: /display-size
 contentful_id: 5twmfZPXYBsbdR3gnx4xsz
 title: Display size
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: More about display size
 authors: [johan, maurice]
 date: 2022-12-13
@@ -24,10 +21,12 @@ On Android, about 15% percent of users increase the size of the screen. By the w
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
-        The metric for display size on iOS is not available at the moment. 
-        <CustomLink url="/en/stats/display-size" label="More about display size" external={false}/>
+      <TextBlock showBackgroundColor={true}>
+        The metric for display size on iOS is not available at the moment.
+        <CustomLink
+          url="/en/stats/display-size"
+          label="More about display size"
+        />
       </TextBlock>
     </ColumnRow>
   </LeftColumn>
@@ -37,8 +36,8 @@ On Android, about 15% percent of users increase the size of the screen. By the w
         metrics={[
           { title: 'Bigger display size', key: 'android-screen_display_scale_default_comparison-bigger', isPercentage: true }
         ]}
-        linkLabel="More about display size"
-        linkUrl="/en/stats/display-size">
+        label="More about display size"
+        url="/en/stats/display-size">
         increase display size on Android.
       </PercentageBlock>
     </ColumnRow>

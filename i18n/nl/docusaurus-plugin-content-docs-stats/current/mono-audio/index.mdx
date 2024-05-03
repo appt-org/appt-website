@@ -3,9 +3,6 @@ locale: nl
 slug: /mono-audio
 contentful_id: 3jmYe3LALs8Mj2K41AW1gS
 title: Mono audio
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: Meer over mono audio
 authors: [johan]
 date: 2022-06-02
@@ -28,18 +25,20 @@ Op basis van ons toegankelijkheidsonderzoek is de inschatting dat ongeveer een k
         metrics={[
           { title: 'iOS - mono audio metric', key: 'ios-accessibility_is_mono_audio_enabled-true', isPercentage: true }
         ]}
-        linkLabel="Meer over monogeluid"
-        linkUrl="/nl/stats/mono-audio">
+        label="Meer over monogeluid"
+        url="/nl/stats/mono-audio">
         heeft monogeluid ingeschakeld op iOS.
       </PercentageBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
-        De gegevens voor mono audio op Android komen binnenkort beschikbaar. 
-        <CustomLink url="/nl/stats/mono-audio" label="Meer over monogeluid" external={false}/>
+      <TextBlock showBackgroundColor={true}>
+        De gegevens voor mono audio op Android komen binnenkort beschikbaar.
+        <CustomLink
+          url="/nl/stats/mono-audio"
+          label="Meer over monogeluid"
+        />
       </TextBlock>
     </ColumnRow>
   </RightColumn>

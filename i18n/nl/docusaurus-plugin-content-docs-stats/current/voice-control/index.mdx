@@ -3,9 +3,6 @@ locale: nl
 slug: /stembediening
 contentful_id: 5QWe7Pm9Zh9cdQLQK5QJ9R
 title: Stembediening
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: Dit artikel bevat verdiepende informatie over stembediening op Android en iOS.
 authors: [johan]
 date: 2022-08-03
@@ -22,10 +19,12 @@ Op Android toestellen is **Voice Access** te installeren om apps via je stem te 
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
-        De gegevens voor spraakbediening op iOS komen binnenkort beschikbaar. 
-        <CustomLink url="/nl/stats/stembediening" label="Meer over stembediening" external={false}/>
+      <TextBlock showBackgroundColor={true}>
+        De gegevens voor spraakbediening op iOS komen binnenkort beschikbaar.
+        <CustomLink
+          url="/nl/stats/stembediening"
+          label="Meer over stembediening"
+        />
       </TextBlock>
     </ColumnRow>
   </LeftColumn>
@@ -35,8 +34,8 @@ Op Android toestellen is **Voice Access** te installeren om apps via je stem te 
         metrics={[
           { title: 'Android - voice access metric', key: 'android-accessibility_is_voice_access_enabled-true', isPercentage: true }
         ]}
-        linkLabel="Meer over stembediening"
-        linkUrl="/nl/stats/stembediening">
+        label="Meer over stembediening"
+        url="/nl/stats/stembediening">
         gebruikt stembediening op Android.
       </PercentageBlock>
     </ColumnRow>
@@ -46,6 +45,20 @@ Op Android toestellen is **Voice Access** te installeren om apps via je stem te 
 ## Stembediening gebruiken
 
 <LinkList title="List of voice control features" isHighlighted={true}>
-  <LinkListItem url="/nl/docs/ios/functies/stembediening" title="Voice Control voor iOS" pageTitle="Voice Control: stembediening voor iOS" shortDescription="Dit artikel bevat verdiepende informatie over de stembediening Voice Control voor iOS." icon="/img/light/voiceaccess.svg" iconAlt="Voice Control icon"/>
-  <LinkListItem url="/nl/docs/android/functies/stembediening" title="Voice Access voor Android" pageTitle="Voice Access: stembediening voor Android" shortDescription="Dit artikel bevat verdiepende informatie over de stembediening Voice Access voor Android." icon="/img/light/voiceaccess.svg" iconAlt="Voice Control icon"/>
+  <LinkListItem
+    url="/nl/docs/ios/functies/stembediening"
+    title="Voice Control voor iOS"
+    label="Voice Control: stembediening voor iOS"
+    description="Dit artikel bevat verdiepende informatie over de stembediening Voice Control voor iOS."
+    image="/img/light/voiceaccess.svg"
+    alt="Voice Control icon"
+  />
+  <LinkListItem
+    url="/nl/docs/android/functies/stembediening"
+    title="Voice Access voor Android"
+    label="Voice Access: stembediening voor Android"
+    description="Dit artikel bevat verdiepende informatie over de stembediening Voice Access voor Android."
+    image="/img/light/voiceaccess.svg"
+    alt="Voice Control icon"
+  />
 </LinkList>

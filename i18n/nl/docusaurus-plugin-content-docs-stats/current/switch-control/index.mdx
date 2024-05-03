@@ -3,9 +3,6 @@ locale: nl
 slug: /schakelbediening
 contentful_id: 2mPkKpUg10Qt9KH9rNm1Ey
 title: Schakelbediening
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: Dit artikel bevat verdiepende informatie over schakelbediening op Android en iOS.
 authors: [johan]
 date: 2022-08-03
@@ -24,8 +21,8 @@ Voor sommige mensen met een beperking is de schakelbediening erg belangrijk bij 
         metrics={[
           { title: 'Schakelbediening', key: 'ios-accessibility_is_switch_control_running-true', isPercentage: true }
         ]}
-        linkLabel="Meer over schakelbediening"
-        linkUrl="/nl/stats/schakelbediening">
+        label="Meer over schakelbediening"
+        url="/nl/stats/schakelbediening">
         gebruikt schakelbediening op iOS.
       </PercentageBlock>
     </ColumnRow>
@@ -36,8 +33,8 @@ Voor sommige mensen met een beperking is de schakelbediening erg belangrijk bij 
         metrics={[
           { title: 'Schakelbediening', key: 'android-accessibility_is_switch_access_enabled-true', isPercentage: true }
         ]}
-        linkLabel="Meer over schakelbediening"
-        linkUrl="/nl/stats/schakelbediening">
+        label="Meer over schakelbediening"
+        url="/nl/stats/schakelbediening">
         gebruikt schakelbediening op Android.
       </PercentageBlock>
     </ColumnRow>
@@ -47,6 +44,20 @@ Voor sommige mensen met een beperking is de schakelbediening erg belangrijk bij 
 ## Schakelbediening gebruiken
 
 <LinkList title="List of switch control features" isHighlighted={true}>
-  <LinkListItem url="/nl/docs/ios/functies/schakelbediening" title="Schakelbediening voor iOS" pageTitle="Schakelbediening voor iOS" shortDescription="Dit artikel bevat verdiepende informatie over het gebruik van schakelbediening om je iOS toestel te bedienen." icon="/img/light/switchaccess.svg" iconAlt="Switch Access icon"/>
-  <LinkListItem url="/nl/docs/android/functies/toegang-via-schakelaar" title="Toegang via schakelaar voor Android" pageTitle="Toegang via schakelaar voor Android" shortDescription="Dit artikel bevat verdiepende informatie over het gebruik van 'Toegang via schakelaar' om je Android toestel te bedienen." icon="/img/light/switchaccess.svg" iconAlt="Switch Access icon"/>
+  <LinkListItem
+    url="/nl/docs/ios/functies/schakelbediening"
+    title="Schakelbediening voor iOS"
+    label="Schakelbediening voor iOS"
+    description="Dit artikel bevat verdiepende informatie over het gebruik van schakelbediening om je iOS toestel te bedienen."
+    image="/img/light/switchaccess.svg"
+    alt="Switch Access icon"
+  />
+  <LinkListItem
+    url="/nl/docs/android/functies/toegang-via-schakelaar"
+    title="Toegang via schakelaar voor Android"
+    label="Toegang via schakelaar voor Android"
+    description="Dit artikel bevat verdiepende informatie over het gebruik van 'Toegang via schakelaar' om je Android toestel te bedienen."
+    image="/img/light/switchaccess.svg"
+    alt="Switch Access icon"
+  />
 </LinkList>

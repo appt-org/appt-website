@@ -1,38 +1,25 @@
-import { CustomLink, Image, Typography } from '@site/src/components';
+import { CustomLink, Image, ImagePropsOptional, Typography } from '@site/src/components';
 
 import clsx from 'clsx';
 
-type ImageProps =
-  | {
-      imageSrc: string;
-      imageDarkSrc?: string;
-      alt: string;
-    }
-  | {
-      imageSrc: undefined;
-      imageDarkSrc: undefined;
-      alt: undefined;
-    };
-
-type LinkProps = { linkLabel: string; url: string } | { linkLabel: undefined; url: undefined };
+type LinkProps = { label: string; url: string } | { label: undefined; url: undefined };
 
 export type QuoteProps = {
   quote: string;
   name: string;
   extraInfo?: string;
   isImageLeft?: boolean;
-} & LinkProps &
-  ImageProps;
+} & LinkProps & ImagePropsOptional;
 
 export function Quote({
   quote,
   name,
   extraInfo,
   isImageLeft = true,
-  imageSrc,
-  imageDarkSrc,
+  image,
+  imageDark,
   alt,
-  linkLabel,
+  label,
   url,
 }: QuoteProps) {
   const classes = clsx('markdown-block flex flex-col items-center justify-center md:flex-row mb-12 md:mb-20', {
@@ -40,9 +27,9 @@ export function Quote({
   });
   return (
     <div className={classes}>
-      {imageSrc && alt && (
+      {image && alt && (
         <div className="overflow-hidden relative block flex-1 grow-0 basis-[12.5rem] h-[12.5rem] w-[12.5rem] rounded-full mb-4 md:first:mr-6 md:mb-0">
-          <Image className="absolute object-cover w-full h-full" src={imageSrc} dark={imageDarkSrc} alt={alt} />
+          <Image className="absolute object-cover w-full h-full" src={image} dark={imageDark} alt={alt} />
         </div>
       )}
       <div className="flex-1 flex flex-col max-w-sm md:first:mr-6">
@@ -59,7 +46,7 @@ export function Quote({
             {extraInfo}
           </Typography>
         )}
-        {linkLabel && url && <CustomLink className="self-end mt-4" url={url} label={linkLabel} />}
+        {label && url && <CustomLink className="self-end mt-4" url={url} label={label} />}
       </div>
     </div>
   );

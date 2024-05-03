@@ -1,6 +1,6 @@
 # Audio description - Android
 
-As of Android 4.1, the [`MediaPlayer`](https://developer.android.com/reference/android/media/MediaPlayer) has support for multiple audio tracks. Use the [`selectTrack`](<https://developer.android.com/reference/android/media/MediaPlayer#selectTrack(int)>) method to select the correct audio track.
+As of Android 4.1, the [`MediaPlayer`](https://developer.android.com/reference/android/media/MediaPlayer) has support for multiple audio tracks. Use the [`selectTrack`](https://developer.android.com/reference/android/media/MediaPlayer#selectTrack(int)) method to select the correct audio track.
 
 The code example belows shows a basic implementation of selecting an audio description track embedded inside a video.
 

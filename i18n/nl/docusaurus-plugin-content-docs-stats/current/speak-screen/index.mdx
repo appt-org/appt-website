@@ -3,9 +3,6 @@ locale: nl
 slug: /spreek-scherm-uit
 contentful_id: 5yiFgQhsCfsAsbOT4p7NtR
 title: Spreek scherm uit
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: Meer over spreek scherm uit
 authors: [johan, janjaap]
 date: 2022-06-02
@@ -28,18 +25,20 @@ Op basis van ons onderzoek is de schatting dat ongeveer 200.000 Nederlanders dez
         metrics={[
           { title: 'iOS - speak screen metric', key: 'ios-accessibility_is_speak_screen_enabled-true', isPercentage: true }
         ]}
-        linkLabel="Meer over scherm uitspreken"
-        linkUrl="/nl/stats/spreek-scherm-uit">
+        label="Meer over scherm uitspreken"
+        url="/nl/stats/spreek-scherm-uit">
         laat de inhoud van het scherm uitspreken op iOS.
       </PercentageBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock
-        showBackgroundColor={true}>
-        De scherm uitspreken functie is niet beschikbaar op Android. 
-        <CustomLink url="/nl/stats/spreek-scherm-uit" label="Meer over scherm uitspreken" external={false}/>
+      <TextBlock showBackgroundColor={true}>
+        De scherm uitspreken functie is niet beschikbaar op Android.
+        <CustomLink
+          url="/nl/stats/spreek-scherm-uit"
+          label="Meer over scherm uitspreken"
+        />
       </TextBlock>
     </ColumnRow>
   </RightColumn>
@@ -48,9 +47,9 @@ Op basis van ons onderzoek is de schatting dat ongeveer 200.000 Nederlanders dez
 <Quote
   quote="Mijn iPhone is mijn derde oog."
   name="Jeroen"
-  imageSrc="/img/light/Blinde app gebruiker Jeroen.jpg"
+  image="/img/light/Blinde-app-gebruiker-Jeroen.jpg"
   alt="Jeroen - Asset"
-  linkLabel="Lees het interview met Jeroen"
+  label="Lees het interview met Jeroen"
   url="/nl/artikelen/jeroen"
 />
 
@@ -69,5 +68,8 @@ Niet-tekstuele inhoud zoals knoppen en afbeeldingen dienen te zijn voorzien van 
 Dit hoort bij het volgende succescriterium van de WCAG:
 
 <LinkList title="Text alternatives - link list" isHighlighted={false}>
-  <LinkListItem url="/nl/richtlijnen/wcag/succescriterium-1-1-1" title="Succescriterium 1.1.1 - Succescriterium 1.1.1 - Niet-tekstuele content - Niveau A"/>
+  <LinkListItem
+    url="/nl/richtlijnen/wcag/succescriterium-1-1-1"
+    title="Succescriterium 1.1.1 - Niet-tekstuele content - Niveau A"
+  />
 </LinkList>

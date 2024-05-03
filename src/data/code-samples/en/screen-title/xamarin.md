@@ -17,6 +17,6 @@ With Xamarin Forms, we recommend setting an appropriate [`Title`](https://learn.
 ```csharp
 public NewPage()
 {
-    SetBinding(Page.TitleProperty, new Binding("Appt homescreen"));
+    SetBinding(Page.TitleProperty, new Binding("Appt homescreen")); 
 }
 ```

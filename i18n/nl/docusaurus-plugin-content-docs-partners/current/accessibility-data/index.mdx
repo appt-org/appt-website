@@ -4,9 +4,6 @@ slug: /data-over-toegankelijkheid
 contentful_id: 4j28k0q5myb1Cc4j3uWJq8
 icon: /img/light/q42-logo-black.png
 title: Data over toegankelijkheid
-hide_table_of_contents: true
-pagination_next: null
-pagination_prev: null
 description: Hoe data jou kan helpen om meer inzicht te krijgen in toegankelijkheid.
 authors: [johan]
 date: 2022-08-29
@@ -30,7 +27,7 @@ Uit ons onderzoek blijkt, dat accessibility-instellingen veel breder worden gebr
 
 Aan dit onderzoek doen enkele bekende Nederlandse apps mee, waarmee een aanzienlijk deel van de Nederlandse bevolking vertegenwoordigd is in de data. Het onderzoek is inmiddels gebaseerd op meer dan 2 miljoen iPhone-gebruikers. Met het toevoegen van steeds meer apps, waarbij we nu ook de Android-apps meenemen, wordt het onderzoek nóg nauwkeuriger.
 
-## **Hoe werkt het?**
+## Hoe werkt het?
 
 Bij het opstarten van een app wordt door de library informatie opgehaald over de functies ten behoeve van toegankelijkheid op de mobiele telefoon: Per functie wordt bekeken of deze is geactiveerd en in een aantal gevallen welke waarden zijn ingesteld. Bijvoorbeeld bij de fontgrootte wordt de waarde van het ingestelde formaat, small/medium/large/extra large/…,  gedeeld. Dit wordt niet iedere keer gedeeld maar volgens een ingestelde interval. Bijvoorbeeld elke week. Dit wordt naar een instantie van Firestore gestuurd. Hierin wordt de data uit de apps voor 24 uur verzameld. Iedere 24 uur wordt deze data verwerkt naar BigQuery. Vervolgens wordt de data in Firestore verwijderd. Dit is om de kosten zo laag mogelijk te houden. Als je ervoor kiest om de Firestore, dataverwerking en BigQuery in eigen beheer te houden, houd dan rekening met 40-60 euro per maand. Uiteraard is dit ook afhankelijk van het aantal app-gebruikers.
 
@@ -63,7 +60,7 @@ Iedere nacht wordt de nieuwe data opgehaald uit de Firestore. Deze data wordt ve
 
 [Link naar juridische bijsluiter toevoegen ]
 
-## **Hoe gaat dit jou helpen?**
+## Hoe gaat dit jou helpen?
 
 We hopen dat dit onderzoek ook jou en je team gaat helpen om digitale producten te maken die bruikbaar zijn door iedereen.
 
@@ -71,12 +68,12 @@ We hopen dat dit onderzoek ook jou en je team gaat helpen om digitale producten 
 Persoonlijk dashboard toont jou precies welke functies door klanten gebruikt worden en hoeveel. Dit geeft jou de kans om te bepalen welke stappen je moet zetten om een zo groot mogelijk deel van jouw gebruikers optimaal te bedienen.
 - Focus op toegankelijkheid.  
 Data maakt inzichtelijk dat er behoefte is aan toegankelijkheid en helpt daarbij bij het maken van een businesscase voor toegankelijkheid.
-- Prioritering in toegankelijkheid. 
+- Prioritering in toegankelijkheid.
 Inzicht middels persoonlijk dashboard. Welk onderdeel heeft de meeste impact?
-- Meer gedetailleerde inzichten. 
+- Meer gedetailleerde inzichten.
 Hoe langer je dit laat lopen hoe meer detaillering. Zo zagen we bij een klant initieel geen gebruik van een schermlezer. Maar na een paar maanden was dit aantal opgelopen tot een paar honderd.
 
-## **Gepersonaliseerde uitbreiding**
+## Gepersonaliseerde uitbreiding
 
 Het is doorgaans heel lastig kwantificeerbaar, hoe ver je bent met het toegankelijk maken van jouw product of producten. Met een persoonlijk dashboard wordt het effect van de inspanningen ten behoeve van toegankelijkheid inzichtelijk gemaakt. Het toont hoeveel mensen een bepaalde feature gebruiken. Als de ondersteuning van deze feature is gerealiseerd, zie je direct wat het effect is op jouw doelgroep. Door ook de uitkomsten van audits en gebruiksonderzoeken hierin een plek te geven ontstaat een meetinstrument dat jouw voortgang nog beter inzichtelijk maakt.
 

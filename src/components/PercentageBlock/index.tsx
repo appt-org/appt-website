@@ -33,8 +33,8 @@ type AccessibilityMetricApiModel = ManualAccessibilityMetricApiModel | Generated
 
 export type PercentageBlockProps = PropsWithChildren & {
   metrics?: AccessibilityMetricApiModel[];
-  linkLabel?: string;
-  linkUrl?: string;
+  label?: string;
+  url?: string;
   baseValue?: number;
 };
 
@@ -55,7 +55,7 @@ function roundPercentage(percentage: number) {
   return Math.round(percentage);
 }
 
-export function PercentageBlock({ metrics, linkLabel, linkUrl, baseValue, children }: PercentageBlockProps) {
+export function PercentageBlock({ metrics, label, url, baseValue, children }: PercentageBlockProps) {
   const { i18n } = useDocusaurusContext();
   const locale = i18n.currentLocale;
   const id = uuidv4();
@@ -161,9 +161,9 @@ export function PercentageBlock({ metrics, linkLabel, linkUrl, baseValue, childr
   return (
     <Card className="markdown-block flex-1">
       {allMetrics.length === 1 ? renderMetric() : renderMetrics()}
-      {linkLabel && linkUrl && (
+      {label && url && (
         <div className="flex justify-end mt-4">
-          <CustomLink className="flex justify-end mt-4" url={linkUrl} label={linkLabel} />
+          <CustomLink className="flex justify-end mt-4" url={url} label={label} />
         </div>
       )}
     </Card>

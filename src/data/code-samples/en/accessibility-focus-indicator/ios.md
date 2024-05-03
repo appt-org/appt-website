@@ -8,7 +8,7 @@ The code sample below shows how to change the background color of a button on fo
 
 ```swift
 class Button: UIButton {
-
+    
     override open func accessibilityElementDidBecomeFocused() {
         backgroundColor = .focused
     }

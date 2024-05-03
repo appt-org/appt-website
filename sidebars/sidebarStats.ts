@@ -22,12 +22,12 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
-          id: 'colour-blind-mode/index',
+          id: 'color-blind-mode/index',
           customProps: { isHidden: true },
         },
         {
           type: 'doc',
-          id: 'colour-contrast/index',
+          id: 'color-contrast/index',
           customProps: { isHidden: true },
         },
         {
@@ -37,7 +37,7 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
-          id: 'darker-system-colours/index',
+          id: 'darker-system-colors/index',
           customProps: { isHidden: true },
         },
         {
@@ -57,7 +57,7 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
-          id: 'invert-colours/index',
+          id: 'invert-colors/index',
           customProps: { isHidden: true },
         },
         {
