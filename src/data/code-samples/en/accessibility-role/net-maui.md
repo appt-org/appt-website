@@ -23,7 +23,7 @@ By intercepting the handler changed event you can change the role of a custom co
 
 Partial class on Android:
 
-```c# title="Component.Android.cs"
+```csharp title="Component.Android.cs"
 public partial class Component
 {
   void Frame_HandlerChanged(System.Object sender, System.EventArgs e)
@@ -52,7 +52,7 @@ public class CustomFrameDelegate : AccessibilityDelegateCompatWrapper
 
 Partial class on iOS:
 
-```c# title="Component.iOS.cs"
+```csharp title="Component.iOS.cs"
 public partial class Component
 {
   void Frame_HandlerChanged(System.Object sender, System.EventArgs e)

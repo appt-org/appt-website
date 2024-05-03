@@ -13,7 +13,7 @@ By intercepting the handler changed event you can set the `StateDescription` on 
 
 Partial class on Android:
 
-```c# title="CustomEntry.xaml.Android.cs"
+```csharp title="CustomEntry.xaml.Android.cs"
 public partial class PinTilesCodeEntryView
 {
   private AndroidX.AppCompat.Widget.AppCompatEditText? editor;
@@ -33,7 +33,7 @@ public partial class PinTilesCodeEntryView
 
 Partial class on iOS:
 
-```c# title="CustomEntry.xaml.iOS.cs"
+```csharp title="CustomEntry.xaml.iOS.cs"
 private void Entry_HandlerChanged(object? sender, EventArgs? e)
 {
   if (sender.Handler?.PlatformView is UITextField field)
