@@ -17,7 +17,8 @@ export function CustomLink({ label, url, className, external, appearance, active
   const { i18n } = useDocusaurusContext();
 
   const linkAppearance = appearance?.toLowerCase();
-  const isExternal = external || url.startsWith('https');
+  const isApptLink = url.startsWith('https://appt.org');
+  const isExternal = external || (url.startsWith('https') && !isApptLink);
   const isButton = linkAppearance === LinkAppearance.PrimaryButton || linkAppearance === LinkAppearance.SecondaryButton;
 
   const classNames = clsx(

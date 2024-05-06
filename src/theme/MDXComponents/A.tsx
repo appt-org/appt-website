@@ -8,7 +8,8 @@ export default function MDXA(props: Props): JSX.Element {
   const isCodeLabel =
     ((props.children as ReactElement)?.type as JSXElementConstructor<ReactElement>)?.name === 'MDXCode';
 
-  const showExternalIcon = props.href.includes('https') && !isCodeLabel;
+  const isApptLink = props.href.includes('https://appt.org');
+  const showExternalIcon = props.href.includes('https') && !isApptLink && !isCodeLabel;
 
   return (
     <Link className="underline text-accent hover:no-underline inline font-normal" {...props} target="_self">
