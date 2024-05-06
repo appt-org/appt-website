@@ -14,9 +14,12 @@ article ol li {
 article > p,
 .theme-doc-markdown > p {
   margin-block: theme(spacing.4);
-  max-width: theme(maxWidth.prose);
   font-size: theme(fontSize.paragraph);
+}
+
+p {
   line-height: theme(lineHeight.paragraph);
+  max-width: theme(maxWidth.prose);
 }
 
 .theme-doc-markdown {
