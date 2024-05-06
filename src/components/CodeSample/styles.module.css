@@ -1,10 +1,14 @@
-.codeSampleContainer [role="tabpanel"] h1,
+.codeSampleContainer [role='tabpanel'] h1,
 .codeSampleContainer > h1 {
   display: none;
 }
 
-.codeSampleContainer [role="tabpanel"] p {
+.codeSampleContainer [role='tabpanel'] p {
   margin-block: 1rem;
+}
+
+.codeSampleContainer p + p {
+  margin-top: theme(spacing.4);
 }
 
 .codeSampleTabs {
@@ -31,7 +35,7 @@
   background-color: unset;
 }
 
-.codeSampleTabs li[aria-selected="true"] {
+.codeSampleTabs li[aria-selected='true'] {
   color: rgb(var(--color-body));
   background-color: rgb(var(--color-surface));
   border: none;
