@@ -35,4 +35,5 @@
   color: rgb(var(--color-body));
   background-color: rgb(var(--color-surface));
   border: none;
+  text-decoration-line: underline;
 }
