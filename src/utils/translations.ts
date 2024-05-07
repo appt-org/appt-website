@@ -22,9 +22,9 @@ export const getTranslatedPath = (path: keyof typeof dutchTranslations, capitali
 export const getTranslatedAnnouncement = () => {
   const isNl = process.env.DOCUSAURUS_CURRENT_LOCALE === 'nl';
   const nlAnnouncement =
-    '<div class="announcement">Onze nieuwe website is live! Feedback? <a href="https://github.com/appt-org/appt-docusaurus/issues">Laat het ons weten!</a></div>';
+    '<div class="announcement">Onze nieuwe website is live! Feedback? <a href="https://github.com/appt-org/appt-website/issues">Laat het ons weten!</a></div>';
   const enAnnouncement =
-    '<div class="announcement">Our new website is live! Feedback? <a href="https://github.com/appt-org/appt-docusaurus/issues">Let us know!</a></div>';
+    '<div class="announcement">Our new website is live! Feedback? <a href="https://github.com/appt-org/appt-website/issues">Let us know!</a></div>';
 
   return isNl ? nlAnnouncement : enAnnouncement;
 };

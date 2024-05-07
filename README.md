@@ -2,8 +2,8 @@
 
 *Source code of appt.org*
 
-![Build Status](https://github.com/appt-org/appt-docusaurus/actions/workflows/firebase-hosting-push-acc.yml/badge.svg)
-![Build Status](https://github.com/appt-org/appt-docusaurus/actions/workflows/firebase-hosting-push-prod.yml/badge.svg)
+![Build Status](https://github.com/appt-org/appt-website/actions/workflows/firebase-hosting-push-acc.yml/badge.svg)
+![Build Status](https://github.com/appt-org/appt-website/actions/workflows/firebase-hosting-push-prod.yml/badge.svg)
 
 **What is Appt?**
 
