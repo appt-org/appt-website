@@ -69,7 +69,7 @@ const config: Config = {
   title: 'Appt',
   tagline: 'Gids voor het maken van toegankelijke apps',
   favicon: 'favicon.ico',
-  noIndex: true, //process.env.ENVIRONMENT !== 'production',
+  noIndex: process.env.ENVIRONMENT !== 'production',
   url: 'https://appt.org',
   baseUrl: process.env.BASE_URL,
   onBrokenLinks: 'throw',
@@ -95,7 +95,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars/sidebarsDocs.ts',
-          editUrl: 'https://github.com/appt-org/appt-docusaurus/tree/develop/',
+          editUrl: 'https://github.com/appt-org/appt-website/tree/develop/',
           showLastUpdateTime: true,
         },
         theme: {

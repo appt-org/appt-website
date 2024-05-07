@@ -14,7 +14,7 @@
     "build:prod:en": "cross-env BASE_URL='/en' env-cmd -f .env.production docusaurus build --locale en --out-dir build/en",
     "build:dev": "rm -rf build && npm run build:dev:en && npm run build:dev:nl",
     "build:acc": "rm -rf build && npm run build:acc:en && npm run build:acc:nl",
-    "build:prod": "rm -rf build && npm run build:prod:en && npm run build:prod:nl",
+    "build:prod": "rm -rf build && npm run build:prod:en && npm run build:prod:nl && cp -r ./sitemap.xml ./build",
     "swizzle": "cross-env BASE_URL='/' docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
