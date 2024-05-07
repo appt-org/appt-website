@@ -95,7 +95,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars/sidebarsDocs.ts',
-          editUrl: 'https://github.com/appt-org/appt-docusaurus/tree/develop/',
+          editUrl: 'https://github.com/appt-org/appt-website/tree/develop/',
           showLastUpdateTime: true,
         },
         theme: {
