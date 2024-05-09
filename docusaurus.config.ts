@@ -72,6 +72,7 @@ const config: Config = {
   noIndex: process.env.ENVIRONMENT !== 'production',
   url: 'https://appt.org',
   baseUrl: process.env.BASE_URL,
+  trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   headTags,
@@ -220,8 +221,8 @@ const config: Config = {
     },
     algolia: {
       appId: '6XBZ8SDI3N',
-      apiKey: 'debf254ff5610709fdbaac9c297ad511',
-      indexName: 'appt',
+      apiKey: '904315b2e60e7af6603eb4e9ff0cdb56',
+      indexName: 'appt2',
     },
     announcementBar: {
       id: 'new_site',
