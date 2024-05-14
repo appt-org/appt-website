@@ -8,6 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          token: ${{secrets.STATS_PAT}}
           ref: 'main'
 
       - name: Create env file
