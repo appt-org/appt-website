@@ -34,7 +34,8 @@ jobs:
         run: |
           git config --global user.name 'Appt Stats'
           git config --global user.email '167291111+stats-appt-org@users.noreply.github.com'
-          git remote set-url origin https://x-access-token/:${{ secrets.STATS_PAT }}@github.com/${{ github.repository }}
           git add .
           git commit -am "Automated accessibility data update"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.STATS_PAT }}
