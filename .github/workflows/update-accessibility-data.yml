@@ -1,5 +1,8 @@
 name: Automated - Update accessibility data
 'on':
+  push:
+    branches:
+      - develop
   schedule:
     - cron: '0 2 * * *'
 jobs:
@@ -29,8 +32,6 @@ jobs:
       - name: Commit & push data
         if: steps.verify_diff.outputs.changed == 'true'
         run: |
-          git config --global user.name 'Appt Stats'
-          git config --global user.email '167291111+stats-appt-org@users.noreply.github.com'
           git add .
           git commit -am "Automated accessibility data update"
           git push
