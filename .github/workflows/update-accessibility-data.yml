@@ -1,8 +1,5 @@
 name: Automated - Update accessibility data
 'on':
-  push:
-    branches:
-      - develop
   schedule:
     - cron: '0 2 * * *'
 jobs:
