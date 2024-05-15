@@ -10,6 +10,7 @@ export const docusaurusContentDocsConfig = [
       sidebarPath: './sidebars/guidelines/sidebars.ts',
       editUrl: 'https://github.com/appt-org/appt-website/tree/develop/',
       showLastUpdateTime: true,
+      editLocalizedFiles: true,
     },
   ],
   [
@@ -21,6 +22,7 @@ export const docusaurusContentDocsConfig = [
       sidebarPath: false,
       editUrl: 'https://github.com/appt-org/appt-website/tree/develop/',
       showLastUpdateTime: true,
+      editLocalizedFiles: true,
     },
   ],
   [
@@ -32,6 +34,7 @@ export const docusaurusContentDocsConfig = [
       sidebarPath: './sidebars/sidebarStats.ts',
       editUrl: 'https://github.com/appt-org/appt-website/tree/develop/',
       showLastUpdateTime: true,
+      editLocalizedFiles: true,
     },
   ],
   [

@@ -98,6 +98,7 @@ const config: Config = {
           sidebarPath: './sidebars/sidebarsDocs.ts',
           editUrl: 'https://github.com/appt-org/appt-website/tree/develop/',
           showLastUpdateTime: true,
+          editLocalizedFiles: true,
         },
         theme: {
           customCss: [
