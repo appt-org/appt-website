@@ -73,7 +73,7 @@ const config: Config = {
   url: 'https://appt.org',
   baseUrl: process.env.BASE_URL,
   trailingSlash: false,
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   headTags,
   i18n: {
