@@ -11,9 +11,10 @@ export type CustomLinkProps = {
   external?: boolean;
   appearance?: LinkAppearance;
   active?: boolean;
+  target?: string;
 } & NavLinkProps;
 
-export function CustomLink({ label, url, className, external, appearance, active = false }: CustomLinkProps) {
+export function CustomLink({ label, url, className, external, appearance, active = false, target="_self" }: CustomLinkProps) {
   const { i18n } = useDocusaurusContext();
 
   const linkAppearance = appearance?.toLowerCase();
@@ -40,7 +41,7 @@ export function CustomLink({ label, url, className, external, appearance, active
   const iconClassNames = clsx('w-8 h-8 inline-block');
 
   return (
-    <Link to={url} className={classNames} target="_self">
+    <Link to={url} className={classNames} target={target}>
       <span>{label}</span>
       {isExternal && (
         <ExternalIcon aria-label={i18n.currentLocale === 'en' ? 'External' : 'Extern'} className={iconClassNames} />
