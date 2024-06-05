@@ -3,7 +3,7 @@ import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { PageMetadata, useThemeConfig } from '@docusaurus/theme-common';
-import { DEFAULT_SEARCH_TAG, useAlternatePageUtils, keyboardFocusedClassName } from '@docusaurus/theme-common/internal';
+import { DEFAULT_SEARCH_TAG, keyboardFocusedClassName } from '@docusaurus/theme-common/internal';
 import { useLocation } from '@docusaurus/router';
 import { applyTrailingSlash } from '@docusaurus/utils-common';
 import SearchMetadata from '@theme/SearchMetadata';
