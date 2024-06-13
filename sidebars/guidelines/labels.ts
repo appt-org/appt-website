@@ -277,15 +277,15 @@ const labels = {
   },
   '2.4.11': {
     en: '2.4.11 Focus Not Obscured (Minimum)',
-    nl: '2.4.11 Focus niet verborgen (minimum)',
+    nl: '2.4.11 Focus niet bedekt (minimum)',
   },
   '2.4.12': {
     en: '2.4.12 Focus Not Obscured (Enhanced)',
-    nl: '2.4.12 Focus niet verborgen (versterkt)',
+    nl: '2.4.12 Focus niet bedekt (uitgebreid)',
   },
   '2.4.13': {
     en: '2.4.13 Focus Appearance',
-    nl: '2.4.13 Focus weergave',
+    nl: '2.4.13 Focusweergave',
   },
   '2.5.1': {
     en: '2.5.1 Pointer Gestures',
@@ -313,7 +313,7 @@ const labels = {
   },
   '2.5.7': {
     en: '2.5.7 Dragging Movements',
-    nl: '2.5.7 Slepende bewegingen',
+    nl: '2.5.7 Sleepbewegingen',
   },
   '2.5.8': {
     en: '2.5.8 Target Size (Minimum)',
@@ -393,7 +393,7 @@ const labels = {
   },
   '3.3.7': {
     en: '3.3.7 Redundant Entry',
-    nl: '3.3.7 Overtollige invoer',
+    nl: '3.3.7 Overbodige invoer',
   },
   '3.3.8': {
     en: '3.3.8 Accessible Authentication (Minimum)',
@@ -401,7 +401,7 @@ const labels = {
   },
   '3.3.9': {
     en: '3.3.9 Accessible Authentication (Enhanced)',
-    nl: '3.3.9 Toegankelijke authenticatie (versterkt)',
+    nl: '3.3.9 Toegankelijke authenticatie (uitgebreid)',
   },
   '4.1.1': {
     en: '4.1.1 Parsing',
