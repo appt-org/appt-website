@@ -15,7 +15,7 @@ var body: some View {
 ```
 
 ```swift
-// Define multiple accessibility actions
+// Multiple accessibility actions
 var body: some View {
     ContentView()
     // Custom actions
