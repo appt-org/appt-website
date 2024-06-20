@@ -1,16 +1,28 @@
 # Accessibility focus - SwiftUI
 
-In SwiftUI, enhancing the accessibility of your app can be achieved by using the [accessibilityFocused(_:)](https://developer.apple.com/documentation/swiftui/view/accessibilityfocused(_:)) view modifier. This modifier allows you to bind an element's focus state to a boolean variable, enabling you to track and respond to focus changes in a dynamic and visually informative way.
+In SwiftUI, you can enhance accessibility focus by using [`@AccessibilityFocusState`](https://developer.apple.com/documentation/swiftui/accessibilityfocusstate) property wrapper and the [`accessibilityFocused`](https://developer.apple.com/documentation/swiftui/view/accessibilityfocused(_:)) modifier. These tools allow you to programmatically move the accessibility focus to a specific element in your app. This can be particularly useful when you want to direct the user's attention to a specific part of the UI in response to changes or interactions.
 
 ```swift
-// Property wrapper to track whether the email TextField is focused for accessibility
-@AccessibilityFocusState private var isEmailFocused: Bool
-@State private var email = ""
+// State variable to control loading state
+@State var isLoading: Bool = false
+    
+// Accessibility focus state variable to manage focus
+@AccessibilityFocusState var isLoadingIndicatorFocused: Bool
+    
 var body: some View {
-    Form {
-        TextField("Email", text: $email, prompt: Text("Email"))
-            // Binds the focus state of this TextField to the 'isEmailFocused' property
-            .accessibilityFocused($isEmailFocused)
+    VStack {
+        Button("Search articles") {
+            // Set loading state to true
+            isLoading = true
+            // Move focus to the loading indicator
+            isLoadingIndicatorFocused = true
+        }
+            
+        if isLoading {
+            ProgressView()
+                .accessibilityFocused($isLoadingIndicatorFocused)  // Bind the focus state
+                .accessibilityLabel("Loading")  // Provide an accessible label
+            }
+        }
     }
-}
 ```
