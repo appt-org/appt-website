@@ -22,7 +22,7 @@ In Jetpack Compose, you can add custom actions for assistive technologies using 
     }
 ```
 
-There are several ways to override labels for default actions. For `Composables` that expose the `onClick` parameter, specify the [`label`](https://developer.android.com/reference/kotlin/androidx/compose/ui/semantics/SemanticsPropertyReceiver#(androidx.compose.ui.semantics.SemanticsPropertyReceiver).onClick(kotlin.String,kotlin.Function0)) inside the [`semantics`](https://developer.android.com/reference/kotlin/androidx/compose/ui/semantics/package-summary#(androidx.compose.ui.Modifier).semantics(kotlin.Boolean,kotlin.Function1)) block modifier. The [`SemanticsActions`](https://developer.android.com/reference/kotlin/androidx/compose/ui/semantics/SemanticsPropertyReceiver) object provides a list of all predefined accessibility actions.
+Furthermore, there are several ways to override labels for default actions. For `Composables` that expose the `onClick` parameter, specify the [`label`](https://developer.android.com/reference/kotlin/androidx/compose/ui/semantics/SemanticsPropertyReceiver#(androidx.compose.ui.semantics.SemanticsPropertyReceiver).onClick(kotlin.String,kotlin.Function0)) inside the [`semantics`](https://developer.android.com/reference/kotlin/androidx/compose/ui/semantics/package-summary#(androidx.compose.ui.Modifier).semantics(kotlin.Boolean,kotlin.Function1)) block modifier. The [`SemanticsActions`](https://developer.android.com/reference/kotlin/androidx/compose/ui/semantics/SemanticsPropertyReceiver) object provides a list of all predefined accessibility actions.
 
 ```kotlin
     // override label for button

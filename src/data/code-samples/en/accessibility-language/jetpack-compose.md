@@ -4,6 +4,7 @@ In Jetpack Compose, you can use [`AnnotatedString`](https://developer.android.co
 
 ```kotlin
 val text = buildAnnotatedString {  
+    // Setting locale to Dutch for Appt string
     withStyle(style = SpanStyle(localeList = LocaleList("nl"))) {  
         append("Appt")  
     }  

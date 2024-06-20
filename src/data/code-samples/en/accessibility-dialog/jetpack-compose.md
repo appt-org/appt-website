@@ -17,7 +17,7 @@ Box {
                     Text("Proceed")  
                 }  
             },  
-            dismissButton = {  
+            dismissButton = {  // Do not forget to add dismissButton
                 TextButton(onClick = { showDialog = false }) {  
                     Text("Cancel")  
                 }  
