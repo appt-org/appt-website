@@ -8,14 +8,12 @@ In SwiftUI, you can dynamically change the visual appearance of views based on t
 @AccessibilityFocusState private var isEmailFocused: Bool
 @State private var email = ""
 var body: some View {
-    NavigationView {
-        Form {
-            TextField("Email", text: $email, prompt: Text("Email"))
-                // Binds the focus state of this TextField to the 'isEmailFocused' property.
-                .accessibilityFocused($isEmailFocused)
-                // The border color changes based on whether the TextField is focused:
-                .border(isEmailFocused ? .red : .clear)
-        }
+    Form {
+        TextField("Email", text: $email, prompt: Text("Email"))
+            // Binds the focus state of this TextField to the 'isEmailFocused' property.
+            .accessibilityFocused($isEmailFocused)
+            // The border color changes based on whether the TextField is focused:
+            .border(isEmailFocused ? .red : .clear)
     }
 }
 ```
