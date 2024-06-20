@@ -1,4 +1,4 @@
-# Accessibility link - Android
+# Accessibility link - Jetpack Compose
 
 In Jetpack Compose, starting from [`compose-ui 1.7.0`](https://developer.android.com/jetpack/androidx/releases/compose-ui#1.7.0-alpha07) you can use [`LinkAnnotation.Url`](https://developer.android.com/reference/kotlin/androidx/compose/ui/text/LinkAnnotation.Url) of [`AnnotatedString`](https://developer.android.com/reference/kotlin/androidx/compose/ui/text/AnnotatedString) to add an inline link to the text. Clicking on the link will automatically open it in the default browser.
 

@@ -1,4 +1,4 @@
-# Accessibility action - Android
+# Accessibility action - Jetpack Compose
 
 In Jetpack Compose, you can add custom actions for assistive technologies using the [`customActions`](https://developer.android.com/reference/kotlin/androidx/compose/ui/semantics/package-summary#(androidx.compose.ui.semantics.SemanticsPropertyReceiver).customActions()) property inside the [`semantics`](https://developer.android.com/reference/kotlin/androidx/compose/ui/semantics/package-summary#(androidx.compose.ui.Modifier).semantics(kotlin.Boolean,kotlin.Function1)) block modifier.
 

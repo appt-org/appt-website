@@ -1,4 +1,4 @@
-# Accessibility focus indicator - Android
+# Accessibility focus indicator - Jetpack Compose
 
 In Jetpack Compose, you can easily create a focus indicator by using either the [`border`](https://developer.android.com/reference/kotlin/androidx/compose/material3/package-summary?hl=en#Card(androidx.compose.ui.Modifier,androidx.compose.ui.graphics.Shape,androidx.compose.material3.CardColors,androidx.compose.material3.CardElevation,androidx.compose.foundation.BorderStroke,kotlin.Function1)) property or the [`border`](https://developer.android.com/develop/ui/compose/modifiers-list#Border) modifier. Another way, is by implementing a custom `Indication`. You can read [official documentation](https://developer.android.com/develop/ui/compose/touch-input/focus/react-to-focus#advanced-visual-cues) for more details.
 
