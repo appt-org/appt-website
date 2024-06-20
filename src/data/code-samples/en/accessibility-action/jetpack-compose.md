@@ -40,17 +40,3 @@ There are several ways to override labels for default actions. For `Composables`
         // Button content
     }
 ```
-
-If a `Composable` does not provide an `onClick` parameter, you can specify `label` when adding the [`clickable`](https://developer.android.com/reference/kotlin/androidx/compose/ui/Modifier#(androidx.compose.ui.Modifier).clickable(kotlin.Boolean,kotlin.String,androidx.compose.ui.semantics.Role,kotlin.Function0)) modifier.
-
-```kotlin
-    // override label for surface
-    Surface(
-        modifier = Modifier
-            .clickable(onClickLabel = "Add bookmark") {
-                /* Your click handler */
-            }
-    ) {
-        // Surface content
-    }
-```
