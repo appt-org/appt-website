@@ -1,6 +1,6 @@
 # Accessibility dialog - SwiftUI
 
-In SwiftUI, you can [show alerts](https://developer.apple.com/documentation/swiftui/view/alert(_:ispresented:presenting:actions:message:)-8584l) by using `.alert` view modifier. The `alert` style of the dialog is going to be presented according to `@State` variable. You should always add a close action with a `.cancel` button role. The focus of assistive technologies is automatically trapped inside the alert while it's visible.
+In SwiftUI, you can [show alerts](https://developer.apple.com/documentation/swiftui/view/alert(_:ispresented:presenting:actions:message:)-8584l) by using the `.alert` view modifier. The `alert` dialog presentation is determined by the `@State` variable. You should always include a close action with a `.cancel` button role. Assistive technologies automatically trap focus inside the alert while it's visible.
 
 ```swift
 @State private var showingAlert = false
