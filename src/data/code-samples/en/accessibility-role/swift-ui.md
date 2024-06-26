@@ -1,6 +1,6 @@
 # Accessibility role - SwiftUI
 
-In SwiftUI, you can enhance the accessibility of your app by setting [`accessibility traits`](https://developer.apple.com/documentation/swiftui/accessibilitytraits) on views. This is done using the [`.accessibilityAddTraits`](https://developer.apple.com/documentation/swiftui/view/accessibilityaddtraits(_:)) modifier, which allows you to specify the role a view should play in the user interface. Traits can make a view act as a button, header, link, image, and more. You can also combine multiple traits to define complex roles.
+In SwiftUI, you can enhance the accessibility of your app by setting [`accessibility traits`](https://developer.apple.com/documentation/swiftui/accessibilitytraits) on views. This is done using the [`accessibilityAddTraits`](https://developer.apple.com/documentation/swiftui/view/accessibilityaddtraits(_:)) modifier, which allows you to specify the role a view should play in the user interface. Traits can make a view act as a button, header, link, image, and more. You can also combine multiple traits to define complex roles.
 
 ```swift
 // Button Trait
