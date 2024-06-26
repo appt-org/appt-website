@@ -8,7 +8,8 @@ If your state is not `isSelected`, we recommended using the [`accessibilityValue
 @State private var isExpanded = false
 
 var body: some View {
-    Text("Example View")
+    ExpandableView()
+        // Accessibility trait indicates the state
         .accessibilityAddTraits(isExpanded ? [.isSelected] : [])
         .accessibilityValue(Text(isExpanded ? "Expanded": "Collapsed"))
 }
