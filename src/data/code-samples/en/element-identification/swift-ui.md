@@ -15,7 +15,7 @@ struct CloseButton: View {
             Image(systemName: "xmark.circle")
                 .resizable()
                 .frame(width: 24, height: 24)
-                .accessibilityLabel(Text("Close"))
+                .accessibilityLabel("Close")
         }
     }
 }

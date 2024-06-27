@@ -1,6 +1,6 @@
 # Accessibility focus - SwiftUI
 
-In SwiftUI, you can enhance accessibility focus by using the [`@AccessibilityFocusState`](https://developer.apple.com/documentation/swiftui/accessibilityfocusstate) property wrapper and the [`accessibilityFocused`](https://developer.apple.com/documentation/swiftui/view/accessibilityfocused(_:)) modifier. These tools allow you to programmatically move the accessibility focus to a specific element in your app. This can be particularly useful when you want to direct the user's attention to a specific part of the UI in response to changes or interactions.
+In SwiftUI, you can enhance accessibility focus by using the [`@AccessibilityFocusState`](https://developer.apple.com/documentation/swiftui/accessibilityfocusstate) property wrapper and the [`accessibilityFocused`](https://developer.apple.com/documentation/swiftui/view/accessibilityfocused(_:)) modifier. These methods allow you to programmatically move the accessibility focus to a specific element in your app. This can be particularly useful when you want to direct the user's attention to a specific part of the UI in response to changes or interactions.
 
 ```swift
 // State variable to control loading state
@@ -11,7 +11,7 @@ In SwiftUI, you can enhance accessibility focus by using the [`@AccessibilityFoc
     
 var body: some View {
     VStack {
-        Button("Search articles") {
+        Button("Search Appt website") {
             // Set loading state to true
             isLoading = true
             // Move focus to the loading indicator

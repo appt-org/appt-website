@@ -1,6 +1,6 @@
 # Accessibility order - SwiftUI
 
-In SwiftUI assistive technology like `VoiceOver` typically reads elements in a top-left to bottom-right order. However, you can customize this reading order using the [`accessibilitySortPriority`](https://developer.apple.com/documentation/swiftui/view/accessibilitysortpriority(_:)) view modifier. A higher priority value means the element is read earlier. Use `.accessibilityElement(children: .contain)` to group and manage the accessibility elements within stacks (`HStack`, `VStack`, or `ZStack`).
+In SwiftUI, assistive technology like `VoiceOver` typically reads elements in a top-left to bottom-right order. However, you can customize this reading order using the [`accessibilitySortPriority`](https://developer.apple.com/documentation/swiftui/view/accessibilitysortpriority(_:)) view modifier. A higher priority value means the element is read earlier. Use `.accessibilityElement(children: .contain)` to group and manage the accessibility elements within stacks (`HStack`, `VStack`, or `ZStack`) to improve navigation when using assitive technologies.
 
 ```swift
 VStack {
