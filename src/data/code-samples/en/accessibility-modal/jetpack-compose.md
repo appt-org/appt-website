@@ -7,9 +7,9 @@ It's recommended to set the pane title for high-level layouts, such as [`Scaffol
 Please keep in mind that focus is not trapped when a pane title has been set.
 
 ```kotlin
-    Scaffold(modifier = Modifier.semantics {
-        paneTitle = "Appt pane"
-    }) { paddingValues ->
-        // Scaffold content...
-    }
+Scaffold(modifier = Modifier.semantics {
+    paneTitle = "Appt pane"
+}) { paddingValues ->
+    // Scaffold content...
+}
 ```

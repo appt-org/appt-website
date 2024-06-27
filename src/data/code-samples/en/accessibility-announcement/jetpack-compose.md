@@ -11,14 +11,14 @@ You can choose from two options for `liveRegion`:
 If you don't specify the `liveRegion` property, it indicates to Compose that updates to this field would not be announced.
 
 ```kotlin
-    var changingText by remember{ mutableStateOf("Changing text") }
-    Text(
-        text = changingText,
-        modifier = Modifier.semantics {
-            liveRegion = LiveRegionMode.Polite
-            contentDescription = changingText // workaround for bug
-        }
-    )
+var changingText by remember{ mutableStateOf("Changing text") }
+Text(
+    text = changingText,
+    modifier = Modifier.semantics {
+        liveRegion = LiveRegionMode.Polite
+        contentDescription = changingText // workaround for bug
+    }
+)
 ```
 
 Important: there is a [known issue](https://issuetracker.google.com/issues/225780131) with `liveRegion`, which prevents speech announcements when the `text` parameter is changed. The current workaround is to assign the same text to the [`contentDescription`](https://developer.android.com/reference/kotlin/androidx/compose/ui/semantics/package-summary.html#(androidx.compose.ui.semantics.SemanticsPropertyReceiver).contentDescription()) field.

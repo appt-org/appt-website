@@ -5,14 +5,14 @@ In Jetpack Compose, you can use [`pointerInput`](https://developer.android.com/r
 A gesture should not be the only way to trigger actions. Make sure to provide a second way, such as a button, to trigger the same action.
 
 ```kotlin
-    Box(
-        modifier = Modifier
-            .pointerInput(Unit) {
-                detectTransformGestures { _, _, zoom, _ ->
-                    // Provide alternative
-                }
+Box(
+    modifier = Modifier
+        .pointerInput(Unit) {
+            detectTransformGestures { _, _, zoom, _ ->
+                // Provide alternative
             }
-    ) {
-        // Scalable Box content ...
-    }
+        }
+) {
+    // Scalable Box content ...
+}
 ```

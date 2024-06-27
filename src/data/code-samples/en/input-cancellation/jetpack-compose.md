@@ -5,16 +5,16 @@ In Jetpack Compose, ypu should avoid execution actions before user finishes the 
 If you need more fine-grained control over gestures, you need to wait for the action to be released. This can be done, by using for example, [`tryAwaitRelease`](https://developer.android.com/reference/kotlin/androidx/compose/foundation/gestures/PressGestureScope#tryAwaitRelease()) for click actions.
 
 ```kotlin
-        Box(
-            modifier = Modifier
-                .pointerInput(Unit) {
-                    detectTapGestures(
-                        onPress = {
-                            if (tryAwaitRelease()) {
-                                // your action ...   
-                            }
-                        }
-                    )
+Box(
+    modifier = Modifier
+        .pointerInput(Unit) {
+            detectTapGestures(
+                onPress = {
+                    if (tryAwaitRelease()) {
+                        // your action ...   
+                    }
                 }
-        )
+            )
+        }
+)
 ```

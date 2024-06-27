@@ -5,11 +5,11 @@ In Jetpack Compose, you can use a [`Text`](https://developer.android.com/referen
 You can also use a [`TextField`](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#TextField(androidx.compose.ui.text.input.TextFieldValue,kotlin.Function1,androidx.compose.ui.Modifier,kotlin.Boolean,kotlin.Boolean,androidx.compose.ui.text.TextStyle,kotlin.Function0,kotlin.Function0,kotlin.Function0,kotlin.Function0,kotlin.Boolean,androidx.compose.ui.text.input.VisualTransformation,androidx.compose.foundation.text.KeyboardOptions,androidx.compose.foundation.text.KeyboardActions,kotlin.Boolean,kotlin.Int,kotlin.Int,androidx.compose.foundation.interaction.MutableInteractionSource,androidx.compose.ui.graphics.Shape,androidx.compose.material.TextFieldColors)) which contains `supportingText` property, which can be used to provide instructions.
 
 ```kotlin
-    TextField(
-        value = "",
-        onValueChange = { /* State update logic */ },
-        supportingText = {
-            Text("Your password should be at least 8 characters.")
-        }
-    )
+TextField(
+    value = "",
+    onValueChange = { /* State update logic */ },
+    supportingText = {
+        Text("Your password should be at least 8 characters.")
+    }
+)
 ```

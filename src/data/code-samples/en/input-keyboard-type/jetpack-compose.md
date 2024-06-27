@@ -18,9 +18,9 @@ The following constants are defined for `KeyboardType`:
 Example of using `KeyboardType`:
 
 ```kotlin
-    TextField(
-        value = "",
-        onValueChange = { /* State update logic */ },
-        keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Number)
-    )
+TextField(
+    value = "",
+    onValueChange = { /* State update logic */ },
+    keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Number)
+)
 ```
