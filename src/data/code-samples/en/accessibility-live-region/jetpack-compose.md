@@ -1,25 +1,11 @@
 # Accessibility live region - Jetpack Compose
 
-With Jetpack Compose, you can use [`liveRegion`](https://developer.android.com/reference/kotlin/androidx/compose/ui/semantics/package-summary#(androidx.compose.ui.semantics.SemanticsPropertyReceiver).liveRegion()) to announce changes in layout.
-
-A live region only triggers when a change in the element has been detected.
-It can also be triggered by saving the state.
-
-Note: be careful with LiveRegionMode.Assertive, this will interrupt all ongoing speech.
+In Jetpack Compose, a live region can be set inside the [`semantics`](https://developer.android.com/reference/kotlin/androidx/compose/ui/semantics/package-summary#(androidx.compose.ui.Modifier).semantics(kotlin.Boolean,kotlin.Function1)) block modifier. To interrupt ongoing speech, also known as being assertive, use [`LiveRegionMode.Assertive`](https://developer.android.com/reference/kotlin/androidx/compose/ui/semantics/LiveRegionMode#Assertive()). To wait for ongoing speech, also known as being polite, use [`LiveRegionMode.Polite`](https://developer.android.com/reference/kotlin/androidx/compose/ui/semantics/LiveRegionMode#Polite()).
 
 ```kotlin
-// remember state
-var liveRegionEnabled by remember { mutableStateOf(false) } 
-
-// enable live region
-if (somethingChanged) {
-    liveRegionEnabled = true
-}
-
-// define live region mode for element
-modifier = Modifier.semantics {
-    if (liveRegionEnabled) {
-        liveRegion = LiveRegionMode.Polite
+Text(
+    modifier = Modifier.semantics {
+        liveRegion = LiveRegionMode.Polite // or LiveRegionMode.Assertive
     }
-}
+)
 ```
