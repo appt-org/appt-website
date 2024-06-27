@@ -4,9 +4,9 @@ In Jetpack Compose, to notify `Composable` state changes, you can use the [`live
 
 You can choose from two options for `liveRegion`:
 
-+ [`LiveRegionMode.Polite`](https://developer.android.com/reference/kotlin/androidx/compose/ui/semantics/LiveRegionMode#Polite()) , which waits for the speech announcement in progress to complete
+1. [`LiveRegionMode.Polite`](https://developer.android.com/reference/kotlin/androidx/compose/ui/semantics/LiveRegionMode#Polite()) , which waits for the speech announcement in progress to complete
 
-+ [`LiveRegionMode.Assertive`](https://developer.android.com/reference/kotlin/androidx/compose/ui/semantics/LiveRegionMode#Assertive()), which interrupts ongoing speech to immediately announce changes
+2. [`LiveRegionMode.Assertive`](https://developer.android.com/reference/kotlin/androidx/compose/ui/semantics/LiveRegionMode#Assertive()), which interrupts ongoing speech to immediately announce changes
 
 If you don't specify the `liveRegion` property, it indicates to Compose that updates to this field would not be announced.
 
