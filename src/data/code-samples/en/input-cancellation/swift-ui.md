@@ -5,7 +5,7 @@ In SwiftUI, you should avoid performing actions in response to [`gestures`](http
 Use SwiftUI built-in [`gestures`](https://developer.apple.com/documentation/swiftui/gestures) that have support for the cancellation upon `touchUp` events.
 
 ```swift
-Circle()
+Text("Appt")
     .gesture(LongPressGesture()
         .onChanged { _ in
             // Avoid activating actions before user has finished or cancelled touch
