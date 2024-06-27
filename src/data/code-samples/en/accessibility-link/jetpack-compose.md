@@ -17,7 +17,7 @@ val textWithLink = buildAnnotatedString {
             )
         )
     ) {
-        append("Aapt")
+        append("Appt")
     }
 }
 Text(textWithLink)
