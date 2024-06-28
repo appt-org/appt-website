@@ -5,6 +5,8 @@ Set the `contentDescription` property to `null`, the assistive technology will t
 
 If `Composable` doesn't expose the `contentDescription` property, you can use the `invisibleToUser` property inside the [`semantics`](https://developer.android.com/reference/kotlin/androidx/compose/ui/semantics/package-summary#(androidx.compose.ui.Modifier).semantics(kotlin.Boolean,kotlin.Function1)) block modifier, to hide an element from assistive techonologies.
 
+If, on the contrary, you want to make a certain element focusable, use the `focusable` modifier. By design, some `Composables` are focusable, such as a `Button` or a `Composable` with the `clickable` modifier attached to it.
+
 ```kotlin
 // Set contentDescription to null
 Image(
@@ -19,4 +21,9 @@ Text(
         invisibleToUser()
     }
 )
+
+// Make element focusable
+Box(modifier = Modifier.focusable()) {
+    // Box content...
+}
 ```
