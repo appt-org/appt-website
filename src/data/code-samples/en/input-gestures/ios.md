@@ -12,7 +12,6 @@ let gesture = UIPinchGestureRecognizer(
 addGestureRecognizer(gesture)
 
 @objc private func onPinch(_ sender: UIPinchGestureRecognizer) {
-    // Provide alternative
-  }
+  // Provide alternative
 }
 ```
