@@ -4,7 +4,7 @@ In SwiftUI, you can use [`Text`](https://developer.apple.com/documentation/swift
 
 
 ```swift
-private var transcript: String = ""
+private var transcript: String = "Appt video transcript."
 
 var body: some View {
     ScrollView {
