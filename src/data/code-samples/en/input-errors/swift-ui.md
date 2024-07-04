@@ -1,8 +1,6 @@
 # Input errors - SwiftUI
 
-In SwiftUI, we recommend using a [`Text`](https://developer.apple.com/documentation/swiftui/text) or [`Label`](https://developer.apple.com/documentation/swiftui/label) views to indicate an error. The error message should also be posted to assistive technologies by using an [`accessibility announcement`](../Techniques/accessibility-announcement.md).
-
-You could also use a third party library to displaying instructions. Unfortunately, accessibility is often not considered in the implementations.
+In SwiftUI, we recommend using [`Text`](https://developer.apple.com/documentation/swiftui/text) or [`Label`](https://developer.apple.com/documentation/swiftui/label) views to indicate an error. The error message should also be posted to assistive technologies by using an [`accessibility announcement`](../Techniques/accessibility-announcement.md).
 
 ```swift
 @State private var showError = false

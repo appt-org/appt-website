@@ -1,6 +1,6 @@
 # Input gestures - SwiftUI
 
-In SwiftUI, [`gestures`](https://developer.apple.com/documentation/swiftui/gestures) are a common way of interaction with user interface. You can handle gestures by applying gesture modifiers directly to your views. This allows you to detect and respond to common [`gestures`](https://developer.apple.com/documentation/swiftui/gestures) such as taps, drags, pinches, and more.
+In SwiftUI, [`gestures`](https://developer.apple.com/documentation/swiftui/gestures) are a common way of interaction with the user interface. You can handle gestures by applying gesture modifiers directly to your views. This allows you to detect and respond to common gestures such as taps, drags, pinches, and more.
 
 A gesture should not be the only way to trigger actions. Make sure to provide a second way, such as a button, to trigger the same action.
 

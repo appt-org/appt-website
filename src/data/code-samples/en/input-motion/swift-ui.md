@@ -1,6 +1,6 @@
 # Motion input - SwiftUI
 
-In SwiftUI, there is no built-in method to detect when a user shakes their device. However, you can easily create this functionality yourself by overriding the [`motionEnded`](https://developer.apple.com/documentation/uikit/uiresponder/1621090-motionended) method in UIWindow and setting up a custom notification.
+In SwiftUI, there is no built-in method to detect when a user shakes their device. However, you can create this functionality yourself by overriding the [`motionEnded`](https://developer.apple.com/documentation/uikit/uiresponder/1621090-motionended) method in `UIWindow` and setting up a custom notification.
 
 A motion event should not be the only way to trigger actions. Make sure to provide a second way, such as a button, to trigger the same action.
 

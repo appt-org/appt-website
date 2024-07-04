@@ -12,7 +12,6 @@ VStack {
             .accessibilitySortPriority(4)
             // Allow interaction using Full Keyboard Access
             .accessibilityRespondsToUserInteraction(true)
-            // Top Right View
         
         Text("Top Right")
             // Focused third
