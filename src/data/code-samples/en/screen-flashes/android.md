@@ -5,5 +5,17 @@ On Android, flashing content often uses [`Executors`](https://developer.android.
 If your app contains any videos, also check if these contain more than three flashes per second.
 
 ```kotlin
-Not available, contribute!
+private val handler = Handler(Looper.getMainLooper())
+private val flashRunnable = object : Runnable {
+    override fun run() {
+        toggleFlashing()
+        handler.postDelayed(this, 333) // Do not do this
+    }
+}
+
+val flashingTextView = findViewById(R.id.flashingTextView)
+flashingTextView.text = "Flashing Content"
+
+isFlashing = true
+handler.post(flashRunnable)
 ```
