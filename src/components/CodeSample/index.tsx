@@ -12,9 +12,10 @@ export type CodeSampleProps = {
 };
 
 export function CodeSample({ id, platform }: CodeSampleProps) {
-  const defaultPlatforms = ['android', 'ios', 'flutter', 'net-maui', 'react-native', 'xamarin'];
+  const defaultPlatforms = ['android', 'compose', 'ios', 'flutter', 'net-maui', 'react-native', 'xamarin'];
   const platformLabels = [
     { id: 'android', label: 'Android' },
+    { id: 'compose', label: 'Jetpack Compose' },
     { id: 'ios', label: 'iOS' },
     { id: 'flutter', label: 'Flutter' },
     { id: 'net-maui', label: '.NET MAUI' },
