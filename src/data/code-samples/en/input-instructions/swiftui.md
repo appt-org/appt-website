@@ -1,6 +1,6 @@
 # Input instructions - SwiftUI
 
-In SwiftUI, we recommend using [`Text`](https://developer.apple.com/documentation/swiftui/text) or [`Label`](https://developer.apple.com/documentation/swiftui/label) views to show input instructions. The input instructions message should also be posted to assistive technologies by using an [`accessibility announcement`](../Techniques/accessibility-announcement.md).
+In SwiftUI, we recommend using [`Text`](https://developer.apple.com/documentation/swiftui/text) or [`Label`](https://developer.apple.com/documentation/swiftui/label) views to show input instructions. The input instructions message should also be posted to assistive technologies by using an [`accessibility announcement`](https://appt.org/en/docs/swiftui/samples/accessibility-announcement).
 
 ```swift
 @State private var showHelp = false

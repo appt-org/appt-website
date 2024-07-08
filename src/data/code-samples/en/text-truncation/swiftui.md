@@ -4,7 +4,6 @@ In SwiftUI, [`Text`](https://developer.apple.com/documentation/swiftui/text) vie
 
 To further avoid text truncation, especially when the text content exceeds the available screen space, it's recommended to place the `Text` view inside a scrollable container like a [`ScrollView`](https://developer.apple.com/documentation/swiftui/scrollview).
 
-
 ```swift
 ScrollView {
     VStack {
