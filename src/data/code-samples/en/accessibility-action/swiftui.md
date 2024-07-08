@@ -8,7 +8,7 @@ Additionally, you can define multiple custom actions by using the [`accessibilit
 // Single custom accessibility action
 var body: some View {
     ContentView()
-    // Custom action
+        // Custom action
         .accessibilityAction(named: "Appt action") {
             // Logic
         }
