@@ -5,43 +5,46 @@ On iOS, [`AVPlayer`](https://developer.apple.com/documentation/avfoundation/avpl
 The code example below shows a basic implementation of adding captions.
 
 ```swift
+// Create a mutable composition
+let videoComposition = AVMutableComposition()
+
 // Add video track
 guard let videoTrack = videoComposition.addMutableTrack(
-    withMediaType: .video, 
+    withMediaType: .video,
     preferredTrackID: kCMPersistentTrackID_Invalid
-) else { 
-    return 
+) else {
+    return
 }
 
-guard let videoUrl = Bundle.main.url(forResource: "Appt", withExtension: "mp4") else { 
-    return 
+guard let videoUrl = Bundle.main.url(forResource: "Appt", withExtension: "mp4") else {
+    return
 }
 
 let videoAsset = AVURLAsset.init(url: videoUrl)
-try? videoTrack.insertTimeRange(
-    CMTimeRangeMake(start: .zero, duration: videoAsset.duration),
-    of: videoAsset.tracks(withMediaType: .video)[0],
+try await videoTrack.insertTimeRange(
+    CMTimeRangeMake(start: .zero, duration: videoAsset.load(.duration)),
+    of: videoAsset.loadTracks(withMediaType: .video)[0],
     at: .zero
 )
 
 // Add captions track
 guard let captionsUrl = Bundle.main.url(
-    forResource: "Appt", 
+    forResource: "Appt",
     withExtension: ".vtt"
-) else { 
-    return 
+) else {
+    return
 }
 guard let captionsTrack = videoComposition.addMutableTrack(
-    withMediaType: .text, 
+    withMediaType: .text,
     preferredTrackID: kCMPersistentTrackID_Invalid
-) else { 
-    return 
+) else {
+    return
 }
 
 let captionsAsset = AVURLAsset(url: captionsUrl)
-try? captionsTrack.insertTimeRange(
-    CMTimeRangeMake(start: .zero, duration: videoAsset.duration),
-    of: subtitleAsset.tracks(withMediaType: .text)[0],
+try? await captionsTrack.insertTimeRange(
+    CMTimeRangeMake(start: .zero, duration: videoAsset.load(.duration)),
+    of: captionsAsset.loadTracks(withMediaType: .text)[0],
     at: .zero
 )
 ```
