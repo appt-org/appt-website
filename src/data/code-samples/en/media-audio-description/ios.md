@@ -5,43 +5,48 @@ On iOS, [`AVPlayer`](https://developer.apple.com/documentation/avfoundation/avpl
 The code example below shows a basic implementation of enabling audio description embedded inside a video.
 
 ```swift
-let videoComposition = AVMutableComposition()
+let composition = AVMutableComposition()
 
-// Add video track
-guard let videoTrack = videoComposition.addMutableTrack(
-    withMediaType: .video, 
-    preferredTrackID: kCMPersistentTrackID_Invalid
-) else { 
-    return 
-}
 guard let videoUrl = Bundle.main.url(
     forResource: "Appt", 
     withExtension: "mp4"
 ) else { 
     return 
 }
-let videoAsset = AVURLAsset.init(url: videoUrl)
-try? videoTrack.insertTimeRange(
-    CMTimeRangeMake(start: .zero, duration: videoAsset.duration),
-    of: videoAsset.tracks(withMediaType: .video)[0],
-    at: .zero
-)
 
-// Find & add audio description track
-for track in videoAsset.tracks {
-    if track.hasMediaCharacteristic(.describesVideoForAccessibility) {
-        guard let audioTrack = videoComposition.addMutableTrack(
-            withMediaType: track.mediaType, 
-            preferredTrackID: kCMPersistentTrackID_Invalid
-        ) else { 
-            return 
-        }
-        try? audioTrack.insertTimeRange(
-            CMTimeRange(start: .zero, duration: videoAsset.duration), 
-            of: track, 
+let videoAsset = AVURLAsset.init(url: videoUrl)
+
+// Add video track to composition
+if let videoTrack = try await videoAsset.loadTracks(withMediaType: .video).first,
+   let videoCompositionTrack = composition.addMutableTrack(
+        withMediaType: .video,
+        preferredTrackID: kCMPersistentTrackID_Invalid
+   ) {
+    do {
+        try await videoCompositionTrack.insertTimeRange(
+            CMTimeRange(start: .zero, duration: videoAsset.load(.duration)),
+            of: videoTrack,
             at: .zero
         )
-        break
+    } catch { }
+}
+
+// Find and add the audio description track
+for track in try await videoAsset.load(.tracks) {
+    if try await track.load(.mediaCharacteristics).contains(.describesVideoForAccessibility) {
+        if let audioCompositionTrack = composition.addMutableTrack(
+                withMediaType: track.mediaType,
+                preferredTrackID: kCMPersistentTrackID_Invalid
+            ) {
+            do {
+                try await audioCompositionTrack.insertTimeRange(
+                    CMTimeRange(start: .zero, duration: videoAsset.load(.duration)),
+                    of: track,
+                    at: .zero
+                )
+            } catch { }
+            break
+        }
     }
 }
 ```
