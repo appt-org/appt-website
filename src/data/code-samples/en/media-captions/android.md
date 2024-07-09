@@ -4,8 +4,13 @@ On Android, captions can be added by using [`TimedText`](https://developer.andro
 
 ```kotlin
 val player = MediaPlayer.create(this, R.raw.video)
+val mimeType = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+    MediaFormat.MIMETYPE_TEXT_SUBRIP
+} else {
+    MediaPlayer.MEDIA_MIMETYPE_TEXT_SUBRIP
+}
 try {
-    player.addTimedTextSource("/assets/appt.srt", MediaPlayer.MEDIA_MIMETYPE_TEXT_SUBRIP)
+    player.addTimedTextSource("/assets/appt.srt", mimeType)
     player.trackInfo.forEachIndexed { index, trackInfo ->
         if (trackInfo.trackType == TrackInfo.MEDIA_TRACK_TYPE_TIMEDTEXT) {
             player.selectTrack(index)
