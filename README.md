@@ -44,7 +44,7 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 ### Installation
 
 ```bash
-$ nvm use && npm i
+nvm use && npm i
 ```
 
 ### Development
@@ -52,14 +52,14 @@ $ nvm use && npm i
 Appt.org is available in two languages right now, you can start developing by running one of the two locales.
 
 ```bash
-$ npm run start
+npm run start
 ```
 
 This command starts a local development server using the default locale (English) and opens up a browser window. Most changes are reflected live without having to restart the server.
 For Dutch content, run the following command:
 
 ```bash
-$ npm run start:nl
+npm run start:nl
 ```
 
 ### Build
@@ -67,19 +67,15 @@ $ npm run start:nl
 For each environment we have a build command that builds both languages. To build the environment you need to add an `.env` file for that environment, see `.env.example`. For dev add `.env`, for acc add `.env.acceptance` and for prod add `.env.production`.
 
 ```bash
-$ npm run build:dev
-```
-```
-$ npm run build:acc
-```
-```
-$ npm run build:prod
+npm run build:dev
+npm run build:acc
+npm run build:prod
 ```
 
 This command generates static content into the `build` directory and can be served the following command:
 
 ```bash
-$ npm run serve
+npm run serve
 ```
 
 ## Environments
@@ -88,12 +84,12 @@ A new version will be automatically deployed to Firebase with commits on specifi
 
 ### Acceptance
 
-- **URL**: https://appt-org-acc.web.app
+- **URL**: <https://appt-org-acc.web.app>
 - **Branch**: develop
 
 ### Production
 
-- **URL**: https://appt.org
+- **URL**: <https://appt.org>
 - **Branch**: main
 
 ## Commit conventions
@@ -122,8 +118,10 @@ It should also include at least one of the following files:
 - `android.md`: Android code sample
 - `flutter.md`: Flutter code sample
 - `ios.md`: iOS code sample
+- `jetpack-compose.md`: Jetpack Compose code sample
 - `net-maui.md`: .NET MAUI code sample
 - `react-native.md`: React Native code sample
+- `swiftui.md`: SwiftUI code sample
 - `xamarin.md`: Xamarin code sample
 
 You can embed a code sample in `.mdx` files as follows:
@@ -132,7 +130,7 @@ You can embed a code sample in `.mdx` files as follows:
 <CodeSample id="accessibility-label">
 ```
 
-Optionally, the `platform` parameter can be used to only display a code sample for a specific platform, such as `android.
+Optionally, the `platform` parameter can be used to only display a code sample for a specific platform, such as `android`.
 
 ```jsx
 <CodeSample id="accessibility-label" platform="android">
@@ -154,8 +152,7 @@ font scaling.
 #### Do
 
 - Use the viewBox on svg's with a width and height class in REM's.
-- Use REM's for font sizes, paddings, margins, media queries and images that should grow when the text grows, for
-  example logo's.
+- Use REM's for font sizes, paddings, margins, media queries and images that should grow when the text grows, for example logo's.
 
 *Note: We decided to not use `font: -apple-system-body;` for scaling text on mobile iOS devices. You can already set a
 default zoom level in the Safari preferences. We assume that people have this turned on. If we also turn on font scaling
