@@ -2,7 +2,7 @@
 
 On Android, make sure that the [`android:screenOrientation`](https://developer.android.com/guide/topics/manifest/activity-element#screen) attribute is not used anywhere.
 
-Open Android Studio and press the Shift key twice to open the search dialog. Search for _“android:screenOrientation”_. In case there are search results, remove the attribute.
+Open Android Studio and press the Shift key twice to open the search dialog. Search for `android:screenOrientation`. In case there are search results, remove the attribute.
 
 You probably need to make additional code adjustments to make sure the all orientations are working as intended.
 

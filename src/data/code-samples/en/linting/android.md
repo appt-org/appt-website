@@ -1,15 +1,16 @@
 # Linting - Android
 
-On Android you can use [`AndroidLint`](https://developer.android.com/studio/write/lint) to improve the quality of your code.
+On Android, you can use [`Android Lint`](https://developer.android.com/studio/write/lint) to improve the quality of your code.
 
-Check if you are using outdated code. In Android Studio you can check this by selecting the following menu options:
+`Android Lint` is bundled with Android Studio and enabled by default. It automatically performs checks for Kotlin, Java and XML source files.
 
-1. Kotlin
-2. Migration
-3. Usage of redundant or deprecated syntax or deprecated symbols
+You can suppress lint warning by using the [`@SuppressLint`](https://developer.android.com/reference/kotlin/android/annotation/SuppressLint) annotation. This can be useful in situations where a lint check is not relevant, or it is the only possible way to implement the desired behavior.
 
-Avoid errors with automated testing. Follow the [UI-testing guide for Android](https://developer.android.com/training/testing/ui-testing).
+To manually run configured lint and other IDE inspections, select `Code > Inspect Code`. The results of the inspection appear in the `Inspection Results` window.
 
 ```kotlin
-/AndroidSDK/tools/lint /project
+// Suppressing java script enabled warning
+val webView: WebView
+@SuppressLint("SetJavaScriptEnabled")
+webView.settings.javaScriptEnabled = true
 ```
