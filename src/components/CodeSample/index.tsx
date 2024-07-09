@@ -14,7 +14,7 @@ export type CodeSampleProps = {
 export function CodeSample({ id, platform }: CodeSampleProps) {
   const defaultPlatforms = [
     'android',
-    'compose',
+    'jetpack-compose',
     'ios', 
     'swiftui', 
     'flutter', 
@@ -24,7 +24,7 @@ export function CodeSample({ id, platform }: CodeSampleProps) {
   ];
   const platformLabels = [
     { id: 'android', label: 'Android' },
-    { id: 'compose', label: 'Jetpack Compose' },
+    { id: 'jetpack-compose', label: 'Jetpack Compose' },
     { id: 'ios', label: 'iOS' },
     { id: 'swiftui', label: 'SwiftUI' },
     { id: 'flutter', label: 'Flutter' },
