@@ -1,6 +1,6 @@
 # Adjustable timing - Jetpack Compose
 
-On Android, a [`Toast`](https://developer.android.com/reference/android/widget/Toast) is often used display temporary messages. The display duration might be too short for people to read or hear the message.
+In Jetpack Compose, a [`Toast`](https://developer.android.com/reference/android/widget/Toast) is often used display temporary messages. The display duration might be too short for people to read or hear the message.
 
 We recommend displaying messages by using an [`AlertDialog`](https://developer.android.com/reference/kotlin/androidx/compose/material3/package-summary#AlertDialog(kotlin.Function0,kotlin.Function0,androidx.compose.ui.Modifier,kotlin.Function0,kotlin.Function0,kotlin.Function0,kotlin.Function0,androidx.compose.ui.graphics.Shape,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.unit.Dp,androidx.compose.ui.window.DialogProperties)) or [`Snackbar`](https://developer.android.com/reference/kotlin/androidx/compose/material3/package-summary#snackbar) with the duration set to [`SnackbarDuration.Indefinite`](https://developer.android.com/reference/kotlin/androidx/compose/material3/SnackbarDuration#Indefinite). Don't forget to add a close button.
 
