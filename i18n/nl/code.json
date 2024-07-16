@@ -11,6 +11,10 @@
     "message": "Kopieer",
     "description": "The copy button label on code blocks"
   },
+  "theme.CodeBlock.contribute": {
+    "message": "Bijdragen",
+    "description": "The contribute link label on code blocks"
+  },
   "theme.ErrorPageContent.title": {
     "message": "Oeps! Er is iets misgegaan.",
     "description": "The title of the fallback page when the page crashed"

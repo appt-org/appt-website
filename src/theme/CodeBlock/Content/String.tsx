@@ -10,8 +10,11 @@ import Container from '@theme/CodeBlock/Container';
 import type { Props } from '@theme/CodeBlock/Content/String';
 import CopyButton from '@theme/CodeBlock/CopyButton';
 import Line from '@theme/CodeBlock/Line';
-import clsx from 'clsx';
+import Link from '@docusaurus/Link';
 import { Highlight, type Language } from 'prism-react-renderer';
+
+import clsx from 'clsx';
+import { translate } from '@docusaurus/Translate';
 
 import styles from './styles.module.css';
 
@@ -112,7 +115,17 @@ export default function CodeBlockString({
         <div className={clsx(styles.buttonGroup, 'p-4')}>
           <CopyButton code={code} />
 
-          {url && <a href={url} target="_blank" rel="noopener noreferrer">Contribute</a>}
+          {url && 
+            <Link 
+              to={url} 
+              target="_blank" 
+              className={clsx(
+                'clean-btn', 
+                'rounded-lg text-accent inline-flex items-center bg-onsurface p-3'
+              )} >
+                {translate({id: 'theme.CodeBlock.contribute'})}
+            </Link>
+          }
         </div>
       </div>
     </Container>
