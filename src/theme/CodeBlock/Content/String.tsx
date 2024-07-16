@@ -50,10 +50,8 @@ export default function CodeBlockString({
   metastring,
   title: titleProp,
   showLineNumbers: showLineNumbersProp,
-  language: languageProp
+  language: languageProp,
 }: Props): JSX.Element {
-  console.log("Metastring", metastring)
-
   const {
     prism: { defaultLanguage, magicComments },
   } = useThemeConfig();
