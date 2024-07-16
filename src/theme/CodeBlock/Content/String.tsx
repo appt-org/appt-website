@@ -35,14 +35,22 @@ function normalizeLanguage(language: string | undefined): string | undefined {
   return language?.toLowerCase();
 }
 
+const urlRegex = /url=['"](.*?)['"]/;
+
+function parseUrl(metastring?: string): string {
+  return metastring?.match(urlRegex)?.[1]
+}
+
 export default function CodeBlockString({
   children,
   className: blockClassName = '',
   metastring,
   title: titleProp,
   showLineNumbers: showLineNumbersProp,
-  language: languageProp,
+  language: languageProp
 }: Props): JSX.Element {
+  console.log("Metastring", metastring)
+
   const {
     prism: { defaultLanguage, magicComments },
   } = useThemeConfig();
@@ -62,6 +70,8 @@ export default function CodeBlockString({
     magicComments,
   });
   const showLineNumbers = showLineNumbersProp ?? containsLineNumbers(metastring);
+
+  const url = parseUrl(metastring);
 
   return (
     <Container
@@ -101,6 +111,8 @@ export default function CodeBlockString({
         </Highlight>
         <div className={clsx(styles.buttonGroup, 'p-4')}>
           <CopyButton code={code} />
+
+          {url && <a href={url} target="_blank" rel="noopener noreferrer">Contribute</a>}
         </div>
       </div>
     </Container>
