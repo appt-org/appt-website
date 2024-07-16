@@ -119,7 +119,7 @@ export default function CodeBlockString({
               target="_blank" 
               className={clsx(
                 'clean-btn', 
-                'rounded-lg text-accent inline-flex items-center bg-onsurface p-3'
+                'rounded-lg text-accent inline-flex items-center bg-onsurface p-3 ml-1'
               )} >
                 {translate({id: 'theme.CodeBlock.contribute'})}
             </Link>
