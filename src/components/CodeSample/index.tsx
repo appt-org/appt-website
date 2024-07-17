@@ -21,7 +21,7 @@ export function CodeSample({ id, platform }: CodeSampleProps) {
     'flutter',
     'react-native',
     'net-maui',
-    'xamarin'
+    'xamarin',
   ];
   const platformLabels = [
     { id: 'android', label: 'Android' },
@@ -57,7 +57,6 @@ export function CodeSample({ id, platform }: CodeSampleProps) {
           }
 
           return {
-            id: id,
             platform: platform,
             label: platformLabels.find(label => label.id === platform).label,
             url: url,

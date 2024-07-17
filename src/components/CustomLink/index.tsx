@@ -14,7 +14,15 @@ export type CustomLinkProps = {
   target?: string;
 } & NavLinkProps;
 
-export function CustomLink({ label, url, className, external, appearance, active = false, target="_self" }: CustomLinkProps) {
+export function CustomLink({
+  label,
+  url,
+  className,
+  external,
+  appearance,
+  active = false,
+  target = '_self',
+}: CustomLinkProps) {
   const { i18n } = useDocusaurusContext();
 
   const linkAppearance = appearance?.toLowerCase();
