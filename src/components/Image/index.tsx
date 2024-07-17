@@ -11,8 +11,8 @@ export type ImageProps = ComponentProps<'img'> & {
 // Type for components which display an optional image
 // Alt is only required if image is provided
 export type ImagePropsOptional =
-| { image: string; imageDark?: string; alt: string }
-| { image: undefined; imageDark: undefined; alt: undefined };
+  | { image: string; imageDark?: string; alt: string }
+  | { image: undefined; imageDark: undefined; alt: undefined };
 
 export function Image({ alt, src, dark, ...props }: ImageProps) {
   return (

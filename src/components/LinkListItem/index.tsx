@@ -50,12 +50,7 @@ export function LinkListItem({
 
   return (
     <div className="border-t -px-3 border-onsurface first:border-t-0 flex">
-      <CustomLink
-        className="p-3 w-full"
-        url={url}
-        label={title}
-        onClick={() => onLinkClick({ title: label, url })}
-      />
+      <CustomLink className="p-3 w-full" url={url} label={title} onClick={() => onLinkClick({ title: label, url })} />
     </div>
   );
 }
