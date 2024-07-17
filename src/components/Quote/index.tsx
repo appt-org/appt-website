@@ -9,19 +9,10 @@ export type QuoteProps = {
   name: string;
   extraInfo?: string;
   isImageLeft?: boolean;
-} & LinkProps & ImagePropsOptional;
+} & LinkProps &
+  ImagePropsOptional;
 
-export function Quote({
-  quote,
-  name,
-  extraInfo,
-  isImageLeft = true,
-  image,
-  imageDark,
-  alt,
-  label,
-  url,
-}: QuoteProps) {
+export function Quote({ quote, name, extraInfo, isImageLeft = true, image, imageDark, alt, label, url }: QuoteProps) {
   const classes = clsx('markdown-block flex flex-col items-center justify-center md:flex-row mb-12 md:mb-20', {
     'md:flex-row-reverse': !isImageLeft,
   });

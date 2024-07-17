@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
+import MDXCode from '@theme/MDXComponents/Code';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import clsx from 'clsx';
-
+import React from 'react';
 import styles from './styles.module.css';
 
 export type CodeSampleProps = {
@@ -15,12 +16,12 @@ export function CodeSample({ id, platform }: CodeSampleProps) {
   const defaultPlatforms = [
     'android',
     'jetpack-compose',
-    'ios', 
-    'swiftui', 
-    'flutter', 
+    'ios',
+    'swiftui',
+    'flutter',
     'react-native',
-    'net-maui', 
-    'xamarin'
+    'net-maui',
+    'xamarin',
   ];
   const platformLabels = [
     { id: 'android', label: 'Android' },
@@ -41,11 +42,27 @@ export function CodeSample({ id, platform }: CodeSampleProps) {
       const codeBlocks = [...platforms].map(async platform => {
         try {
           const module = await import(`@site/src/data/code-samples/en/${id}/${platform}.md`);
+          const url = `https://github.com/appt-org/appt-website/tree/develop/src/data/code-samples/en/${id}/${platform}.md?plain=1`;
+
+          // Inject `url` in metastring, used in `CodeBlockString` function
+          const components = {
+            code: props => {
+              const urlMeta = `url="${url}"`;
+              const metastring = props.metastring ? `${props.metastring} ${urlMeta}` : urlMeta;
+
+              return (
+                <MDXCode {...props} metastring={metastring}>
+                  {props.children}
+                </MDXCode>
+              );
+            },
+          };
 
           return {
-            platform,
-            platformLabel: platformLabels.find(label => label.id === platform).label,
-            CodeBlock: module.default,
+            platform: platform,
+            label: platformLabels.find(label => label.id === platform).label,
+            url: url,
+            content: <module.default components={components} />,
           };
         } catch (error) {
           console.error('Failed to import MDX content:', error);
@@ -71,13 +88,13 @@ export function CodeSample({ id, platform }: CodeSampleProps) {
         {codeBlocks.length > 1 && (
           <Tabs className={styles.codeSampleTabs} groupId="platform" queryString>
             {codeBlocks.map((codeBlock, index) => (
-              <TabItem key={index} value={codeBlock.platform} label={codeBlock.platformLabel}>
-                <codeBlock.CodeBlock />
+              <TabItem key={index} value={codeBlock.platform} label={codeBlock.label}>
+                {codeBlock.content}
               </TabItem>
             ))}
           </Tabs>
         )}
-        {codeBlocks.length === 1 && <firstCodeBlock.CodeBlock />}
+        {codeBlocks.length === 1 && firstCodeBlock.content}
       </div>
     );
   }

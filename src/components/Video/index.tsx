@@ -44,16 +44,8 @@ export function Video({ youTubeId, title, image, imageDark, alt }: VideoProps) {
       {loading && (
         <div className={videoLoaderClasses}>
           <div className="relative w-full h-full">
-            {image
-         ? (
-              <Image
-                src={image
-              
-                }
-                dark={imageDark}
-                alt={alt ?? title}
-                className="object-cover w-full h-full"
-              />
+            {image ? (
+              <Image src={image} dark={imageDark} alt={alt ?? title} className="object-cover w-full h-full" />
             ) : (
               <Image
                 src={thumbnailUrl}
