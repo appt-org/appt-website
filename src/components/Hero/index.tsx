@@ -10,11 +10,7 @@ export type HeroProps = {
 
 export function Hero({ title, description, prefix, suffix, image, imageDark, alt }: HeroProps) {
   const wrapperClasses = clsx('relative', { 'mb-10': image || description });
-  const containerClasses = clsx(
-    'hero-container max-w-md mx-auto',
-    { 'w-full': !image },
-    { 'py-8 sm:py-16': image },
-  );
+  const containerClasses = clsx('hero-container max-w-md mx-auto', { 'w-full': !image }, { 'py-8 sm:py-16': image });
 
   const prefixSuffixText = prefix && suffix ? `${prefix} - ${suffix}` : prefix ? prefix : suffix ? suffix : undefined;
 

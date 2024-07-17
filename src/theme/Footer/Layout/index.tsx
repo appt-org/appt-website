@@ -10,12 +10,7 @@ export default function FooterLayout({ style, links, logo, copyright }: Props): 
         'footer--dark': style === 'dark',
       })}>
       <div className="max-w-xl mx-auto p-8 sm:p-16">
-        <Image
-          src="img/light/logos/appt.svg"
-          dark="img/dark/logos/appt.svg"
-          alt="Appt logo"
-          className="nav-logo"
-        />
+        <Image src="img/light/logos/appt.svg" dark="img/dark/logos/appt.svg" alt="Appt logo" className="nav-logo" />
         {links}
         <div className="pt-8 mt-8 text--center border-t-2 border-onsurface">{copyright}</div>
       </div>

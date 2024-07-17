@@ -15,12 +15,12 @@ export function CodeSample({ id, platform }: CodeSampleProps) {
   const defaultPlatforms = [
     'android',
     'jetpack-compose',
-    'ios', 
-    'swiftui', 
-    'flutter', 
+    'ios',
+    'swiftui',
+    'flutter',
     'react-native',
-    'net-maui', 
-    'xamarin'
+    'net-maui',
+    'xamarin',
   ];
   const platformLabels = [
     { id: 'android', label: 'Android' },
