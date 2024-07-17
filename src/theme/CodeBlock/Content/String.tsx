@@ -10,8 +10,11 @@ import Container from '@theme/CodeBlock/Container';
 import type { Props } from '@theme/CodeBlock/Content/String';
 import CopyButton from '@theme/CodeBlock/CopyButton';
 import Line from '@theme/CodeBlock/Line';
-import clsx from 'clsx';
+import Link from '@docusaurus/Link';
 import { Highlight, type Language } from 'prism-react-renderer';
+
+import clsx from 'clsx';
+import { translate } from '@docusaurus/Translate';
 
 import styles from './styles.module.css';
 
@@ -33,6 +36,12 @@ const languageLabels = [
 // See https://github.com/facebook/docusaurus/issues/9012
 function normalizeLanguage(language: string | undefined): string | undefined {
   return language?.toLowerCase();
+}
+
+const urlRegex = /url=['"](.*?)['"]/;
+
+function parseUrl(metastring?: string): string {
+  return metastring?.match(urlRegex)?.[1];
 }
 
 export default function CodeBlockString({
@@ -62,6 +71,8 @@ export default function CodeBlockString({
     magicComments,
   });
   const showLineNumbers = showLineNumbersProp ?? containsLineNumbers(metastring);
+
+  const url = parseUrl(metastring);
 
   return (
     <Container
@@ -101,6 +112,15 @@ export default function CodeBlockString({
         </Highlight>
         <div className={clsx(styles.buttonGroup, 'p-4')}>
           <CopyButton code={code} />
+
+          {url && (
+            <Link
+              to={url}
+              target="_blank"
+              className={clsx('clean-btn', 'rounded-lg text-accent inline-flex items-center bg-onsurface p-3 ml-1')}>
+              {translate({ id: 'theme.CodeBlock.contribute' })}
+            </Link>
+          )}
         </div>
       </div>
     </Container>
