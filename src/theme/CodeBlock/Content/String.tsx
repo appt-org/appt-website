@@ -41,7 +41,7 @@ function normalizeLanguage(language: string | undefined): string | undefined {
 const urlRegex = /url=['"](.*?)['"]/;
 
 function parseUrl(metastring?: string): string {
-  return metastring?.match(urlRegex)?.[1]
+  return metastring?.match(urlRegex)?.[1];
 }
 
 export default function CodeBlockString({
@@ -113,17 +113,14 @@ export default function CodeBlockString({
         <div className={clsx(styles.buttonGroup, 'p-4')}>
           <CopyButton code={code} />
 
-          {url && 
-            <Link 
-              to={url} 
-              target="_blank" 
-              className={clsx(
-                'clean-btn', 
-                'rounded-lg text-accent inline-flex items-center bg-onsurface p-3 ml-1'
-              )} >
-                {translate({id: 'theme.CodeBlock.contribute'})}
+          {url && (
+            <Link
+              to={url}
+              target="_blank"
+              className={clsx('clean-btn', 'rounded-lg text-accent inline-flex items-center bg-onsurface p-3 ml-1')}>
+              {translate({ id: 'theme.CodeBlock.contribute' })}
             </Link>
-          }
+          )}
         </div>
       </div>
     </Container>

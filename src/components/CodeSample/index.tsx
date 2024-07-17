@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import MDXCode from '@theme/MDXComponents/Code'
+import MDXCode from '@theme/MDXComponents/Code';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import clsx from 'clsx';
@@ -42,25 +42,27 @@ export function CodeSample({ id, platform }: CodeSampleProps) {
       const codeBlocks = [...platforms].map(async platform => {
         try {
           const module = await import(`@site/src/data/code-samples/en/${id}/${platform}.md`);
-          const url = `https://github.com/appt-org/appt-website/tree/develop/src/data/code-samples/en/${id}/${platform}.md?plain=1`
+          const url = `https://github.com/appt-org/appt-website/tree/develop/src/data/code-samples/en/${id}/${platform}.md?plain=1`;
 
           // Inject `url` in metastring, used in `CodeBlockString` function
           const components = {
-            code: (props) => {
-              const urlMeta = `url="${url}"`
-              const metastring = props.metastring ? `${props.metastring} ${urlMeta}` : urlMeta
+            code: props => {
+              const urlMeta = `url="${url}"`;
+              const metastring = props.metastring ? `${props.metastring} ${urlMeta}` : urlMeta;
 
-              return <MDXCode {...props} metastring={metastring}>
-                {props.children}
-              </MDXCode>
-            }
-          }
+              return (
+                <MDXCode {...props} metastring={metastring}>
+                  {props.children}
+                </MDXCode>
+              );
+            },
+          };
 
           return {
             platform: platform,
             label: platformLabels.find(label => label.id === platform).label,
             url: url,
-            content: <module.default components={components}/>
+            content: <module.default components={components} />,
           };
         } catch (error) {
           console.error('Failed to import MDX content:', error);
