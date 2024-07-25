@@ -7,7 +7,7 @@ Button {
     // Button action
 } label: {
     Image(systemName: "magnifyingglass")
-        //
+        // Set accessibility label
         .accessibilityLabel("Search")
 }
 ```
