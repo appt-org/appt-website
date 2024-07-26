@@ -4,12 +4,12 @@ slug: /wcag/success-criterion-2-5-1
 contentful_id: 7uRoZyvTDyrGnZJdiGZMIu
 icon: /img/light/2.5.1.svg
 title: Pointer Gestures
-description: Ensure an alternative is provided for all gesture-triggered actions.
+description: Ensure users can operate the interface with one finger using simple gestures.
 authors: [janjaap]
 hide_title: true
 date: 2022-06-16
 last_update:
-  date: 2024-03-01
+  date: 2024-07-26
 ---
 
 <Hero
@@ -20,18 +20,24 @@ last_update:
   suffix="Level A"
 />
 
-Ensure there is an alternative for gesture-activated actions. Not everyone is able to move two fingers apart or able to swipe. Provide an alternative, such as a button, that allows the user to perform the action.
+Ensure users can operate the interface with one finger using simple gestures. Not everyone is able to pinch-to-zoom or trace a certain path. Provide an alternative, such as a button, that allows the user to perform the same action.
 
 ## Impact
 
-- It can be difficult for people with a motor disability to make swipe gestures. Make sure that swiping is not necessary to reach all information.
 - It can be difficult for people with a motor disability to use multiple fingers. By offering an alternative, they can use the same functionality.
+- It can be difficult for people with a motor disability to make path-based gestures. Make sure that path-based gestures are not necessary to operate the app.
 
 ## Check
 
-“*Is an alternative available for gesture-triggered actions?*“
+“*Is an alternative available for multipoint and path-based gestures?*“
 
-This can be tested without assistive technologies.
+This can be tested without assistive technologies. The table below lists examples of gesture types.
+
+|Type          |Examples                                                             |
+|--------------|---------------------------------------------------------------------|
+|Single pointer|One finger clicking, tapping, pressing, swiping                      |
+|Multipoint    |Pinching, rotating, multi-finger clicking, tapping, pressing, swiping|
+|Path-based    |Tracing, drawing, twisting                                           |
 
 ## Solution
 
@@ -42,3 +48,5 @@ This can be tested without assistive technologies.
 ## Resources
 
 - [WCAG 2.2 - Success Criterion 2.5.1 - Pointer Gestures](https://www.w3.org/TR/WCAG22/#pointer-gestures)
+- [Foundations: pointer gestures](https://tetralogical.com/blog/2023/03/17/foundations-pointer-gestures/)
+  
