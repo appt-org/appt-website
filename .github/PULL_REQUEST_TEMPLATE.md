@@ -1,12 +1,14 @@
-#### What does this PR do?
+# What does this PR do?
 
-#### How do you test this PR?
+## How do you test this PR?
 
-Test link:
+Test link: `<ADD LINK HERE>`
 
-<!-- Add the test link and steps to complete the test here -->
+Test steps:
 
-#### Checklist
+`<ADD STEPS HERE>`
+
+## Checklist
 
 - [ ] Works on Safari, Chrome, Firefox & Edge
 - [ ] Works on different screen sizes (responsive)
@@ -15,10 +17,10 @@ Test link:
 - [ ] Are migrations added?
 - [ ] Is the README.md updated?
 
-**Accessibility checklist**
+## Accessibility checklist
 
-- Scalable text
-- Dark and light mode
-- Contrast
-- Focus management
-- Aria attributes
+- [ ] Scalable text
+- [ ] Dark and light mode
+- [ ] Contrast
+- [ ] Focus management
+- [ ] Aria attributes

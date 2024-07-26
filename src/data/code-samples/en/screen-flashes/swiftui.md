@@ -4,7 +4,6 @@ In SwiftUI, flashing content often utilizes [`DispatchQueue`](https://developer.
 
 Additionally, if your app includes any videos, verify that they do not contain more than three flashes per second.
 
-
 ```swift
 // Timer to control the flashing rate
 // Flash every 1/3 second (3 times per second)

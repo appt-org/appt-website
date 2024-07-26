@@ -1,6 +1,6 @@
 # Scale text - iOS
 
-In SwiftUI, scaling text to match the user's preferred content size is straightforward. SwiftUI automatically supports [Dynamic Type](https://developer.apple.com/documentation/swiftui/dynamictypesize), which means your text will adapt to the user's preferred font size set in the device settings.
+In SwiftUI, scaling text to match the user's preferred content size is straightforward. SwiftUI automatically supports [`Dynamic Type`](https://developer.apple.com/documentation/swiftui/dynamictypesize), which means your text will adapt to the user's preferred font size set in the device settings.
 
 ```swift
 Text("Appt")

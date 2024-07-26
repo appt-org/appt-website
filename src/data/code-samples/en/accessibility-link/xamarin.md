@@ -7,7 +7,7 @@ In Xamarin, you need to follow four steps to create links:
 3. Define the `ICommand` that will be executed by the [`TapGestureRecognizer`](/en-us/dotnet/api/xamarin.forms.tapgesturerecognizer).
 4. Write the code that will be executed by the `ICommand`.
 
-For more information, see [Xamarin Hyperlinks](https://learn.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/label#hyperlinks), it includes information how you can create your own [Hyperlink class](https://learn.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/label#creating-a-reusable-hyperlink-class).
+For more information, see [Xamarin Hyperlinks](https://learn.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/label#hyperlinks), it includes information how you can create your own [`Hyperlink` class](https://learn.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/label#creating-a-reusable-hyperlink-class).
 
 ```xml
 <Label>

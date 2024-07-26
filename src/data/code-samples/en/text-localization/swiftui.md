@@ -6,7 +6,6 @@ To retrieve a localized string from a `.strings` file, use the [`LocalizedString
 
 For more detailed information, refer to [Adding Support for Languages and Regions](https://developer.apple.com/documentation/xcode/adding-support-for-languages-and-regions) on Apple's Developer site.
 
-
 ```swift
 // Get current locale
 @Environment(\.locale) var locale: Locale
