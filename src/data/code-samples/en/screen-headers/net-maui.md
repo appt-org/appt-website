@@ -1,5 +1,25 @@
 # Descriptive headers - .NET MAUI
 
+MAUI offers a built-in [`heading levels`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/accessibility#heading-levels) feature that can be used to setup a header item.
+
+Usage (C#)
+
 ```csharp
-Not available, contribute!
+
+var headerLabel = new Label
+{
+    Text = "Hello"
+};
+SemanticProperties.SetHeadingLevel(headerLabel, SemanticHeadingLevel.Level1);
+
+```
+
+Usage (XAML)
+
+```xml
+
+<Label
+    SemanticProperties.HeadingLevel="Level1"
+    Text="Hello" />
+
 ```
