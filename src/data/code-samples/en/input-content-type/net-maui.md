@@ -1,6 +1,6 @@
 # Input content type - .NET MAUI
 
-On MAUI there no built-in way to create a custom action but you can achieve via [`Platform Behavior`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/behaviors#platform-behaviors) see the code for an example of usage.
+In MAUI, there is no built-in way to create a custom action, but you can achieve this via [`Platform Behavior`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/behaviors#platform-behaviors). See the code for an example of usage.
 
 PlatformBehavior
 

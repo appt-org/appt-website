@@ -1,6 +1,6 @@
 # Input predictable - .NET MAUI
 
-On MAUI all input components has the [`TextChanged`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.inputview.textchanged) handler to listen any change on the input text.
+In MAUI, all input components have the [`TextChanged`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.inputview.textchanged) handler to listen for any changes to the input text.
 
 Usage (C#)
 

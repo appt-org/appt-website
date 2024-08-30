@@ -2,7 +2,7 @@
 
 .NET MAUI does not have built-in support to indicate an accessibility state.
 
-By intercepting the handler changed event you can set the `StateDescription` on Android or `AccessibilityValue` on iOS.
+By intercepting the handler changed event, you can set the `StateDescription` on Android or `AccessibilityValue` on iOS.
 
 ```xml title="CustomEntry.xaml"
 <Entry

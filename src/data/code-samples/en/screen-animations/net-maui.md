@@ -1,6 +1,6 @@
 # Reduced animations - .NET MAUI
 
-On MAUI by default the animation are disabled if the user has that option enabled on the device settings, but in fact you can check and apply any custom logic by checking the platform specific code.
+In MAUI, animations are disabled by default if the user has that option enabled in the device settings. However, you can check and apply custom logic by using platform-specific code.
 
 ```csharp
 

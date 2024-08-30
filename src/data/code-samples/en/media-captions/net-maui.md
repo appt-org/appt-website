@@ -18,7 +18,7 @@ In .NET MAUI, you can use [`MediaElement`](https://docs.microsoft.com/en-us/xama
     HorizontalOptions="Center" />
 ```
 
-If you name the MediaElement, e.g. `x:Name="mediaElement"`, you can pause and play the video using code.
+If you name the `MediaElement`, e.g., `x:Name="mediaElement"`, you can pause and play the video using code.
 
 ```csharp
 private void OnMediaButtonClicked(object sender, EventArgs e)

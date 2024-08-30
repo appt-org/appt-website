@@ -1,6 +1,6 @@
 # Input keyboard type - .NET MAUI
 
-MAUI inlcudes a built-in property for input fields([`Entry`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) & [`Editor`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor)) named [`Keyboard`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry#customize-the-keyboard) with the next possible values
+MAUI inlcudes a built-in property for input fields([`Entry`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) & [`Editor`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor)) named [`Keyboard`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry#customize-the-keyboard) with the next possible values:
 
 * Chat
 * Default

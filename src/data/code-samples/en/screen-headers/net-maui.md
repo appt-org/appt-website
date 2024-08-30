@@ -1,6 +1,6 @@
 # Descriptive headers - .NET MAUI
 
-MAUI offers a built-in [`heading levels`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/accessibility#heading-levels) feature that can be used to setup a header item.
+MAUI offers a built-in [`heading levels`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/accessibility#heading-levels) feature that can be used to set up header items.
 
 Usage (C#)
 

@@ -1,12 +1,12 @@
 # Accessibility announcement - .NET MAUI
 
-.NET MAUI has built-in support for posting an accessibility announcement to the TalkBack or VoiceOver engine.
+.NET MAUI has built-in support for posting accessibility announcements to the `TalkBack` or `VoiceOver` engine.
 
 ```csharp
 SemanticScreenReader.Default.Announce("Appt announcement");
 ```
 
-If you want to use attributed strings or add a delay, you can create your own service, for example `IA11yService`.
+If you want to use attributed strings or add a delay, you can create your own service, such as `IA11yService`.
 
 ```csharp title="IA11YService.cs"
 public interface IA11YService

@@ -1,11 +1,11 @@
 # Audio control - .NET MAUI
 
-On MAUI there no built-in audio control, but you can use the [`MediaElement`](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/views/mediaelement) from the [`MAUI Community Toolkit`](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui) which sufaces the next natives components:
+In MAUI, there is no built-in audio control, but you can use the [`MediaElement`](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/views/mediaelement) from the [`MAUI Community Toolkit`](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui), which surfaces the following native components:
 
 - Exoplayer, [`Android`](https://developer.android.com/media/media3/exoplayer)
 - AVPlayer, [`iOS`](https://learn.microsoft.com/en-us/dotnet/api/avfoundation.avplayer)
 
-Usage (C#)
+C#
 
 ```csharp
 
@@ -17,7 +17,7 @@ var mediaElement = new MediaElement
 
 ```
 
-Usage (XAML)
+XAML
 
 ```xml
 

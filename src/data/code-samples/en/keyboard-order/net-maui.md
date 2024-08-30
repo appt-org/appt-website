@@ -1,6 +1,6 @@
 # Keyboard order - .NET MAUI
 
-On MAUI there no built-in way to set the order, but you can use the [`SemanticOrderView`](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/views/semantic-order-view) from the [`MAUI Community Toolkit`](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui)
+In MAUI, there is no built-in way to set the order, but you can use the [`SemanticOrderView`](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/views/semantic-order-view) from the [`MAUI Community Toolkit`](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui).
 
 XAML Config
 

@@ -1,6 +1,6 @@
 # Search functionality - .NET MAUI
 
-On MAUI, you can use the built-in [`SearchBar`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/searchbar) component.
+In MAUI, you can use the built-in [`SearchBar`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/searchbar) component.
 
 Usage (C#)
 

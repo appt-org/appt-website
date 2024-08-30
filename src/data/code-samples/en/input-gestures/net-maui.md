@@ -1,6 +1,6 @@
 # Input gestures - .NET MAUI
 
-MAUI offers several types of [`Gesture Recognizers`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/gestures/drag-and-drop) in order to detect any user interaction with a UI component, the available gestures are:
+MAUI offers several types of [`Gesture Recognizers`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/gestures/drag-and-drop) to detect user interactions with a UI component. The available gestures are:
 
 - [`Drag and drop`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/gestures/drag-and-drop)
 - [`Pan`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/gestures/pan)

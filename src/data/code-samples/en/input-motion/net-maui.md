@@ -1,6 +1,6 @@
 # Motion input - .NET MAUI
 
-On MAUI, to listed the Motion events you can use the [`Accelerometer API`](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/device/sensors#accelerometer) make sure you enable the setup instructions per platform in order to make it work.
+In MAUI, to listen to motion events, you can use the [`Accelerometer API`](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/device/sensors#accelerometer). Make sure to follow the setup instructions for each platform to ensure it works correctly.
 
 ```csharp
 

@@ -1,7 +1,6 @@
 # Text element - .NET MAUI
 
-On MAUI, text elements can be created by using [`Label`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/label) and content can be changed by setting the [`Text`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.label.text) property.
-
+In MAUI, text elements can be created using [`Label`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/label), and the content can be changed by setting the [`Text`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.label.text) property.
 
 Usage (C#)
 

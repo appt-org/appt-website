@@ -1,6 +1,6 @@
 # Screen orientation - .NET MAUI
 
-MAUI offers a simple way to listen screen orientation changes by subscribing to the [`DeviceDisplay.Current.MainDisplayInfoChanged`](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/device/display) handler.
+MAUI offers a simple way to listen for screen orientation changes by subscribing to the [`DeviceDisplay.Current.MainDisplayInfoChanged`](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/device/display) handler.
 
 ```csharp
 

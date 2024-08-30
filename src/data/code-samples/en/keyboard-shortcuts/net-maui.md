@@ -1,6 +1,6 @@
 # Keyboard shortcuts - .NET MAUI
 
-While MAUI does not offer a cross platform way to achieve this, you can listen for keypress by overwriting the default [`MainActivity.KeyUp`](https://learn.microsoft.com/en-us/dotnet/api/android.app.activity.onkeyup) method for Android and for iOS by setting up a [`UIKeyCommand`](https://learn.microsoft.com/es-es/dotnet/api/uikit.uikeycommand) inside the default AppDelegate
+While MAUI does not offer a cross-platform way to achieve this, you can listen for keypresses by overriding the default [`MainActivity.KeyUp`](https://learn.microsoft.com/en-us/dotnet/api/android.app.activity.onkeyup) method for Android, and for iOS by setting up a [`UIKeyCommand`](https://learn.microsoft.com/es-es/dotnet/api/uikit.uikeycommand) inside the default `AppDelegate`.
 
 Android
 

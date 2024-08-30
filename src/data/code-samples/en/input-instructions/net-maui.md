@@ -1,6 +1,6 @@
 # Input instructions - .NET MAUI
 
-On MAUI, in order to set the input instructions you can use the [`SemanticProperties.Description`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/accessibility#description) attached property.
+In MAUI, to set the input instructions, you can use the [`SemanticProperties.Description`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/accessibility#description) attached property.
 
 Usage (C#)
 

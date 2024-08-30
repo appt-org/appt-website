@@ -2,7 +2,7 @@
 
 .NET MAUI does not have built-in support for setting an accessibility role.
 
-By intercepting the handler changed event you can change the role of a custom component.
+By intercepting the handler changed event, you can change the role of a custom component.
 
 ```xml title="Component.xaml"
 <StackLayout>

@@ -1,6 +1,6 @@
 # Reflow - .NET MAUI
 
-On MAUI, you can put the UI elements inside of a [`ScrollView`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview), other components are availabe for dynamic UI such as:
+In MAUI, you can put UI elements inside a [`ScrollView`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview). Other components available for dynamic UI include:
 
 - [`CollectionView`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/collectionview/): for multi dimensional content
 - [`ListView`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/listview): for one dimensional content

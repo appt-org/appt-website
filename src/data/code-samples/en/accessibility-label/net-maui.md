@@ -26,7 +26,7 @@ As an alternative, you can link a label by setting [`IsInAccessibleTree`](https:
 
 **Note**: `SemanticProperties.Description` will supersede the value of `AutomationProperties.IsInAccessibleTree`.
 
-In the sample below, the text from `SemanticProperties.Description` will be spoken despite of the value of `AutomationProperties.IsInAccessibleTree`.
+In the sample below, the text from `SemanticProperties.Description` will be spoken regardless of the value of `AutomationProperties.IsInAccessibleTree`.
 
 ```xml
 <Label

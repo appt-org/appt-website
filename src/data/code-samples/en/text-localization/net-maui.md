@@ -1,6 +1,6 @@
 # Localization - .NET MAUI
 
-MAUI offers several way to handle localization you can achieve by using the native approch via app resources, but also the recommendation is to use the .NET approach via [`RESX files`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/localization), make sure you follow all the instructions at the docs in order to make it work accordingly, after adding the strings into your Resx files you can simple use as following:
+MAUI offers several ways to handle localization. You can achieve this using the native approach via app resources, but it is recommended to use the .NET approach via [`RESX` files](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/localization). Make sure you follow all the instructions in the documentation to ensure it works correctly. After adding the strings into your `RESX` files, you can simply use them as follows:
 
 Usage (XAML)
 

@@ -1,6 +1,6 @@
 # Accessibility group - .NET MAUI
 
-In .NET MAUI you can group items together by setting `AutomationProperties.IsInAccessibleTree` to `true`. You also need to set a `SemanticProperties.Description` for the grouped elements.
+In .NET MAUI, you can group items together by setting `AutomationProperties.IsInAccessibleTree` to `true`. You also need to set a `SemanticProperties.Description` for the grouped elements.
 
 ```xml
 <HorizontalStackLayout
@@ -28,7 +28,7 @@ In .NET MAUI you can group items together by setting `AutomationProperties.IsInA
 </HorizontalStackLayout>
 ```
 
-When you only use `IsInaccessibleTree="True"` the following descriptions will be read by the screen reader:
+When you only use `IsInaccessibleTree="True"`, the following descriptions will be read by the screen reader:
 
 - iOS: "Button"
 - Android: "Menu image, menu label, double tap to activate"
