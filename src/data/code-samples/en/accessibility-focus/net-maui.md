@@ -1,6 +1,6 @@
 # Accessibility focus - .NET MAUI
 
-In .NET MAUI the [`SemanticExtensions`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.semanticextensions?view=net-maui-8.0) class contais the `SetSemanticFocus` method. It moves the accessibility focus to the given element on the native platform.
+In MAUI, the [`SemanticExtensions`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.semanticextensions?view=net-maui-8.0) class contains the `SetSemanticFocus` method. This method moves the accessibility focus to the given element on the native platform.
 
 The code sample below shows how to move the accessibility focus to a specific element.
 

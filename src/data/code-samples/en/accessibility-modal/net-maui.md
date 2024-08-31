@@ -1,9 +1,19 @@
 # Accessibility modal - .NET MAUI
 
-.NET MAUI does not have built-in support to indicate an accessibility modal.
+In MAUI, you can use two approaches to display modals:
 
-.NET MAUI does not have built-in support to indicate to assistive technologies that the accessibility elements within the sibling views of the receiving view should be ignored.
+- MAUI's default `Navigation.PushModalAsync`. More details [`here`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage#push-pages-to-the-modal-stack).
 
-```xml
-Not available, contribute!
+```csharp
+Navigation.PushModalAsync(new ModalPageToDisplay());
 ```
+
+- [`MAUI Community Toolkit`](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/") Popups for more details [`here`](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/views/popup)
+
+```csharp
+var popup = new SimplePopup();
+
+rootPage.ShowPopup(popup);
+```
+
+Both approaches follow the standard native behavior for presenting modals/popups.

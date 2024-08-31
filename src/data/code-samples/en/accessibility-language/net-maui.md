@@ -1,6 +1,6 @@
 # Accessibility language - .NET MAUI
 
-.NET MAUI does not have built-in support to indicate what language should be used by the assistive technologies when reading content.
+In MAUI, there is no built-in support to indicate which language should be used by assistive technologies when reading content.
 
 ```csharp
 Not available, contribute!
