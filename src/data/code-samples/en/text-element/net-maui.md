@@ -5,18 +5,14 @@ In MAUI, text elements can be created using [`Label`](https://learn.microsoft.co
 Usage (C#)
 
 ```csharp
-
 var label = new Label
 {
     Text = "Descriptive label"
 };
-
 ```
 
 Usage (XAML)
 
 ```xml
-
 <Label Text="Descriptive label" />
-
 ```

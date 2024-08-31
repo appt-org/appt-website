@@ -1,6 +1,6 @@
 # Accessibility label - .NET MAUI
 
-In .NET MAUI, you can set an accessibility label by using the [`SemanticProperties.Description`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.semanticproperties.descriptionproperty#microsoft-maui-controls-semanticproperties-descriptionproperty) property.
+In MAUI, you can set an accessibility label by using the [`SemanticProperties.Description`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.semanticproperties.descriptionproperty#microsoft-maui-controls-semanticproperties-descriptionproperty) property.
 
 ```xml
 <Control 

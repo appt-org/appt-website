@@ -1,6 +1,6 @@
 # Accessibility state - .NET MAUI
 
-.NET MAUI does not have built-in support to indicate an accessibility state.
+In MAUI, there is no built-in support to indicate an accessibility state.
 
 By intercepting the handler changed event, you can set the `StateDescription` on Android or `AccessibilityValue` on iOS.
 
@@ -13,7 +13,7 @@ By intercepting the handler changed event, you can set the `StateDescription` on
 
 Partial class on Android:
 
-```csharp title="CustomEntry.xaml.Android.cs"
+```csharp title=""
 public partial class PinTilesCodeEntryView
 {
   private AndroidX.AppCompat.Widget.AppCompatEditText? editor;

@@ -8,22 +8,18 @@ In MAUI, there is no built-in audio control, but you can use the [`MediaElement`
 C#
 
 ```csharp
-
 var mediaElement = new MediaElement
 {
     ShouldAutoPlay = true,
     Source = "TheUrlOrPathForYouAudio.mp3"
 };
-
 ```
 
 XAML
 
 ```xml
-
 xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
 <toolkit:MediaElement 
     Source="TheUrlOrPathForYouAudio.mp3"
     ShouldAutoPlay="True" />
-
 ```

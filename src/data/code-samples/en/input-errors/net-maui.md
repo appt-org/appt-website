@@ -5,18 +5,14 @@ In MAUI, there is no built-in component for this, but you can hide or show a [`L
 Usage (C#)
 
 ```csharp
-
 label.Text = "This is an error message";
 label.IsVisible = true;
-
 ```
 
 Usage (XAML)
 
 ```xml
-
 <Label
     Text="This is an error message"
     IsVisible="True" />
-
 ```

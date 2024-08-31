@@ -1,12 +1,21 @@
 # Keyboard shortcuts - .NET MAUI
 
-While MAUI does not offer a cross-platform way to achieve this, you can listen for keypresses by overriding the default [`MainActivity.KeyUp`](https://learn.microsoft.com/en-us/dotnet/api/android.app.activity.onkeyup) method for Android, and for iOS by setting up a [`UIKeyCommand`](https://learn.microsoft.com/es-es/dotnet/api/uikit.uikeycommand) inside the default `AppDelegate`.
+In MAUI, there is no cross platform way to achieve setting a keyboard shortcut. But, you can listen for keypresses by overriding the default [`MainActivity.KeyUp`](https://learn.microsoft.com/en-us/dotnet/api/android.app.activity.onkeyup) method for Android, and for iOS by setting up a [`UIKeyCommand`](https://learn.microsoft.com/es-es/dotnet/api/uikit.uikeycommand) inside the default `AppDelegate`.
 
-Android
+Android implementation:
 
 ```csharp
-
-[Activity(Theme = "@style/Maui.SplashTheme", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.Density)]
+[Activity(
+    Theme = "@style/Maui.SplashTheme", 
+    MainLauncher = true, 
+    LaunchMode = LaunchMode.SingleTop, 
+    ConfigurationChanges = ConfigChanges.ScreenSize | 
+                           ConfigChanges.Orientation | 
+                           ConfigChanges.UiMode | 
+                           ConfigChanges.ScreenLayout | 
+                           ConfigChanges.SmallestScreenSize | 
+                           ConfigChanges.Density
+)]
 public class MainActivity : MauiAppCompatActivity
 {
     public override bool OnKeyUp([GeneratedEnum] Keycode keyCode, KeyEvent? e)
@@ -21,17 +30,19 @@ public class MainActivity : MauiAppCompatActivity
         return base.OnKeyUp(keyCode, e);
     }
 }
-
 ```
 
-iOS
+iOS implementation:
 
 ```csharp
-
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate
 {
-    public UIKeyCommand FKeyCommand = UIKeyCommand.Create(new NSString("f"), UIKeyModifierFlags.Control, new ObjCRuntime.Selector("Action:"));
+    public UIKeyCommand FKeyCommand = UIKeyCommand.Create(
+      new NSString("f"), 
+      UIKeyModifierFlags.Control, 
+      new ObjCRuntime.Selector("Action:")
+    );
 
     protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
 
@@ -44,5 +55,4 @@ public class AppDelegate : MauiUIApplicationDelegate
         //Apply any logic
     }
 }
-
 ```

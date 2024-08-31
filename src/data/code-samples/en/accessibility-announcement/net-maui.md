@@ -1,6 +1,6 @@
 # Accessibility announcement - .NET MAUI
 
-.NET MAUI has built-in support for posting accessibility announcements to the `TalkBack` or `VoiceOver` engine.
+In MAUI, there is built-in support for posting accessibility announcements to the `TalkBack` or `VoiceOver` engine.
 
 ```csharp
 SemanticScreenReader.Default.Announce("Appt announcement");
@@ -8,7 +8,9 @@ SemanticScreenReader.Default.Announce("Appt announcement");
 
 If you want to use attributed strings or add a delay, you can create your own service, such as `IA11yService`.
 
-```csharp title="IA11YService.cs"
+IA11YService interface:
+
+```csharp
 public interface IA11YService
 {
   bool IsInVoiceOverMode { get; }
@@ -16,7 +18,9 @@ public interface IA11YService
 }
 ```
 
-```csharp title="IA11YService.Android.cs"
+IA11YService for Android:
+
+```csharp
 private static AccessibilityManager? AccessibilityManager => Android.App.Application.Context.GetSystemService(Android.Content.Context.AccessibilityService) as AccessibilityManager;
 
 public bool IsInVoiceOverMode => AccessibilityManager is { IsEnabled: true, IsTouchExplorationEnabled: true };
@@ -40,8 +44,9 @@ public async Task Speak(string? text, int pauseInMs = 0)
 }
 ```
 
-```csharp title="IA11YService.iOS.cs"
-// IA11YService implementation on iOS
+IA11YService for iOS:
+
+```csharp
 public bool IsInVoiceOverMode => UIAccessibility.IsVoiceOverRunning;
 
 public Task Speak(string? text, int pauseInMs = 0)

@@ -1,6 +1,6 @@
 # Accessibility hint - .NET MAUI
 
-In .NET MAUI, an accessibility hint is set by using the [`SemanticProperties.Hint`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.semanticproperties.hintproperty?view=net-maui-8.0#microsoft-maui-controls-semanticproperties-hintproperty) property.
+In MAUI, an accessibility hint is set by using the [`SemanticProperties.Hint`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.semanticproperties.hintproperty?view=net-maui-8.0#microsoft-maui-controls-semanticproperties-hintproperty) property.
 
 ```xml
 <Control 

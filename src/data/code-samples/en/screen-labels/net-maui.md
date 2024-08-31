@@ -5,18 +5,14 @@ In MAUI, labels can be created using [`Label`](https://learn.microsoft.com/en-us
 Usage (C#)
 
 ```csharp
-
 var label = new Label
 {
     Text = "Descriptive label"
 };
-
 ```
 
 Usage (XAML)
 
 ```xml
-
 <Label Text="Descriptive label" />
-
 ```

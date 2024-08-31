@@ -5,7 +5,6 @@ In MAUI, there is no built-in way to create a custom action, but you can achieve
 PlatformBehavior
 
 ```csharp
-
 public class InputContentTypeBehavior
 #if IOS
     : PlatformBehavior<Entry, UIKit.UITextField>
@@ -13,8 +12,13 @@ public class InputContentTypeBehavior
     : PlatformBehavior<Entry, Android.Widget.EditText>
 #endif
 {
-    public static readonly BindableProperty FieldTypeAndroidProperty =
-        BindableProperty.Create(nameof(FieldTypeAndroid), typeof(FieldTypeAndroid), typeof(AccessibilityCustomActionBehavior), FieldTypeAndroid.None);
+    public static readonly BindableProperty FieldTypeAndroidProperty = 
+        BindableProperty.Create(
+            nameof(FieldTypeAndroid), 
+            typeof(FieldTypeAndroid), 
+            typeof(AccessibilityCustomActionBehavior), 
+            FieldTypeAndroid.None
+        );
 
     public FieldTypeAndroid FieldTypeAndroid
     {
@@ -23,7 +27,12 @@ public class InputContentTypeBehavior
     }
 
     public static readonly BindableProperty FieldTypeiOSProperty =
-        BindableProperty.Create(nameof(FieldTypeiOS), typeof(FieldTypeiOS), typeof(AccessibilityCustomActionBehavior), FieldTypeiOS.None);
+        BindableProperty.Create(
+            nameof(FieldTypeiOS), 
+            typeof(FieldTypeiOS), 
+            typeof(AccessibilityCustomActionBehavior), 
+            FieldTypeiOS.None
+        );
 
     public FieldTypeiOS FieldTypeiOS
     {
@@ -39,7 +48,9 @@ public class InputContentTypeBehavior
 
         if (FieldTypeAndroid != FieldTypeAndroid.None)
         {
-            platformView.SetAutofillHints(FirstCharToLowerCase(FieldTypeAndroid.ToString()));
+            platformView.SetAutofillHints(
+                FirstCharToLowerCase(FieldTypeAndroid.ToString())
+            );
         }
     }
 
@@ -67,7 +78,10 @@ public class InputContentTypeBehavior
         try
         {
             var propertyInfo = typeof(UIKit.UITextContentType)
-                .GetProperty(fieldType.ToString(), System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
+                .GetProperty(
+                    fieldType.ToString(), 
+                    System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static
+                );
 
             return (Foundation.NSString)propertyInfo.GetValue(null, null);
         }
@@ -127,30 +141,25 @@ public enum FieldTypeiOS
     Url,
     Username
 }
-
 ```
 
 Usage (XAML)
 
 ```xml
-
 <Entry>
     <Entry.Behaviors>
         <local:InputContentTypeBehavior FieldTypeAndroid="EmailAddress" FieldTypeiOS="NewPassword" />
     </Entry.Behaviors>
 </Entry>
-
 ```
 
 Usage (C#)
 
 ```csharp
-
 var entry = new Entry();
 entry.Behaviors.Add(new InputContentTypeBehavior
 {
     FieldTypeAndroid = FieldTypeAndroid.CreditCardExpirationDate,
     FieldTypeiOS = FieldTypeiOS.AddressCity
 });
-
 ```

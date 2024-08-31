@@ -7,7 +7,6 @@ When using `SnackBar`, set the `Duration` to `TimeSpan.MaxValue`. Alternatively,
 Also, make sure that the use of time limits, such as those set with [`Timer`](https://learn.microsoft.com/en-us/dotnet/api/System.Threading.Timer), can be extended.
 
 ```csharp
-
 var snackbar = Snackbar.Make("Appt",
     () =>
     {
@@ -17,5 +16,4 @@ var snackbar = Snackbar.Make("Appt",
     TimeSpan.MaxValue);
 
 await snackbar.Show();
-
 ```

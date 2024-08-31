@@ -1,10 +1,12 @@
 # Accessibility role - .NET MAUI
 
-.NET MAUI does not have built-in support for setting an accessibility role.
+In MAUI, there is no built-in support for setting an accessibility role.
 
 By intercepting the handler changed event, you can change the role of a custom component.
 
-```xml title="Component.xaml"
+HandlerChanged event in XAML:
+
+```xml
 <StackLayout>
   <BindableLayout.ItemTemplate>
     <DataTemplate>
@@ -21,9 +23,9 @@ By intercepting the handler changed event, you can change the role of a custom c
 </StackLayout>
 ```
 
-Partial class on Android:
+Component on Android:
 
-```csharp title="Component.Android.cs"
+```csharp
 public partial class Component
 {
   void Frame_HandlerChanged(System.Object sender, System.EventArgs e)
@@ -50,9 +52,9 @@ public class CustomFrameDelegate : AccessibilityDelegateCompatWrapper
 }
 ```
 
-Partial class on iOS:
+Component on iOS:
 
-```csharp title="Component.iOS.cs"
+```csharp
 public partial class Component
 {
   void Frame_HandlerChanged(System.Object sender, System.EventArgs e)

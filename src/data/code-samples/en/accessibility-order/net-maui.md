@@ -1,6 +1,6 @@
 # Accessibility order - .NET MAUI
 
-In .NET MAUI, you can use a `SemanticOrderView` to control the order of `VisualElements` for screen readers. This can be particularly useful when building user interfaces in orders differing from the order in which users and screen readers will navigate them.
+In MAUI, you can use a `SemanticOrderView` to control the order of `VisualElements` for screen readers. This can be particularly useful when building user interfaces in orders differing from the order in which users and screen readers will navigate them.
 
 For more information, check out the [`SemanticOrderView` documentation](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/views/semantic-order-view).
 

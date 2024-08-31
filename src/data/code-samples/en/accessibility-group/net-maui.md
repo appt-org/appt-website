@@ -1,6 +1,6 @@
 # Accessibility group - .NET MAUI
 
-In .NET MAUI, you can group items together by setting `AutomationProperties.IsInAccessibleTree` to `true`. You also need to set a `SemanticProperties.Description` for the grouped elements.
+In MAUI, you can group items together by setting `AutomationProperties.IsInAccessibleTree` to `true`. You also need to set a `SemanticProperties.Description` for the grouped elements.
 
 ```xml
 <HorizontalStackLayout

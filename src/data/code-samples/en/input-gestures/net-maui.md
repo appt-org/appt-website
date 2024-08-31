@@ -1,6 +1,6 @@
 # Input gestures - .NET MAUI
 
-MAUI offers several types of [`Gesture Recognizers`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/gestures/drag-and-drop) to detect user interactions with a UI component. The available gestures are:
+In MAUI, you can use several types of [`Gesture Recognizers`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/gestures/drag-and-drop) to detect user interactions with a UI component. The available gestures are:
 
 - [`Drag and drop`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/gestures/drag-and-drop)
 - [`Pan`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/gestures/pan)
@@ -10,7 +10,6 @@ MAUI offers several types of [`Gesture Recognizers`](https://learn.microsoft.com
 - [`Tap`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/gestures/tap)
 
 ```csharp
-
 var label = new Label();
 
 var dragGestureRecognizer = new DragGestureRecognizer();
@@ -62,11 +61,9 @@ tapGestureRecognizer.NumberOfTapsRequired = 2;
 tapGestureRecognizer.Tapped += TapGestureRecognizer_Tapped;
 
 label.GestureRecognizers.Add(tapGestureRecognizer);
-
 ```
 
 ```csharp
-
 <Label
     Text="Hello">
     <Label.GestureRecognizers>
@@ -79,5 +76,4 @@ label.GestureRecognizers.Add(tapGestureRecognizer);
         <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="TapGestureRecognizer_Tapped"  />
     </Label.GestureRecognizers>
 </Label>
-
 ```

@@ -1,6 +1,6 @@
 # Accessibility name - .NET MAUI
 
-In .NET MAUI, the [`SemanticProperties.Description`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.semanticproperties.descriptionproperty#microsoft-maui-controls-semanticproperties-descriptionproperty) property is used as the accessibility name.
+In MAUI, the [`SemanticProperties.Description`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.semanticproperties.descriptionproperty#microsoft-maui-controls-semanticproperties-descriptionproperty) property is used as the accessibility name.
 
 ```xml
 <Control 

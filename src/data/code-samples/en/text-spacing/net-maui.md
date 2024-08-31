@@ -1,6 +1,6 @@
 # Text spacing - .NET MAUI
 
-MAUI offers a few properties to adjust text spacing:
+In MAUI, there are a few properties to adjust text spacing:
 
 - [`CharacterSpacing`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.label.characterspacing): Set spacing between characters.
 - [`LineHeight`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.label.lineheight): Set spacing between lines.
@@ -11,20 +11,16 @@ You can also make a [`Platform Behavior`](https://learn.microsoft.com/en-us/dotn
 Usage (C#)
 
 ```csharp
-
 var label = new Label
 {
     CharacterSpacing = 3,
     LineHeight = 32,
     Padding = 10
 };
-
 ```
 
 Usage (XAML)
 
 ```xml
-
 <Label CharacterSpacing="3" LineHeight="32" Margin="10" Padding="10" />
-
 ```

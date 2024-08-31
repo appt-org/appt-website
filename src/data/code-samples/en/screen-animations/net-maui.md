@@ -3,7 +3,6 @@
 In MAUI, animations are disabled by default if the user has that option enabled in the device settings. However, you can check and apply custom logic by using platform-specific code.
 
 ```csharp
-
 #if IOS
 
 if(UIKit.UIAccessibility.IsReduceMotionEnabled)
@@ -28,5 +27,4 @@ if (duration == 0f || transition == 0f)
 }
 
 #endif
-
 ```

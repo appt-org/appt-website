@@ -9,7 +9,6 @@ In MAUI, you can put UI elements inside a [`ScrollView`](https://learn.microsoft
 Usage (C#)
 
 ```csharp
-
 var scrollView = new ScrollView
 {
     Content = new Label
@@ -17,15 +16,12 @@ var scrollView = new ScrollView
         Text = "Content should scroll!"
     }
 };
-
 ```
 
 Usage (XAML)
 
 ```xml
-
 <ScrollView>
     <Label Text="Content should scroll!" />
 </ScrollView>
-
 ```

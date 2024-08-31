@@ -5,23 +5,19 @@ In MAUI, skipping content is mostly relevant to [`TalkBack`](https://appt.org/en
 Usage (C#)
 
 ```csharp
-
 var headerLabel = new Label
 {
     Text = "Hello"
 };
 SemanticProperties.SetHeadingLevel(headerLabel, SemanticHeadingLevel.None);
 AutomationProperties.SetIsInAccessibleTree(headerLabel, false);
-
 ```
 
 Usage (XAML)
 
 ```xml
-
 <Label
     SemanticProperties.HeadingLevel="None"
     AutomationProperties.IsInAccessibleTree="False"
     Text="Hello" />
-
 ```

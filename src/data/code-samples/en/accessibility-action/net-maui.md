@@ -2,8 +2,6 @@
 
 In MAUI, there is no built-in way to create a custom action, but you can achieve this via [`Platform Behavior`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/behaviors#platform-behaviors). See the code below for an example of usage.
 
-PlatformBehavior
-
 ```csharp
 public class AccessibilityCustomActionBehavior
 #if IOS
@@ -16,10 +14,21 @@ public class AccessibilityCustomActionBehavior
     private int androidActionId = -1;
 
     public static readonly BindableProperty NameProperty =
-        BindableProperty.Create(nameof(Name), typeof(string), typeof(AccessibilityCustomActionBehavior), null, BindingMode.TwoWay);
+        BindableProperty.Create(
+            nameof(Name), 
+            typeof(string), 
+            typeof(AccessibilityCustomActionBehavior), null, 
+            BindingMode.TwoWay
+        );
 
     public static readonly BindableProperty ActionProperty =
-        BindableProperty.Create(nameof(Action), typeof(Func<bool>), typeof(AccessibilityCustomActionBehavior), null, BindingMode.TwoWay);
+        BindableProperty.Create(
+            nameof(Action), 
+            typeof(Func<bool>), 
+            typeof(AccessibilityCustomActionBehavior), 
+            null, 
+            BindingMode.TwoWay
+        );
 
     public string Name
     {
@@ -53,7 +62,11 @@ public class AccessibilityCustomActionBehavior
             customAction
         };
 #elif ANDROID
-        androidActionId = AndroidX.Core.View.ViewCompat.AddAccessibilityAction(platformView, Name, new CustomAndroidAccessibilityAction(Action));
+        androidActionId = AndroidX.Core.View.ViewCompat.AddAccessibilityAction(
+            platformView, 
+            Name, 
+            new CustomAndroidAccessibilityAction(Action)
+        );
 #endif
     }
 
@@ -71,14 +84,19 @@ public class AccessibilityCustomActionBehavior
 #elif ANDROID
         if (androidActionId != -1)
         {
-            AndroidX.Core.View.ViewCompat.RemoveAccessibilityAction(platformView, androidActionId);
+            AndroidX.Core.View.ViewCompat.RemoveAccessibilityAction(
+                platformView, 
+                androidActionId
+            );
         }
 #endif
     }
 
 #if ANDROID
 
-    public class CustomAndroidAccessibilityAction : Java.Lang.Object, AndroidX.Core.View.Accessibility.IAccessibilityViewCommand
+    public class CustomAndroidAccessibilityAction : 
+        Java.Lang.Object, 
+        AndroidX.Core.View.Accessibility.IAccessibilityViewCommand
     {
         Func<bool> action;
 
@@ -89,7 +107,9 @@ public class AccessibilityCustomActionBehavior
             this.action = action;
         }
 
-        public bool Perform(Android.Views.View view, AndroidX.Core.View.Accessibility.AccessibilityViewCommandCommandArguments? arguments)
+        public bool Perform(
+            Android.Views.View view, 
+            AndroidX.Core.View.Accessibility.AccessibilityViewCommandCommandArguments? arguments)
         {
             return action();
         }
@@ -102,7 +122,6 @@ public class AccessibilityCustomActionBehavior
 Usage (XAML)
 
 ```xml
-
 <Image
     Source="dotnet_bot.png"
     HeightRequest="185">
@@ -113,13 +132,11 @@ Usage (XAML)
             Action="{Binding CustomAction}" />
     </Image.Behaviors>
 </Image>
-
 ```
 
 Usage (C#)
 
 ```csharp
-
 var image = new Image();
 image.Behaviors.Add(new AccessibilityCustomActionBehavior
 {
@@ -130,5 +147,4 @@ image.Behaviors.Add(new AccessibilityCustomActionBehavior
         return true;
     }
 });
-
 ```
