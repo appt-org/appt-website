@@ -22,7 +22,7 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
-          id: 'accessibility-data/index',
+          id: 'arctouch/index',
           customProps: { isHidden: true },
         },
       ],

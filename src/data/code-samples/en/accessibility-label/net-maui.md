@@ -1,6 +1,6 @@
 # Accessibility label - .NET MAUI
 
-In .NET MAUI, you can set an accessibility label by using the [`SemanticProperties.Description`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.semanticproperties.descriptionproperty#microsoft-maui-controls-semanticproperties-descriptionproperty) property.
+In MAUI, you can set an accessibility label by using the [`SemanticProperties.Description`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.semanticproperties.descriptionproperty#microsoft-maui-controls-semanticproperties-descriptionproperty) property.
 
 ```xml
 <Control 
@@ -26,7 +26,7 @@ As an alternative, you can link a label by setting [`IsInAccessibleTree`](https:
 
 **Note**: `SemanticProperties.Description` will supersede the value of `AutomationProperties.IsInAccessibleTree`.
 
-In the sample below, the text from `SemanticProperties.Description` will be spoken despite of the value of `AutomationProperties.IsInAccessibleTree`.
+In the sample below, the text from `SemanticProperties.Description` will be spoken regardless of the value of `AutomationProperties.IsInAccessibleTree`.
 
 ```xml
 <Label
