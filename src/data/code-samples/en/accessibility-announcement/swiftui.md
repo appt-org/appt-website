@@ -34,7 +34,7 @@ var body: some View {
 }
 
 // Post an announcement
-fun announce(_ message: String) {
+func announce(_ message: String) {
   if #available(iOS 17, *) {
     // iOS 17+ can use AccessibilityNotification
     var announcement = AttributedString(message)
