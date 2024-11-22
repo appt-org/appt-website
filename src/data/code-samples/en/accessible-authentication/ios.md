@@ -2,7 +2,7 @@
 
 ## Text content type
 
-In iOS, you need to ensure that the [`UITextField`](https://developer.apple.com/documentation/uikit/uitextfield) elements used for authentication are properly marked up for the password manager to identify them. This means setting the right [`UITextContentType`](https://developer.apple.com/documentation/uikit/uitextcontenttype) for the username and password fields. Password managers typically recognize fields by these properties and can automatically fill in the credentials for the user.
+In iOS, ensure that the [`UITextField`](https://developer.apple.com/documentation/uikit/uitextfield) elements used for authentication are properly marked up for the password manager to identify them. This means setting the right [`UITextContentType`](https://developer.apple.com/documentation/uikit/uitextcontenttype) authentication fields. Password managers typically recognize fields by these properties and can automatically fill in the credentials for the user.
 
 ```swift
 class LoginViewController: UIViewController {

@@ -1,6 +1,6 @@
 # Redundant entry - SwiftUI
 
-In SwiftUI, store previously entered information and reuse it in a new form on a different screen. You can use [UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults) to save the data temporarily and retrieve it when needed.
+In SwiftUI, store previously entered information and reuse it in a new form on a different screen. You can use [`UserDefaults`](https://developer.apple.com/documentation/foundation/userdefaults) to save the data temporarily and retrieve it when needed.
 
 ```swift
 struct LoginView: View {

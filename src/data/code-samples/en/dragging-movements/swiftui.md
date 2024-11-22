@@ -1,6 +1,6 @@
 # Dragging movements - SwiftUI
 
-In iOS, ensure that users who cannot perform precise dragging movements, such as those using assistive devices or with limited dexterity, can still access and interact with app features.
+In SwiftUI, ensure that users who cannot perform precise dragging movements, such as those using assistive devices or with limited dexterity, can still access and interact with app features.
 
 ```swift
 @State private var sliderValue: Double = 50 // Initial value

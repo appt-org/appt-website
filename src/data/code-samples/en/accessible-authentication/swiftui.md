@@ -2,7 +2,7 @@
 
 ## Text content type
 
-In SwiftUI, you need to ensure that the [`TextField`](https://developer.apple.com/documentation/swiftui/textfield) elements used for authentication are properly marked up for the password manager to identify them. This means applying correct [`textContentType`](https://developer.apple.com/documentation/swiftui/view/textcontenttype(_:)-ufdv) modifier for the username and password fields. Password managers typically recognize fields by these properties and can automatically fill in the credentials for the user.
+In SwiftUI, ensure that the [`TextField`](https://developer.apple.com/documentation/swiftui/textfield) elements used for authentication are properly marked up for the password manager to identify them. This means applying correct [`textContentType`](https://developer.apple.com/documentation/swiftui/view/textcontenttype(_:)-ufdv) modifier for input fields. Password managers typically recognize fields by these properties and can automatically fill in the credentials for the user.
 
 ```swift
 struct LoginView: View {

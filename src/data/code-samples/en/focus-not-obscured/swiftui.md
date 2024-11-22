@@ -1,6 +1,6 @@
 # Focus not obscured - SwiftUI
 
-In SwiftUI, to ensure accessibility compliance when overlaying UI elements, such as banners over a TextField, always consider the user's ability to interact with both elements effectively. Avoid permanently obscuring interactive elements like [`TextField`](https://developer.apple.com/documentation/swiftui/textfield), as this can prevent users from entering information and disrupt navigation.
+In SwiftUI, to ensure accessibility compliance when overlaying UI elements, such as banners over a [`TextField`](https://developer.apple.com/documentation/swiftui/textfield), always consider the user's ability to interact with both elements effectively. Avoid permanently obscuring interactive elements like `TextField`, as this can prevent users from entering information and disrupt navigation.
 
 The following example displays how not to compose the user interface that has a potential to obscure focus on focusable elements:
 

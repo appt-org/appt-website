@@ -1,6 +1,6 @@
 # Target size - SwiftUI
 
-In SwiftUI, to ensure that the interactive target minimum size of buttons meets accessibility guidelines, it’s recommended to use a minimum of 24x24 points for tappable elements. This size helps ensure that all users, including those who rely on assistive technologies like VoiceOver, can easily interact with buttons without accidentally triggering them.
+In SwiftUI, ensure that the interactive target minimum size of buttons meets accessibility guidelines, it’s recommended to use a minimum of 24x24 points for tappable elements. This size helps ensure that all users, including those who rely on assistive technologies like VoiceOver, can easily interact with buttons without accidentally triggering them.
 
 ```swift
 Button(action: {
