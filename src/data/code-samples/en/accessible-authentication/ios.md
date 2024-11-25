@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
 Another example on how to provide an accessible authentication is to allow the user to authenticate by requesting an authentication email with the universal link.
 
 1. Configure your app for [Universal Links](https://developer.apple.com/documentation/xcode/supporting-universal-links-in-your-app):
-In Xcode, enable Associated Domains in the Signing & Capabilities section.
+In Xcode, enable `Associated Domains` in the `Signing & Capabilities` section.
 Add the domain you’ll use for Universal Links (e.g., applinks:example.com).
 
 2. Set up an [`apple-app-site-association`](https://developer.apple.com/documentation/xcode/supporting-associated-domains) file on your server to indicate which links should open your app:
@@ -41,19 +41,18 @@ Add the domain you’ll use for Universal Links (e.g., applinks:example.com).
 }
 ```
 
-3. Handle Universal Link in App:
+3. Handle Universal Link in an app:
 
 ```swift
-@main
-struct PlaygroundApp: App {
-  
-  var body: some Scene {
-    WindowGroup {
-      ContentView()
-        .onOpenURL { url in
-          // Handle incoming url
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    func application(
+      _ application: UIApplication,
+      continue userActivity: NSUserActivity,
+      restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void
+      ) -> Bool {
+        if let url = userActivity.webpageURL {
+            // Handle incoming url
         }
     }
-  }
 }
 ```
