@@ -10,17 +10,16 @@ var body: some View {
         // Slider
         Slider(value: $sliderValue, in: 0...100, step: 1)
         
-        // Button Alternatives
         HStack {
+            // Alternative action to decrease
             Button(action: {
-                // Decrease slider value by 1
                 sliderValue -= 1
             }) {
                 Text("-1")
             }
             
+            // Alternative action to increase
             Button(action: {
-                // Increase slider value by 1
                 sliderValue += 1
             }) {
                 Text("+1")
