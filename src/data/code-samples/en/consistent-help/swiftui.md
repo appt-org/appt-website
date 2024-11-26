@@ -8,9 +8,22 @@ struct HelpButton: View {
     
     var body: some View {
         Button(action: action) {
-            HStack {
-                Image(systemName: "questionmark.circle.fill") // Help icon
-                Text("Help")
+            Image(systemName: "questionmark.circle")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 20, height: 20)
+                .accessibilityLabel("Help")
+        }
+        .buttonStyle(.plain)
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            // Place consistently across screens
+            HelpButton {
+                // Show help
             }
         }
     }
