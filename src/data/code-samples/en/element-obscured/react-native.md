@@ -1,4 +1,4 @@
-# Focus not obscured - React native
+# Element obscured - React native
 
 ```
 Not available, contribute!

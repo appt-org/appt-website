@@ -1,4 +1,4 @@
-# Focus not obscured - Xamarin
+# Element obscured - Android
 
 ```
 Not available, contribute!

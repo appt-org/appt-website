@@ -1,4 +1,4 @@
-# Focus not obscured - .NET MAUI
+# Element obscured - .NET MAUI
 
 ```
 Not available, contribute!

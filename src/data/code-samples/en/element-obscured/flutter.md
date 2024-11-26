@@ -1,4 +1,4 @@
-# Focus not obscured - Flutter
+# Element obscured - Flutter
 
 ```
 Not available, contribute!
