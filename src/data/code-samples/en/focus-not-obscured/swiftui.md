@@ -1,31 +1,32 @@
 # Focus not obscured - SwiftUI
 
-In SwiftUI, to ensure accessibility compliance when overlaying UI elements, such as banners over a [`TextField`](https://developer.apple.com/documentation/swiftui/textfield), always consider the user's ability to interact with both elements effectively. Avoid permanently obscuring interactive elements like `TextField`, as this can prevent users from entering information and disrupt navigation.
-
-The following example displays how **not to** compose the user interface that has a potential to obscure focus on focusable elements:
+In SwiftUI, you should ensure that any user interface component receiving focus is at least partially visible on the screen and not obscured by other content, such as sticky banners, headers and footers. Additionally, avoid placing interactive elements near areas where overlapping content, such as floating buttons, could interfere with visibility.
 
 ```swift
-struct ContentView: View {
-    @State private var text: String = ""
-    @State private var showStickyNote: Bool = true
-    
+import SwiftUI
+
+struct ApptView: View {
     var body: some View {
-        ZStack { // Avoid obscuring elements by placing in ZStack
-            // TextField at the bottom
-            TextField("Your email address", text: $text)
-            
-            if showStickyNote {
-                Text("View Promotional Offers")
-                    .background(Color.yellow)
-                    .cornerRadius(8)
-                    .onTapGesture {
-                        // Dismiss sticky note
-                        withAnimation {
-                            showStickyNote = false
-                        }
-                    }
-            }
+        VStack {
+            TextField("Appt")
         }
+        .padding()
+        .onReceive(Publishers.keyboard) { 
+          // Adjust layout to avoid obscuration
+        }
+    }
+}
+
+extension Publishers {
+    static var keyboard: AnyPublisher<(Bool, CGFloat?), Never> {
+        let show = NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)
+            .compactMap { ($0.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect)?.height }
+            .map { (true, $0) }
+
+        let hide = NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification)
+            .map { _ in (false, nil as CGFloat?) }
+
+        return show.merge(with: hide).eraseToAnyPublisher()
     }
 }
 ```

@@ -1,8 +1,9 @@
 # Focus not obscured - iOS
 
-On iOS, you should ensure that any user interface component receiving keyboard focus is at least partially visible on the screen and not obscured by other content, such as sticky banners, footers, or pop-ups. Additionally, avoid placing interactive elements near areas where overlapping content, such as floating buttons or banners, could interfere with visibility.
+On iOS, you should ensure that any user interface component receiving focus is at least partially visible on the screen and not obscured by other content, such as sticky banners, headers and footers. Additionally, avoid placing interactive elements near areas where overlapping content, such as floating buttons, could interfere with visibility.
 
 ```swift
+class ApptViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -13,10 +14,11 @@ On iOS, you should ensure that any user interface component receiving keyboard f
     }
 
      @objc func keyboardWillShow(notification: Notification) {
-        // Adjust the layout to avoid the focused element being obscured by the onscren keyboard
+        // Adjust the layout to avoid obscuration when keyboard is shown
     }
 
     @objc func keyboardWillHide(notification: Notification) {
-        // Adjust the layout for events when the keyboard is hidden
+        // Adjust the layout when the keyboard is hidden
     }
+}
 ```
