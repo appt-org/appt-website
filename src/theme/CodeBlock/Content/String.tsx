@@ -29,6 +29,8 @@ const languageLabels = [
   { id: 'dart', label: 'Dart' },
   { id: 'csharp', label: 'C#' },
   { id: 'java', label: 'Java' },
+  { id: 'json', label: 'JSON' },
+  { id: 'md', label: 'Markdown' },
 ];
 
 // Prism languages are always lowercase
