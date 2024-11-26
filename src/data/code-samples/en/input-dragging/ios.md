@@ -1,4 +1,4 @@
-# Dragging movements - iOS
+# Input dragging - iOS
 
 In iOS, ensure that users who cannot perform precise dragging movements, such as those using assistive devices or with limited dexterity, can still access and interact with app features.
 

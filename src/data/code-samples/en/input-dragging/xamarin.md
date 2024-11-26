@@ -1,4 +1,4 @@
-# Dragging movements - .NET MAUI
+# Input dragging - Xamarin
 
 ```
 Not available, contribute!

@@ -1,4 +1,4 @@
-# Dragging movements - SwiftUI
+# Input dragging - SwiftUI
 
 In SwiftUI, ensure that users who cannot perform precise dragging movements, such as those using assistive devices or with limited dexterity, can still access and interact with app features.
 

@@ -1,4 +1,4 @@
-# Dragging movements - Android
+# Input dragging - React native
 
 ```
 Not available, contribute!
