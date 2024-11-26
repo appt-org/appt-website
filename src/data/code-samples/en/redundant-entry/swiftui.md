@@ -1,24 +1,51 @@
 # Redundant entry - SwiftUI
 
-In SwiftUI, store previously entered information and reuse it in a new form on a different screen. You can use [`UserDefaults`](https://developer.apple.com/documentation/foundation/userdefaults) to save the data temporarily and retrieve it when needed.
+In SwiftUI, store previously entered information and reuse this information on different screen. You can use [`UserDefaults`](https://developer.apple.com/documentation/foundation/userdefaults) to save the data and retrieve it when needed.
 
 ```swift
+enum UserDefaultKey: String {
+    static let emailAddress = "emailAddress"
+}
+
 struct LoginView: View {
-    @State private var email: String? = UserDefaults.standard.string(forKey: "emailAddress")
+
+    // Store `emailAddress` in UserDefaults
+    @AppStorage(UserDefaultKey.emailAddress)
+    private var email: String = ""
+
+    @State private var password: String = ""
 
     var body: some View {
-       TextField("Enter your email", text: $email)
-        .onSubmit {
-            UserDefaults.standard.set(self.email, forKey: "emailAddress")
-       }
+        VStack {
+            TextField("Email", text: $email)
+                .keyboardType(.emailAddress)
+                .textContentType(.emailAddress)
+            
+            SecureField("Password", text: $password)
+            
+            Button("Login") {
+                // Handle login action
+            }
+        }
     }
 }
 
 struct ResetPassword: View {
-    @State private var email: String? = UserDefaults.standard.string(forKey: "emailAddress")
+
+    // Use `emailAddress` from UserDefaults
+    @AppStorage(serDefaultKey.emailAddress)
+    private var email: String = ""
 
     var body: some View {
-       TextField("Enter your email", text: $email)
+        VStack {
+            TextField("Email", text: $email)
+              .keyboardType(.emailAddress)
+              .textContentType(.emailAddress)
+            
+            Button("Reset password") {
+                // Handle reset action
+            }
+        }
     }
 }
 ```
