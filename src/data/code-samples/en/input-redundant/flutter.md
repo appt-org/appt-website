@@ -1,4 +1,4 @@
-# Redundant entry - .NET MAUI
+# Input redundant - Flutter
 
 ```
 Not available, contribute!

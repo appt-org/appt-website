@@ -1,4 +1,4 @@
-# Redundant entry - Xamarin
+# Input redundant - Xamarin
 
 ```
 Not available, contribute!

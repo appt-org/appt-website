@@ -1,4 +1,4 @@
-# Redundant entry - iOS
+# Input redundant - iOS
 
 In iOS, store previously entered information and reuse this information on different screen. You can use [`UserDefaults`](https://developer.apple.com/documentation/foundation/userdefaults) to save the data and retrieve it when needed.
 

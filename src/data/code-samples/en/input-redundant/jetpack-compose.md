@@ -1,4 +1,4 @@
-# Redundant entry - React native
+# Input redundant - Jetpack Compose
 
 ```
 Not available, contribute!

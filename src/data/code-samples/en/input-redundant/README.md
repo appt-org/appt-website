@@ -1,4 +1,4 @@
-# Redundant entry
+# Input redundant
 
 Avoid requiring users to re-enter information they have already provided in your app. Instead:
 

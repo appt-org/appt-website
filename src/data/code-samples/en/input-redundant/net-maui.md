@@ -1,4 +1,4 @@
-# Redundant entry - Jetpack Compose
+# Input redundant - .NET MAUI
 
 ```
 Not available, contribute!

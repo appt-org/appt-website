@@ -1,4 +1,4 @@
-# Redundant entry - Android
+# Input redundant - Android
 
 ```
 Not available, contribute!
