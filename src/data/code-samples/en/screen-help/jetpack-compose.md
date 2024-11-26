@@ -1,4 +1,4 @@
-# Consistent help - Jetpack Compose
+# Screen help - Jetpack Compose
 
 ```
 Not available, contribute!
