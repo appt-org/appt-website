@@ -1,6 +1,6 @@
 # Target size - iOS
 
-In iOS, ensure that interactive elements have a target size of at least 24x24 points. This size helps ensure that users can easily interact with targets such as buttons.
+In iOS, ensure that interactive elements have a target size of at least 24x24 points and ideally 44x44 points. This size helps ensure that users can easily interact with targets such as buttons.
 
 ```swift
 @IBOutlet weak var stackView: UIStackView!
