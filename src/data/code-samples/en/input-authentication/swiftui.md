@@ -1,6 +1,4 @@
-# Accessible authentication - SwiftUI
-
-## Text content type
+# Input authentication - SwiftUI
 
 In SwiftUI, ensure that the [`TextField`](https://developer.apple.com/documentation/swiftui/textfield) elements used for authentication can be identified by password managers. This means you need to apply an appropriate [`textContentType`](https://developer.apple.com/documentation/swiftui/view/textcontenttype(_:)-ufdv) modifier, such as [.username](https://developer.apple.com/documentation/uikit/uitextcontenttype/2866088-username) and [.password](https://developer.apple.com/documentation/uikit/uitextcontenttype/2865813-password).
 
@@ -27,15 +25,13 @@ struct LoginView: View {
 }
 ```
 
-## Universal links
-
 Another example of providing accessible authentication is allowing users to authenticate by requesting an authentication email containing a `universal link`.
 
 1. Configure your app for [Universal Links](https://developer.apple.com/documentation/xcode/supporting-universal-links-in-your-app):
 In Xcode, enable `Associated Domains` in the `Signing & Capabilities` section.
 Add the domain you’ll use for Universal Links (e.g., `applinks:example.com`).
 
-2. Set up an [`apple-app-site-association`](https://developer.apple.com/documentation/xcode/supporting-associated-domains) file on your server to indicate which links should open your app.
+1. Set up an [`apple-app-site-association`](https://developer.apple.com/documentation/xcode/supporting-associated-domains) file on your server to indicate which links should open your app.
 
 ```json
 {
