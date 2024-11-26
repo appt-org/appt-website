@@ -2,7 +2,9 @@
 
 ## Text content type
 
-In SwiftUI, ensure that the [`TextField`](https://developer.apple.com/documentation/swiftui/textfield) elements used for authentication are properly marked up for the password manager to identify them. This means applying correct [`textContentType`](https://developer.apple.com/documentation/swiftui/view/textcontenttype(_:)-ufdv) modifier for input fields. Password managers typically recognize fields by these properties and can automatically fill in the credentials for the user.
+In SwiftUI, ensure that the [`TextField`](https://developer.apple.com/documentation/swiftui/textfield) elements used for authentication can be identified by password managers. This means you need to apply an appropriate [`textContentType`](https://developer.apple.com/documentation/swiftui/view/textcontenttype(_:)-ufdv) modifier, such as [.username](https://developer.apple.com/documentation/uikit/uitextcontenttype/2866088-username) and [.password](https://developer.apple.com/documentation/uikit/uitextcontenttype/2865813-password).
+
+Password managers typically recognize authentication fields based on these properties and can automatically fill in the credentials of the user.
 
 ```swift
 struct LoginView: View {
@@ -11,14 +13,14 @@ struct LoginView: View {
 
     var body: some View {
         VStack {
-            // Username TextField with support for password manager autofill
+            // Username TextField
             TextField("Username", text: $username)
-                .textContentType(.username) // Support for autofill
+                .textContentType(.username) // Identify as username
                 .autocapitalization(.none)
             
-            // Password TextField with support for password manager autofill
+            // Password TextField
             SecureField("Password", text: $password)
-                .textContentType(.password) // Support for autofill
+                .textContentType(.password) // Identify as password
                 .padding()
         }
     }
@@ -27,38 +29,38 @@ struct LoginView: View {
 
 ## Universal links
 
-Another example on how to provide an accessible authentication is to allow the user to authenticate by requesting an authentication email with the universal link.
+Another example of providing accessible authentication is allowing users to authenticate by requesting an authentication email containing a `universal link`.
 
 1. Configure your app for [Universal Links](https://developer.apple.com/documentation/xcode/supporting-universal-links-in-your-app):
 In Xcode, enable `Associated Domains` in the `Signing & Capabilities` section.
-Add the domain you’ll use for Universal Links (e.g., applinks:example.com).
+Add the domain you’ll use for Universal Links (e.g., `applinks:example.com`).
 
-2. Set up an apple-app-site-association file on your server to indicate which links should open your app:
+2. Set up an [`apple-app-site-association`](https://developer.apple.com/documentation/xcode/supporting-associated-domains) file on your server to indicate which links should open your app.
 
 ```json
 {
   "applinks": {
     "details": [
       {
-        "appID": "TEAM_ID.com.yourapp.bundle",
-        "paths": ["/login/*"]
+        "appID": "TEAM_ID.com.example.bundle",
+        "paths": ["/auth/*"]
       }
     ]
   }
 }
 ```
 
-3. Handle Universal Link in an app:
+3. Handle Universal Link in your app.
 
 ```swift
 @main
-struct PlaygroundApp: App {
+struct ApptApp: App {
   
   var body: some Scene {
     WindowGroup {
       ContentView()
         .onOpenURL { url in
-          // Handle incoming url
+          // Authenticate based on parameters of incoming URL
         }
     }
   }
