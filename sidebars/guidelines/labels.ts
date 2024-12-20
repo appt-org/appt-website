@@ -25,7 +25,7 @@ const labels = {
   },
   '2.1': {
     en: '2.1 Keyboard Accessible',
-    nl: '2.1 Toetsenbord toegankelijk',
+    nl: '2.1 Toetsenbordtoegankelijk',
   },
   '2.2': {
     en: '2.2 Enough Time',
@@ -41,7 +41,7 @@ const labels = {
   },
   '2.5': {
     en: '2.5 Input Modalities',
-    nl: '2.5 Input Modaliteiten',
+    nl: '2.5 Input modaliteiten',
   },
   '3': {
     en: '3. Understandable',
@@ -304,12 +304,12 @@ const labels = {
     nl: '2.5.4 Bewegingsactivering',
   },
   '2.5.5': {
-    en: '2.5.5 Target Size',
-    nl: '2.5.5 Grootte van het aanwijsgebied',
+    en: '2.5.5 Target Size (Enhanced)',
+    nl: '2.5.5 Grootte van het aanwijsgebied (uitgebreid)',
   },
   '2.5.6': {
     en: '2.5.6 Concurrent Input Mechanisms',
-    nl: '2.5.6 Inpurt gelijktijdige invoermechanismen',
+    nl: '2.5.6 Input gelijktijdige invoermechanismen',
   },
   '2.5.7': {
     en: '2.5.7 Dragging Movements',
@@ -349,7 +349,7 @@ const labels = {
   },
   '3.2.2': {
     en: '3.2.2 On Input',
-    nl: '3.2.2 Bij inpurt',
+    nl: '3.2.2 Bij input',
   },
   '3.2.3': {
     en: '3.2.3 Consistent Navigation',

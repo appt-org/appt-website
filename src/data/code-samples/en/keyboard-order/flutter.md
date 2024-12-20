@@ -6,6 +6,15 @@ The default [`ReadingOrderTraversalPolicy`](https://api.flutter.dev/flutter/widg
 
 Read more about [Flutter's keyboard focus system](https://docs.flutter.dev/development/ui/advanced/focus).
 
+:::warning
+
+Full Keyboard Access (FKA) on iOS is not yet fully supported on Flutter.
+
+- February 21, 2021: [Flutter issue regarding FKA has been created](https://github.com/flutter/flutter/issues/76497)
+- October 24, 2024: [Bare-bones FKA implementation has been merged](https://github.com/flutter/engine/pull/55964)
+
+:::
+
 The example below shows how to use the `FocusTraversalOrder` widget to traverse a row of buttons in the order TWO, ONE, THREE using `NumericFocusOrder`.
 
 ```dart
