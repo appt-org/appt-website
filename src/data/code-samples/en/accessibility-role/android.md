@@ -51,13 +51,13 @@ ViewCompat.setAccessibilityHeading(view, true)
 
 ## EditText considerations
 
-Hidden in [Talk Back's source code](https://github.com/google/talkback/blob/master/utils/src/main/java/com/google/android/accessibility/utils/Role.java#L303-L311) there's a special case for `EditText`:
+Hidden in [TalkBack's source code](https://github.com/google/talkback/blob/master/utils/src/main/java/com/google/android/accessibility/utils/Role.java#L303-L311) there's a special case for `EditText`:
 
 ```kotlin
 if (ClassLoadingCache.checkInstanceOf(className, android.widget.EditText.class)) {
     if (node.isEnabled() && !node.isEditable()) {
-        // Developers may want to provide extra information when an EditText is enabled but not
-        // editable.
+        // Developers may want to provide extra information
+        // when an EditText is enabled but not editable.
         return ROLE_NONE;
     } else {
         return ROLE_EDIT_TEXT;
@@ -65,7 +65,7 @@ if (ClassLoadingCache.checkInstanceOf(className, android.widget.EditText.class))
 }
 ```
 
-In order for the correct role to be announced, the `EditText` needs to be editable, otherwise `ROLE_NONE` will be set to the component.
+Meaning that in order for the correct role to be announced, the `EditText` needs to be editable, otherwise `ROLE_NONE` will be set to the component.
 
 ```kotlin
 ViewCompat.setAccessibilityDelegate(
