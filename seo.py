@@ -29,9 +29,12 @@ def extract_first_paragraph(content):
         lines = text_after_hero.split('\n')
         paragraph = next((line.strip() for line in lines if line.strip()), None)
 
-        return paragraph if paragraph else "EMPTY"
+        if paragraph:
+            return paragraph
+        else:
+            raise ValueError("No meaningful paragraph found after Hero component.")
 
-    return "EMPTY"
+    return None
 
 def update_frontmatter_with_regex(content):
     """Update the Frontmatter directly using regex."""
@@ -50,15 +53,24 @@ def update_frontmatter_with_regex(content):
     # Extract description
     new_description = extract_first_paragraph(content)
 
-    # Update title and description in Frontmatter
+    # Update Frontmatter
+    if new_title:
+        updated_frontmatter = re.sub(
+            r'(?m)^(title:\s*).*$',  # Match only the `title` line
+            f"title: {new_title}",
+            frontmatter
+        )
+
+    if new_description:
+      updated_frontmatter = re.sub(
+          r'(?m)^(description:\s*).*$',  # Match only the `description` line
+          f"description: {new_description}",
+          updated_frontmatter
+      )
+
     updated_frontmatter = re.sub(
-        r'(?m)^(title:\s*).*$',  # Match only the `title` line
-        f"title: {new_title}",
-        frontmatter
-    )
-    updated_frontmatter = re.sub(
-        r'(?m)^(description:\s*).*$',  # Match only the `description` line
-        f"description: {new_description}",
+        r'(?m)^last_update:\s*\n\s*date:\s*\d{4}-\d{2}-\d{2}$',  # Match last_update date
+        "last_update:\n  date: 2024-12-18",
         updated_frontmatter
     )
 
