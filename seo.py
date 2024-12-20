@@ -5,7 +5,10 @@ import re
 
 # Path to the wcag folder
 script_dir = os.path.dirname(os.path.realpath(__file__))
-wcag_folder = script_dir + "/i18n/nl/docusaurus-plugin-content-docs-guidelines/current/wcag"
+folders = [
+    script_dir + "/guidelines/wcag",
+    script_dir + "/i18n/nl/docusaurus-plugin-content-docs-guidelines/current/wcag"
+]
 
 def extract_hero_attributes(content):
     """Extract prefix, title, and suffix attributes from the Hero component."""
@@ -31,6 +34,11 @@ def extract_first_paragraph(content):
         paragraph = next((line.strip() for line in lines if line.strip()), None)
 
         if paragraph:
+            # Trim the paragraph if it ends with a colon (Frontmatter exception)
+            if paragraph.endswith(':'):
+                paragraph = paragraph[:-1].strip()
+                paragraph += '.'
+
             return paragraph
         else:
             raise ValueError("No meaningful paragraph found after Hero component.")
@@ -55,27 +63,28 @@ def update_frontmatter_with_regex(content):
     new_description = extract_first_paragraph(content)
 
     # Update Frontmatter
-    if new_title:
+    if new_title and new_description:
         updated_frontmatter = re.sub(
             r'(?m)^(title:\s*).*$',  # Match only the `title` line
             f"title: {new_title}",
             frontmatter
         )
 
-    if new_description:
-      updated_frontmatter = re.sub(
-          r'(?m)^(description:\s*).*$',  # Match only the `description` line
-          f"description: {new_description}",
-          updated_frontmatter
-      )
+        updated_frontmatter = re.sub(
+            r'(?m)^(description:\s*).*$',  # Match only the `description` line
+            f"description: {new_description}",
+            updated_frontmatter
+        )
 
-    updated_frontmatter = re.sub(
-        r'(?m)^last_update:\s*\n\s*date:\s*\d{4}-\d{2}-\d{2}$',  # Match last_update date
-        "last_update:\n  date: 2024-12-18",
-        updated_frontmatter
-    )
+        updated_frontmatter = re.sub(
+            r'(?m)^last_update:\s*\n\s*date:\s*\d{4}-\d{2}-\d{2}$',  # Match last_update date
+            "last_update:\n  date: 2024-12-18",
+            updated_frontmatter
+        )
 
-    return f"---\n{updated_frontmatter}\n---\n{body}"
+        return f"---\n{updated_frontmatter}\n---\n{body}"
+
+    return None
 
 def process_file(file_path):
     """Process and update a single index.mdx file."""
@@ -83,19 +92,20 @@ def process_file(file_path):
         content = file.read()
 
     updated_content = update_frontmatter_with_regex(content)
-
-    with open(file_path, 'w') as file:
-        file.write(updated_content)
+    if updated_content:
+      with open(file_path, 'w') as file:
+          file.write(updated_content)
 
     print(f"Updated {file_path}")
 
 def main():
     """Update all index.mdx files in the wcag folder."""
-    for root, dirs, files in os.walk(wcag_folder):
-        for file in files:
-            if file == 'index.mdx':
-                file_path = os.path.join(root, file)
-                process_file(file_path)
+    for folder in folders:
+      for root, _, files in os.walk(folder):
+          for file in files:
+              if file == 'index.mdx':
+                  file_path = os.path.join(root, file)
+                  process_file(file_path)
 
 if __name__ == "__main__":
     main()
