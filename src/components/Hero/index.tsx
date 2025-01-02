@@ -20,7 +20,11 @@ export function Hero({ title, description, prefix, suffix, image, imageDark, alt
         <div className="flex flex-col flex-1 md:items-center  md:flex-row">
           {!!image && (
             <div className="relative self-stretch grow-0 mb-8 mt-0 md:my-auto md:mr-8 md:h-auto shrink-0">
-              <Image src={image} dark={imageDark} alt={alt} />
+              <Image 
+                src={image} 
+                dark={imageDark} 
+                alt={alt} 
+                className="min-w-16 min-h-16 md:min-w-24 md:min-h-24" />
             </div>
           )}
           <div className="min-w-0">
