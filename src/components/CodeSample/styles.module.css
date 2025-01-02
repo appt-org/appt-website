@@ -20,12 +20,10 @@
   text-underline-offset: 0.15rem;
   text-decoration-thickness: 0.075rem;
   color: rgb(var(--color-accent));
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding: theme(spacing.3);
   border-radius: 0.5rem;
   background-color: unset;
+  font-size: 1rem;
   font-weight: normal;
   white-space: nowrap;
 }

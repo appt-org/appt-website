@@ -85,7 +85,7 @@ export default function CodeBlockString({
       )}>
       {title && <div className={styles.codeBlockTitle}>{title}</div>}
       {language && (
-        <label className="py-3 px-6 rounded-lg relative inline-block cursor-pointer hover:underline text-body bg-onsurface">
+        <label className="p-3 rounded-lg relative inline-block cursor-pointer hover:underline text-body bg-onsurface">
           {languageLabels.find(label => label.id === language)?.label || language}
         </label>
       )}
