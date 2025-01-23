@@ -218,7 +218,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.okaidia,
       darkTheme: prismThemes.okaidia,
-      additionalLanguages: ['java', 'kotlin', 'swift', 'objectivec', 'csharp', 'dart', 'json'],
+      additionalLanguages: ['java', 'kotlin', 'swift', 'objectivec', 'csharp', 'dart', 'json', , 'markdown'],
     },
     algolia: {
       appId: '6XBZ8SDI3N',
