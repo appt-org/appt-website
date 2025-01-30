@@ -7,7 +7,7 @@ description: What framework to choose if you want to build an accessible app? Na
 authors: [janjaap]
 date: 2023-12-19
 last_update:
-  date: 2024-04-10
+  date: 2025-01-30
 ---
 
 # Native versus cross-platform frameworks to develop accessible apps
@@ -17,6 +17,10 @@ It's important to consider accessibility when developing an app. Over 1 billion 
 A question we are often asked is: *"Which framework should I choose to develop an accessible app?"*
 
 In this article, we are comparing the pros and cons of Android, iOS, Flutter, React Native and Xamarin. And we added Web equivalents. A conclusion is drawn at the end.
+
+:::note
+This article has been updated on 30 January 2025 to reflect the new API in Flutter to move focus order.
+:::
 
 ## 1. Orientation
 
@@ -148,7 +152,7 @@ Apps might need to move the focus of assistive technologies, to ensure users end
 | --- | --- | --- | --- |
 | Android | [AccessibilityEvent](https://developer.android.com/reference/android/view/accessibility/AccessibilityEvent) → [TYPE_VIEW_FOCUSED](https://developer.android.com/reference/android/view/accessibility/AccessibilityEvent#TYPE_VIEW_FOCUSED) |  |  |
 | iOS | [UIAccessibility.Notification](https://developer.apple.com/documentation/uikit/uiaccessibility/notification) → [screenChanged](https://developer.apple.com/documentation/uikit/uiaccessibility/notification/1620198-screenchanged/) or [layoutChanged](https://developer.apple.com/documentation/uikit/uiaccessibility/notification/1620186-layoutchanged) | Two types |  |
-| Flutter | **Not supported** |  | Can’t change accessibility focus |
+| Flutter | [FocusSemanticEvent](https://api.flutter.dev/flutter/semantics/FocusSemanticEvent-class.html) |  |  |
 | React Native | [setAccessibilityFocus](https://reactnative.dev/docs/accessibilityinfo#setaccessibilityfocus) |  |  |
 | Xamarin | [SemanticExtensions](https://github.com/xamarin/XamarinCommunityToolkit/blob/main/src/CommunityToolkit/Xamarin.CommunityToolkit/Extensions/Semantic/SemanticExtensions.shared.cs) → [SetSemanticFocus](https://github.com/xamarin/XamarinCommunityToolkit/blob/main/src/CommunityToolkit/Xamarin.CommunityToolkit/Extensions/Semantic/SemanticExtensions.shared.cs#L11) |  | 3rd party library |
 | Web | [tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex?retiredLocale=nl) / [focus()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus) | Multiple options |  |
@@ -181,7 +185,7 @@ But beware, when using cross-platform frameworks you may not be able to access c
 | Android | 100% | Full support |
 | iOS | 100% | Full support |
 | Web | 100% | Full support |
-| Flutter | 90% | Good support, lacks accessibility focus change |
+| Flutter | 100% | Full support |
 | React Native | 90% | Good support, lacks accessibility order change |
 | Xamarin | 50-80% | Mediocre support, lacks accessibility state/value, requires 3rd party libraries |
 
