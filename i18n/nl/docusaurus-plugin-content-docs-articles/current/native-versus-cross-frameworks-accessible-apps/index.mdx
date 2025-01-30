@@ -7,7 +7,7 @@ description: Welk framework kies je om een toegankelijke app te bouwen? Native h
 authors: [janjaap]
 date: 2023-12-19
 last_update:
-  date: 2024-04-10
+  date: 2025-01-30
 ---
 
 # Native versus cross-platform frameworks om toegankelijke apps te ontwikkelen
@@ -17,6 +17,10 @@ Het is belangrijk om toegankelijkheid in overweging te nemen bij het ontwikkelen
 Een vraag die ons vaak wordt gesteld, is: *"Welk framework moet ik kiezen om een toegankelijke app te ontwikkelen?"*
 
 In dit artikel vergelijken we de voor- en nadelen van Android, iOS, Flutter, React Native en Xamarin. En we hebben ook Web-equivalenten toegevoegd. Op het eind wordt een conclusie getrokken.
+
+:::note
+Dit artikel is op 30 januari 2025 bijgewerkt met informatie over de nieuwe API in Flutter om focus te verplaatsen.
+:::
 
 ## 1. Oriëntatie
 
@@ -148,7 +152,7 @@ Apps dienen de focus van ondersteunende hulpmiddelen te kunnen verplaatsen, zoda
 | --- | --- | --- | --- |
 | Android | [AccessibilityEvent](https://developer.android.com/reference/android/view/accessibility/AccessibilityEvent) → [TYPE_VIEW_FOCUSED](https://developer.android.com/reference/android/view/accessibility/AccessibilityEvent#TYPE_VIEW_FOCUSED) |  |  |
 | iOS | [UIAccessibility.Notification](https://developer.apple.com/documentation/uikit/uiaccessibility/notification) → [screenChanged](https://developer.apple.com/documentation/uikit/uiaccessibility/notification/1620198-screenchanged/) of [layoutChanged](https://developer.apple.com/documentation/uikit/uiaccessibility/notification/1620186-layoutchanged) | Twee soorten |  |
-| Flutter | **Niet ondersteund** |  | Focus kan niet verplaatst worden |
+| Flutter | [FocusSemanticEvent](https://api.flutter.dev/flutter/semantics/FocusSemanticEvent-class.html) | | |
 | React Native | [setAccessibilityFocus](https://reactnative.dev/docs/accessibilityinfo#setaccessibilityfocus) |  |  |
 | Xamarin | [SemanticExtensions](https://github.com/xamarin/XamarinCommunityToolkit/blob/main/src/CommunityToolkit/Xamarin.CommunityToolkit/Extensions/Semantic/SemanticExtensions.shared.cs) → [SetSemanticFocus](https://github.com/xamarin/XamarinCommunityToolkit/blob/main/src/CommunityToolkit/Xamarin.CommunityToolkit/Extensions/Semantic/SemanticExtensions.shared.cs#L11) |  | Externe bibliotheek |
 | Web | [tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex?retiredLocale=nl) / [focus()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus) | Meerdere opties |  |
@@ -181,7 +185,7 @@ Maar let op, bij het gebruik van cross-platform frameworks heb je mogelijk geen 
 | Android | 100% | Volledige ondersteuning |
 | iOS | 100% | Volledige ondersteuning |
 | Web | 100% | Volledige ondersteuning |
-| Flutter | 90% | Goede ondersteuning,  focus verplaatsing ontbreekt |
+| Flutter | 100% | Volledige ondersteuning |
 | React Native | 90% | Goede ondersteuning, volgorde aanpassen ontbreekt |
 | Xamarin | 50-80% | Matige ondersteuning, status/waarde ontbreekt, vereist externe bibliotheken. |
 
