@@ -8,7 +8,7 @@ description: You can run automated accessibility tests to check if your Android 
 authors: [janjaap]
 date: 2023-02-10
 last_update:
-  date: 2024-04-10
+  date: 2025-04-07
 ---
 
 # Automated accessibility testing of Android and iOS apps
@@ -21,15 +21,16 @@ Automated accessibility tests can be used on both Android and iOS devices, and t
 
 When using these tools, you need to write your own accessibility tests. For example, you can write a test case where you check whether an accessibility label has been set for an image. Or you can check whether the accessibility role ‘button’ has been applied to all buttons in your app.
 
-Fortunately, there are also people who have written automated accessibility tests for you.
+Fortunately, there are also tools that can execute automated accessibility tests for you.
 
-## Free tools for automated accessibility testing
+## Free tools for automated app accessibility testing
 
 | Name | Description | Platform |
 | --- | --- | --- |
 | [Accessibility Test Framework for Android](https://github.com/google/Accessibility-Test-Framework-for-Android) | This library performs various accessibility-related checks on Android objects. | Android |
 | [Accessibility Scanner](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor) | Accessibility Scanner is a tool that scans an app’s user interface to provide recommendations on how to improve accessibility of the app. | Android |
 | [Accessibility Insights for Android](https://accessibilityinsights.io/docs/android/reference/releases/) (archived) | Accessibility Insights for Android is a free, open source tool that helps developers find and fix accessibility issues in Android apps. | Android |
+| [Android Accessibility Inspector App](https://github.com/jwlilly/Android-Accessibility-Inspector-App) | This is a desktop app that allows you to view the 'accessibility node tree' of Android devices. | Android |
 | [Axe Android](https://github.com/dequelabs/axe-android) (archived) | Axe Android is a library with automated WCAG 2.0 and WCAG 2.1 tests for Android apps. | Android |
 | [A11yUITests](https://github.com/rwapp/A11yUITests) (archived) | A11yUITests is an extension to XCTestCase that adds tests for common accessibility issues that can be run as part of an XCUITest suite. | iOS |
 | [AccessibilitySnapshot](https://github.com/cashapp/AccessibilitySnapshot) | AccessibilitySnapshot makes it simple to add regression tests for accessibility in iOS apps. The framework builds on the idea of snapshot testing to provide snapshots of the accessibility hierarchy. | iOS |
@@ -40,21 +41,21 @@ Fortunately, there are also people who have written automated accessibility test
 | [XCUIAccessibilityAudit](https://developer.apple.com/videos/play/wwdc2023/10035/) | The XCUIAccessibilityAudit API's enable you to perform an accessibility audit, it contains 9 types of tests. | iOS |
 | [xiblint](https://github.com/lyft/xiblint) | The xiblint script will test .xib and .storyboard files for compliance, it contains 4 rules for accessibility. | iOS |
 
-## Paid tools for automated accessibility testing
+## Paid tools for automated app accessibility testing
 
 | Name | Description | Platform |
 | --- | --- | --- |
-| [Abra Desktop](https://abra.ai/products/desktop) | Abra Desktop automatically detects accessibility issues in Android and iOS apps. | Android and iOS |
-| [axe DevTools Mobile](https://www.deque.com/axe/devtools/mobile-accessibility/) | axe DevTools Mobile provides tools for identifying accessibility issues in mobile apps. | Android and iOS |
+| [Abra Desktop](https://abra.ai/products/desktop)<br/>[Abra SDK](https://abra.ai/products/sdk)| Abra automatically detects accessibility issues in Android and iOS apps using testing engines created by Apple, Google and Abra. | Android and iOS |
+| [axe DevTools Mobile Analyzer](https://www.deque.com/axe/devtools/mobile-accessibility/)<br/>[axe DevTools Mobile SDK](https://www.deque.com/axe/devtools/mobile-accessibility/) | axe DevTools Mobile provides tools for identifying accessibility issues in mobile apps. | Android and iOS |
+| [BrowserStack Automated App Accessibility](https://www.browserstack.com/app-accessibility-testing/automated-tests)<br/>[BrowserStack Manual App Accessibility Testing](https://www.browserstack.com/app-accessibility-testing) | BrowserStack provides tools to audit, automate, and monitor mobile app accessibility health using the Spectra™ Rule Engine. | Android and iOS |
 | [Evinced Mobile Flow Analyzer](https://www.evinced.com/products/flow-analyzer-for-mobile)<br/>[Evinced Mobile Automation SDK](https://www.evinced.com/products/auto-test-sdks) | Evinced automatically analyzes the accessibility of one or more screens of your app. | Android and iOS |
 | [Reveal Accessibility Workspace](https://revealapp.com/news/introducing-the-accessibility-workspace/) | Reveal's Accessibility Workspace gives you tools to inspect if your app is accessible. | iOS |
-| [BrowserStack Manual App Accessibility Testing](https://www.browserstack.com/app-accessibility-testing)<br/>[BrowserStack Automated App Accessibility](https://www.browserstack.com/app-accessibility-testing/automated-tests) | Audit, automate, and monitor mobile app accessibility health with fast workflow scans, screen readers on real devices, and Spectra™ Rule Engine. No setup needed. | Android and iOS |
 
 ## Conclusion
 
 In conclusion, automated accessibility testing tools are essential for developers to ensure that their apps are accessible to all users. There are a variety of tools available for Android and iOS, both free and paid. Developers should choose the tool that best suits their needs and budget.
 
-If you have written a tool to automatically test mobile accessibility which is not listed, please [contact us](/en/about).
+If you know of tools to automatically test mobile accessibility which are not listed, please create a [Pull Request](https://github.com/appt-org/appt-website/pulls) or [Issue](https://github.com/appt-org/appt-website/issues).
 
 ## Learning resources
 

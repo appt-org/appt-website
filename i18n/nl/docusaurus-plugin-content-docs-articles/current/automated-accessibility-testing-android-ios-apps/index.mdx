@@ -8,7 +8,7 @@ description: Je kunt geautomatiseerd toegankelijkheidstests uitvoeren om te cont
 authors: [janjaap]
 date: 2023-02-10
 last_update:
-  date: 2024-04-10
+  date: 2025-04-07
 ---
 
 # Geautomatiseerd toegankelijkheid testen van Android en iOS apps
@@ -21,15 +21,16 @@ Je kunt op verschillende manieren geautomatiseerd toegankelijkheidstests uitvoer
 
 Wanneer je gebruik maakt van deze tools, moet je zelf toegankelijkheidstests schrijven. Je kunt bijvoorbeeld een testcase schrijven waarin je controleert of er een toegankelijkheidslabel is ingesteld voor een afbeelding. Of je kunt controleren of de toegankelijkheidsrol 'knop' is toegepast op alle knoppen in je app.
 
-Gelukkig zijn er ook mensen die tools hebben gemaakt waarmee je automatisch de toegankelijkheid van je app kunt testen.
+Gelukkig zijn er ook tools waarmee je automatisch de toegankelijkheid van je app kunt testen.
 
-## Gratis tools om automatisch toegankelijkheid te testen
+## Gratis tools om automatisch app toegankelijkheid te testen
 
 | Naam | Beschrijving | Platform |
 | --- | --- | --- |
 | [Accessibility Test Framework for Android](https://github.com/google/Accessibility-Test-Framework-for-Android) | Deze bibliotheek voert verschillende toegankelijkheidsgerelateerde controles uit op Android-objecten. | Android |
 | [Accessibility Scanner](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor) | Accessibility Scanner is een tool die de gebruikersinterface van een app scant en aanbevelingen doet om de toegankelijkheid van de app te verbeteren. | Android |
 | [Accessibility Insights for Android](https://accessibilityinsights.io/docs/android/reference/releases/) (gearchiveerd) | Accessibility Insights for Android is een gratis, open source tool die ontwikkelaars helpt bij het vinden en oplossen van toegankelijkheidsproblemen in Android-apps. | Android |
+| [Android Accessibility Inspector App](https://github.com/jwlilly/Android-Accessibility-Inspector-App) | Dit is een desktop app waarmee je de 'accessibility node tree' van Android toestellen kunt bekijken. | Android |
 | [Axe Android](https://github.com/dequelabs/axe-android) (gearchiveerd) | Axe Android is een toegankelijkheidsbibliotheek voor het uitvoeren van WCAG 2.0 en WCAG 2.1 tests op Android. | Android |
 | [A11yUITests](https://mobilea11y.com/blog/a11yuitests/) (gearchiveerd) | A11yUITests is een uitbreiding op XCTestCase die tests toevoegt voor veelvoorkomende toegankelijkheidsproblemen die kunnen worden uitgevoerd als onderdeel van een XCUITestsuite. | iOS |
 | [AccessibilitySnapshot](https://github.com/cashapp/AccessibilitySnapshot) | AccessibilitySnapshot maakt het eenvoudig om regressietests toe te voegen voor toegankelijkheid in iOS-apps. Het raamwerk vergelijkt snapshots van de toegankelijkheidshiërarchie. | iOS |
@@ -40,12 +41,13 @@ Gelukkig zijn er ook mensen die tools hebben gemaakt waarmee je automatisch de t
 | [XCUIAccessibilityAudit](https://developer.apple.com/videos/play/wwdc2023/10035/) | Met de XCUIAccessibilityAudit API's kun je een accessibility audit uitvoeren, het bevat 9 soorten testen | iOS |
 | [xiblint](https://github.com/lyft/xiblint) | Het xiblint script test .xib en .storyboard bestanden op conformiteit, het bevat 4 regels voor toegankelijkheid. | iOS |
 
-## Betaalde tools om automatisch toegankelijkheid te testen
+## Betaalde tools om automatisch app toegankelijkheid te testen
 
 | Naam | Beschrijving | Platform |
 | --- | --- | --- |
-| [Abra Desktop](https://abra.nl/producten/desktop) | Abra Desktop detecteert automatisch toegankelijkheidsfouten in Android en iOS apps. | Android en iOS |
-| [axe DevTools Mobile](https://docs.deque.com/devtools-mobile/2022.11.17/en/intro) | axe DevTools Mobile identificeert toegankelijkheidsproblemen in mobiele apps en biedt oplossingen. | Android en iOS |
+| [Abra Desktop](https://abra.ai/products/desktop)<br/>[Abra SDK](https://abra.ai/products/sdk)| Abra detecteert automatisch toegankelijkheidsfouten in Android en iOS apps met behulp van testing engines gemaakt door Apple, Google en Abra. | Android en iOS |
+| [axe DevTools Mobile Analyzer](https://www.deque.com/axe/devtools/mobile-accessibility/)<br/>[axe DevTools Mobile SDK](https://www.deque.com/axe/devtools/mobile-accessibility/) | axe DevTools Mobile identificeert toegankelijkheidsproblemen in mobiele apps en biedt oplossingen. | Android en iOS |
+| [BrowserStack Automated App Accessibility](https://www.browserstack.com/app-accessibility-testing/automated-tests)<br/>[BrowserStack Manual App Accessibility Testing](https://www.browserstack.com/app-accessibility-testing) |BrowserStack biedt tooling om de toegankelijkheid van mobiele apps te controleren, automatiseren en monitoren met behulp van de Spectra™ Rule Engine. | Android en iOS |
 | [Evinced Mobile Flow Analyzer](https://www.evinced.com/products/flow-analyzer-for-mobile)<br/>[Evinced Mobile Automation SDK](https://www.evinced.com/products/auto-test-sdks) | Evinced analyseert automatisch de toegankelijkheid van één of meerdere schermen in je app. | Android en iOS |
 | [Reveal Accessibility Workspace](https://revealapp.com/news/introducing-the-accessibility-workspace/) | Reveal's Accessibility Workspace geeft je tools om te inspecteren, ervaren en controleren of je app toegankelijk is voor alle gebruikers. | iOS |
 
@@ -53,7 +55,7 @@ Gelukkig zijn er ook mensen die tools hebben gemaakt waarmee je automatisch de t
 
 Kortom, tools voor het geautomatiseerd testen van de toegankelijkheid zijn essentieel voor ontwikkelaars om ervoor te zorgen dat hun apps toegankelijk zijn voor alle gebruikers. Er zijn verschillende tools beschikbaar voor Android en iOS, zowel gratis als betaald. Ontwikkelaars moeten een tool kiezen die het beste bij hun behoeften en budget past.
 
-Mocht je een tool hebben geschreven voor het automatisch testen van app toegankelijkheid die nog niet in de lijst staat, neem dan [contact met ons op](/nl/over).
+Mocht je tools voor het automatisch testen van app toegankelijkheid kennen die nog niet in de lijst staan, maak dan een [Pull Request](https://github.com/appt-org/appt-website/pulls) of [Issue](https://github.com/appt-org/appt-website/issues).
 
 ## Leermiddelen
 
