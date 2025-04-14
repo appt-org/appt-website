@@ -160,4 +160,4 @@ on iOS, users suddenly get an extra large font.*
 
 ## License
 
-The source code is available under the MIT license. See the [LICENSE file](./LICENSE) for more information.
+See the [LICENSE file](./LICENSE) for licensing information.
