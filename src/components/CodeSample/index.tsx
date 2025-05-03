@@ -1,4 +1,4 @@
-import { createWebpackLoader, getCodeSample, type SampleId, type Framework } from '@appt.org/samples';
+import { createWebpackLoader, getTopic, type TopicId, type Framework } from '@appt.org/samples';
 import { useEffect, useState } from 'react';
 import MDXCode from '@theme/MDXComponents/Code';
 import Tabs from '@theme/Tabs';
@@ -11,7 +11,7 @@ const codeSamplesContext = require.context('@appt.org/samples/code-samples', tru
 const webpackLoader = createWebpackLoader(codeSamplesContext);
 
 export type CodeSampleProps = {
-  id: SampleId;
+  id: TopicId;
   platform?: Framework;
   locale: string;
 };
@@ -22,13 +22,13 @@ export function CodeSample({ id, platform }: CodeSampleProps) {
   useEffect(() => {
     const getBlocks = async () => {
       try {
-        const queriedCodeSamples = await getCodeSample(webpackLoader, {
+        const topic = await getTopic(webpackLoader, {
           locale: 'en',
-          sampleId: id,
+          topicId: id,
           frameworks: platform ? [platform] : undefined,
         });
 
-        return queriedCodeSamples.frameworks.map(queriedCodeSample => {
+        return topic.codeSamples.map(queriedCodeSample => {
           // Inject `url` in metastring, used in `CodeBlockString` function
           const components = {
             code: props => {
