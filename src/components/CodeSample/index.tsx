@@ -1,4 +1,4 @@
-import { createWebpackLoader, getTopic, type TopicId, type Framework } from '@appt.org/samples';
+import { createWebpackLoader, getTopic, type Locale, type Technique, type Framework } from '@appt.org/samples';
 import { useEffect, useState } from 'react';
 import MDXCode from '@theme/MDXComponents/Code';
 import Tabs from '@theme/Tabs';
@@ -7,13 +7,13 @@ import clsx from 'clsx';
 import React from 'react';
 import styles from './styles.module.css';
 
-const codeSamplesContext = require.context('@appt.org/samples/code-samples', true, /\.md$/, 'lazy');
+const codeSamplesContext = require.context('@appt.org/samples/samples', true, /\.md$/, 'lazy');
 const webpackLoader = createWebpackLoader(codeSamplesContext);
 
 export type CodeSampleProps = {
-  id: TopicId;
+  id: Technique;
   platform?: Framework;
-  locale: string;
+  locale: Locale;
 };
 
 export function CodeSample({ id, platform }: CodeSampleProps) {
@@ -23,16 +23,16 @@ export function CodeSample({ id, platform }: CodeSampleProps) {
     const getBlocks = async () => {
       try {
         const topic = await getTopic(webpackLoader, {
-          locale: 'en',
-          topicId: id,
+          locale: ['en'],
+          technique: id,
           frameworks: platform ? [platform] : undefined,
         });
 
-        return topic.codeSamples.map(queriedCodeSample => {
+        return topic.samples.map(queriedCodeSample => {
           // Inject `url` in metastring, used in `CodeBlockString` function
           const components = {
             code: props => {
-              const urlMeta = `url="${queriedCodeSample.contributionUrl}"`;
+              const urlMeta = `url="${queriedCodeSample.url}"`;
               const metastring = props.metastring ? `${props.metastring} ${urlMeta}` : urlMeta;
 
               return (
@@ -46,7 +46,7 @@ export function CodeSample({ id, platform }: CodeSampleProps) {
           return {
             platform: queriedCodeSample.framework.id,
             label: queriedCodeSample.framework.label,
-            url: queriedCodeSample.contributionUrl,
+            url: queriedCodeSample.url,
             content: <queriedCodeSample.content.default components={components} />,
           };
         });
