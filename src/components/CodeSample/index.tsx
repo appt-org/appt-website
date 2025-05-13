@@ -18,7 +18,7 @@ const frameworks: Framework[] = [
   'flutter',
   'react-native',
   'net-maui',
-  'xamarin'
+  'xamarin',
 ];
 
 export type CodeSampleProps = {
@@ -93,9 +93,7 @@ export function CodeSample({ id, framework }: CodeSampleProps) {
           <Tabs className={styles.codeSampleTabs} groupId="framework" queryString>
             {codeBlocks.map((codeBlock, index) => (
               <TabItem key={index} value={codeBlock.framework} label={codeBlock.label}>
-                <div lang={codeBlock.locale}>
-                  {codeBlock.content}
-                </div>
+                <div lang={codeBlock.locale}>{codeBlock.content}</div>
               </TabItem>
             ))}
           </Tabs>
