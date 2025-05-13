@@ -29,7 +29,7 @@
     "update-accessibility-data": "env-cmd -f .env.secrets tsx scripts/accessibility-data-update.ts"
   },
   "dependencies": {
-    "@appt.org/samples": "^1.0.0-alpha.6",
+    "@appt.org/samples": "^1.0.0",
     "@docusaurus/core": "^3.4.0",
     "@docusaurus/plugin-client-redirects": "^3.4.0",
     "@docusaurus/preset-classic": "^3.4.0",
