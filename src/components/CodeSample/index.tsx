@@ -7,32 +7,43 @@ import clsx from 'clsx';
 import React from 'react';
 import styles from './styles.module.css';
 
-const codeSamplesContext = require.context('@appt.org/samples/samples', true, /\.md$/, 'lazy');
-const webpackLoader = createWebpackLoader(codeSamplesContext);
+const context = require.context('@appt.org/samples/samples', true, /\.md$/, 'lazy');
+const loader = createWebpackLoader(context);
+
+const frameworks: Framework[] = [
+  'android',
+  'jetpack-compose',
+  'ios',
+  'swiftui',
+  'flutter',
+  'react-native',
+  'net-maui',
+  'xamarin',
+];
 
 export type CodeSampleProps = {
   id: Technique;
-  platform?: Framework;
+  framework?: Framework;
   locale: Locale;
 };
 
-export function CodeSample({ id, platform }: CodeSampleProps) {
+export function CodeSample({ id, framework }: CodeSampleProps) {
   const [codeBlocks, setCodeBlocks] = useState(null);
 
   useEffect(() => {
     const getBlocks = async () => {
       try {
-        const topic = await getTopic(webpackLoader, {
+        const topic = await getTopic(loader, {
           locale: ['en'],
           technique: id,
-          frameworks: platform ? [platform] : undefined,
+          frameworks: framework ? [framework] : undefined,
         });
 
-        return topic.samples.map(queriedCodeSample => {
+        return topic.samples.map(sample => {
           // Inject `url` in metastring, used in `CodeBlockString` function
           const components = {
             code: props => {
-              const urlMeta = `url="${queriedCodeSample.url}"`;
+              const urlMeta = `url="${sample.url}"`;
               const metastring = props.metastring ? `${props.metastring} ${urlMeta}` : urlMeta;
 
               return (
@@ -44,10 +55,11 @@ export function CodeSample({ id, platform }: CodeSampleProps) {
           };
 
           return {
-            platform: queriedCodeSample.framework.id,
-            label: queriedCodeSample.framework.label,
-            url: queriedCodeSample.url,
-            content: <queriedCodeSample.content.default components={components} />,
+            framework: sample.framework.id,
+            label: sample.framework.label,
+            locale: sample.locale,
+            url: sample.url,
+            content: <sample.content.default components={components} />,
           };
         });
       } catch (error) {
@@ -58,7 +70,15 @@ export function CodeSample({ id, platform }: CodeSampleProps) {
 
     const setBlocks = async () => {
       const codeBlocks = (await getBlocks()).filter(block => block);
-      setCodeBlocks(codeBlocks);
+
+      // Sort the code blocks according to the order in frameworks array
+      const sortedCodeBlocks = [...codeBlocks].sort((a, b) => {
+        const indexA = frameworks.indexOf(a.framework);
+        const indexB = frameworks.indexOf(b.framework);
+        return (indexA === -1 ? Infinity : indexA) - (indexB === -1 ? Infinity : indexB);
+      });
+
+      setCodeBlocks(sortedCodeBlocks);
     };
 
     setBlocks();
@@ -70,10 +90,10 @@ export function CodeSample({ id, platform }: CodeSampleProps) {
     return (
       <div className={clsx(styles.codeSampleContainer, 'mt-10 mb-12 last:mb-0 md:mb-20')}>
         {codeBlocks.length > 1 && (
-          <Tabs className={styles.codeSampleTabs} groupId="platform" queryString>
+          <Tabs className={styles.codeSampleTabs} groupId="framework" queryString>
             {codeBlocks.map((codeBlock, index) => (
-              <TabItem key={index} value={codeBlock.platform} label={codeBlock.label}>
-                {codeBlock.content}
+              <TabItem key={index} value={codeBlock.framework} label={codeBlock.label}>
+                <div lang={codeBlock.locale}>{codeBlock.content}</div>
               </TabItem>
             ))}
           </Tabs>
