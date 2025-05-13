@@ -12,11 +12,11 @@ const webpackLoader = createWebpackLoader(codeSamplesContext);
 
 export type CodeSampleProps = {
   id: Technique;
-  platform?: Framework;
+  framework?: Framework;
   locale: Locale;
 };
 
-export function CodeSample({ id, platform }: CodeSampleProps) {
+export function CodeSample({ id, framework }: CodeSampleProps) {
   const [codeBlocks, setCodeBlocks] = useState(null);
 
   useEffect(() => {
@@ -25,14 +25,14 @@ export function CodeSample({ id, platform }: CodeSampleProps) {
         const topic = await getTopic(webpackLoader, {
           locale: ['en'],
           technique: id,
-          frameworks: platform ? [platform] : undefined,
+          frameworks: framework ? [framework] : undefined,
         });
 
-        return topic.samples.map(queriedCodeSample => {
+        return topic.samples.map(sample => {
           // Inject `url` in metastring, used in `CodeBlockString` function
           const components = {
             code: props => {
-              const urlMeta = `url="${queriedCodeSample.url}"`;
+              const urlMeta = `url="${sample.url}"`;
               const metastring = props.metastring ? `${props.metastring} ${urlMeta}` : urlMeta;
 
               return (
@@ -44,10 +44,10 @@ export function CodeSample({ id, platform }: CodeSampleProps) {
           };
 
           return {
-            platform: queriedCodeSample.framework.id,
-            label: queriedCodeSample.framework.label,
-            url: queriedCodeSample.url,
-            content: <queriedCodeSample.content.default components={components} />,
+            framework: sample.framework.id,
+            label: sample.framework.label,
+            url: sample.url,
+            content: <sample.content.default components={components} />,
           };
         });
       } catch (error) {
@@ -70,9 +70,9 @@ export function CodeSample({ id, platform }: CodeSampleProps) {
     return (
       <div className={clsx(styles.codeSampleContainer, 'mt-10 mb-12 last:mb-0 md:mb-20')}>
         {codeBlocks.length > 1 && (
-          <Tabs className={styles.codeSampleTabs} groupId="platform" queryString>
+          <Tabs className={styles.codeSampleTabs} groupId="framework" queryString>
             {codeBlocks.map((codeBlock, index) => (
-              <TabItem key={index} value={codeBlock.platform} label={codeBlock.label}>
+              <TabItem key={index} value={codeBlock.framework} label={codeBlock.label}>
                 {codeBlock.content}
               </TabItem>
             ))}

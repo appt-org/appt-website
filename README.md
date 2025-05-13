@@ -109,20 +109,9 @@ To show our stat blocks we use data from the [Accessibility Data Pipeline](https
 
 ## Multi-platform code samples
 
-Our code samples are located in the `src/data/code-samples/` folder.
+Code samples are located in the [appt-samples repository](https://github.com/appt-org/appt-samples).
 
-Each code sample has it's own folder, e.g. `accessibility-label`. The folder should include a `README.md` briefly explaining it's purpose.
-
-It should also include at least one of the following files:
-
-- `android.md`: Android code sample
-- `flutter.md`: Flutter code sample
-- `ios.md`: iOS code sample
-- `jetpack-compose.md`: Jetpack Compose code sample
-- `net-maui.md`: .NET MAUI code sample
-- `react-native.md`: React Native code sample
-- `swiftui.md`: SwiftUI code sample
-- `xamarin.md`: Xamarin code sample
+We have implemented a [CodeSample component](/src/components/CodeSample/index.tsx) to render these code samples.
 
 You can embed a code sample in `.mdx` files as follows:
 
@@ -133,7 +122,7 @@ You can embed a code sample in `.mdx` files as follows:
 Optionally, the `platform` parameter can be used to only display a code sample for a specific platform, such as `android`.
 
 ```jsx
-<CodeSample id="accessibility-label" platform="android">
+<CodeSample id="accessibility-label" framework="android">
 ```
 
 ## Accessibility
