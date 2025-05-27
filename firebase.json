@@ -18,6 +18,11 @@
         "source": "/",
         "destination": "/en",
         "type": 301
+      },
+      {
+        "source": "/samples",
+        "destination": "https://www.npmjs.com/package/@appt.org/samples",
+        "type": 301
       }
     ]
   }
