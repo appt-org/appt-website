@@ -311,30 +311,21 @@
     "message": "/over"
   },
   "footer.text.listItem0": {
-    "message": "Informatie is beschikbaar onder de {link}"
+    "message": "Informatie en codevoorbeelden zijn beschikbaar onder onze {link}"
   },
   "footer.text.listItem0.linkLabel": {
-    "message": "CC BY-SA 4.0 licenties"
+    "message": "licenties"
   },
   "footer.text.listItem0.linkUrl": {
     "message": "/licenties"
   },
   "footer.text.listItem1": {
-    "message": "Codevoorbeelden zijn beschikbaar onder de {link}"
-  },
-  "footer.text.listItem1.linkLabel": {
-    "message": "MIT licentie"
-  },
-  "footer.text.listItem1.linkUrl": {
-    "message": "/licenties"
-  },
-  "footer.text.listItem2": {
     "message": "De broncode van deze website is beschikbaar op {link}"
   },
-  "footer.text.listItem2.linkLabel": {
-    "message": "Github"
+  "footer.text.listItem1.linkLabel": {
+    "message": "GitHub"
   },
-  "footer.text.listItem2.linkUrl": {
+  "footer.text.listItem1.linkUrl": {
     "message": "https://github.com/appt-org/appt-website"
   }
 }

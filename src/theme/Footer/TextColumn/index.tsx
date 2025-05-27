@@ -2,7 +2,7 @@ import Translate, { translate } from '@docusaurus/Translate';
 import { CustomLink, Typography } from '@site/src/components';
 
 export default function TextColumn() {
-  const numberOfListItems = 3;
+  const numberOfListItems = 2;
   return (
     <>
       <Typography tag="p" className="my-4">

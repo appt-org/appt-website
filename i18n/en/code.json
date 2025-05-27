@@ -310,30 +310,21 @@
     "message": "/about"
   },
   "footer.text.listItem0": {
-    "message": "Content is available under the {link}"
+    "message": "Content and code is available under our {link}"
   },
   "footer.text.listItem0.linkLabel": {
-    "message": "CC BY-SA 4.0 license"
+    "message": "licenses"
   },
   "footer.text.listItem0.linkUrl": {
     "message": "/licenses"
   },
   "footer.text.listItem1": {
-    "message": "Code samples are available under the {link}"
-  },
-  "footer.text.listItem1.linkLabel": {
-    "message": "MIT license"
-  },
-  "footer.text.listItem1.linkUrl": {
-    "message": "/licenses"
-  },
-  "footer.text.listItem2": {
     "message": "The source code of this website is available on {link}"
   },
-  "footer.text.listItem2.linkLabel": {
-    "message": "Github"
+  "footer.text.listItem1.linkLabel": {
+    "message": "GitHub"
   },
-  "footer.text.listItem2.linkUrl": {
+  "footer.text.listItem1.linkUrl": {
     "message": "https://github.com/appt-org/appt-website"
   }
 }
