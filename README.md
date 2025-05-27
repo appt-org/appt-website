@@ -99,7 +99,7 @@ messages.
 
 ## Generated stats
 
-To show our stat blocks we use data from the [Accessibility Data Pipeline](https://github.com/Q42/accessibility-data-pipeline). Every night a Github workflow will check if there is any new data and if there is push it to main in the `/src/data/generated/data-features` folder. We can show this data in the website by using a `PercentageBlock` in `.mdx` files. The numbers will automatically update when they have changed.
+To show our stat blocks we use data from the [Accessibility Data Pipeline](https://github.com/Q42/accessibility-data-pipeline). Every night a GitHub workflow will check if there is any new data and if there is push it to main in the `/src/data/generated/data-features` folder. We can show this data in the website by using a `PercentageBlock` in `.mdx` files. The numbers will automatically update when they have changed.
 
 ```jsx
 <PercentageBlock metrics={[{ title: '[Title of your metrix]', key: '[Key of the metric, for example: android-preference_daytime-night]', isPercentage: true/false }]}>
@@ -116,13 +116,13 @@ We have implemented a [CodeSample component](/src/components/CodeSample/index.ts
 You can embed a code sample in `.mdx` files as follows:
 
 ```jsx
-<CodeSample id="accessibility-label">
+<CodeSample id="accessibility-label"/>
 ```
 
 Optionally, the `platform` parameter can be used to only display a code sample for a specific platform, such as `android`.
 
 ```jsx
-<CodeSample id="accessibility-label" framework="android">
+<CodeSample id="accessibility-label" framework="android"/>
 ```
 
 ## Accessibility

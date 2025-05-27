@@ -1,0 +1,89 @@
+---
+locale: en
+slug: /appt-samples-package-published
+icon: /img/light/2.5.7.svg
+title: Appt samples package
+description: Easily embed our code samples on your website using the new Appt samples package.
+authors: [janjaap]
+date: 2025-05-27
+last_update:
+  date: 2025-05-27
+---
+
+# Appt samples package published
+
+We're excited to announce [`@appt.org/samples`](https://www.npmjs.com/package/@appt.org/samples), a new NPM package that provides code samples for building accessible apps.
+
+The package offers over 400 code samples to create accessible apps using Android (XML), Jetpack Compose, iOS (UIKit), SwiftUI, Flutter, React Native, .NET MAUI and Xamarin.
+
+[Abra](/en/partners/abra) has funded this project and [Mart-Jan Roeleveld](https://www.linkedin.com/in/mart-jan/) ([Q42](/en/partners/q42)) wrote the package.
+
+## Configuration
+
+The package works with any build system through our loader interface. It includes built-in support for Webpack.
+
+```bash
+npm install @appt.org/samples
+```
+
+Configure your bundler, create a loader, and start querying:
+
+```javascript
+import { createWebpackLoader, getTopic } from '@appt.org/samples';
+
+// Create a webpack context that includes all markdown files
+const webpackContext = require.context(
+  '@appt.org/samples/samples',
+  true, // Include subdirectories
+  /\.md$/, // Only include markdown files
+  'lazy' // Only load a sample when it is requested in retrieval
+);
+
+// Query code samples for `accessibility-label` on `android` and `ios`
+const topic = await getTopic(loader, {
+  locale: ['en'],
+  technique: 'accessibility-label',
+  frameworks: ['android', 'ios']
+});
+```
+
+The `topic` data can be used to render the code samples using your framework of choice.
+
+- `topic.introduction` holds an [`Introduction`](https://github.com/appt-org/appt-samples/blob/f974778ddf9156c1a0d1b96a69702b3aae18d41b/lib/src/types.ts#L9) object
+- `topic.samples` holds all [`Sample`](https://github.com/appt-org/appt-samples/blob/f974778ddf9156c1a0d1b96a69702b3aae18d41b/lib/src/types.ts#L11) objects
+
+## Rendering
+
+Our [CodeSample component](https://github.com/appt-org/appt-website/blob/a6a696786d31bb06d23d7f300a4668b7fc02454a/src/components/CodeSample/index.tsx) shows how to render these code samples using Docusaurus and React.
+
+```jsx
+<CodeSample id="accessibility-label"/>
+```
+
+renders as:
+
+> <CodeSample id="accessibility-label"/>
+
+## Licensing
+
+As a non-profit initiative, we're committed to keeping accessibility resources free and open-source.
+
+The [LICENSE file](https://github.com/appt-org/appt-samples/blob/HEAD/LICENSE) contains licensing information.
+
+When publishing our content or code, you must:
+
+- Provide appropriate credit and attribution as required by [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) and [MIT](https://opensource.org/licenses/MIT).
+- Include a visible link to `https://appt.org` or `https://github.com/appt-org/appt-samples` on every page where our content appears.
+
+If you cannot comply with the attribution requirements, contact us at [info@appt.org](mailto:info@appt.org) to discuss alternative licensing options, including white-label.
+
+Licensing fees will be use to expand the collection of code samples for everyone.
+
+## Contributing
+
+Will you help us make apps more accessible?
+
+When you contribute, your name will be visible in the commit history for each code sample. In the future, we will use this to show authors next to the code samples on our website.
+
+- [Create a fork on GitHub](https://github.com/appt-org/appt-samples/fork)
+- [Join our community](https://appt.li/slack)

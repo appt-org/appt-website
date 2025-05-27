@@ -1,0 +1,89 @@
+---
+locale: nl
+slug: /appt-samples-package-gepubliceerd
+icon: /img/light/2.5.7.svg
+title: Appt samples package gepubliceerd
+description: Integreer eenvoudig onze codevoorbeelden op jouw website met behulp van de nieuwe Appt samples package.
+authors: [janjaap]
+date: 2025-05-27
+last_update:
+  date: 2025-05-27
+---
+
+# Appt samples package gepubliceerd
+
+We zijn verheugd om [`@appt.org/samples`](https://www.npmjs.com/package/@appt.org/samples) aan te kondigen, een nieuw NPM package dat codevoorbeelden biedt voor het bouwen van toegankelijke apps.
+
+De package bevat meer dan 400 codevoorbeelden om toegankelijke apps te maken met Android (XML), Jetpack Compose, iOS (UIKit), SwiftUI, Flutter, React Native, .NET MAUI en Xamarin.
+
+[Abra](/nl/partners/abra) heeft dit project gefinancierd en [Mart-Jan Roeleveld](https://www.linkedin.com/in/mart-jan/) ([Q42](/nl/partners/q42)) heeft de package geschreven.
+
+## Configuratie
+
+De package werkt met elk build system via onze loader interface. Het bevat ingebouwde ondersteuning voor Webpack.
+
+```bash
+npm install @appt.org/samples
+```
+
+Configureer je bundler, maak een loader aan en begin met zoeken:
+
+```javascript
+import { createWebpackLoader, getTopic } from '@appt.org/samples';
+
+// Create a webpack context that includes all markdown files
+const webpackContext = require.context(
+  '@appt.org/samples/samples',
+  true, // Include subdirectories
+  /\.md$/, // Only include markdown files
+  'lazy' // Only load a sample when it is requested in retrieval
+);
+
+// Query code samples for `accessibility-label` on `android` and `ios`
+const topic = await getTopic(loader, {
+  locale: ['nl'],
+  technique: 'accessibility-label',
+  frameworks: ['android', 'ios']
+});
+```
+
+De topic data kan worden gebruikt om de codevoorbeelden te renderen met het framework van je keuze.
+
+- `topic.introduction` bevat een [`Introduction`](https://github.com/appt-org/appt-samples/blob/f974778ddf9156c1a0d1b96a69702b3aae18d41b/lib/src/types.ts#L9) object
+- `topic.samples` bevat alle [`Sample`](https://github.com/appt-org/appt-samples/blob/f974778ddf9156c1a0d1b96a69702b3aae18d41b/lib/src/types.ts#L11) objecten
+
+## Rendering
+
+Ons [CodeSample component](https://github.com/appt-org/appt-website/blob/a6a696786d31bb06d23d7f300a4668b7fc02454a/src/components/CodeSample/index.tsx) toont hoe je deze codevoorbeelden kunt renderen met Docusaurus en React.
+
+```jsx
+<CodeSample id="accessibility-label"/>
+```
+
+wordt gerenderd als:
+
+> <CodeSample id="accessibility-label"/>
+
+## Licenties
+
+Als stichting zonder winstoogmerk zijn we toegewijd om informatie over toegankelijkheid gratis en open-source te houden.
+
+Het [LICENSE bestand](https://github.com/appt-org/appt-samples/blob/HEAD/LICENSE) bevat licentie-informatie.
+
+Bij het publiceren van onze inhoud of code moet je:
+
+- Adequate bronvermelding verstrekken zoals vereist door [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) en [MIT](https://opensource.org/licenses/MIT).
+- Een zichtbare link naar `https://appt.org` of `https://github.com/appt-org/appt-samples` opnemen op elke pagina waar onze content gebruikt wordt.
+
+Als je niet kunt voldoen aan de vereisten, neem contact met ons op via [info@appt.org](mailto:info@appt.org) om alternatieve licentieopties te bespreken, inclusief white-label.
+
+Licentiekosten worden gebruikt om de collectie codevoorbeelden voor iedereen uit te breiden.
+
+## Bijdragen
+
+Help je ons mee om apps toegankelijker te maken?
+
+Wanneer je bijdraagt, zal je naam zichtbaar zijn in de commit geschiedenis voor elk codevoorbeeld. In de toekomst gebruiken we dit om auteurs naast de codevoorbeelden te tonen op onze website.
+
+- [Maak een fork op GitHub](https://github.com/appt-org/appt-samples/fork)
+- [Word lid van onze community](https://appt.li/slack)

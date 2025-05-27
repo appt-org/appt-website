@@ -31,7 +31,7 @@ const GENERATED_DATA_DIR = 'src/data/generated/data-features';
 const DATA_SA_KEY_FILE = './data_sa_key.json';
 
 /**
- * The dataUpdate API route is called periodically through a Github action.
+ * The dataUpdate API route is called periodically through a GitHub action.
  * This function downloads a JSON file with all the aggregated accessibility setting data for both iOS and Android from
  * the accessibility data Cloud Storage Bucket.
  *
@@ -56,7 +56,7 @@ async function dataUpdate() {
 }
 
 /**
- * Create or update accessibility feature entry in Github
+ * Create or update accessibility feature entry in GitHub
  */
 async function createOrUpdateFeatureEntry(feature: AccessibilityDataFeatureFields): Promise<void> {
   const fileName = mapFeatureId(feature.platform, feature.feature_key, feature.property_key);
