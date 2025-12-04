@@ -7,7 +7,7 @@ description: Meer over weergavegrootte
 authors: [johan, maurice]
 date: 2022-12-13
 last_update:
-  date: 2023-01-30
+  date: 2025-12-04
 ---
 
 # Weergavegrootte
@@ -23,10 +23,7 @@ Op Android zet zo'n 15% procent van de gebruikers de weergave van het scherm gro
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
         De gegevens voor weergavegrootte op iOS zijn niet beschikbaar.
-        <CustomLink
-          url="/nl/stats/weergavegrootte"
-          label="Meer over weergavegrootte"
-        />
+        <CustomLink url="/nl/stats/weergavegrootte" label="Meer over weergavegrootte" />
       </TextBlock>
     </ColumnRow>
   </LeftColumn>
@@ -34,7 +31,11 @@ Op Android zet zo'n 15% procent van de gebruikers de weergave van het scherm gro
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Weergavegrootte', key: 'android-screen_display_scale_default_comparison-bigger', isPercentage: true }
+          {
+            title: 'Weergavegrootte',
+            key: 'android-screen_display_scale_default_comparison-bigger',
+            isPercentage: true,
+          },
         ]}
         label="Meer over weergavegrootte"
         url="/nl/stats/weergavegrootte">
