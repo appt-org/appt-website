@@ -1,5 +1,6 @@
 .codeSampleContainer [role='tabpanel'] h1,
-.codeSampleContainer > h1 {
+.codeSampleContainer > h1,
+.codeSampleContainer > header {
   display: none;
 }
 
