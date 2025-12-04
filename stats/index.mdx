@@ -8,7 +8,7 @@ description: Results from research amongst millions of iOS and Android users tha
 authors: [johan, janjaap]
 date: 2022-05-31
 last_update:
-  date: 2024-04-22
+  date: 2025-12-04
 hide_title: true
 hide_table_of_contents: true
 pagination_next: null
@@ -16,54 +16,43 @@ pagination_prev: null
 sidebar_position: 1
 ---
 
-<Hero
-  title="Accessibility stats"
-/>
+<Hero title="Accessibility stats" />
 
-Almost half of all people with a mobile phone use accessibility features. Much more than you would expect, right? In our survey of millions of iOS and Android users in the Netherlands, we looked at which accessibility features are enabled.
+More than half of all people with a mobile phone use accessibility features. Much more than you would expect, right? In our survey of millions of iOS and Android users in the Netherlands, we looked at which accessibility features are enabled.
 
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
-        ## iOS
-      </TextBlock>
+      <TextBlock showBackgroundColor={false}>## iOS</TextBlock>
     </ColumnRow>
     <ColumnRow>
-      <PercentageBlock
-        metrics={[
-          { title: 'At least one feature on iOS', number: 45, isPercentage: true }
-        ]}>
-        Almost half of the Dutch iOS users surveyed have one or more accessibility settings activated on their phone.
+      <PercentageBlock metrics={[{ title: 'At least one feature on iOS', number: 50, isPercentage: true }]}>
+        Half of the Dutch iOS users surveyed have one or more accessibility settings activated on their phone.
       </PercentageBlock>
     </ColumnRow>
     <ColumnRow>
-      <PercentageBlock
-        metrics={[
-          { title: 'At least one feature on iOS', number: 15, isPercentage: true }
-        ]}>
+      <PercentageBlock metrics={[{ title: 'At least one feature on iOS', number: 20, isPercentage: true }]}>
         What is more, a large group even uses two or more accessibility features on iOS.
       </PercentageBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
-        ## Android
-      </TextBlock>
+      <TextBlock showBackgroundColor={false}>## Android</TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'At least 1 feature on Android', key: 'android-accessibility_features-1+', isPercentage: true }
+          { title: 'At least 1 feature on Android', key: 'android-accessibility_features-1+', isPercentage: true },
         ]}>
-        More than half of the Dutch Android users surveyed have one or more accessibility settings activated on their phone.
+        Almost three quarters of the Dutch Android users surveyed have one or more accessibility settings activated on
+        their phone.
       </PercentageBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'At least two features on Android', key: 'android-accessibility_features-2+', isPercentage: true }
+          { title: 'At least two features on Android', key: 'android-accessibility_features-2+', isPercentage: true },
         ]}>
         Also on Android, a large group even uses two or more accessibility features.
       </PercentageBlock>
@@ -71,7 +60,10 @@ Almost half of all people with a mobile phone use accessibility features. Much m
   </RightColumn>
 </TwoColumnBlock>
 
-<Image src="/img/light/Websites-en-apps-toegankelijk-maken-voor-blinden-en-slechtzienden.c6c8901.png" alt="Websites en apps toegankelijk maken voor blinden en slechtzienden"/>
+<Image
+  src="/img/light/Websites-en-apps-toegankelijk-maken-voor-blinden-en-slechtzienden.c6c8901.png"
+  alt="Websites en apps toegankelijk maken voor blinden en slechtzienden"
+/>
 
 ## Visual settings
 
@@ -80,15 +72,11 @@ The study shows that visual settings are changed most frequently in mobile appli
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
-        ### Visual features on iOS
-      </TextBlock>
+      <TextBlock showBackgroundColor={false}>### Visual features on iOS</TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
-        metrics={[
-          { title: 'Dark mode', key: 'ios-preference_ui_style-dark', isPercentage: true }
-        ]}
+        metrics={[{ title: 'Dark mode', key: 'ios-preference_ui_style-dark', isPercentage: true }]}
         label="More about dark mode"
         url="/en/stats/dark-mode">
         have turned on dark mode on iOS.
@@ -99,7 +87,7 @@ The study shows that visual settings are changed most frequently in mobile appli
         metrics={[
           { title: 'Font-size smaller', key: 'ios-custom_content_size-smaller', isPercentage: true },
           { title: 'Font-size normal', key: 'ios-custom_content_size-default', isPercentage: true },
-          { title: 'Font-size larger', key: 'ios-custom_content_size-larger', isPercentage: true }
+          { title: 'Font-size larger', key: 'ios-custom_content_size-larger', isPercentage: true },
         ]}
         label="More about font size"
         url="/en/stats/font-size">
@@ -108,9 +96,7 @@ The study shows that visual settings are changed most frequently in mobile appli
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
-        metrics={[
-          { title: 'Zoom', key: 'ios-screen_zoomed-true', isPercentage: true }
-        ]}
+        metrics={[{ title: 'Zoom', key: 'ios-screen_zoomed-true', isPercentage: true }]}
         label="More about zoom"
         url="/en/stats/zoom">
         use zoom on iOS.
@@ -118,18 +104,13 @@ The study shows that visual settings are changed most frequently in mobile appli
     </ColumnRow>
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
-        The metric for display size on iOS is not available at the moment.
-        <CustomLink
-          url="/en/stats/display-size"
-          label="More about display size"
-        />
+        The metric for display size on iOS is not available.
+        <CustomLink url="/en/stats/display-size" label="More about display size" />
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
-        metrics={[
-          { title: 'Bold text', key: 'ios-accessibility_is_bold_text_enabled-true', isPercentage: true }
-        ]}
+        metrics={[{ title: 'Bold text', key: 'ios-accessibility_is_bold_text_enabled-true', isPercentage: true }]}
         label="More about bold text"
         url="/en/stats/bold-text">
         turn on bold text on iOS.
@@ -138,7 +119,11 @@ The study shows that visual settings are changed most frequently in mobile appli
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Color contrast', key: 'ios-accessibility_is_darker_system_colors_enabled-true', isPercentage: true }
+          {
+            title: 'Color contrast',
+            key: 'ios-accessibility_is_darker_system_colors_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="More about color contrast"
         url="/en/stats/color-contrast">
@@ -148,7 +133,11 @@ The study shows that visual settings are changed most frequently in mobile appli
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'iOS - transparency metric', key: 'ios-accessibility_is_reduce_transparency_enabled-true', isPercentage: true }
+          {
+            title: 'iOS - transparency metric',
+            key: 'ios-accessibility_is_reduce_transparency_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="More about transparency"
         url="/en/stats/transparency">
@@ -157,17 +146,18 @@ The study shows that visual settings are changed most frequently in mobile appli
     </ColumnRow>
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
-        The metric for color blind mode is not available on iOS at the moment.
-        <CustomLink
-          url="/en/stats/color-blind-mode"
-          label="More about color blind mode"
-        />
+        The metric for color blind mode on iOS is not available.
+        <CustomLink url="/en/stats/color-blind-mode" label="More about color blind mode" />
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'iOS - invert colors metric', key: 'ios-accessibility_is_invert_colors_enabled-true', isPercentage: true }
+          {
+            title: 'iOS - invert colors metric',
+            key: 'ios-accessibility_is_invert_colors_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="More about invert colors"
         url="/en/stats/invert-colors">
@@ -177,15 +167,11 @@ The study shows that visual settings are changed most frequently in mobile appli
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
-        ### Visual features on Android
-      </TextBlock>
+      <TextBlock showBackgroundColor={false}>### Visual features on Android</TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
-        metrics={[
-          { title: 'Dark mode', key: 'android-preference_is_nightmode_enabled-true', isPercentage: true }
-        ]}
+        metrics={[{ title: 'Dark mode', key: 'android-preference_is_nightmode_enabled-true', isPercentage: true }]}
         label="More about dark mode"
         url="/en/stats/dark-mode">
         have turned on dark mode on Android.
@@ -196,7 +182,11 @@ The study shows that visual settings are changed most frequently in mobile appli
         metrics={[
           { title: 'Font-size normal', key: 'android-default_screen_font_scale-true', isPercentage: true },
           { title: 'Font-size larger', key: 'android-screen_font_scale_default_comparison-bigger', isPercentage: true },
-          { title: 'Font-size smaller', key: 'android-screen_font_scale_default_comparison-smaller', isPercentage: true }
+          {
+            title: 'Font-size smaller',
+            key: 'android-screen_font_scale_default_comparison-smaller',
+            isPercentage: true,
+          },
         ]}
         label="More about font size"
         url="/en/stats/font-size">
@@ -206,7 +196,7 @@ The study shows that visual settings are changed most frequently in mobile appli
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Magnification', key: 'android-accessibility_is_magnification_enabled-true', isPercentage: true }
+          { title: 'Magnification', key: 'android-accessibility_is_magnification_enabled-true', isPercentage: true },
         ]}
         label="More about zoom"
         url="/en/stats/zoom">
@@ -216,7 +206,11 @@ The study shows that visual settings are changed most frequently in mobile appli
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Bigger display size', key: 'android-screen_display_scale_default_comparison-bigger', isPercentage: true }
+          {
+            title: 'Bigger display size',
+            key: 'android-screen_display_scale_default_comparison-bigger',
+            isPercentage: true,
+          },
         ]}
         label="More about display size"
         url="/en/stats/display-size">
@@ -225,9 +219,7 @@ The study shows that visual settings are changed most frequently in mobile appli
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
-        metrics={[
-          { title: 'Bold text', key: 'android-preference_font_weight_adjustment-300', isPercentage: true }
-        ]}
+        metrics={[{ title: 'Bold text', key: 'android-preference_font_weight_adjustment-300', isPercentage: true }]}
         label="More about bold text"
         url="/en/stats/bold-text">
         turn on bold text on Android.
@@ -235,26 +227,24 @@ The study shows that visual settings are changed most frequently in mobile appli
     </ColumnRow>
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
-        The metric for high contrast text on Android will soon become available.
-        <CustomLink
-          url="/en/stats/color-contrast"
-          label="More about color contrast"
-        />
+        The metric for high contrast text on Android is not available.
+        <CustomLink url="/en/stats/color-contrast" label="More about color contrast" />
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
         The setting to turn off transparency is not available on Android.
-        <CustomLink
-          url="/en/stats/transparency"
-          label="More about transparency"
-        />
+        <CustomLink url="/en/stats/transparency" label="More about transparency" />
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Color blind mode', key: 'android-accessibility_is_color_blind_mode_enabled-true', isPercentage: true }
+          {
+            title: 'Color blind mode',
+            key: 'android-accessibility_is_color_blind_mode_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="More about color blind mode"
         url="/en/stats/color-blind-mode">
@@ -264,7 +254,11 @@ The study shows that visual settings are changed most frequently in mobile appli
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Android - invert colors metric', key: 'android-accessibility_is_color_inversion_enabled-true', isPercentage: true }
+          {
+            title: 'Android - invert colors metric',
+            key: 'android-accessibility_is_color_inversion_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="More about invert colors"
         url="/en/stats/invert-colors">
@@ -274,7 +268,7 @@ The study shows that visual settings are changed most frequently in mobile appli
   </RightColumn>
 </TwoColumnBlock>
 
-<Image src="/img/light/rijks-tour2.6d50992.jpg" alt="Someone doing the RIJKS audiotour"/>
+<Image src="/img/light/rijks-tour2.6d50992.jpg" alt="Someone doing the RIJKS audiotour" />
 
 ## Audio settings
 
@@ -283,14 +277,12 @@ Closed captions and other audio settings are indispensable for people who are de
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
-        ### Audio features on iOS
-      </TextBlock>
+      <TextBlock showBackgroundColor={false}>### Audio features on iOS</TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'iOS - mono audio metric', key: 'ios-accessibility_is_mono_audio_enabled-true', isPercentage: true }
+          { title: 'iOS - mono audio metric', key: 'ios-accessibility_is_mono_audio_enabled-true', isPercentage: true },
         ]}
         label="More about mono audio"
         url="/en/stats/mono-audio">
@@ -300,7 +292,11 @@ Closed captions and other audio settings are indispensable for people who are de
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'iOS - closed captions metric', key: 'ios-accessibility_is_closed_captioning_enabled-true', isPercentage: true }
+          {
+            title: 'iOS - closed captions metric',
+            key: 'ios-accessibility_is_closed_captioning_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="More about closed captions"
         url="/en/stats/closed-captions">
@@ -310,23 +306,22 @@ Closed captions and other audio settings are indispensable for people who are de
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
-        ### Audio features on Android
-      </TextBlock>
+      <TextBlock showBackgroundColor={false}>### Audio features on Android</TextBlock>
     </ColumnRow>
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
-        The metric for mono audio on Android will soon become available.
-        <CustomLink
-          url="/en/stats/mono-audio"
-          label="More about mono audio"
-        />
+        The metric for mono audio on Android is not available.
+        <CustomLink url="/en/stats/mono-audio" label="More about mono audio" />
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Live captions', key: 'android-accessibility_is_closed_captioning_enabled-true', isPercentage: true }
+          {
+            title: 'Live captions',
+            key: 'android-accessibility_is_closed_captioning_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="More about closed captions"
         url="/en/stats/closed-captions">
@@ -336,7 +331,7 @@ Closed captions and other audio settings are indispensable for people who are de
   </RightColumn>
 </TwoColumnBlock>
 
-<Image src="/img/light/arend-2.463821b.jpg" alt="arend-2.463821b"/>
+<Image src="/img/light/arend-2.463821b.jpg" alt="arend-2.463821b" />
 
 ## Speech settings
 
@@ -345,14 +340,16 @@ If you are unable to look at your screen for whatever reason, speech settings he
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
-        ### Speech features on iOS
-      </TextBlock>
+      <TextBlock showBackgroundColor={false}>### Speech features on iOS</TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'iOS - speak selection metric', key: 'ios-accessibility_is_speak_selection_enabled-true', isPercentage: true }
+          {
+            title: 'iOS - speak selection metric',
+            key: 'ios-accessibility_is_speak_selection_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="More about speak selection"
         url="/en/stats/speak-selection">
@@ -362,7 +359,11 @@ If you are unable to look at your screen for whatever reason, speech settings he
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'iOS - speak screen metric', key: 'ios-accessibility_is_speak_screen_enabled-true', isPercentage: true }
+          {
+            title: 'iOS - speak screen metric',
+            key: 'ios-accessibility_is_speak_screen_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="More about speak screen"
         url="/en/stats/speak-screen">
@@ -372,7 +373,7 @@ If you are unable to look at your screen for whatever reason, speech settings he
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'iOS - voiceover metric', key: 'ios-accessibility_is_voice_over_running-true', isPercentage: true }
+          { title: 'iOS - voiceover metric', key: 'ios-accessibility_is_voice_over_running-true', isPercentage: true },
         ]}
         label="More about the screen reader"
         url="/en/stats/screen-reader">
@@ -381,24 +382,23 @@ If you are unable to look at your screen for whatever reason, speech settings he
     </ColumnRow>
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
-        The metric for Voice Control on iOS will soon become available.
-        <CustomLink
-          url="/en/stats/voice-control"
-          label="More about voice control"
-        />
+        The metric for Voice Control on iOS is not available.
+        <CustomLink url="/en/stats/voice-control" label="More about voice control" />
       </TextBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
-        ### Speech features on Android
-      </TextBlock>
+      <TextBlock showBackgroundColor={false}>### Speech features on Android</TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Android - select to speak', key: 'android-accessibility_is_select_to_speak_enabled-true', isPercentage: true }
+          {
+            title: 'Android - select to speak',
+            key: 'android-accessibility_is_select_to_speak_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="More about speak selection"
         url="/en/stats/speak-selection">
@@ -408,16 +408,17 @@ If you are unable to look at your screen for whatever reason, speech settings he
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
         The speak screen feature is not available on Android.
-        <CustomLink
-          url="/en/stats/speak-screen"
-          label="More about speak screen"
-        />
+        <CustomLink url="/en/stats/speak-screen" label="More about speak screen" />
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Android - talkback metric', key: 'android-accessibility_is_talk_back_enabled-true', isPercentage: true }
+          {
+            title: 'Android - talkback metric',
+            key: 'android-accessibility_is_talk_back_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="More about the screen reader"
         url="/en/stats/screen-reader">
@@ -427,7 +428,11 @@ If you are unable to look at your screen for whatever reason, speech settings he
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Android - voice access metric', key: 'android-accessibility_is_voice_access_enabled-true', isPercentage: true }
+          {
+            title: 'Android - voice access metric',
+            key: 'android-accessibility_is_voice_access_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="More about voice control"
         url="/en/stats/voice-control">
@@ -437,7 +442,7 @@ If you are unable to look at your screen for whatever reason, speech settings he
   </RightColumn>
 </TwoColumnBlock>
 
-<Image src="/img/light/old-person-phone.aba87b4.jpg" alt="Other results - image"/>
+<Image src="/img/light/old-person-phone.aba87b4.jpg" alt="Other results - image" />
 
 ## Other striking results
 
@@ -446,14 +451,12 @@ In addition to the findings set out above, we also discovered some that are not 
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
-        ### Striking results on iOS
-      </TextBlock>
+      <TextBlock showBackgroundColor={false}>### Striking results on iOS</TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Shake to undo off', key: 'ios-accessibility_is_shake_to_undo_enabled-false', isPercentage: true }
+          { title: 'Shake to undo off', key: 'ios-accessibility_is_shake_to_undo_enabled-false', isPercentage: true },
         ]}
         label="More about shake to undo"
         url="/en/stats/shake-to-undo">
@@ -462,17 +465,14 @@ In addition to the findings set out above, we also discovered some that are not 
     </ColumnRow>
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
-        The metric for disabling the automatic screen rotation is not available on iOS.
-        <CustomLink
-          url="/en/stats/screen-orientation-landscape"
-          label="More about screen orientation landscape"
-        />
+        The metric for disabling the automatic screen rotation on iOS is not available.
+        <CustomLink url="/en/stats/screen-orientation-landscape" label="More about screen orientation landscape" />
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Switch Control', key: 'ios-accessibility_is_switch_control_running-true', isPercentage: true }
+          { title: 'Switch Control', key: 'ios-accessibility_is_switch_control_running-true', isPercentage: true },
         ]}
         label="More about switch control"
         url="/en/stats/switch-control">
@@ -482,23 +482,18 @@ In addition to the findings set out above, we also discovered some that are not 
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
-        ### Striking results on Android
-      </TextBlock>
+      <TextBlock showBackgroundColor={false}>### Striking results on Android</TextBlock>
     </ColumnRow>
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
         The setting to turn off shake to undo is not available on Android.
-        <CustomLink
-          url="/en/stats/shake-to-undo"
-          label="More about shake to undo"
-        />
+        <CustomLink url="/en/stats/shake-to-undo" label="More about shake to undo" />
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Screen orientation landscape', key: 'android-screen_orientation-landscape', isPercentage: true }
+          { title: 'Screen orientation landscape', key: 'android-screen_orientation-landscape', isPercentage: true },
         ]}
         label="More about screen orientation landscape"
         url="/en/stats/screen-orientation-landscape">
@@ -508,7 +503,7 @@ In addition to the findings set out above, we also discovered some that are not 
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Switch Access', key: 'android-accessibility_is_switch_access_enabled-true', isPercentage: true }
+          { title: 'Switch Access', key: 'android-accessibility_is_switch_access_enabled-true', isPercentage: true },
         ]}
         label="More about switch control"
         url="/en/stats/switch-control">

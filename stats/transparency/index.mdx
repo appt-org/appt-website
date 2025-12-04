@@ -23,7 +23,11 @@ More than 200,000 Dutch people have been shown to have switched off the transpar
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'iOS - transparency metric', key: 'ios-accessibility_is_reduce_transparency_enabled-true', isPercentage: true }
+          {
+            title: 'iOS - transparency metric',
+            key: 'ios-accessibility_is_reduce_transparency_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="More about transparency"
         url="/en/stats/transparency">
@@ -35,10 +39,7 @@ More than 200,000 Dutch people have been shown to have switched off the transpar
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
         The setting to turn off transparency is not available on Android.
-        <CustomLink
-          url="/en/stats/transparency"
-          label="More about transparency"
-        />
+        <CustomLink url="/en/stats/transparency" label="More about transparency" />
       </TextBlock>
     </ColumnRow>
   </RightColumn>
