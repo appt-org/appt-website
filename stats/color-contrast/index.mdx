@@ -7,7 +7,7 @@ description: More about color contrast
 authors: [johan]
 date: 2022-06-02
 last_update:
-  date: 2023-01-27
+  date: 2025-12-04
 ---
 
 # Color contrast
@@ -25,7 +25,11 @@ At the moment we are not measuring high contrast text on Android yet.
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Color contrast', key: 'ios-accessibility_is_darker_system_colors_enabled-true', isPercentage: true }
+          {
+            title: 'Color contrast',
+            key: 'ios-accessibility_is_darker_system_colors_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="More about color contrast"
         url="/en/stats/color-contrast">
@@ -36,11 +40,8 @@ At the moment we are not measuring high contrast text on Android yet.
   <RightColumn>
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
-        The metric for high contrast text on Android will soon become available.
-        <CustomLink
-          url="/en/stats/color-contrast"
-          label="More about color contrast"
-        />
+        The metric for high contrast text on Android is not available.
+        <CustomLink url="/en/stats/color-contrast" label="More about color contrast" />
       </TextBlock>
     </ColumnRow>
   </RightColumn>

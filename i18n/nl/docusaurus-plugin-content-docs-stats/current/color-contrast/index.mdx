@@ -7,7 +7,7 @@ description: Meer over verhoogd contrast
 authors: [johan]
 date: 2022-06-02
 last_update:
-  date: 2023-01-27
+  date: 2025-12-04
 ---
 
 # Verhoogd (kleur)contrast
@@ -25,7 +25,11 @@ Op dit moment meten we tekst met hoog contrast op Android nog niet.
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Color contrast', key: 'ios-accessibility_is_darker_system_colors_enabled-true', isPercentage: true }
+          {
+            title: 'Color contrast',
+            key: 'ios-accessibility_is_darker_system_colors_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="Meer over kleurcontrast"
         url="/nl/stats/verhoogd-contrast">
@@ -36,11 +40,8 @@ Op dit moment meten we tekst met hoog contrast op Android nog niet.
   <RightColumn>
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
-        De gegevens voor tekst met hoog contrast op Android komen binnenkort beschikbaar.
-        <CustomLink
-          url="/nl/stats/verhoogd-contrast"
-          label="Meer over kleurcontrast"
-        />
+        De gegevens voor tekst met hoog contrast op Android zijn niet beschikbaar.
+        <CustomLink url="/nl/stats/verhoogd-contrast" label="Meer over kleurcontrast" />
       </TextBlock>
     </ColumnRow>
   </RightColumn>
