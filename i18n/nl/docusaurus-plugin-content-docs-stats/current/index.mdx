@@ -16,54 +16,44 @@ pagination_prev: null
 sidebar_position: 1
 ---
 
-<Hero
-  title="Stats over toegankelijkheid"
-/>
+<Hero title="Stats over toegankelijkheid" />
 
-Bijna de helft van alle mensen met een mobiele telefoon gebruikt toegankelijkheidsfuncties. Véél meer dan je zou verwachten. In ons onderzoek onder miljoenen iOS- en Android-gebruikers in Nederland hebben we gekeken welke accessibilityfuncties nou echt staan ingeschakeld.
+Meer dan de helft van alle mensen met een mobiele telefoon gebruikt toegankelijkheidsfuncties. Véél meer dan je zou verwachten. In ons onderzoek onder miljoenen iOS- en Android-gebruikers in Nederland hebben we gekeken welke accessibilityfuncties nou echt staan ingeschakeld.
 
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
-        ## iOS
-      </TextBlock>
+      <TextBlock showBackgroundColor={false}>## iOS</TextBlock>
     </ColumnRow>
     <ColumnRow>
-      <PercentageBlock
-        metrics={[
-          { title: 'At least one feature on iOS', number: 45, isPercentage: true }
-        ]}>
-        Bijna de helft van de onderzochte iOS-gebruikers in Nederland heeft één of meer toegankelijkheids­instellingen op hun telefoon geactiveerd.
+      <PercentageBlock metrics={[{ title: 'At least one feature on iOS', number: 45, isPercentage: true }]}>
+        Bijna de helft van de onderzochte iOS-gebruikers in Nederland heeft één of meer toegankelijkheids­instellingen
+        op hun telefoon geactiveerd.
       </PercentageBlock>
     </ColumnRow>
     <ColumnRow>
-      <PercentageBlock
-        metrics={[
-          { title: 'At least one feature on iOS', number: 15, isPercentage: true }
-        ]}>
+      <PercentageBlock metrics={[{ title: 'At least one feature on iOS', number: 15, isPercentage: true }]}>
         Bovendien gebruikt een grote groep zelfs twee of meer toegankelijkheidsfuncties.
       </PercentageBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
-        ## Android
-      </TextBlock>
+      <TextBlock showBackgroundColor={false}>## Android</TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'At least 1 feature on Android', key: 'android-accessibility_features-1+', isPercentage: true }
+          { title: 'At least 1 feature on Android', key: 'android-accessibility_features-1+', isPercentage: true },
         ]}>
-        Meer dan de helft van de onderzochte Android-gebruikers in Nederland heeft één of meer toegankelijkheids­instellingen op hun telefoon geactiveerd.
+        Bijna driekwart van de onderzochte Android-gebruikers in Nederland heeft één of meer
+        toegankelijkheids­instellingen op hun telefoon geactiveerd.
       </PercentageBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'At least two features on Android', key: 'android-accessibility_features-2+', isPercentage: true }
+          { title: 'At least two features on Android', key: 'android-accessibility_features-2+', isPercentage: true },
         ]}>
         Ook op Android gebruikt een grote groep zelfs twee of meer toegankelijkheidsfuncties.
       </PercentageBlock>
@@ -71,7 +61,10 @@ Bijna de helft van alle mensen met een mobiele telefoon gebruikt toegankelijkhei
   </RightColumn>
 </TwoColumnBlock>
 
-<Image src="/img/light/Websites-en-apps-toegankelijk-maken-voor-blinden-en-slechtzienden.c6c8901.png" alt="Websites en apps toegankelijk maken voor blinden en slechtzienden"/>
+<Image
+  src="/img/light/Websites-en-apps-toegankelijk-maken-voor-blinden-en-slechtzienden.c6c8901.png"
+  alt="Websites en apps toegankelijk maken voor blinden en slechtzienden"
+/>
 
 ## Visuele functies
 
@@ -80,15 +73,11 @@ Uit het onderzoek blijkt dat visuele instellingen het meest worden aangepast in 
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
-        ### Visuele functies op iOS
-      </TextBlock>
+      <TextBlock showBackgroundColor={false}>### Visuele functies op iOS</TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
-        metrics={[
-          { title: 'Donkere modus', key: 'ios-preference_ui_style-dark', isPercentage: true }
-        ]}
+        metrics={[{ title: 'Donkere modus', key: 'ios-preference_ui_style-dark', isPercentage: true }]}
         label="Meer over donkere modus"
         url="/nl/stats/donkere-modus">
         heeft de donkere modus geactiveerd op iOS.
@@ -99,7 +88,7 @@ Uit het onderzoek blijkt dat visuele instellingen het meest worden aangepast in 
         metrics={[
           { title: 'Verkleinde tekst', key: 'ios-custom_content_size-smaller', isPercentage: true },
           { title: 'Normale tekstgrootte', key: 'ios-custom_content_size-default', isPercentage: true },
-          { title: 'Vergrootte tekst', key: 'ios-custom_content_size-larger', isPercentage: true }
+          { title: 'Vergrootte tekst', key: 'ios-custom_content_size-larger', isPercentage: true },
         ]}
         label="Meer over lettergrootte"
         url="/nl/stats/lettergrootte">
@@ -108,9 +97,7 @@ Uit het onderzoek blijkt dat visuele instellingen het meest worden aangepast in 
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
-        metrics={[
-          { title: 'Scherm inzoomen', key: 'ios-screen_zoomed-true', isPercentage: true }
-        ]}
+        metrics={[{ title: 'Scherm inzoomen', key: 'ios-screen_zoomed-true', isPercentage: true }]}
         label="Meer over zoomen"
         url="/nl/stats/zoom">
         heeft zoomen aanstaan op iOS.
@@ -118,18 +105,13 @@ Uit het onderzoek blijkt dat visuele instellingen het meest worden aangepast in 
     </ColumnRow>
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
-        De gegevens voor weergavegrootte op iOS zijn momenteel niet beschikbaar.
-        <CustomLink
-          url="/nl/stats/weergavegrootte"
-          label="Meer over weergavegrootte"
-        />
+        De gegevens voor weergavegrootte op iOS zijn niet beschikbaar.
+        <CustomLink url="/nl/stats/weergavegrootte" label="Meer over weergavegrootte" />
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
-        metrics={[
-          { title: 'Vette tekst', key: 'ios-accessibility_is_bold_text_enabled-true', isPercentage: true }
-        ]}
+        metrics={[{ title: 'Vette tekst', key: 'ios-accessibility_is_bold_text_enabled-true', isPercentage: true }]}
         label="Meer over vette tekst"
         url="/nl/stats/vette-tekst">
         schakelt vette tekst in op iOS.
@@ -138,7 +120,11 @@ Uit het onderzoek blijkt dat visuele instellingen het meest worden aangepast in 
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Color contrast', key: 'ios-accessibility_is_darker_system_colors_enabled-true', isPercentage: true }
+          {
+            title: 'Color contrast',
+            key: 'ios-accessibility_is_darker_system_colors_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="Meer over kleurcontrast"
         url="/nl/stats/verhoogd-contrast">
@@ -148,7 +134,11 @@ Uit het onderzoek blijkt dat visuele instellingen het meest worden aangepast in 
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'iOS - transparency metric', key: 'ios-accessibility_is_reduce_transparency_enabled-true', isPercentage: true }
+          {
+            title: 'iOS - transparency metric',
+            key: 'ios-accessibility_is_reduce_transparency_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="Meer over doorzichtigheid"
         url="/nl/stats/verminderde-transparantie">
@@ -157,17 +147,18 @@ Uit het onderzoek blijkt dat visuele instellingen het meest worden aangepast in 
     </ColumnRow>
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
-        De gegevens voor kleurenblind modus zijn op dit moment niet beschikbaar op iOS.
-        <CustomLink
-          url="/nl/stats/kleurblind-modus"
-          label="Meer over kleurenblind modus"
-        />
+        De gegevens voor kleurenblind modus op iOS zijn niet beschikbaar.
+        <CustomLink url="/nl/stats/kleurblind-modus" label="Meer over kleurenblind modus" />
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'iOS - invert colors metric', key: 'ios-accessibility_is_invert_colors_enabled-true', isPercentage: true }
+          {
+            title: 'iOS - invert colors metric',
+            key: 'ios-accessibility_is_invert_colors_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="Meer over kleuren omkeren"
         url="/nl/stats/kleuren-omkeren">
@@ -177,15 +168,11 @@ Uit het onderzoek blijkt dat visuele instellingen het meest worden aangepast in 
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
-        ### Visuele functies op Android
-      </TextBlock>
+      <TextBlock showBackgroundColor={false}>### Visuele functies op Android</TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
-        metrics={[
-          { title: 'Donkere modus', key: 'android-preference_is_nightmode_enabled-true', isPercentage: true }
-        ]}
+        metrics={[{ title: 'Donkere modus', key: 'android-preference_is_nightmode_enabled-true', isPercentage: true }]}
         label="Meer over donkere modus"
         url="/nl/stats/donkere-modus">
         heeft de donkere modus geactiveerd op Android.
@@ -196,7 +183,11 @@ Uit het onderzoek blijkt dat visuele instellingen het meest worden aangepast in 
         metrics={[
           { title: 'Normale tekstgrootte', key: 'android-default_screen_font_scale-true', isPercentage: true },
           { title: 'Vergrootte tekst', key: 'android-screen_font_scale_default_comparison-bigger', isPercentage: true },
-          { title: 'Verkleinde tekst', key: 'android-screen_font_scale_default_comparison-smaller', isPercentage: true }
+          {
+            title: 'Verkleinde tekst',
+            key: 'android-screen_font_scale_default_comparison-smaller',
+            isPercentage: true,
+          },
         ]}
         label="Meer over lettergrootte"
         url="/nl/stats/lettergrootte">
@@ -206,7 +197,7 @@ Uit het onderzoek blijkt dat visuele instellingen het meest worden aangepast in 
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Vergroting', key: 'android-accessibility_is_magnification_enabled-true', isPercentage: true }
+          { title: 'Vergroting', key: 'android-accessibility_is_magnification_enabled-true', isPercentage: true },
         ]}
         label="Meer over zoomen"
         url="/nl/stats/zoom">
@@ -216,7 +207,11 @@ Uit het onderzoek blijkt dat visuele instellingen het meest worden aangepast in 
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Weergavegrootte', key: 'android-screen_display_scale_default_comparison-bigger', isPercentage: true }
+          {
+            title: 'Weergavegrootte',
+            key: 'android-screen_display_scale_default_comparison-bigger',
+            isPercentage: true,
+          },
         ]}
         label="Meer over weergavegrootte"
         url="/nl/stats/weergavegrootte">
@@ -225,9 +220,7 @@ Uit het onderzoek blijkt dat visuele instellingen het meest worden aangepast in 
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
-        metrics={[
-          { title: 'Vette tekst', key: 'android-preference_font_weight_adjustment-300', isPercentage: true }
-        ]}
+        metrics={[{ title: 'Vette tekst', key: 'android-preference_font_weight_adjustment-300', isPercentage: true }]}
         label="Meer over vette tekst"
         url="/nl/stats/vette-tekst">
         schakelt vette tekst in op Android.
@@ -236,25 +229,23 @@ Uit het onderzoek blijkt dat visuele instellingen het meest worden aangepast in 
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
         De gegevens voor tekst met hoog contrast op Android komen binnenkort beschikbaar.
-        <CustomLink
-          url="/nl/stats/verhoogd-contrast"
-          label="Meer over kleurcontrast"
-        />
+        <CustomLink url="/nl/stats/verhoogd-contrast" label="Meer over kleurcontrast" />
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
         De instelling om doorzichtigheid te verminderen is niet beschikbaar op Android.
-        <CustomLink
-          url="/nl/stats/verminderde-transparantie"
-          label="Meer over doorzichtigheid"
-        />
+        <CustomLink url="/nl/stats/verminderde-transparantie" label="Meer over doorzichtigheid" />
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Kleurenblind modus', key: 'android-accessibility_is_color_blind_mode_enabled-true', isPercentage: true }
+          {
+            title: 'Kleurenblind modus',
+            key: 'android-accessibility_is_color_blind_mode_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="Meer over kleurenblind modus"
         url="/nl/stats/kleurblind-modus">
@@ -264,7 +255,11 @@ Uit het onderzoek blijkt dat visuele instellingen het meest worden aangepast in 
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Android - invert colors metric', key: 'android-accessibility_is_color_inversion_enabled-true', isPercentage: true }
+          {
+            title: 'Android - invert colors metric',
+            key: 'android-accessibility_is_color_inversion_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="Meer over kleuren omkeren"
         url="/nl/stats/kleuren-omkeren">
@@ -274,24 +269,21 @@ Uit het onderzoek blijkt dat visuele instellingen het meest worden aangepast in 
   </RightColumn>
 </TwoColumnBlock>
 
-<Image src="/img/light/rijks-tour2.6d50992.jpg" alt="Someone doing the RIJKS audiotour"/>
+<Image src="/img/light/rijks-tour2.6d50992.jpg" alt="Someone doing the RIJKS audiotour" />
 
 ## Audiofuncties
 
 Ondertiteling en andere audiosettings zijn onmisbaar voor mensen die niet of slecht kunnen horen. Maar ook als je een filmpje wilt kijken in een rumoerige omgeving, of als je iets kijkt in een vreemde taal, heb je baat bij ondertiteling.
 
-
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
-        ### Audiofuncties op iOS
-      </TextBlock>
+      <TextBlock showBackgroundColor={false}>### Audiofuncties op iOS</TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'iOS - mono audio metric', key: 'ios-accessibility_is_mono_audio_enabled-true', isPercentage: true }
+          { title: 'iOS - mono audio metric', key: 'ios-accessibility_is_mono_audio_enabled-true', isPercentage: true },
         ]}
         label="Meer over monogeluid"
         url="/nl/stats/mono-audio">
@@ -301,7 +293,11 @@ Ondertiteling en andere audiosettings zijn onmisbaar voor mensen die niet of sle
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'iOS - closed captions metric', key: 'ios-accessibility_is_closed_captioning_enabled-true', isPercentage: true }
+          {
+            title: 'iOS - closed captions metric',
+            key: 'ios-accessibility_is_closed_captioning_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="Meer over ondertiteling"
         url="/nl/stats/ondertiteling">
@@ -311,23 +307,22 @@ Ondertiteling en andere audiosettings zijn onmisbaar voor mensen die niet of sle
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
-        ### Audiofuncties op Android
-      </TextBlock>
+      <TextBlock showBackgroundColor={false}>### Audiofuncties op Android</TextBlock>
     </ColumnRow>
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
         De gegevens voor mono audio op Android komen binnenkort beschikbaar.
-        <CustomLink
-          url="/nl/stats/mono-audio"
-          label="Meer over monogeluid"
-        />
+        <CustomLink url="/nl/stats/mono-audio" label="Meer over monogeluid" />
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Ondertiteling', key: 'android-accessibility_is_closed_captioning_enabled-true', isPercentage: true }
+          {
+            title: 'Ondertiteling',
+            key: 'android-accessibility_is_closed_captioning_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="Meer over ondertiteling"
         url="/nl/stats/ondertiteling">
@@ -337,24 +332,25 @@ Ondertiteling en andere audiosettings zijn onmisbaar voor mensen die niet of sle
   </RightColumn>
 </TwoColumnBlock>
 
-<Image src="/img/light/arend-2.463821b.jpg" alt="arend-2.463821b"/>
+<Image src="/img/light/arend-2.463821b.jpg" alt="arend-2.463821b" />
 
 ## Spraakfuncties
 
 Als je om welke reden dan ook niet in staat bent om naar je scherm te kijken, helpen spraakfuncties je om op een andere manier de informatie tot je te nemen. Maar ook als je moeite hebt met lezen van geschreven tekst, kunnen de voorleesfuncties je helpen.
 
-
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
-        ### Spraakfuncties op iOS
-      </TextBlock>
+      <TextBlock showBackgroundColor={false}>### Spraakfuncties op iOS</TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'iOS - speak selection metric', key: 'ios-accessibility_is_speak_selection_enabled-true', isPercentage: true }
+          {
+            title: 'iOS - speak selection metric',
+            key: 'ios-accessibility_is_speak_selection_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="Meer over spreek selectie uit"
         url="/nl/stats/spreek-selectie-uit">
@@ -364,7 +360,11 @@ Als je om welke reden dan ook niet in staat bent om naar je scherm te kijken, he
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'iOS - speak screen metric', key: 'ios-accessibility_is_speak_screen_enabled-true', isPercentage: true }
+          {
+            title: 'iOS - speak screen metric',
+            key: 'ios-accessibility_is_speak_screen_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="Meer over scherm uitspreken"
         url="/nl/stats/spreek-scherm-uit">
@@ -374,7 +374,7 @@ Als je om welke reden dan ook niet in staat bent om naar je scherm te kijken, he
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'iOS - voiceover metric', key: 'ios-accessibility_is_voice_over_running-true', isPercentage: true }
+          { title: 'iOS - voiceover metric', key: 'ios-accessibility_is_voice_over_running-true', isPercentage: true },
         ]}
         label="Meer over de schermlezer"
         url="/nl/stats/schermlezer">
@@ -383,24 +383,23 @@ Als je om welke reden dan ook niet in staat bent om naar je scherm te kijken, he
     </ColumnRow>
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
-        De gegevens voor spraakbediening op iOS komen binnenkort beschikbaar.
-        <CustomLink
-          url="/nl/stats/stembediening"
-          label="Meer over stembediening"
-        />
+        De gegevens voor spraakbediening op iOS zijn niet beschikbaar.
+        <CustomLink url="/nl/stats/stembediening" label="Meer over stembediening" />
       </TextBlock>
     </ColumnRow>
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
-        ### Spraakfuncties op Android
-      </TextBlock>
+      <TextBlock showBackgroundColor={false}>### Spraakfuncties op Android</TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Android - selecteer om uit te spreken', key: 'android-accessibility_is_select_to_speak_enabled-true', isPercentage: true }
+          {
+            title: 'Android - selecteer om uit te spreken',
+            key: 'android-accessibility_is_select_to_speak_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="Meer over spreek selectie uit"
         url="/nl/stats/spreek-selectie-uit">
@@ -410,16 +409,17 @@ Als je om welke reden dan ook niet in staat bent om naar je scherm te kijken, he
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
         De scherm uitspreken functie is niet beschikbaar op Android.
-        <CustomLink
-          url="/nl/stats/spreek-scherm-uit"
-          label="Meer over scherm uitspreken"
-        />
+        <CustomLink url="/nl/stats/spreek-scherm-uit" label="Meer over scherm uitspreken" />
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Android - talkback metric', key: 'android-accessibility_is_talk_back_enabled-true', isPercentage: true }
+          {
+            title: 'Android - talkback metric',
+            key: 'android-accessibility_is_talk_back_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="Meer over de schermlezer"
         url="/nl/stats/schermlezer">
@@ -429,7 +429,11 @@ Als je om welke reden dan ook niet in staat bent om naar je scherm te kijken, he
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Android - voice access metric', key: 'android-accessibility_is_voice_access_enabled-true', isPercentage: true }
+          {
+            title: 'Android - voice access metric',
+            key: 'android-accessibility_is_voice_access_enabled-true',
+            isPercentage: true,
+          },
         ]}
         label="Meer over stembediening"
         url="/nl/stats/stembediening">
@@ -439,7 +443,7 @@ Als je om welke reden dan ook niet in staat bent om naar je scherm te kijken, he
   </RightColumn>
 </TwoColumnBlock>
 
-<Image src="/img/light/old-person-phone.aba87b4.jpg" alt="Other results - image"/>
+<Image src="/img/light/old-person-phone.aba87b4.jpg" alt="Other results - image" />
 
 ## Andere opvallende resultaten
 
@@ -448,14 +452,16 @@ Naast alle bovenstaande bevindingen hebben we ook het een en ander ontdekt dat z
 <TwoColumnBlock>
   <LeftColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
-        ### Opvallende resultaten op iOS
-      </TextBlock>
+      <TextBlock showBackgroundColor={false}>### Opvallende resultaten op iOS</TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Herstel door schudden uit', key: 'ios-accessibility_is_shake_to_undo_enabled-false', isPercentage: true }
+          {
+            title: 'Herstel door schudden uit',
+            key: 'ios-accessibility_is_shake_to_undo_enabled-false',
+            isPercentage: true,
+          },
         ]}
         label="Meer over herstel door schudden"
         url="/nl/stats/herstel-door-schudden">
@@ -464,17 +470,14 @@ Naast alle bovenstaande bevindingen hebben we ook het een en ander ontdekt dat z
     </ColumnRow>
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
-        De gegevens voor het uitzetten van automatisch meedraaien van het scherm zijn niet beschikbaar op iOS.
-        <CustomLink
-          url="/nl/stats/scherm-draaien"
-          label="Meer over scherm automatisch draaien"
-        />
+        De gegevens voor het uitzetten van automatisch meedraaien van het scherm op iOS zijn niet beschikbaar.
+        <CustomLink url="/nl/stats/scherm-draaien" label="Meer over scherm automatisch draaien" />
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Schakelbediening', key: 'ios-accessibility_is_switch_control_running-true', isPercentage: true }
+          { title: 'Schakelbediening', key: 'ios-accessibility_is_switch_control_running-true', isPercentage: true },
         ]}
         label="Meer over schakelbediening"
         url="/nl/stats/schakelbediening">
@@ -484,23 +487,18 @@ Naast alle bovenstaande bevindingen hebben we ook het een en ander ontdekt dat z
   </LeftColumn>
   <RightColumn>
     <ColumnRow>
-      <TextBlock showBackgroundColor={false}>
-        ### Opvallende resultaten op Android
-      </TextBlock>
+      <TextBlock showBackgroundColor={false}>### Opvallende resultaten op Android</TextBlock>
     </ColumnRow>
     <ColumnRow>
       <TextBlock showBackgroundColor={true}>
         De instelling om herstel door schudden uit te zetten is niet beschikbaar op Android.
-        <CustomLink
-          url="/nl/stats/herstel-door-schudden"
-          label="Meer over herstel door schudden"
-        />
+        <CustomLink url="/nl/stats/herstel-door-schudden" label="Meer over herstel door schudden" />
       </TextBlock>
     </ColumnRow>
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Scherm oriëntatie landscape', key: 'android-screen_orientation-landscape', isPercentage: true }
+          { title: 'Scherm oriëntatie landscape', key: 'android-screen_orientation-landscape', isPercentage: true },
         ]}
         label="Meer over scherm automatisch draaien"
         url="/nl/stats/scherm-draaien">
@@ -510,7 +508,7 @@ Naast alle bovenstaande bevindingen hebben we ook het een en ander ontdekt dat z
     <ColumnRow>
       <PercentageBlock
         metrics={[
-          { title: 'Schakelbediening', key: 'android-accessibility_is_switch_access_enabled-true', isPercentage: true }
+          { title: 'Schakelbediening', key: 'android-accessibility_is_switch_access_enabled-true', isPercentage: true },
         ]}
         label="Meer over schakelbediening"
         url="/nl/stats/schakelbediening">
